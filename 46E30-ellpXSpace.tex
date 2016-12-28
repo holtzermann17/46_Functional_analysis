@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ellpXSpace}
+\pmcreated{2013-03-22 17:55:59}
+\pmmodified{2013-03-22 17:55:59}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$\ell^p(X)$ space}
+\pmrecord{10}{40428}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E30}
+\pmclassification{msc}{46B26}
+\pmclassification{msc}{28B15}
+\pmsynonym{$\ell^p(X)$}{ellpXSpace}
+\pmsynonym{$\ell^p(X)$-space}{ellpXSpace}
+\pmrelated{Lp}
+\pmrelated{ClassificationOfHilbertSpaces}
+\pmrelated{RieszFischerTheorem}
+\pmdefines{$\ell^2(X)$}
+\pmdefines{$\ell^2(X)$ space}
+\pmdefines{$\ell^p(X)$ is nonseparable iff $X$ is uncountable}
+\pmdefines{orthonormal basis of $\ell^2(X)$ have the cardinality of $X$}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{property}
+
+\subsubsection{Definition of $\ell^p(X)$}
+
+Let $p$ be a real number such that $1 \leq p < \infty$.
+
+Let $X$ be a set and let $\mu$ be the counting measure on $X$, defined on the \PMlinkname{$\sigma$-algebra}{SigmaAlgebra} $\mathfrak{B}$ of all subsets of $X$. The $\ell^p(X)$ space is a particular \PMlinkescapetext{type} of a \PMlinkname{$L^p$-space}{LpSpace}, defined as
+
+\begin{displaymath}
+\ell^p(X) := L^p(X, \mathfrak{B}, \mu)
+\end{displaymath}
+
+Thus, the $\ell^p(X)$ space consists of all functions $f:X \longrightarrow \mathbb{C}$ such that
+
+\begin{displaymath}
+\sum_{x \in X} |f(x)|^p < \infty
+\end{displaymath}
+
+Of course, for the above sum to be finite one must necessarily have $f(x) \neq 0$ only for a countable number of $x \in X$ (see \PMlinkname{this entry}{SupportOfIntegrableFunctionWithRespectToCountingMeasureIsCountable}).
+
+\subsubsection{Properties}
+\begin{itemize}
+\item By the corresponding property on $L^p$-spaces, the space $\ell^p(X)$ is a Banach space and its norm amounts to
+\begin{displaymath}
+\|f\|_p = \left ( \sum_{x \in X} |f(x)|^p \right )^{\frac{1}{p}}
+\end{displaymath}
+\end{itemize}
+\begin{itemize}
+\item By the corresponding property on \PMlinkname{$L^2$-spaces}{L2SpacesAreHilbertSpaces}, the space $\ell^2(X)$ is a Hilbert space and its inner product amounts to
+\begin{displaymath}
+\langle f, g\rangle = \sum_{x \in X} f(x)\overline{g(x)}
+\end{displaymath}
+\end{itemize}
+
+\subsubsection{Nonseparability of $\ell^p(X)$ for uncountable $X$}
+
+\emph{\PMlinkescapetext{Proposition}} - The space $\ell^p(X)$ is separable if and only if $X$ is a countable set. Moreover, $\ell^p(X)$ admits a Schauder basis if and only if $X$ is countable.
+
+$\,$
+
+A Schauder basis for $\ell^p(X)$, when it exists, can be just the set of functions $\{\delta_{x_0}: x_0 \in X\}$ defined by
+\begin{displaymath}
+\delta_{x_0}(x) :=
+\begin{cases}
+1, & $if$\;\; x=x_0\\
+0 & $if$\;\; x \neq x_0
+\end{cases}
+\end{displaymath}
+
+\subsubsection{Orthonormal basis of $\ell^2(X)$}
+
+The set of functions $\{\delta_{x_0}: x_0 \in X\}$ 
+is an orthonormal basis of $\ell^2(X)$. Hence, the \PMlinkname{dimension}{OrthonormalBasis} of $\ell^2(X)$ is given by the cardinality of $X$ (as all orthonormal bases have the same cardinality).
+
+It can be shown that all Hilbert spaces are isometrically isomorphic (hence, preserving the inner product) to a $\ell^2(X)$ space, for a suitable set $X$.
+%%%%%
+%%%%%
+\end{document}

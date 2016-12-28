@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InvariantSubspacesForSelfadjointalgebrasOfOperators}
+\pmcreated{2013-03-22 18:40:23}
+\pmmodified{2013-03-22 18:40:23}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{invariant subspaces for self-adjoint *-algebras of operators}
+\pmrecord{9}{41420}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46K05}
+\pmclassification{msc}{46H35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{proof}
+\PMlinkescapeword{proposition}
+
+In this entry we provide few results concerning invariant subspaces of *-algebras of bounded operators on Hilbert spaces. 
+
+Let $H$ be a Hilbert space and $B(H)$ its algebra of bounded operators. Recall that, given an operator $T \in B(H)$, a subspace $V \subseteq H$ is said to be invariant for $T$ if $T x \in V$ whenever $x \in V$.
+
+Similarly, given a subalgebra $\mathcal{A} \subseteq B(H)$, we will say that a subspace $V \subseteq H$ is \emph{invariant} for $\mathcal{A}$ if $Tx \in V$ whenever $T \in \mathcal{A}$ and $x \in V$, i.e. if $V$ is invariant for all operators in $\mathcal{A}$.
+
+\section*{Invariant subspaces for a single operator}
+
+{\bf Proposition 1 -} \emph{Let $T \in B(H)$. If a subspace $V \subset H$ is invariant for $T$, then so is its closure $\overline{V}$.}
+
+\emph{Proof:} Let $x \in \overline{V}$. There is a sequence $\{x_n\}$ in $V$ such that $x_n \to x$. Hence, $Tx_n \to Tx$. Since $V$ is invariant for $T$, all $Tx_n$ belong to $V$. Thus, their limit $Tx$ must be in $\overline{V}$. We conclude that $\overline{V}$ is also invariant for $T$. $\square$
+
+$\,$
+
+{\bf Proposition 2 -} \emph{Let $T \in B(H)$. If a subspace $V \subset H$ is invariant for $T$, then its orthogonal complement $V^{\perp}$ is invariant for $T^*$.}
+
+\emph{Proof:} Let $y \in V^{\perp}$. For all $x \in H$ we have that $\langle x, T^*y \rangle = \langle Tx, y \rangle = 0$, where the last equality comes from the fact that $Tx \in V$, since $V$ is invariant for $T$. Therefore $T^*y$ must belong to $V^{\perp}$, from which we conclude that $V^{\perp}$ is invariant for $T^*$. $\square$
+
+$\,$
+
+{\bf Proposition 3 -} \emph{Let $T \in B(H)$, $V \subset H$ a closed subspace and $P \in B(H)$ the orthogonal projection onto $V$. The following are statements are equivalent:}
+\begin{enumerate}
+\item \emph{$V$ is invariant for $T$.}
+\item \emph{$V^{\perp}$ is invariant for $T^*$.}
+\item \emph{$TP = PTP$.}
+\end{enumerate}
+
+
+\emph{Proof:} $(1) \Longrightarrow (2)$ This part follows directly from Proposition 2.
+
+$(2) \Longrightarrow (1)$ From Proposition 2 it follows that $(V^{\perp})^{\perp}$ is invariant for $(T^*)^* = T$. Since $V$ is closed, $V = \overline{V} = (V^{\perp})^{\perp}$. We conclude that $V$ is invariant for $T$.
+
+$(1) \Longrightarrow (3)$ Let $x \in H$. From the orthogonal decomposition theorem we know that $H = V \oplus V^{\perp}$, hence $x = y + z$, where $y \in V$ and $z \in V^{\perp}$. We now see that $TPx = Ty$ and $PTPx = PTy = Ty$, where the last equality comes from the fact that $Ty \in V$. Hence, $TP = PTP$.
+
+$(3) \Longrightarrow (1)$ Let $x \in V$. We have that $Tx = TPx = PTPx$. Since $PTPx$ is obviously on the image of $P$, it follows that $Tx \in V$, i.e. $V$ is invariant for $T$. $\square$
+
+$\,$
+
+{\bf Proposition 4 -} \emph{Let $T \in B(H)$, $V \subset H$ a closed subspace and $P \in B(H)$ the orhtogonal projection onto $V$. The subspaces $V$ and $V^{\perp}$ are both invariant for $T$ if and only if $TP = PT$.}
+
+\emph{Proof:} $(\Longrightarrow)$ From Proposition 3 it follows that $V$ is invariant for both $T$ and $T^*$. Then, again from Proposition 3, we see that $PT = (T^*P)^* = (PT^*P)^*= PTP = TP$.
+
+$(\Longleftarrow)$ Suppose $TP = PT$. Then $PTP = TPP =TP$, and from Proposition 3 we see that $V$ is invariant for $T$.
+
+We also have that $PT^* = T^*P$, and we can conclude in the same way that $V$ is invariant for $T^*$. From Proposition 3 it follows that $V^{\perp}$ is also invariant for $T$. $\square$
+
+\section*{Invariant subspaces for *-algebras of operators}
+
+We shall now generalize some of the above results to the case of self-adjoint subalgebras of $B(H)$.
+
+{\bf Proposition 5 -} \emph{Let $\mathcal{A}$ be a *-subalgebra of $B(H)$ and $V$ a subspace of $H$. If a subspace $V$ is invariant for $\mathcal{A}$, then so are its closure $\overline{V}$ and its orthogonal complement $V^{\perp}$.}
+
+\emph{Proof:} From Proposition 1 it follows that $\overline{V}$ is invariant for all operators in $\mathcal{A}$, which means that $V$ is invariant for $\mathcal{A}$.
+
+Also, from Proposition 2 it follows that $V^{\perp}$ is invariant for the adjoint of each operator in $\mathcal{A}$. Since $\mathcal{A}$ is self-adjoint, it follows that $V^{\perp}$ is invariant for $\mathcal{A}$.  $\square$
+
+$\,$
+
+{\bf Theorem -} \emph{Let $\mathcal{A}$ be a *-subalgebra of $B(H)$, $V \subset H$ a closed subspace and $P$ the orthogonal projection onto $V$. The following are equivalent:}
+\begin{enumerate}
+\item \emph{$V$ is invariant for $\mathcal{A}$.}
+\item \emph{$V^{\perp}$ is invariant for $\mathcal{A}$.}
+\item \emph{$P \in \mathcal{A}'$, i.e. $P$ belongs to the commutant of $\mathcal{A}$.}
+\end{enumerate}
+
+
+\emph{Proof:} $(1) \Longleftrightarrow (2)$ This equivalence follows directly from Proposition 5 and the fact that $V$ is closed.
+
+$(1) \Longrightarrow (3)$ Suppose $V$ is invariant for $\mathcal{A}$. We have already proved that $V^{\perp}$ is also invariant for $\mathcal{A}$. Thus, from Proposition 4 it follows that $P$ commutes with all operators in $\mathcal{A}$, i.e. $P \in \mathcal{A}'$.
+
+$(3) \Longrightarrow (1)$ Suppose $P \in \mathcal{A}'$. Then $P$ commutes with all operators in $\mathcal{A}$. From Proposition 4 it follows that $V$ is invariant for each operator in $\mathcal{A}$, i.e. $V$ is invariant for $\mathcal{A}$. $\square$
+%%%%%
+%%%%%
+\end{document}

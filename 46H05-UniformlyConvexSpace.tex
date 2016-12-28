@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformlyConvexSpace}
+\pmcreated{2013-03-22 15:13:11}
+\pmmodified{2013-03-22 15:13:11}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{uniformly convex space}
+\pmrecord{32}{36983}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+\pmsynonym{uniformly convex}{UniformlyConvexSpace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A normed space is \emph{uniformly convex} iff  $\forall \epsilon>0$ there exists $\delta>0$ that satisfies
+for $\|x\|\leq1$  $\|y\|\leq1$ and $\|x-y\|> \epsilon$ $\Rightarrow$ $\|\frac{x+y}{2}\|\leq1$-$\delta$.
+\\\\For example it is easily seen that the normed space $(\mathbb{R}^2,\|.\|_{2})$ is uniformly convex space.
+Also $L^p$ and $l^p$ spaces for $1<p<\infty$ are uniformly convex, see \it{ J.A. Clarkson, "Uniformly convex spaces", Trans. Amer. Math. Society, 40 (1936), 396-414.}
+
+%%%%%
+%%%%%
+\end{document}

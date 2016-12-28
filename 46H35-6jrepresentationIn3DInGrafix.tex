@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{6jrepresentationIn3DInGrafix}
+\pmcreated{2013-03-22 18:22:38}
+\pmmodified{2013-03-22 18:22:38}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{6j-representation in 3D in grafix}
+\pmrecord{38}{41019}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H35}
+\pmclassification{msc}{81T45}
+\pmclassification{msc}{57R56}
+\pmsynonym{6j-representation in 3D}{6jrepresentationIn3DInGrafix}
+%\pmkeywords{6j-representation in 3D}
+%\pmkeywords{tetrahedron}
+%\pmkeywords{example of TQFT state}
+\pmrelated{Tetrahedron}
+\pmrelated{StateOnTheTetrahedron}
+\pmrelated{RegularTetrahedron3}
+\pmrelated{TriangleMidSegmentTheorem}
+\pmrelated{Heptahedron}
+\pmrelated{GergonneTriangle}
+\pmrelated{RegularPolyhedron}
+\pmrelated{NormalLine}
+\pmdefines{tetrahedron graphics}
+
+% this is the default PlanetMath preamble.  
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pstricks}
+
+
+% there are many more packages, add them here as you need them
+
+
+% define commands here
+
+\begin{document}
+\subsection{Graphical representation of the topological quantum field (TQFT) state on the tetrahedron}
+\begin{center}
+\begin{pspicture}(-4,-1)(4,4)
+\psline[linecolor=blue,linewidth=0.04]{->}(-1.5,0)(0,-1.5)
+\psline[linecolor=blue,linewidth=0.04]{->}(0,-1.5)(3,0)
+\psline[linecolor=blue,linewidth=0.04]{->}(3,0)(0.5,3)
+\psline[linecolor=blue,linewidth=0.04]{->}(0.5,3)(-1.5,0)
+\rput(-1.7,0){2}
+\rput(0,-1.75){3}
+\rput(3.2,0){4}
+\rput(0.5,3.25){1}
+\psline[linecolor=blue,linewidth=0.04](0,-1.5)(0.5,3)
+\psline[linestyle=dashed](-1.5,0)(3,0)
+\end{pspicture}
+\end{center}
+
+{\em Notes:}
+ The $pstricks$ code for the graphics is courtesy of pahio.
+ 
+ Arrows indicate the orientations defined for the TQFT state on tetrahedron by the $6j$-symbols. 
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PointwiseLimitOfBoundedOperatorsIsBounded}
+\pmcreated{2013-03-22 17:32:10}
+\pmmodified{2013-03-22 17:32:10}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{pointwise limit of bounded operators is bounded}
+\pmrecord{4}{39933}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmclassification{msc}{47A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following result is a corollary of the principle of uniform boundedness.
+
+{\bf Theorem -} Let $X$ be a Banach space and $Y$ a normed vector space. Let $(T_n) \in B(X,Y)$ be a sequence of bounded operators from $X$ to $Y$. If $(T_nx)$ converges for every $x \in X$, then the operator
+\begin{center}
+$T:X \longrightarrow Y$
+\end{center}
+
+\begin{displaymath}
+Tx = \lim_{n \rightarrow \infty} T_n x
+\end{displaymath}
+is linear and \PMlinkescapetext{bounded}. Moreover, the sequence $(\|T_n\|)$ is \PMlinkname{bounded}{Bounded}.
+
+{\bf Proof :} It is clear that the operator $T$ is linear. 
+
+For each $x \in X$ we have $\displaystyle \;\sup_n \|T_nx\| < \infty\;$ since $(T_nx)$ is \PMlinkescapetext{convergent}. By the \PMlinkname{principle of uniform boundedness}{BanachSteinhausTheorem} we must also have $\displaystyle M := \sup_n \|T_n\| < \infty$.
+
+Then for each $x \in X$ we have
+\begin{displaymath}
+\|Tx\| = \lim_{n \rightarrow \infty} \|T_nx\| \leq M\|x\|
+\end{displaymath}
+
+which means that $T$ is \PMlinkescapetext{bounded}. $\square$
+%%%%%
+%%%%%
+\end{document}

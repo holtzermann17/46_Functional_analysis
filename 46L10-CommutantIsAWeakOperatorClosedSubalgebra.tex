@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommutantIsAWeakOperatorClosedSubalgebra}
+\pmcreated{2013-03-22 18:39:32}
+\pmmodified{2013-03-22 18:39:32}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{commutant is a weak operator closed subalgebra}
+\pmrecord{7}{41402}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $H$ be a Hilbert space and $B(H)$ the algebra of bounded operators in $H$. Recall that the commutant of a subset $\mathcal{F} \subset B(H)$ is the set of all bounded operators that commute with those of $\mathcal{F}$, i.e.
+
+\begin{align*}
+\mathcal{F}':=\{T \in B(H):\; TS=ST \,,\;\;\; \forall S \in \mathcal{F}\}.
+\end{align*}
+
+{\bf \PMlinkescapetext{Proposition} -} If $\mathcal{F} \subset B(H)$, then $\mathcal{F}'$ is a subalgebra of $B(H)$ that contains the identity operator and is closed in the weak operator topology.
+
+{\bf \emph{\PMlinkescapetext{Proof}:}} It is clear that $\mathcal{F}'$ contains the identity operator, since it commutes with all operators in $B(H)$ and in particular with those of $\mathcal{F}$.
+
+Let us now see that $\mathcal{F}'$ is a subalgebra of $B(H)$. Let $T_1, T_2 \in \mathcal{F}'$ and $\lambda \in \mathbb{C}$. We have that, for all $S \in \mathcal{F}$,
+
+\begin{align*}
+S(T_1+T_2)= ST_1 + ST_2 = T_1S + T_2S = (T_1+T_2)S\\
+S(\lambda T_1) = \lambda ST_1 = \lambda T_1 S\\
+S(T_1T_2) = T_1ST_2 = T_1T_2S
+\end{align*}
+
+thus, $T_1 +T_2$, $\lambda T_1$ and $T_1T_2$ all belong to $\mathcal{F}'$, and therefore $\mathcal{F}'$ is a subalgebra of $B(H)$.
+
+It remains to see that $\mathcal{F}'$ is weak operator closed. Suppose $(T_i)$ is a net in $\mathcal{F}'$ that converges to $T$ in the weak operator topology. Then, for all $x, y \in H$ we have that $\langle T_ix, y \rangle \to \langle Tx,y\rangle$. Thus, for all $S \in \mathcal{F}$, we have
+
+\begin{eqnarray*}
+\langle (TS - ST)x, y \rangle & = & \langle TSx, y \rangle - \langle Tx, S^*y \rangle \\
+& = & \lim \big( \langle T_iSx, y \rangle - \langle T_ix, S^*y \rangle \big)\\
+& = & \lim \, \langle (T_iS - ST_i)x, y \rangle\\
+& = & \lim\, \langle (T_iS - T_iS)x, y \rangle\\
+& = & 0
+\end{eqnarray*}
+
+Hence, $TS-ST=0$, so that $T \in \mathcal{F}'$. We conclude that $\mathcal{F}'$ is closed in the weak operator topology. $\square$
+%%%%%
+%%%%%
+\end{document}

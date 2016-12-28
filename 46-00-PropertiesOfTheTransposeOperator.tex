@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfTheTransposeOperator}
+\pmcreated{2013-03-22 17:36:02}
+\pmmodified{2013-03-22 17:36:02}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{properties of the transpose operator}
+\pmrecord{7}{40014}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+\pmclassification{msc}{47A05}
+\pmsynonym{transpose operator properties}{PropertiesOfTheTransposeOperator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{compact}
+
+In this entry, whenever $V,W$ are normed vector spaces, $\mathcal{B}(V,W)$ denotes the algebra of bounded linear operators $V \longrightarrow W$.
+
+Let $X, Y, Z$ be normed vector spaces and $X', Y', Z'$ be their continuous dual spaces. Let $T, S \in \mathcal{B}(X,Y)$, 
+$R \in \mathcal{B}(Y,Z)$ and $\lambda \in \mathbb{C}$.
+
+\subsubsection{Basic properties}
+\begin{itemize}
+\item $T' \in \mathcal{B}(Y',X')$ and $\|T\|=\|T\,'\|$.
+\item $(\lambda T)' = \lambda T'$.
+\item $(S+T)' = S'+T'$.
+\item $(RT)' = T'R'$.
+\item If $T^{-1}$ exists and $T^{-1} \in \mathcal{B}(Y,X)$ then $(T')^{-1} \in \mathcal{B}(X',Y')$ and $(T')^{-1} = (T^{-1})'$.
+\end{itemize}
+
+\subsubsection{Miscellaneous properties}
+\begin{itemize}
+\item If we endow $X'$ and $Y'$ with the weak-* topology then $T':Y' \longrightarrow X'$ is continuous.
+\item $T$ is an isometric isomorphism if and only if $T'$ is an isometric isomorphism.
+\item If $T$ is \PMlinkname{compact}{CompactOperator} then $T'$ is also compact.
+\item If $T'$ is compact and $Y$ is a Banach space, then $T$ is also compact.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

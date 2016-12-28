@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsorbingSet}
+\pmcreated{2013-03-22 15:26:24}
+\pmmodified{2013-03-22 15:26:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{absorbing set}
+\pmrecord{10}{37287}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A08}
+\pmclassification{msc}{15A03}
+\pmrelated{BalancedSet}
+\pmrelated{AbsorbingElement}
+\pmdefines{absorbing}
+\pmdefines{absorb}
+\pmdefines{radial}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+
+\newcommand{\abs}[1]{\vert{#1}\vert}
+\begin{document}
+\PMlinkescapeword{symmetric}
+
+Let $V$ be a vector space over a field $F$ equipped with a
+non-discrete valuation $\abs{\cdot}:F\to\mathbb{R}$.  Let $A,B$ be
+two subsets of $V$.  Then $A$ is said to \emph{absorb} $B$ if there
+is a non-negative real number $r$ such that, for all $\lambda\in F$
+with $\abs{\lambda}\geq r$, $B\subseteq\lambda A$.  $A$ is said to
+be an \emph{absorbing set}, or a \emph{radial subset} of $V$ if $A$
+absorbs all finite subsets of $V$.
+
+Equivalently, $A$ is absorbing if for any $x\in V$, there is a
+non-negative real number $r$ such that $x\in\lambda A$ for all
+$\lambda\in F$ with $\abs{\lambda}\geq r$.  If a finite subset $B$
+of $V$ consists of $x_1,\ldots,x_n$, then corresponding to each
+$x_i$, there is an $r_i\geq 0$ such that $x_i\in\lambda A$ such that
+$\vert\lambda\mid\geq r_i$, $\forall\lambda\in F$.  So
+$x_i\in\lambda A$ with $\abs{\lambda}\geq r$ if we take
+$r=\max\lbrace r_1,\ldots,r_n\rbrace$.  So $A$ absorbs $B$.
+
+\textbf{Example}. If $V=\mathbb{R}^n$ and $F=\mathbb{R}$, then any
+set containing an open ball centered at $0$ is absorbing. This
+implies that an absorbing set does not have to be connected, convex.
+
+A closely related concept is that of a \emph{circled set}, or a \emph{balanced set}. Let $V$ and $F$ be defined as above.  A subset $C$ of $V$ is said to be
+\emph{circled}, or \emph{balanced}, if $\lambda C\subseteq C$ for all $\abs{\lambda}\leq 1$.  Clearly, $C$ absorbs itself ($C\subseteq\lambda^{-1}C$,
+$\abs{\lambda^{-1}}\geq 1$), and $0\in C$. $C$ is also symmetric
+($-C=C$), for $-C\subseteq C$ and $C=-(-C)\subseteq -C$. As an
+example of a circled set that is neither absorbing nor convex,
+consider $V=\mathbb{R}^2$ and $F=\mathbb{R}$, and $C$ the union of
+$x$ and $y$ axes.  For an example of an absorbing set that is not
+circled, take the union of a unit disk and an annulus centered at 0
+that is large enough so it is disjoint from the disk.
+%%%%%
+%%%%%
+\end{document}

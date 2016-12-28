@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StoneWeierstrassTheoremcomplexVersion}
+\pmcreated{2013-03-22 18:02:31}
+\pmmodified{2013-03-22 18:02:31}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Stone-Weierstrass theorem (complex version)}
+\pmrecord{6}{40564}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46J10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $X$ be a compact space and $C(X)$ the algebra of continuous functions $X \longrightarrow \mathbb{C}$ endowed with the sup norm $\| \cdot \|_{\infty}$. Let $\mathcal{A}$ be a subalgebra of $C(X)$ for which the following conditions hold:
+\begin{enumerate}
+\item $\forall x, y \in X, x \ne y, \exists f \in \mathcal{A} : f(x) \neq f(y)\;$, i.e. $\mathcal{A}$ separates points
+\item $1 \in \mathcal{A}\;$, i.e. $\mathcal{A}$ contains all constant functions
+\item If $f \in \mathcal{A}$ then $\overline{f} \in \mathcal{A}\;$, i.e. $\mathcal{A}$ is a \PMlinkname{self-adjoint}{InvolutaryRing} subalgebra of $C(X)$
+\end{enumerate}
+Then $\mathcal{A}$ is dense in $C(X)$.
+
+$\,$
+
+{\bf \emph{Proof:}} The proof follows easily from the real version of this theorem (see the \PMlinkname{parent entry}{StoneWeierstrassTheorem}).
+
+Let $\mathcal{R}$ be the set of the real parts of elements $f \in \mathcal{A}$, i.e.
+\begin{align*}
+\mathcal{R}:=\{ \mathrm{Re}(f): f \in \mathcal{A}\}
+\end{align*}
+It is clear that $\mathcal{R}$ contains (it is in fact equal) to the set of the imaginary parts of elements of $\mathcal{A}$. This can be seen just by multiplying any function $f \in \mathcal{A}$ by $-i$.
+
+We can see that $\mathcal{R} \subseteq \mathcal{A}$. In fact, $\mathrm{Re}(f)= \frac{f + \overline{f}}{2}$ and by condition 3 this element belongs to $\mathcal{A}$. 
+
+Moreover, $\mathcal{R}$ is a subalgebra of $\mathcal{A}$. In fact, since $\mathcal{A}$ is an algebra, the product of two elements $\mathrm{Re}(f)$, $\mathrm{Re}(g)$  of $\mathcal{R}$ gives an element of $\mathcal{A}$. But since $\mathrm{Re}(f).\mathrm{Re}(g)$ is a real valued function, it must belong to $\mathcal{R}$. The same can be said about sums and products by real scalars.
+
+Let us now see that $\mathcal{R}$ separates points. Since $\mathcal{A}$ separates points, for every $x \neq y$ in $X$ there is a function $f \in \mathcal{A}$ such that $f(x) \neq f(y)$. But this implies that $\mathrm{Re}(f(x)) \neq \mathrm{Re}(f(y))$ or $\mathrm{Im}(f(x)) \neq \mathrm{Im}(f(y))$, hence there is a function in $\mathcal{R}$ that separates $x$ and $y$.
+
+Of course, $\mathcal{R}$ contains the constant function $1$.
+
+Hence, we can apply the real version of the Stone-Weierstrass theorem to conclude that every real valued function in $X$ can be uniformly approximated by elements of $\mathcal{R}$. 
+
+Let us now see that $\mathcal{A}$ is dense in $C(X)$. Let $f \in C(X)$. By the previous observation, both $\mathrm{Re}(f)$ and $\mathrm{Im}(f)$ are the uniform limits of sequences $\{g_n\}$ and $\{h_n\}$ in $\mathcal{R}$. Hence,
+\begin{align*}
+\|f - (g_n+ih_n)\|_{\infty} \leq \|\mathrm{Re}(f)-g_n\|_{\infty} + \|\mathrm{Im}(f)-h_n\|_{\infty} \longrightarrow 0
+\end{align*}
+
+Of course, the sequence $\{g_n + i h_n\}$ is in $\mathcal{A}$. Hence, $\mathcal{A}$ is dense in $C(X)$. $\square$
+%%%%%
+%%%%%
+\end{document}

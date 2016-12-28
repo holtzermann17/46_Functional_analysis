@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtensionAndRestrictionOfStates}
+\pmcreated{2013-03-22 18:09:35}
+\pmmodified{2013-03-22 18:09:35}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{extension and restriction of states}
+\pmrecord{10}{40717}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L30}
+\pmrelated{State}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand*{\Cset}{\mathbb{C}}
+
+\begin{document}
+\PMlinkescapephrase{restriction}
+
+\subsection{Restriction of States}
+
+Let $\mathcal{A}$ be a \PMlinkname{$C^*$-algebra}{CAlgebra} and $\mathcal{B} \subset \mathcal{A}$ a $C^*$-subalgebra, both having the same identity element.
+
+$\,$
+
+{\bf \PMlinkescapetext{Proposition} -} Given a state $\phi$ of $\mathcal{A}$, its \PMlinkname{restriction}{RestrictionOfAFunction} $\phi|_{\mathcal{B}}$ to $\mathcal{B}$ is also a state of $\mathcal{B}$.
+
+$\,$
+
+{\bf Remark -} Note that the requirement that the $C^*$-algebras $\mathcal{A}$ and $\mathcal{B}$ have a (common) identity element is necessary.
+
+For example, let $X$ be a compact space and $C(X)$ the $C^*$-algebra of continuous functions $X \to \mathbb{C}$. Pick a point $x_0 \in X$ and consider the $C^*$-subalgebra of continuous functions $X \to \mathbb{C}$ which vanish at $x_0$. Notice that this subalgebra never has the same identity element of $C(X)$ (the constant function that equals $1$). In fact, this subalgebra may not have an identity at all.
+
+Now the evaluation mapping at $x_0$, i.e. the function $\mathrm{ev}_{x_0}: C(X) \to \mathbb{C}$
+\begin{align*}
+\mathrm{ev}_{x_0} (f) := f(x_0)
+\end{align*}
+is a state of $C(X)$. Of course, its restriction to the subalgebra in question is the zero mapping, therefore not being a state.
+
+\subsection{Extension of States}
+
+Let $\mathcal{A}$ be a $C^*$-algebra and $\mathcal{B} \subset \mathcal{A}$ a $C^*$-subalgebra (not necessarily unital).
+
+$\,$
+
+{\bf Theorem 1 -} Every state $\phi$ of $\mathcal{B}$ admits an extension to a state $\widetilde{\phi}$ of $\mathcal{A}$. Moreover, every pure state $\phi$ of $\mathcal{B}$  admits an extension to a pure state $\widetilde{\phi}$ of $\mathcal{A}$.\\
+
+{\bf Theorem 2 -} The set of extensions of a state $\phi$ of $\mathcal{B}$ is a compact and convex subset of $S_{\mathcal{A}}$, the \PMlinkescapetext{state space} of $\mathcal{A}$ endowed with the weak-* topology.
+
+%%%%%
+%%%%%
+\end{document}

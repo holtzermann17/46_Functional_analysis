@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SobolevSpace}
+\pmcreated{2013-03-22 14:54:55}
+\pmmodified{2013-03-22 14:54:55}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Sobolev space}
+\pmrecord{10}{36601}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E35}
+\pmsynonym{Sobolev function}{SobolevSpace}
+\pmrelated{WeakDerivative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbf R}
+\begin{document}
+We define the Sobolev spaces of functions $W^{m,p}(\Omega)$ where $\Omega$ is an open subset of $\R^n$, $m\ge 0$ is an integer and $p\in[1,+\infty]$.
+
+The spaces $W^{0,p}(\Omega)$ are simply defined to be the spaces $L^p(\Omega)$ of Lebesgue $p$-summable functions. 
+We then define the space $W^{m,p}(\Omega)$ to be the space of functions $u\in L^p(\Omega)$ which have weak derivatives $g=(g_1,\ldots,g_n)$ such that $g_i\in W^{m-1,p}(\Omega)$.
+
+The space $W^{m,p}$ turns out to be a Banach space when endowed with the norm
+\[
+  \Vert u \Vert_{W^{m,p}}=
+   \sum_{k=0}^m 
+   \sum_{i_1=1}^n \cdots \sum_{i_k=1}^n
+  \left[\int_\Omega 
+\left|\frac{\partial^k u(x)}{\partial x_{i_1}\cdots\partial x_{i_k}}\right|^p
+\, dx\right]^{\frac 1 p}
+\]
+i.e.\ the sum of the $L^p$ norms of $u$ and of all weak derivatives of $u$ up to the $m$-th order. 
+
+Of particular interest are the spaces $H^m(\Omega):=W^{m,2}(\Omega)$ which turn out to be Hilbert spaces with the scalar product given by
+\[
+ (u,v)_{H^m(\Omega)}=\sum_{k=0}^m \sum_{i_1=1}^n \cdots \sum_{i_k=1}^n
+  \int_\Omega 
+\frac{\partial^k u(x)}{\partial x_{i_1}\cdots\partial x_{i_k}}
+\frac{\partial^k v(x)}{\partial x_{i_1}\cdots\partial x_{i_k}}
+\, dx.
+\]
+%%%%%
+%%%%%
+\end{document}

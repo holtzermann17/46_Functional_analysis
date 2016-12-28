@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalgebrasHaveApproximateIdentities}
+\pmcreated{2013-03-22 17:30:40}
+\pmmodified{2013-03-22 17:30:40}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$C^*$-algebras have approximate identities}
+\pmrecord{4}{39901}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry $\leq$ has three different meanings:
+\begin{enumerate}
+\item - The \PMlinkname{ordering of self-adjoint elements}{OrderingOfSelfAdjoints} of a given \PMlinkname{$C^*$-algebra}{CAlgebra}.
+\item - The usual \PMlinkname{order}{PartialOrder} in $\mathbb{R}$.
+\item - The \PMlinkescapetext{order} of a directed set taken as the domain of a given net.
+\end{enumerate}
+It will be clear from the context which one is being used.
+
+{\bf Theorem -} Every $C^*$-algebra has an approximate identity $(e_{\lambda})_{\lambda \in \Lambda}$. Moreover, the approximate identity $(e_{\lambda})_{\lambda \in \Lambda}$ can be chosen to \PMlinkescapetext{satisfy} the following \PMlinkescapetext{properties}:
+\begin{itemize}
+\item $0\leq e_{\lambda}\;\;\;\;\forall_{\lambda \in \Lambda}$
+\item $\|e_{\lambda}\| \leq 1\;\;\;\;\forall_{\lambda \in \Lambda}$
+\item $\lambda \leq \mu\; \Rightarrow \;e_{\lambda}\leq e_{\mu}$, i.e. $(e_{\lambda})_{\lambda \in \Lambda}$ is increasing.
+\end{itemize}
+
+For \PMlinkname{separable}{Separable} $C^*$-algebras the approximate identity can be chosen as an increasing sequence $0\leq e_1 \leq e_2 \leq \dots$ of norm-one elements.
+%%%%%
+%%%%%
+\end{document}

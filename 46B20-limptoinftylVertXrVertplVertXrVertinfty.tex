@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{limptoinftylVertXrVertplVertXrVertinfty}
+\pmcreated{2013-03-22 14:02:53}
+\pmmodified{2013-03-22 14:02:53}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{$\lim_{p \to \infty} \lVert x \rVert_p = \lVert x \rVert_{\infty}$}
+\pmrecord{12}{35399}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B20}
+\pmrelated{PowerMean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+Suppose $x=(x_1,\ldots, x_n)$ is a point in $\sR^n$, and let $\norm{x}_p$
+and $\norm{x}_\infty$ be the usual $p$-norm and $\infty$-norm;
+\begin{eqnarray*}
+\norm{x}_p &=& \big(|x_1|^p + \cdots + |x_n|^p\big)^{1/p},\\
+\norm{x}_\infty &=& \max \{|x_1|, \ldots, |x_n|\}.
+\end{eqnarray*}
+
+Our claim is that
+\begin{eqnarray}
+\label{claim}
+\lim_{p \to \infty} \norm{x}_p &=& \norm{x}_{\infty}.
+\end{eqnarray}
+In other words, for any fixed $x\in \sR^n$, the above limit holds.
+This, or course,  justifies the notation for the $\infty$-norm.
+
+{\bf Proof.}
+Since both norms
+stay invariant if we exchange two components in $x$, we can arrange things
+such that $\norm{x}_\infty = |x_1|$. Then for any real $p>0$, we have
+\begin{eqnarray*}
+\norm{x}_\infty  &=&\abs{x_1} =(\abs{x_1}^p)^{1/p} \leq \norm{x}_p
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\norm{x}_p  &\le & n^{1/p} |x_1| =n^{1/p} \norm{x}_\infty.
+\end{eqnarray*}
+Taking the limit of the above inequalities (see 
+\PMlinkname{this page}{InequalityForRealNumbers})
+we obtain
+\begin{eqnarray*}
+\norm{x}_\infty  &\le& \lim_{p\to \infty} \norm{x}_p,\\
+\lim_{p\to \infty} \norm{x}_p  &\le & \norm{x}_\infty,
+\end{eqnarray*}
+which combined yield the result. $\Box$
+%%%%%
+%%%%%
+\end{document}

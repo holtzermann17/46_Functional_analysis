@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtendedNorm}
+\pmcreated{2013-03-22 14:59:49}
+\pmmodified{2013-03-22 14:59:49}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{extended norm}
+\pmrecord{6}{36703}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+It is sometimes convenient to allow the norm to take extended real numbers as values.  This way, one can accomdate elements of infinite norm in one's vector space.  The formal definition is the same except that one must take care in stating the second condition to avoid the indeterminate form $0 \cdot \infty$.
+
+{\bf Definition:} Given a real or complex vector space $V$, an \emph{extended norm} is a map $\| \cdot \| \to \overline{\mathbb{R}}$ which staisfies the follwing three defining properties:
+\begin{enumerate}
+\item  Positive definiteness: $\| v \| > 0$ unless $v = 0$, in which case $\| v \| = 0$.
+\item  Homogeneity: $\| \lambda v \| = | \lambda | \> \| v \|$ for all non-zero scalars $\lambda$ and all vectors $v$.
+\item  Triangle inequality: $\| u + v \| \le \| u \| + \| v \|$ for all $u, v \in V$.
+\end{enumerate}
+
+{\bf Example}  Let $C^0$ be the space of continuous functions on the real line.  Then the function $\| \cdot \|$ defined as
+ $$\| f \| = \sup_x |f(x)|$$
+is an extended norm.  (We define the supremum of an unbounded set as $\infty$.)  The reason it is not a norm in the strict sense is that there exist continuous functions which are unbounded.  Let us check that it satisfies the defining properties:
+\begin{enumerate}
+\item  Because of the absolute value in the definition, it is obvious that $\| f \| \ge 0$ for all $f$.  Furthermore, if $\| f \| = 0,$ then $\sup_x |f(x)| = 0$, so $|f(x)| \le 0$ for all $x$, which implies that $f = 0$.
+\item  If $f$ is bounded, then 
+ $$\| f \| = \sup_x | \lambda f(x) | = \sup_x | \lambda | \> | f(x) | = | \lambda | \sup_x | f(x) | = | \lambda | \> \| \| f \|$$
+If $f$ is unbounded and $\lambda \neq 0$, then $\lambda |f|$ is unbounded as well.  By the convention that infinity times a finite number is infinity, property (2) holds in this case as well.
+\item  If both $f$ and $g$ are bounded, then
+ $$\| f + g \| = \sup_x | f(x) + g(x) | \le \sup_x ( | f(x) | + | g(x) | ) \le \sup_x  | f(x) | + \sup_x | g(x) | = \| f \| + \| g \|$$
+On the other hand, if either $f$ or $g$ is unbounded, then the right hand side of (3) is infinity by the convention that anything other minus infinity added to plus infinity is still infinity and infinity is bigger than anything which could appear on the left.
+\end{enumerate}
+
+An extended norm partitions a vector space into equivalence classes modulo the relation $\| u - v \| < \infty$.  The equivalence class of zero is a vector space consisting of all elemets of finite norm.  Restricted to this equivalence class the extended norm reduces to an ordinary norm.  The other equivalence classes are translates of the equivalence class of zero.  Furthermore, when we use the distance function of the norm to define a topology on our vector space, these equivalence classes are exactly the connected components of the topology.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderedVectorSpace}
+\pmcreated{2013-03-22 16:37:24}
+\pmmodified{2013-03-22 16:37:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{ordered vector space}
+\pmrecord{20}{38822}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A40}
+\pmclassification{msc}{06F20}
+\pmsynonym{ordered linear space}{OrderedVectorSpace}
+\pmrelated{TopologicalLattice}
+\pmdefines{positive cone}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $k$ be an ordered field.  An \emph{ordered vector space} over $k$ is a vector space $V$ that is also a poset at the same time, such that the following conditions are satisfied
+\begin{enumerate}
+\item for any $u,v,w\in V$, if $u\le v$ then $u+w\le v+w$,
+\item if $0\le u\in V$ and any $0< \lambda \in k$, then $0\le \lambda u$.
+\end{enumerate}
+
+Here is a property that can be immediately verified: $u\le v$ iff $\lambda u\le \lambda v$ for any $0< \lambda$.
+
+Also, note that $0$ is interpreted as the zero vector of $V$, not the bottom element of the poset $V$.  In fact, $V$ is both topless and bottomless: for if $\bot$ is the bottom of $V$, then $\bot\le 0$, or $2\bot\le \bot$, which implies $2\bot=\bot$ or $\bot=0$.  This means that $0\le v$ for all $v\in V$.  But if $v\ne 0$, then $0<v$ or $-v<0$, a contradiction.  $V$ is topless follows from the implication that if $\bot$ exists, then $\top=-\bot$ is the top.
+
+For example, any finite dimensional vector space over $\mathbb{R}$, and more generally, any (vector) space of real-valued functions on a given set $S$, is an ordered vector space.  The natural ordering is defined by $f\le g$ iff $f(x)\le g(x)$ for every $x\in S$.
+
+\textbf{Properties}.  
+Let $V$ be an ordered vector space and $u,v\in V$.  Suppose $u\vee v$ exists.  Then
+\begin{enumerate}
+\item $(u+w) \vee (v+w)$ exists and $(u+w) \vee (v+w)=(u\vee v)+w$ for any vector $w$.
+\begin{proof}
+Let $s=(u\vee v)+w$.  Then $u+w\le s$ and $v+w\le s$.  For any upper bound $t$ of $u+w$ and $v+w$, we have $u\le t-w$ and $v\le t-w$.  So $u\vee v\le t-w$, or $(u\vee v)+w\le t$.  So $s$ is the least upper bound of $u+w$ and $v+w$.
+\end{proof}
+\item $u\wedge v$ exists and $u\wedge v=(u+v)-(u\vee v)$.
+\begin{proof}
+Let $s=(u+v)-(u\vee v)$.  Since $u\le u\vee v$, $-(u\vee v)\le -u$, so $s\le v$.  Similarly $s\le u$, so $s$ is a lower bound of $u$ and $v$.  If $t\le u$ and $t\le v$, then $-u\le -t$ and $-v \le -t$, or $v\le (u+v)-t$ and $u\le (u+v)-t$, or $u\vee v\le (u+v)-t$, or $t\le (u+v)-(u\vee v)=s$.  Hence $s$ the greatest lower bound of $u$ and $v$.
+\end{proof}
+\item $\lambda u\vee \lambda v$ exists for any scalar $\lambda\in k$, and 
+\begin{enumerate}
+\item if $\lambda\ge 0$, then $\lambda u\vee \lambda v=\lambda(u\vee v)$
+\item if $\lambda\le 0$, then $\lambda u\vee \lambda v=\lambda(u\wedge v)$
+\item if $u\ne v$, then the converse holds for (a) and (b).
+\end{enumerate}
+\begin{proof}
+Assume $\lambda\ne 0$ (clear otherwise).  (a). If $\lambda >0$, $u\le u\vee v$ implies $\lambda u\le \lambda(u\vee v)$.  Similarly, $\lambda v\le \lambda(u\vee v)$.  If $\lambda u\le t$ and $\lambda v\le t$, then $u\le \lambda^{-1}t$ and $v\le \lambda^{-1}t$, hence $u\vee v\le \lambda^{-1}t$, or $\lambda(u\vee v)\le t$.  Proof of (b) is similar to (a).  (c).  Suppose $\lambda u\vee \lambda v=\lambda(u\vee v)$ and $\lambda<0$.  Set $\gamma=-\lambda$.  Then $\lambda u\vee \lambda v=\lambda (u\vee v)=-\gamma (u\vee v)=-(\gamma (u\vee v))=-(\gamma u\vee \gamma v)=-((-\lambda u)\vee (-\lambda v))=-(-(\lambda v\wedge \lambda u))=\lambda v \wedge \lambda u$.  This implies $\lambda u=\lambda v$, or $u=v$, a contradiction.
+\end{proof}
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+Since an ordered vector space is just an abelian po-group under $+$, the first two properties above can be easily generalized to a po-group.  For this generalization, see this \PMlinkname{entry}{DistributivityInPoGroups}.
+\item
+A vector space $V$ over $\mathbb{C}$ is said to be \emph{ordered} if $W$ is an ordered vector space over $\mathbb{R}$, where $V=W\oplus iW$ ($V$ is the complexification of $W$).
+\item
+For any ordered vector space $V$, the set $V^+:=\lbrace v\in V\mid 0\le v\rbrace$ is called the \emph{positive cone} of $V$.  $V^+$ is clearly a convex set.  Also, since for any $\lambda>0$, $\lambda V^+\subseteq V^+$, so $V^+$ is a convex cone.  In addition, since $V^+-\lbrace 0 \rbrace$ remains a cone, and $V^+\cap (-V^+)=\lbrace 0\rbrace$, $V^+$ is a proper cone.
+\item
+Given any vector space, a proper cone $P\subseteq V$ defiens a partial ordering on $V$, given by $u\le v$ if $v-u\in P$.  It is not hard to see that the partial ordering so defined makes $V$ into an ordered vector space.
+\item
+So, there is a one-to-one correspondence between proper cones of $V$ and partial orderings on $V$ making $V$ an ordered vector space.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

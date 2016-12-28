@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BalancedSet}
+\pmcreated{2013-03-22 15:33:16}
+\pmmodified{2013-03-22 15:33:16}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{balanced set}
+\pmrecord{5}{37453}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+\pmrelated{AbsorbingSet}
+\pmdefines{balanced subset}
+\pmdefines{balanced hull}
+\pmdefines{balanced evelope}
+\pmdefines{circled}
+\pmdefines{\'equilibr\'e}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{proposition}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{term}
+
+{\bf Definition} \cite{rudin_fap,edwards, horvath, cristescu} 
+Let $V$ be a vector space over $\sR$ (or $\sC$),
+and let $S$ be a subset of $V$. If $\lambda S\subset S$ for all scalars $\lambda$ such
+that $|\lambda|\le 1$, then $S$ is a {\bf balanced set} in $V$.
+The {\bf balanced hull} of $S$,
+denoted by $\operatorname{eq}(S)$, is the smallest 
+balanced set containing $S$. 
+
+In the above, 
+ $\lambda S = \{ \lambda s\mid s\in S\}$, 
+and $|\cdot|$ is the absolute value (in $\sR$),
+or the modulus of a complex number (in $\sC$).
+
+\subsubsection{Examples and properties}
+\begin{enumerate}
+\item Let $V$ be a normed space with norm $||\cdot||$. Then the unit ball
+$\{v\in V\mid ||v||\le 1\}$ is a balanced set.
+\item Any vector subspace is a balanced set. Thus, in $\sR^3$, lines and planes passing
+through the origin are balanced sets.
+\end{enumerate}
+
+\subsubsection{Notes}
+A balanced set is also sometimes called {\bf circled} \cite{horvath}.
+The term {\bf balanced evelope} is also used for the balanced hull \cite{edwards}.
+Bourbaki uses the term {\bf \'equilibr\'e} \cite{edwards}, c.f. $\operatorname{eq}(A)$ 
+above. In \cite{reed}, a balanced set is defined as above, but with the condition $|\lambda|=1$ instead of $|\lambda|\le 1$. 
+
+
+ \begin{thebibliography}{9}
+ \bibitem{rudin_fap}
+ W. Rudin, \emph{Functional Analysis},
+McGraw-Hill Book Company, 1973.
+\bibitem{edwards} R.E. Edwards, \emph{Functional Analysis: Theory and Applications},
+ Dover Publications, 1995.
+\bibitem{horvath} J. Horv\'ath, \emph{Topological Vector Spaces and Distributions},
+Addison-Wsley Publishing Company, 1966.
+ \bibitem{cristescu} R. Cristescu, \emph{Topological vector spaces},
+ Noordhoff International Publishing, 1977.
+\bibitem{reed} M. Reed, B. Simon,
+ \emph{Methods of Modern Mathematical Physics: Functional Analysis I},
+ Revised and enlarged edition, Academic Press, 1980.
+ 
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

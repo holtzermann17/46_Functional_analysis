@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiplicativeLinearFunctional}
+\pmcreated{2013-03-22 17:22:25}
+\pmmodified{2013-03-22 17:22:25}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{multiplicative linear functional}
+\pmrecord{29}{39737}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+\pmsynonym{character (of an algebra)}{MultiplicativeLinearFunctional}
+\pmrelated{LinearFunctional}
+\pmrelated{GelfandTransform}
+\pmrelated{BanachAlgebra}
+\pmdefines{character}
+\pmdefines{maximal ideal space}
+\pmdefines{character space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Definition}
+Let $\mathcal{A}$ be an algebra over $\mathbb{C}$.
+
+A {\bf multiplicative linear functional} is an nontrivial algebra homomorphism $\phi :\mathcal{A} \longrightarrow
+ \mathbb{C}$, i.e. $\phi$ is a non-zero linear functional such that $\;\phi(x\cdot y) = \phi(x)\cdot\phi(y), \;\;\;\forall x,y \in \mathcal{A}$.
+
+Multiplicative linear functionals are also called {\bf characters} of $\mathcal{A}$.
+
+\section{Properties}
+
+\begin{itemize}
+\item If $\phi$ is a multiplicative linear functional in a Banach algebra $\mathcal{A}$ over $\mathbb{C}$ then $\phi$ is continuous. Moreover, if $\mathcal{A}$ has an identity element then $\|\phi\| = 1$.
+\end{itemize}
+
+\begin{itemize}
+\item Suppose $\mathcal{A}$ is a Banach algebra over $\mathbb{C}$. The set of multiplicative linear functionals in $\mathcal{A}$ is a locally compact Hausdorff space in the weak-* topology. Moreover, this set is compact if $\mathcal{A}$
+ has an identity element.
+\end{itemize}
+
+\begin{itemize}
+\item Suppose $\mathcal{A}$ is a commutative Banach algebra over $\mathbb{C}$ with an identity element. There is a bijective correspondence
+ between the set of maximal ideals in $\mathcal{A}$ and the set of multiplicative linear functionals
+ in $\mathcal{A}$. This correspondence is given by
+
+\begin{displaymath}
+\phi \longmapsto Ker\; \phi
+\end{displaymath}
+\end{itemize}
+
+\begin{itemize}
+\item Suppose $\mathcal{A}$ is a commutative \PMlinkname{$C^*$-algebra}{CAlgebra}. Multiplicative linear functionals in $\mathcal{A}$ are exactly the \PMlinkname{irreducible representations}{BanachAlgebraRepresentation} of $\mathcal{A}$.
+\end{itemize}
+
+\section{Character space of a Banach algebra}
+As stated above, the set of all multiplicative linear functionals in a Banach algebra $\mathcal{A}$ is a locally compact Hausdorff space with the weak-* topology. It becomes a compact set if $\mathcal{A}$ has an identity element.
+
+There are several designations for this space, such as:
+ the {\bf \PMlinkescapetext{spectrum}} of $\mathcal{A}$, the {\bf maximal ideal space}, the {\bf character space}.
+
+\section{Examples}
+\begin{itemize}
+\item Let $X$ be a topological space and $C(X)$ the algebra of continuous functions $X \longrightarrow \mathbb{C}$. Every point evaluation is a multiplicative linear functional of $C(X)$. In other words, for every point $x \in X$, the function
+\begin{align*}
+ev_x : C(X) \longrightarrow \mathbb{C}\\
+ev_x ( f) = f(x)
+\end{align*}
+that gives the evaluation in $x$, is a multiplicative linear functional of $C(X)$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

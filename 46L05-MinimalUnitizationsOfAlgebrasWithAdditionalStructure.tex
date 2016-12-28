@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimalUnitizationsOfAlgebrasWithAdditionalStructure}
+\pmcreated{2013-03-22 17:46:29}
+\pmmodified{2013-03-22 17:46:29}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{minimal unitizations of algebras with additional structure}
+\pmrecord{6}{40232}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{46K05}
+\pmclassification{msc}{46H05}
+\pmclassification{msc}{16W99}
+\pmclassification{msc}{16B99}
+\pmdefines{minimal unitization of a topological algebra}
+\pmdefines{minimal unitization of a Banach algebra}
+\pmdefines{minimal unitization of a Banach-* algebra}
+\pmdefines{minimal unitization of a $C^*$-algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{algebra}
+
+Given a (non-unital) \PMlinkname{algebra}{Algebra} there is a \PMlinkescapetext{minimal} procedure to add an unit to it (\PMlinkname{parent entry}{Unitization}). When the algebra has some additional structure (topological structure, for example), it is often useful to endow the same structure on the minimal unitization of the algebra.
+
+All the algebras are to be considered non-unital.
+
+
+\subsection{Topological Algebras}
+
+Let $\mathcal{A}$ be a topological algebra algebra over a (topological) field $\mathbb{K}$. Let $\widetilde{\mathcal{A}}$ be its minimal unitization.
+
+Then $\widetilde{\mathcal{A}} = \mathcal{A} \oplus \mathbb{K}$ is a topological algebra with the product topology.
+
+
+\subsection{Normed and Banach Algebras}
+Let $\mathcal{A}$ be a normed algebra over $\mathbb{K}$ ($= \mathbb{R}$ or $\mathbb{C}$) with norm $\| \cdot \|$. Let $\widetilde{\mathcal{A}}$ be its minimal unitization.
+
+Then $\widetilde{\mathcal{A}}$ is a normed algebra under the norm $\| \cdot \|_u$:
+
+\begin{displaymath}
+\|a+\lambda\|_u = \|a\| +|\lambda|\,, \qquad a \in \mathcal{A} \;, \lambda \in \mathbb{K}
+\end{displaymath}
+
+Moreover, if $\mathcal{A}$ is a Banach algebra, then $\widetilde{\mathcal{A}}$ is a Banach algebra with the norm $\|\cdot\|_u$.
+
+\subsection{*-algebras}
+
+Let $\mathcal{A}$ be a *-algebra over an \PMlinkname{involutory field}{InvolutaryRing} $\mathbb{K}$. Let $\widetilde{\mathcal{A}}$ be its minimal unitization.
+
+Then $\widetilde{\mathcal{A}}$ is a *-algebra with involution given by:
+
+\begin{displaymath}
+(a+\lambda)^* = a^* + \overline{\lambda}\, \qquad a \in \mathcal{A} ,\; \lambda \in \mathbb{K}
+\end{displaymath}
+
+\subsection{Topological *-algebras, Normed *-algebras and Banach *-algebras}
+
+Let $\mathcal{A}$ be a topological *-algebra over $\mathbb{C}$. Let $\widetilde{\mathcal{A}}$ be its minimal unitization.
+
+Then $\widetilde{\mathcal{A}}$ is a topological *-algebra with the product topology and the involution defined above.
+
+Also, if $\mathcal{A}$ is a normed *-algebra (Banach -*algebra), then $\widetilde{\mathcal{A}}$ is also a normed *-algebra (Banach *-algebra) under the above involution and the norm $\|\cdot\|_u$.
+
+\subsection{C*-algebras}
+
+Let $\mathcal{A}$ be a \PMlinkname{$C^*$-algebra}{CAlgebra} with norm $\| \cdot \|$. Let $\widetilde{\mathcal{A}}$ be its minimal unitization.
+
+Then $\widetilde{\mathcal{A}}$ is $C^*$-algebra under the norm $\| \cdot \|_L$:
+
+\begin{displaymath}
+\|a+\lambda\|_L = \sup_{\|b\|=1}\|ab +\lambda b\|\,, \qquad a \in \mathcal{A} ,\; \lambda \in \mathbb{C}
+\end{displaymath}
+
+This norm comes from regarding elements of $\widetilde{\mathcal{A}}$ as left \PMlinkescapetext{multiplication operators} on $\mathcal{A}$. The norm $\| \cdot \|_L$ is \PMlinkescapetext{equivalent} to the norm $\| \cdot \|_u$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentNorms}
+\pmcreated{2013-03-22 13:39:28}
+\pmmodified{2013-03-22 13:39:28}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{equivalent norms}
+\pmrecord{10}{34312}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+Let $\Vert x\Vert$ and $\Vert x\Vert' $ be two norms on
+a vector space $V$. These norms are \emph{equivalent norms} if
+there exists a number $C>1$ such that
+\begin{eqnarray}
+\label{condC}
+ \frac{1}{C} \Vert x\Vert \le \Vert x\Vert' \le C \Vert x\Vert
+\end{eqnarray}
+for all $x\in V$.
+
+Since equation \eqref{condC} is equivalent to
+\begin{eqnarray}
+\label{condC1}
+ \frac{1}{C} \Vert x\Vert ' \le \Vert x\Vert \le C \Vert x\Vert'
+\end{eqnarray}
+it follows that the definition is well defined. In other words,
+$\Vert\cdot \Vert$ and $\Vert\cdot \Vert'$ are equivalent if and only if
+$\Vert\cdot \Vert'$ and $\Vert\cdot \Vert$ are equivalent.
+An alternative condition is that there exist positive real
+numbers $c,d$ such that
+$$
+ c\Vert x\Vert \le \Vert x \Vert' \le d \Vert x\Vert.
+$$
+However, this condition is equivalent to the above
+by setting $C=\max\{1/c,d\}$.
+
+Some key results are as follows:
+
+\begin{enumerate}
+\item If $\gamma>0$ and $\Vert x \Vert' = \gamma \Vert x \Vert$, then
+$\Vert\cdot \Vert$ and $\Vert\cdot \Vert'$ are equivalent. For example,
+if $\gamma>1$, then condition \eqref{condC} holds with $C=\gamma$, and
+for $\gamma<1$, condition \eqref{condC1} holds with $C=1/\gamma$.
+
+\item Suppose norms $\Vert \cdot \Vert$ and $\Vert \cdot \Vert'$ are equivalent norms
+ as in equation \eqref{condC}, and let $B_r(x)$ and $B_r'(x)$ be the
+ open balls with respect to $\Vert \cdot \Vert$ and $\Vert \cdot \Vert'$, respectively.
+ By \PMlinkname{this result}{ScalingOfTheOpenBallInANormedVectorSpace}
+ it follows that
+ $$
+ C B_{\varepsilon}(x) \subseteq B'_\varepsilon(x)\subseteq \frac{1}{C} B_{\varepsilon}(x).
+ $$ 
+
+It follows that the identity map from $(V,\Vert \cdot \Vert)$ to $(V,\Vert \cdot \Vert')$
+is a homeomorphism. Or, alternatively, equivalent norms on $V$ induce the same
+topology on $V$.
+
+\item The converse of the last paragraph is also true, i.e. if two norms induce the same topology on $V$ then they are equivalent. This follows from the fact that every continuous linear function between two normed vector spaces is \PMlinkname{bounded}{BoundedOperator} (see \PMlinkname{this entry}{BoundedOperator}).
+
+\item Suppose $\langle\cdot,\cdot\rangle$ and $\langle\cdot,\cdot\rangle'$ are inner product. Suppose further that the induced norms $\Vert\cdot\Vert$ and $\Vert\cdot\Vert'$ are equivalent as in equation \ref{condC}. Then, by the polarization identity, the inner products satisfy 
+$$
+  \frac{1}{C^2}\langle v,w \rangle'  \le \langle v,w \rangle  \le C^2\langle v,w \rangle.
+$$
+
+\item On a finite dimensional vector space all norms are equivalent
+(see \PMlinkname{this page}{ProofThatAllNormsOnFiniteVectorSpaceAreEquivalent}).
+This is easy to understand as the unit sphere is compact if and only if 
+a space is finite dimensional.
+On infinite dimensional spaces this result does not hold (see
+\PMlinkname{this page}{AllNormsAreNotEquivalent}).
+
+It follows that on a finite dimensional vector space,
+one can check continuity and convergence with respect with any norm.
+If a sequence converges in one norm, it converges in all norms.
+In matrix analysis this is particularly useful as one can choose the norm that
+is most easily calculated. 
+
+\item The concept of equivalent norms also generalize to possibly non-symmetric norms. In this setting, all norms are also equivalent on a finite dimensional vector space. In particular, $\Vert\cdot \Vert$ and $\Vert-\cdot\Vert$ are
+equivalent, and there exists $C>0$ such that 
+$$
+  \Vert - v\Vert \le C \Vert v\Vert,\quad v\in V.
+$$
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

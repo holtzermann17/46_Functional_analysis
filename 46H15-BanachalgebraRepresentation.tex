@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BanachalgebraRepresentation}
+\pmcreated{2013-03-22 17:27:37}
+\pmmodified{2013-03-22 17:27:37}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Banach *-algebra representation}
+\pmrecord{23}{39843}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H15}
+\pmclassification{msc}{46K10}
+\pmdefines{subrepresentation}
+\pmdefines{cyclic representation}
+\pmdefines{cyclic vector}
+\pmdefines{nondegenerate representation}
+\pmdefines{topologically irreducible}
+\pmdefines{algebrically irreducible}
+\pmdefines{direct sum of representations}
+\pmdefines{unitarily equivalent}
+
+% this is the default PlanetMath preamble.  as your 
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{representations}
+\PMlinkescapeword{nondegenerate}
+
+\subsection*{Definition:}
+A {\bf representation} of a Banach *-algebra $\mathcal{A}$ is a *-homomorphism $\pi : \mathcal{A} \longrightarrow \mathcal{B}(H)$ of $\mathcal{A}$ into the *-algebra of bounded operators on some Hilbert space $H$.
+
+The set of all representations of $\mathcal{A}$ on a Hilbert space $H$ is denoted $rep(\mathcal{A},H)$.
+
+
+\subsection*{Special kinds of representations:}
+
+\begin{itemize}
+\item A {\bf subrepresentation} of a representation $\pi \in rep(\mathcal{A},H)$ is a representation $\pi_0 \in rep(\mathcal{A},H_0)$ obtained from $\pi$ by restricting to a closed $\pi(\mathcal{A})$-\PMlinkname{invariant subspace}{InvariantSubspace} \footnote{by a $\pi(\mathcal{A})$-\PMlinkescapetext{invariant subspace} we \PMlinkescapetext{mean} a subspace which is invariant under every operator $\pi(a)$ with $a \in \mathcal{A}$} $H_0 \subseteq H$.
+\end{itemize}
+
+\begin{itemize}
+\item A representation $\pi \in rep(\mathcal{A},H)$ is said to be {\bf nondegenerate} if one of the following equivalent conditions hold:
+\begin{enumerate}
+\item $\pi(x)\xi = 0 \;\;\;\;\; \forall x\in \mathcal{A}\; \Longrightarrow \; \xi = 0$, where $\xi \in H$.
+\item $H$ is the closed linear span of the set of vectors $\pi(\mathcal{A})H := \{\pi(x)\xi : x \in \mathcal{A}, \xi \in H\}$
+\end{enumerate}
+\end{itemize}
+
+\begin{itemize}
+\item A representation $\pi \in rep(\mathcal{A},H)$ is said to be {\bf topologically irreducible} (or just \PMlinkescapetext{{\bf irreducible}}) if the only closed $\pi(\mathcal{A})$-invariant \PMlinkescapetext{subspaces} of $H$ are the trivial ones, $\{0\}$ and $H$.
+\end{itemize}
+
+\begin{itemize}
+\item A representation $\pi \in rep(\mathcal{A},H)$ is said to be {\bf algebrically irreducible} if the only $\pi(\mathcal{A})$-invariant \PMlinkescapetext{subspaces} of $H$ (not necessarily closed) are the trivial ones, $\{0\}$ and $H$.
+\end{itemize}
+
+\begin{itemize}
+\item Given two representations $\pi_1 \in rep(\mathcal{A},H_1)$ and $\pi_2 \in rep(\mathcal{A},H_2)$, the \PMlinkescapetext{{\bf direct sum}} of $\pi_1$ and $\pi_2$ is the representation $\pi_1 \oplus \pi_2 \in rep(\mathcal{A}, H_1 \oplus H_2)$ given by $\pi_1 \oplus \pi_2 (x) := \pi_1 (x) \oplus \pi_2 (x), \;\;\; x \in \mathcal{A}$.
+
+More generally, given a family $\{\pi_i\}_{i \in I}$ of representations, with $\pi_i \in rep(\mathcal{A}, H_i)$, their \PMlinkescapetext{{\bf direct sum}} is the representation $\bigoplus_{i \in I} \pi_i \in rep(\mathcal{A}, \bigoplus_{i \in I}H_i)$, in the direct sum of Hilbert spaces $\bigoplus_{i \in I}H_i$, such that $\left(\bigoplus_{i \in I} \pi_i\right) (x):= \bigoplus_{i \in I} \pi_i(x)$ is the \PMlinkname{direct sum of the family of bounded operators}{DirectSumOfBoundedOperatorsOnHilbertSpaces} $\{\pi_i(x)\}_{i \in I}$.
+\end{itemize}
+
+\begin{itemize}
+\item Two representations $\pi_1 \in rep(\mathcal{A},H_1)$ and $\pi_2 \in rep(\mathcal{A},H_2)$ of a  Banach *-algebra $\mathcal{A}$ are said to be {\bf unitarily equivalent} if there is a unitary $U : H_1 \longrightarrow H_2$ such that
+\begin{displaymath}
+\pi_2(a) = U \pi_1(a) U^* \;\;\;\;\; \forall a \in \mathcal{A}
+\end{displaymath}
+\end{itemize}
+
+\begin{itemize}
+\item A representation $\pi \in rep(\mathcal{A},H)$ is said to be {\bf \PMlinkescapetext{cyclic}} if there exists a vector $\xi \in H$ such that the set
+\begin{displaymath}
+\pi(A)\,\xi := \{\pi(a)\,\xi : a \in \mathcal{A}\}
+\end{displaymath}
+is \PMlinkname{dense}{Dense} in $H$. Such a vector is called a {\bf cyclic vector} for the representation $\pi$.
+\end{itemize}
+
+
+
+Linked file: http://aux.planetmath.org/files/objects/9843/BanachAlgebraRepresentation.pdf
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Commutant}
+\pmcreated{2013-03-22 17:21:53}
+\pmmodified{2013-03-22 17:21:53}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{commutant}
+\pmrecord{11}{39725}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L10}
+\pmrelated{VonNeumannAlgebra}
+\pmdefines{double commutant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section*{Definition}
+
+Let $H$ be an Hilbert Space, $B(H)$ the algebra of bounded operators in $H$ and $\mathcal{F} \subset B(H)$.
+
+The {\bf commutant} of $\mathcal{F}$, usually denoted $\mathcal{F}'$, is the subset of $B(H)$ consisting of all
+ elements that commute with every element of $\mathcal{F}$, that is
+\begin{center}
+$\mathcal{F}'=\{T \in B(H):\; TS=ST \,,\;\;\; \forall S \in \mathcal{F}\}$
+\end{center}
+
+The {\bf double commutant} of $\mathcal{F}$ is just $(\mathcal{F}')'$ and is usually denoted $\mathcal{F}''$.
+
+\section*{Properties:}
+\begin{itemize}
+\item If $\mathcal{F}_1 \subseteq \mathcal{F}_2$, then $\mathcal{F}_2' \subseteq \mathcal{F}_1'$.
+\item $\mathcal{F} \subseteq \mathcal{F}''$.
+\item If $\mathcal{A}$ is a subalgebra of $B(H)$, then $\mathcal{A} \cap \mathcal{A}'$ is the \PMlinkname{center}{CenterOfARing} of $\mathcal{A}$.
+\item If $\mathcal{F}$ is self-adjoint then $\mathcal{F}'$ is self-adjoint.
+\item $\mathcal{F}'$ is always a subalgebra of $B(H)$ that contains the identity operator and is closed in the weak operator topology.
+\item If $\mathcal{F}$ is self-adjoint then $\mathcal{F}'$ is a von Neumann algebra.
+\end{itemize}
+
+{\bf Remark:} The commutant is a particular case of the more general definition of centralizer.
+%%%%%
+%%%%%
+\end{document}

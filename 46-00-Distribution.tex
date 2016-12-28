@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Distribution}
+\pmcreated{2013-03-22 13:44:08}
+\pmmodified{2013-03-22 13:44:08}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{distribution}
+\pmrecord{23}{34427}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+\pmclassification{msc}{46F05}
+\pmsynonym{`generalized function'}{Distribution}
+\pmrelated{ExampleOfDiracSequence}
+\pmrelated{DiracDeltaFunction}
+\pmrelated{DiscreteTimeFourierTransformInRelationWithItsContinousTimeFourierTransfrom}
+\pmrelated{QuantumGroups}
+\pmrelated{FourierStieltjesAlgebraOfAGroupoid}
+\pmrelated{QuantumOperatorAlgebrasInQuantumFieldTheories}
+\pmrelated{QFTOrQuantumFieldTheories}
+\pmrelated{QuantumGroup}
+\pmdefines{distribution of finite order}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+\newcommand{\cD}[0]{\mathcal{D}}
+\newcommand{\scomp}[0]{C^\infty_0}
+\PMlinkescapeword{standard}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{order}
+
+\subsection*{Motivation}
+
+The main motivation behind distribution theory is to
+extend the common linear operators on functions,
+such as the derivative, convolution, and the Fourier transform,
+so that they also apply to the singular, non-smooth, or non-integrable
+functions that regularly appear in both theoretical and applied 
+analysis.
+
+Distribution theory also seeks to define suitable structures
+on the spaces of functions involved
+to ensure the convergence of suitable approximating functions,
+and the continuity of certain operators.
+For example, the limit of derivatives should be equal
+to the derivative of the limit, with some definition of the limiting
+operation.
+
+When this program is carried out,
+inevitably we find that we have to enlarge the space of objects that we
+would consider as ``functions''.  For example, the derivative of a step
+function is the Dirac delta function with a spike at the discontinuous step;
+the Fourier transform of a constant function is also a Dirac delta
+function, with the spike representing infinite spectral magnitude
+at one single frequency.  (These facts, of course, had long been 
+used in engineering mathematics.)
+
+\textbf{Remark:}
+Dirac's notion of delta distributions was introduced to facilitate computations in Quantum Mechanics,
+however without having at the beginning a proper mathematical definition. In part as 
+a (negative) reaction to such a state of affairs, von Neumann produced a mathematically
+well-defined \PMlinkname{foundation of Quantum Mechanics}{QuantumGroupsAndVonNeumannAlgebras} based on actions of 
+self-adjoint operators on Hilbert spaces which is still currently in use, with several significant
+additions such as Frech\'et nuclear spaces and quantum groups. 
+
+There are several theories of such \emph{`generalized functions'}.
+In this entry, we describe Schwartz' theory of \emph{distributions}, 
+which is probably the most widely used.
+
+Essentially, a distribution on $\sR$ is a linear mapping that takes a 
+smooth function (with compact support) on $\sR$ into a real number. 
+For example, the delta distribution is the map,
+$$
+    f\mapsto f(0)
+$$
+while any smooth function $g$ on $\sR$ induces a distribution
+$$
+   f\mapsto \int_{\sR} fg.
+$$
+
+Distributions are also well behaved under coordinate changes, and 
+can be defined onto a manifold. Differential forms with 
+distribution valued coefficients are called currents. 
+However, it is not possible to define a product of two 
+distributions generalizing the product of usual functions. 
+
+
+\subsection*{Formal definition}
+
+\emph{A note on notation.} In distribution theory, the 
+topological vector space of smooth functions with compact support on 
+an open set $U\subseteq \R^n$
+is traditionally denoted by $\cD(U)$. Let us also denote by 
+$\cD_K(U)$ the subset of $\cD(U)$ of functions with support in a 
+compact set $K\subset U$.
+
+\begin{defn}[Distribution] 
+A \emph{distribution} is a linear continuous functional on $\cD(U)$,
+i.e., a linear continuous mapping $\cD(U)\to\sC$. 
+The set of all distributions on $U$ is denoted by $\cD'(U)$. 
+\end{defn}
+
+Suppose $T$ is a linear functional on $\cD(U)$. 
+Then  $T$ is continuous if and only if $T$ is continuous
+in the origin (see \PMlinkname{this page}{ContinuousLinearMapping}).
+This condition can be rewritten in various ways, and 
+the below theorem gives two convenient conditions that can be used to prove
+that a linear mapping is a distribution. 
+
+\begin{thm}
+Let $U$ be an open set in $\sR^n$, 
+and let $T$ be a linear functional on $\cD(U)$. Then the
+following are equivalent:
+\begin{enumerate}
+\item $T$ is a distribution.
+\item If $K$ is a compact set in $U$, and  
+$\{u_i\}_{i=1}^\infty$ be a sequence in $\cD_K(U)$, such that
+for any multi-index $\alpha$, we have 
+$$ 
+   D^\alpha u_i \to 0
+$$
+in the supremum norm as $i\to \infty$, 
+then $T(u_i) \to 0$ in $\sC$. 
+\item For any compact set $K$ in $U$, there are constants $C>0$ and 
+$k\in\{1,2,\ldots\}$ such that for all $u\in \cD_K(U)$, we have
+\begin{eqnarray}
+\label{ineq1}
+|T(u)| &\le& C \sum_{|\alpha|\le k} ||D^\alpha u ||_\infty,
+\end{eqnarray}
+where $\alpha$ is a multi-index, and 
+$||\cdot||_\infty$ is the supremum norm.
+\end{enumerate}
+\end{thm}
+
+{\bf Proof} The equivalence of (2) and (3) can be 
+found on \PMlinkname{this page}{EquivalenceOfConditions2And3},
+and the equivalence of (1) and (3) is shown in 
+\cite{rudin_fap}. 
+
+\subsubsection*{Distributions of order $k$}
+ 
+If $T$ is a distribution on an open set $U$, 
+and the same $k$ can be used for any $K$ 
+in the above inequality, then $T$ is a 
+\emph{distribution of order $k$}. 
+The set of all such distributions is denoted by $D'^k(U)$. 
+
+Both usual functions and the delta distribution are of order $0$. 
+One can also show that by differentiating a distribution its order increases
+by at most one. Thus, in some sense, the order is a measure of how
+''smooth'' a distribution is. 
+
+\subsubsection*{Topology for $\cD'(U)$ }
+The standard topology for $\cD'(U)$ is the weak$^\ast$ topology. 
+In this topology, a sequence $\{T_i\}_{i=1}^\infty$ of distributions 
+(in $\cD'(U)$) converges to a distribution $T\in \cD'(U)$ if and only if
+$$ T_i( u) \to T(u)\,\,\,\mbox{(in $\sC$) as $i\to \infty$} $$
+for every $u\in \cD(U)$.
+
+\subsection*{Notes}
+A common notation for the action of a distribution $T$ onto a test function $u\in \cD(U)$
+(i.e., $T(u)$ with above notation)  is $\langle T,u\rangle$. 
+The motivation for this
+comes from \PMlinkname{this example}{EveryLocallyIntegrableFunctionIsADistribution}.
+
+\begin{thebibliography}{9}
+ \bibitem{rudin_fap}
+ W. Rudin, {\em Functional Analysis},
+ McGraw-Hill Book Company, 1973.
+ \bibitem{hormander}
+ L. H$\"o$rmander, {\em The Analysis of Linear Partial Differential Operators I,
+ (Distribution theory and Fourier Analysis)}, 2nd ed, Springer-Verlag, 1990.
+ \end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

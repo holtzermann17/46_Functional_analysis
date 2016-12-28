@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorPnorm}
+\pmcreated{2013-03-22 11:43:03}
+\pmmodified{2013-03-22 11:43:03}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{vector p-norm}
+\pmrecord{21}{30092}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B20}
+\pmclassification{msc}{05Cxx}
+\pmclassification{msc}{05-01}
+\pmclassification{msc}{20H15}
+\pmclassification{msc}{20B30}
+\pmsynonym{Minkowski norm}{VectorPnorm}
+\pmsynonym{Euclidean vector norm}{VectorPnorm}
+\pmsynonym{vector Euclidean norm}{VectorPnorm}
+\pmsynonym{vector 1-norm}{VectorPnorm}
+\pmsynonym{vector 2-norm}{VectorPnorm}
+\pmsynonym{vector infinity-norm}{VectorPnorm}
+\pmsynonym{L^p metric}{VectorPnorm}
+\pmsynonym{L^p}{VectorPnorm}
+\pmrelated{VectorNorm}
+\pmrelated{CauchySchwartzInequality}
+\pmrelated{HolderInequality}
+\pmrelated{FrobeniusMatrixNorm}
+\pmrelated{LpSpace}
+\pmrelated{CauchySchwarzInequality}
+\pmdefines{Manhattan metric}
+\pmdefines{Taxicab}
+\pmdefines{L^1 norm}
+\pmdefines{L^1 metric}
+\pmdefines{L^2 metric}
+\pmdefines{L^2 norm}
+\pmdefines{L^\infty norm}
+
+\usepackage{graphicx}
+%%%%%%%%%%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+A class of vector norms, called a $p$-norm and denoted $||\cdot||_p$, is defined as
+
+\begin{displaymath}
+    ||\,x\,||_p = (|x_1|^p + \cdots + |x_n|^p)^\frac{1}{p}\qquad p\geq1, x\in\R^n
+\end{displaymath}
+
+The most widely used are the 1-norm, 2-norm, and $\infty$-norm:
+
+\begin{eqnarray*}
+    ||\,x\,||_1 & =& |x_1| + \cdots + |x_n| \\
+    ||\,x\,||_2 & =& \sqrt{|x_1|^2 + \cdots + |x_n|^2} = \sqrt{x^Tx} \\
+    ||\,x\,||_\infty & =& \displaystyle\max_{1\leq i\leq n}|x_i|
+\end{eqnarray*}
+
+The 2-norm is sometimes called the Euclidean vector norm, because
+$||\,x-y\,||_2$ yields the Euclidean distance between any two vectors $x,y\in \R^n$. The 1-norm is also called the taxicab metric (sometimes Manhattan metric) since the distance of two points can be viewed as the distance a taxi would travel on a city (horizontal and vertical movements).
+
+A useful fact is that for finite dimensional spaces (like $\R^n$) the three mentioned norms are \PMlinkid{equivalent}{4312}. Moreover, all $p$-norms are equivalent. This can be proved using that any norm  has to be continuous in the $2$-norm and working in the unit circle.
+
+The \PMlinkname{$L^p$-norm}{LpSpace} in function spaces is a generalization of these norms by using counting measure.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfMinkowskisFunctional}
+\pmcreated{2013-03-22 15:45:04}
+\pmmodified{2013-03-22 15:45:04}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{properties of Minkowski's functional}
+\pmrecord{10}{37704}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a normed space, $K$ convex subset of $X$ and $0$ belongs to the interior of $K$.Then
+\begin{enumerate} 
+\item $\rho_{K}(x)\geq 0$ for all $x\in X$
+\item $\rho_{K}(0)= 0$
+\item $\rho_{K}(\lambda x)= \lambda \rho_{K}(x)$, for all $\lambda\geq 0$ and $x\in X$
+\item $\rho_{K}(x+y)\leq \rho_{K}(x)+\rho_{K}(y)$\,for all $x,y \in K$ 
+\item $\{x\in X\colon \rho_{K}(x)<1\}\subset K \subset \{x\in X\colon \rho_{K}(x)\leq 1\}$
+\item $K^{0}=\{x\in X\colon \rho_{K}(x)<1\}$ where $K^{0}$ denotes the interior of $K$
+\item $\bar K=\{x\in X\colon \rho_{K}(x)\leq 1\}$  where $\bar K$ denotes the closure of $K$
+\item $Bd(K)= \{x\in X\colon \rho_{K}(x)= 1\}$ where the $Bd(K)$ denotes the boundary of $K$.
+\end{enumerate}
+Minkowski's functional is a useful tool to prove propositions and  solve  exercises. Let us see an example\\
+\textbf{Example} Let $K$ be a convex subset of $X$. Show that $Ex(K)\subset Bd(K)$, where $Ex(K)$ denotes the 
+set of extreme points of $K$.
+\\If $x\in Ex(K)$ then from this follows that $x\in 1K$ and $\rho_{K}(x)= 1$.
+Now we hypothesize that $\rho_{K}(x)<1$ then there is a real number $s$ such that $\rho_{K}(x)<s<1$ and 
+so $\rho_{K}(\frac{x}{s})<1$. Therefore we have that $x=s\frac{x}{s}+(1-s)0 \in K$, that contradicts to the 
+fact that $x\in Ex(K).$
+%%%%%
+%%%%%
+\end{document}

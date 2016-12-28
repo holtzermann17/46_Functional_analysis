@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{YetAnotherProofOfParallelogramLaw}
+\pmcreated{2013-03-22 16:08:23}
+\pmmodified{2013-03-22 16:08:23}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{yet another proof of parallelogram law}
+\pmrecord{5}{38214}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Define $g(\epsilon) = \langle x+\epsilon y , x + \epsilon y\rangle$, where $\epsilon$ is real.
+Then $g(\epsilon) = \langle x,x\rangle + \epsilon (\langle y,x\rangle + \langle x,y\rangle) + \epsilon^2 \langle y,y\rangle .$
+Hence,  
+$$ \Vert x + y \Vert ^2  + \Vert x - y \Vert ^2 = g(1) + g(-1) = 2\langle x,x\rangle + 2\langle y,y\rangle  = 2 \Vert x \Vert ^2 + 2 \Vert y \Vert ^2.$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GelfandNaimarkSegalConstruction}
+\pmcreated{2013-03-22 17:47:40}
+\pmmodified{2013-03-22 17:47:40}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Gelfand-Naimark-Segal construction}
+\pmrecord{10}{40256}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L30}
+\pmclassification{msc}{46L05}
+\pmsynonym{GNS construction}{GelfandNaimarkSegalConstruction}
+%\pmkeywords{GNS pair}
+%\pmkeywords{GNS representation}
+\pmrelated{CAlgebra}
+\pmrelated{CAlgebra3}
+\pmrelated{RepresentationOfAC_cG_dTopologicalAlgebra}
+\pmdefines{GNS pair}
+\pmdefines{GNS representation}
+\pmdefines{pure states and irreducible representations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{dense in}
+\PMlinkescapeword{irreducible}
+\PMlinkescapeword{cyclic}
+
+\section{GNS Construction}
+
+The Gelfand-Naimark-Segal construction (or GNS construction) is a fundamental idea in the \PMlinkescapetext{theory} of \PMlinkescapetext{operator} \PMlinkescapetext{algebras}. It provides a procedure to construct and study representations of \PMlinkname{$C^*$-algebras}{CAlgebra} and is the first step on the proof of the Gelfand-Naimark representation theorem, which \PMlinkescapetext{states} that every $C^*$-algebra is isometrically isomorphic to a closed *-subalgebra of $B(H)$, the algebra of bounded operators on a Hilbert space $H$.
+
+There are generalizations of this construction for Banach *-algebras with an approximate unit, and some of the results stated here are in fact valid for this kind of algebras, but we will restrict our attention to the $C^*$ case.
+
+\section{Representations associated with positive linear functionals}
+
+Let $\mathcal{A}$ be a $C^*$-algebra and $\phi$ a positive linear functional in $\mathcal{A}$.
+
+We are going to construct a representation $\pi_{\phi}$ of $\mathcal{A}$ and for that we need to construct a suitable Hilbert space.
+
+Let us endow $\mathcal{A}$ with a semi-inner product defined by $\langle x, y \rangle_{\phi} : = \phi(y^*x)$. Now we define the set
+\begin{displaymath}
+N_{\phi} : = \{ x \in \mathcal{A}: \langle x , x \rangle_{\phi}=0 \}
+\end{displaymath}
+It is easily seen that $N_{\phi}$ is a closed \PMlinkname{left ideal}{Ideal} in $\mathcal{A}$ (using the Cauchy-Schwarz inequality, which is valid in semi-inner product spaces), so that $\langle \cdot, \cdot \rangle_{\phi}$ induces a well defined inner product on the \PMlinkname{quotient}{QuotientModule} $\mathcal{A}/N_{\phi}$. The completion of $\mathcal{A}/N_{\phi}$ is then an Hilbert space, which we will be denoted by $H_{\phi}$.
+
+We will now define a representation of $\mathcal{A}$ on $H_{\phi}$ by left multiplication. For every $a \in \mathcal{A}$ let $\pi_{\phi}(a)$ be the operator of left multiplication by $a$ on $\mathcal{A}/N_{\phi}$, i.e.
+\begin{displaymath}
+\pi(a)\,(x+ N_{\phi}) := ax+N_{\phi}
+\end{displaymath}
+
+$\,$
+
+{\bf Theorem 1 -} The function $\pi_{\phi}(a):\mathcal{A}/N_{\phi} \longrightarrow \mathcal{A}/N_{\phi}$ defined above is linear and \PMlinkname{bounded}{BoundedOperator}, with $\|\pi_{\phi}(a)\| \leq \|a\|$.
+
+$\;$
+
+Being bounded, the operator $\pi_{\phi}(a)$ extends uniquely to a bounded operator on $H_{\phi}$, which we denote by the same symbol, $\pi_{\phi}(a)$.
+
+Let $B(H_{\phi})$ be the algebra of bounded operators on $H_{\phi}$.
+
+$\,$
+
+{\bf Theorem 2 -} The function $\pi_{\phi}:\mathcal{A} \longrightarrow B(H_{\phi})$ defined by $a \mapsto \pi_{\phi}(a)$ is a $C^*$-algebra representation of $\mathcal{A}$.
+
+This representation is called the {\bf GNS representation} associated to $\phi$.
+
+\section{Cyclic vectors and GNS pairs}
+
+Suppose $\mathcal{A}$ had an identity element $e$. In this case it is easily seen that there exists a cyclic vector $\xi_{\phi} \in H_{\phi}$, i.e. a vector $\xi_{\phi}$ such that $\pi_{\phi}(\mathcal{A})\,\xi_{\phi}$ is \PMlinkname{dense}{Dense} in $H_{\phi}$. This cyclic vector can just be chosen as $e + N_{\phi}$.
+
+Moreoever, this cyclic vector $\xi_{\phi} :=e + N_{\phi}$ is such that $\phi(a) = \langle \pi_{\phi}(a)\,\xi_{\phi}, \xi_{\phi}\rangle_{\phi}$ for every $a \in \mathcal{A}$.
+
+Thus, in this case the representation $\pi_{\phi}$ is \PMlinkname{cyclic}{BanachAlgebraRepresentation} and $\phi$ is a vector state of $\mathcal{A}$. The result is still valid for general $C^*$-algebras:
+
+$\,$
+
+{\bf Theorem 3 -} Let $\pi_{\phi}$ be the representation of $\mathcal{A}$ defined previously. Then there exists a vector $\xi_{\phi} \in H_{\phi}$ such that
+\begin{itemize}
+\item $\pi_{\phi}(\mathcal{A})\,\xi_{\phi}$ is dense in $H_{\phi}$, i.e. $\pi_{\phi}$ is cyclic,
+\item $\phi(a) = \langle \pi_{\phi}(a)\,\xi_{\phi}, \xi_{\phi}\rangle_{\phi}$ for every $a \in \mathcal{A}$, i.e. $\phi$ is a vector state.
+\end{itemize}
+
+$\,$
+
+Any pair $(\pi, \xi)$, where $\pi$ is a representation of $\mathcal{A}$ on a Hilbert space $H$ and $\xi \in H$, satisfying the above conditions for $\phi$:
+\begin{itemize}
+\item $\pi(\mathcal{A})\,\xi$ is dense in $H$,
+\item $\phi(a) = \langle \pi(a)\,\xi, \xi\rangle$ for every $a \in \mathcal{A}$
+\end{itemize}
+is called a {\bf GNS pair} for $\phi$.
+
+$\,$
+
+{\bf Theorem 4 -} All GNS pairs for $\phi$ are \PMlinkescapetext{equivalent} (in the sense that the corresponding representations are unitarily equivalent).
+
+
+\section{Irreducible representations}
+
+We know that are "plenty" of states on $C^*$-algebra (see \PMlinkname{this entry}{PropertiesOfStates}), and so we have assured the existence of many (cyclic) representations. An interesting fact is that this representations associated to states are \PMlinkname{irreducible}{BanachAlgebraRepresentation} exactly when the state is a pure state:
+
+$\,$
+
+{\bf Theorem 5 -} Let $\phi$ be a state on $\mathcal{A}$. Then the representation $\pi_{\phi}$ is irreducible if and only if $\phi$ is a pure state.
+
+$\,$
+
+The fact that there are "plenty" of pure states in a $C^*$-algebra allows one to assure the existence of irreducible representations that preserve the norm of a given element in $\mathcal{A}$.
+
+$\,$
+
+{\bf Theorem 6 -} Let $\mathcal{A}$ be a $C^*$-algebra. For every element $a$ there exists an irreducible representation $\pi$ of $\mathcal{A}$ such that $\|\pi(a)\| = \|a\|$.
+
+$\,$
+
+This last theorem is a fundamental step in the proof of the Gelfand-Naimark representation theorem.
+%%%%%
+%%%%%
+\end{document}

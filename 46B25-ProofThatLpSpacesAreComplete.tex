@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatLpSpacesAreComplete}
+\pmcreated{2013-03-22 14:40:09}
+\pmmodified{2013-03-22 14:40:09}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{proof that $L^p$ spaces are complete}
+\pmrecord{8}{36270}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let's prove completeness for the classical Banach spaces, say $L^p[0,1]$
+where $p \geq 1$. 
+
+Since the case $p=\infty$ is elementary, we may assume $1 \le p < \infty$. 
+Let $[f_{\cdot}] \in (L^p)^{\mathbf{N}}$ be a Cauchy sequence. Define $[g_0] := [f_0]$ and for $n > 0$ define $[g_n] := [f_n - f_{n-1}]$. Then $[\sum_{n=0}^N g_n] = [f_N]$ and we see that
+$$\sum_{n=0}^\infty \|g_n\| = \sum_{n=0}^\infty \|f_n - f_{n-1}\| \leq ??? < \infty.$$
+Thus it suffices to prove that etc.
+%$\|f_n - f_m\| < \varepsilon$
+%Define $$F(x) := \left\{\begin{array}{cc}\lim f_{\cdot}(x) & \mbox{if it %exists}\\0 & \mbox{otherwise}\end{array}\right.$$ and calculate its $L^p$-norm. %We have $$\|F\|^p = \int |F|^p \mathrm{d}\mu = $$
+
+It suffices to prove that each absolutely summable series in $L^p$ is 
+summable in $L^p$ to some element in $L^p$.
+
+Let $\{f_n\}$ be a sequence in $L^p$ with 
+$\sum_{n=1}^\infty \|f_n\|=M<\infty$, and define functions $g_n$ by 
+setting $g_n(x)=\sum_{k=1}^n|f_k(x)|$. From the Minkowski inequality we 
+have
+$$
+\|g_n\|\le\sum_{k=1}^n\|f_k\|\le M.
+$$
+Hence
+$$
+\int g_n^p\le M^p.
+$$
+For each $x$, $\{g_n(x)\}$ is an increasing sequence of (extended) real 
+numbers and so must converge to an extended real number $g(x)$. The 
+function $g$ so defined is measurable, and, since $g_n\ge 0$, we have
+$$
+\int g^p\le M^p
+$$
+by Fatou's Lemma. Hence $g^p$ is integrable, and $g(x)$ is finite for 
+almost all $x$.
+
+For each $x$ such that $g(x)$ is finite the series $\sum_{k=1}^\infty f_k(x)$ 
+is an absolutely summable series of real numbers and so must be summable 
+to a real number $s(x)$. If we set $s(x)=0$ for those $x$ where 
+$g(x)=\infty$, we have defined a function $s$ which is the limit almost 
+everywhere of the partial sums $s_n=\sum_{k=1}^n f_k$. Hence $s$ is 
+measurable. Since $|s_n(x)|\le g(x)$, we have $|s(x)|\le g(x)$. 
+Consequently, $s$ is in $L^p$ and we have
+$$
+|s_n(x)-s(x)|^p\le 2^p\,[g(x)]^p.
+$$
+Since $2^pg^p$ is integrable and $|s_n(x)-s(x)|^p$ converges to $0$ for 
+almost all $x$, we have
+$$
+\int|s_n-s|^p\to 0
+$$
+by the Lebesgue Convergence Theorem. Thus $\|s_n-s\|^p\to 0$, whence 
+$\|s_n-s\|\to 0$. Consequently, the series $\{f_n\}$ has in $L^p$ the sum 
+$s$.
+\begin{thebibliography}
+{}Royden, H. L. \emph{Real analysis. Third edition}. Macmillan Publishing Company, New York, 1988.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

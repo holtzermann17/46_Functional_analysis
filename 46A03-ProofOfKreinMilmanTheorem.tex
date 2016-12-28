@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfKreinMilmanTheorem}
+\pmcreated{2013-03-22 15:24:40}
+\pmmodified{2013-03-22 15:24:40}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{proof of Krein-Milman theorem}
+\pmrecord{6}{37251}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A03}
+\pmclassification{msc}{52A07}
+\pmclassification{msc}{52A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The proof is consist of three steps for good understanding.
+We will show initially that the set of extreme points of $K$,$Ex(K)$ is non-empty, $Ex(K)\neq \emptyset $.
+We consider that $\mathcal{A}=\{A\subset K\colon A \subset K , $extreme$ \}$.
+\\Step1
+\\The family set $\mathcal{A}$ ordered by $\subset $ has a minimal element, in other words there exist $A \in  \mathcal{A}$ 
+such as $\forall B\in \mathcal{A},B\subset A$ we have that $B=A$.
+\\Proof1\\ We consider $A<B \Leftrightarrow B\subset A, \forall A,B \in  \mathcal{A}$. The ordering relation $<$ is a partially relation
+on $\mathcal{A}$. We must show that $A$ is maximal element for $\mathcal{A}$.
+We apply Zorn's lemma.We suppose that $$\mathcal{C}=\{A_i\colon i\in I\}$$ is a chain of $\mathcal{A}$.Witout loss of
+generality we take $A=\bigcap_{i\in I} A_i$ and then $A\neq \emptyset$. $\mathcal{C}$ has the property of finite intersections
+and it is consist of closed sets. So we have that $\bigcap_{i\in I}A_i\neq \emptyset$. It is easy to see that $A\in  \mathcal{A}$.
+ Also $A\subset A_i$, for any $i\in I$, so we have that $A>A_i$, for any $i\in I$.
+\\Step2
+\\ Every minimal element of  $\mathcal{A}$ is a set which has only one point.
+\\Proof2
+\\We suppose that there exist a minimal element $A$ of  $\mathcal{A}$ which has at least two points, 
+$x,y \in A$. There exist $x^* \in X^*$ such as $x^*(x)\neq x^*(y)$, witout loss of
+generality we have that $x^*(x)<x^*(y)$. $A$ is compact set (closed subset of the compact $K$). Also there 
+exist $\alpha \in \mathbb{R}$ such that $\alpha=\sup_{z\in A}x^*(z)$ and $B=\{z\in A\colon x^*(z)=\alpha\}\neq \emptyset$.
+It is obvious that $B$ is an extreme subset of $A$, $B$ is an extreme subset of $K$,$B \in \mathcal{A}$.
+$x\notin B$ since $B\in \mathcal{A}$ and $B \subsetneq A$ that contradicts to the fact that $A$ is minimal extreme subset of $\mathcal{A}$.
+\\From the above two steps we have that $Ex(K)\neq \emptyset$.
+\\Step3 
+\\$K=\bar co(Ex(K))$ where $\bar co(Ex(K))$ denotes the closed convex hull of extreme points of $K$.
+\\Proof3 
+\\Let $L=\bar co(Ex(K))$. Then $L$ is closed subset of $K$, therefore it is compact, and convex clearly by the definition.
+We suppose that $L\subsetneqq K$. Then there exist $x\in K-L$. Let use Hahn-Banach theorem(geometric form).
+There exist $x^* \in X^*$ such as $\sup_{w\in L}x^*(w)<x^*(x)$. Let $\alpha=\sup\{x^*(y)\colon y\in K\}$, $B=\{y\in K\colon x^*(y)=\alpha\}$. Similar to
+Step2 $B$ is extreme subset of $K$. $B$ is compact and from step1 and step2 we have that $Ex(B)\neq \emptyset$. It is true that 
+$Ex(B)\subset Ex(K)\subset L$. Now let $y \in Ex(B)$ then $x^*(y)=\alpha$ and if $y \in L x^*(y)<x^*(x)\leq \alpha $. That is a contradiction.
+%%%%%
+%%%%%
+\end{document}

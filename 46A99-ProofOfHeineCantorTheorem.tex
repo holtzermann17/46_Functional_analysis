@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHeineCantorTheorem}
+\pmcreated{2013-03-22 15:09:43}
+\pmmodified{2013-03-22 15:09:43}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of Heine-Cantor theorem}
+\pmrecord{10}{36911}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We seek to show that $f:K \to X$ is continuous with $K$ a compact metric space, then $f$ is uniformly continuous. Recall that for $f:K\to X$, uniform continuity 
+is the condition that for any $\varepsilon>0$, there exists $\delta$ such that
+\[
+d_K(x,y) < \delta 
+\implies d_X (f(x),f(y)) < \epsilon
+\]
+for all $x,y\in K$
+
+Suppose $K$ is a compact metric space, $f$ continuous on $K$. Let $\epsilon > 0$. For each $k \in K$ choose 
+$\delta_k$ such that $d(k,x) \leq \delta_k$ implies $d(f(k),f(x)) \leq \frac{\epsilon}{2}$. Note that the collection of balls 
+$B(k, \frac{\delta_k}{2} )$ covers $K$, so by compactness there is a finite subcover,
+say involving $k_1, \ldots, k_n$. Take 
+\begin{equation*}
+\delta = \min_{i=1,\ldots,n} \frac{\delta_{k_i}}{2}
+\end{equation*}
+Then, suppose $d(x,y) \leq \delta$. By the choice of $k_1,\ldots,k_n$ and the triangle inequality, there exists an $i$ such that 
+$d(x,k_i),d(y,k_i) \leq \delta_{k_i}$. Hence,
+\begin{eqnarray}
+d(f(x),f(y)) &\leq& d(f(x),f(k_i)) + d(f(y),f(k_i)) \\
+             &\leq& \frac{\epsilon}{2} + \frac{\epsilon}{2}
+\end{eqnarray}
+
+As $x,y$ were arbitrary, we have that $f$ is uniformly continuous.\\
+This proof is similar to one found in Mathematical Principles of Analysis, Rudin.
+%%%%%
+%%%%%
+\end{document}

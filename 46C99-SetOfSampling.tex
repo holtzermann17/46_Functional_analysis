@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SetOfSampling}
+\pmcreated{2013-03-22 14:27:50}
+\pmmodified{2013-03-22 14:27:50}
+\pmowner{swiftset}{1337}
+\pmmodifier{swiftset}{1337}
+\pmtitle{set of sampling}
+\pmrecord{4}{35984}
+\pmprivacy{1}
+\pmauthor{swiftset}{1337}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+\pmsynonym{sampling set}{SetOfSampling}
+\pmrelated{Frame2}
+\pmdefines{set of sampling}
+\pmdefines{sampling operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\paragraph{Definition}
+Let $F$ be a Hilbert space of functions defined on a domain $D$. Let $T = \{t_i\}_{i\in I}$ be a finite or infinite sequence of points in $D$. $T$ is said to be a \emph{set of sampling} for $F$ if the sampling operator $S: F \rightarrow l^2_{|T|}$ defined by 
+$$ 
+S: f \mapsto 
+\begin{pmatrix}
+f(t_1) \\
+f(t_2) \\
+\vdots 
+\end{pmatrix}
+$$
+is bounded (i.e. continuous) and bounded below; i.e. if 
+$$\exists A,B>0 \hbox{ such that } \forall f \in F, A\|f\|^2 \leq \sum_{i=1}^{|T|} |f(t_i)|^2 \leq B \|f\|^2.$$
+
+\paragraph{Relation to Frames}
+Using the Riesz Representation Theorem, it is easy to show that every set of sampling determines a unique frame in such a way that the analysis operator of that frame is the sampling operator associated with the set of sampling. In fact, let $t=\{t_i\}$ be a set of sampling with sampling operator $S_t$. Use the Riesz representation theorem to rewrite $S_t$ in terms of vectors $\{g_i\}$ in $F$:
+$$ 
+S: f \mapsto 
+\begin{pmatrix}
+f(t_1) \\
+f(t_2) \\
+\vdots
+\end{pmatrix}
+=
+\begin{pmatrix}
+\langle f, g_1 \rangle \\
+\langle f, g_2 \rangle \\
+\vdots
+\end{pmatrix}
+$$
+then note that 
+$$ \forall f\in F, A\|f\|^2 \leq \sum_{i} \left| \langle f, g_i \rangle \right|^2 \leq B\|f\|^2, $$
+so the $\{g_i\}$ form a frame with bounds $A, B$, and $S_t = \theta_g.$
+
+\paragraph{Reconstruction}
+Particularly nice sets of sampling are those that correspond to tight frames, because then $\theta_g^\ast\theta_g=\theta_g^\ast S_t=AI$, and it is possible to reconstruct the function $f$, given its values over the set of sampling:
+$$ f = \frac{1}{A}\sum_i f(t_i) g_i.$$
+Sets of sampling which correspond to tight frames are referred to as tight sets of sampling.
+%%%%%
+%%%%%
+\end{document}

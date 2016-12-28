@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{State}
+\pmcreated{2013-03-22 13:50:18}
+\pmmodified{2013-03-22 13:50:18}
+\pmowner{mhale}{572}
+\pmmodifier{mhale}{572}
+\pmtitle{state}
+\pmrecord{8}{34574}
+\pmprivacy{1}
+\pmauthor{mhale}{572}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmrelated{ExtensionAndRestrictionOfStates}
+\pmrelated{AlgebraicQuantumFieldTheoriesAQFT}
+\pmdefines{pure state}
+\pmdefines{tracial state}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% my maths package
+
+\newcommand*{\Nset}{\mathbb{N}}
+\newcommand*{\Zset}{\mathbb{Z}}
+\newcommand*{\Qset}{\mathbb{Q}}
+\newcommand*{\Rset}{\mathbb{R}}
+\newcommand*{\Cset}{\mathbb{C}}
+\newcommand*{\Hset}{\mathbb{H}}
+\newcommand*{\Oset}{\mathbb{O}}
+\newcommand*{\Bset}{\mathbb{B}}
+\newcommand*{\Kset}{\mathbb{K}}
+\newcommand*{\Sset}{\mathbb{S}}
+\newcommand*{\Tset}{\mathbb{T}}
+\newcommand*{\GLgrp}{\mathrm{GL}}
+\newcommand*{\SLgrp}{\mathrm{SL}}
+\newcommand*{\Ogrp}{\mathrm{O}}
+\newcommand*{\SOgrp}{\mathrm{SO}}
+\newcommand*{\Ugrp}{\mathrm{U}}
+\newcommand*{\SUgrp}{\mathrm{SU}}
+\newcommand*{\e}{\mathop{\mathrm{e}}\nolimits}
+\newcommand*{\im}{\mathord{\mathrm{i}}}
+\newcommand*{\identity}{\mathord{\mathrm{1\!\!\!\:I}}}
+\newcommand*{\tr}{\mathop{\mathrm{tr}}}
+\newcommand*{\Tr}{\mathop{\mathrm{Tr}}}
+\newcommand*{\norm}[1]{\Vert #1\Vert}
+\renewcommand*{\d}{\mathrm{d}}
+\newcommand*{\deriv}[2]{\frac{\d #1}{\d #2}}
+\newcommand*{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand*{\fderiv}[2]{\frac{\delta #1}{\delta #2}}
+
+% my noncommutative geometry package
+
+\newcommand*{\algebra}[1][A]{\mathord{\mathcal{#1}}}
+\newcommand*{\hilbert}[1][H]{\mathord{\mathcal{#1}}}
+\newcommand*{\hilbmod}[1][E]{\mathord{\mathcal{#1}}}
+\newcommand*{\Matrix}[2]{\mathord{\mathrm{M}_{#1}(#2)}}
+\newcommand*{\dixmier}{\mathop{\mathrm{Tr}_\omega}}
+\newcommand*{\Res}{\mathop{\mathrm{Res}}}
+\newcommand*{\Wres}{\mathop{\mathrm{Wres}}}
+\newcommand*{\Aut}{\mathop{\mathrm{Aut}}\nolimits}
+\newcommand*{\Inn}{\mathop{\mathrm{Inn}}\nolimits}
+\newcommand*{\Out}{\mathop{\mathrm{Out}}\nolimits}
+\newcommand*{\Diff}{\mathop{\mathrm{Diff}}\nolimits}
+\newcommand*{\Ker}{\mathop{\mathrm{Ker}}\nolimits}
+\newcommand*{\Coker}{\mathop{\mathrm{Coker}}\nolimits}
+\newcommand*{\Img}{\mathop{\mathrm{Im}}\nolimits}
+\newcommand*{\End}{\mathop{\mathrm{End}}\nolimits}
+\newcommand*{\spin}{\mathop{\mathrm{spin}}\nolimits}
+\newcommand*{\Ind}{\mathop{\mathrm{Ind}}\nolimits}
+\newcommand*{\KK}{\mathit{KK}}
+\newcommand*{\HH}{\mathit{HH}}
+\newcommand*{\HC}{\mathit{HC}}
+\newcommand*{\ch}{\mathop{\mathrm{ch}}\nolimits}
+
+% my category theory package
+
+\newcommand*{\mathcat}[1]{\mathord{\mathbf{#1}}}
+\newcommand*{\id}{\mathrm{id}}
+\newcommand*{\op}{\mathrm{op}}
+\newcommand*{\boxprod}{\mathbin{\square}}
+
+% my environments
+
+\newtheoremstyle{inlinedefn}{}{0pt}{}{}{\bfseries}{.}{0.5em}{}
+\theoremstyle{inlinedefn}
+\newtheorem{definition}{Definition}
+
+\newtheoremstyle{break}{\baselineskip}{\baselineskip}{\itshape}{}{\bfseries}{}{\newline}{}
+\theoremstyle{break}
+\newtheorem{example}{Example}
+
+% misc commands
+
+\newcommand*{\defn}[1]{\textbf{#1}}
+\begin{document}
+A \textbf{state} $\Psi$ on a $C^*$-algebra $A$ is a positive linear functional
+$\Psi\colon A \to \Cset$, $\Psi(a^*a) \geq 0$ for all $a \in A$, with unit norm.
+The norm of a positive linear functional is defined by
+\begin{equation}
+\norm{\Psi} = \sup_{a \in A}\{|\Psi(a)| : \norm{a}\leq 1\}.
+\end{equation}
+For a unital $C^*$-algebra, $\norm{\Psi} = \Psi(\identity)$.
+
+The space of states is a convex set.
+Let $\Psi_1$ and $\Psi_2$ be states, then the convex combination
+\begin{equation}
+\lambda\Psi_1+(1-\lambda)\Psi_2, \quad \lambda \in [0,1],
+\end{equation}
+is also a state.
+
+A state is \textbf{pure} if it is not a convex combination of two other states.
+Pure states are the extreme points of the convex set of states.
+A pure state on a commutative $C^*$-algebra is equivalent to a character.
+
+A state is called a \textbf{tracial state} if it is also a trace.
+
+When a $C^*$-algebra is represented on a Hilbert space $\hilbert$,
+every unit vector $\psi \in \hilbert$ determines a (not necessarily pure) state in the form of an \defn{expectation value},
+\begin{equation}
+\Psi(a) = \langle\psi, a\psi\rangle.
+\end{equation}
+In physics, it is common to refer to such states by their vector $\psi$ rather than the linear functional $\Psi$.
+The converse is not always true; not every state need be given by
+an expectation value.
+For example, delta functions (which are distributions not functions)
+give pure states on $C_0(X)$,
+but they do not correspond to any vector in a Hilbert space
+(such a vector would not be square-integrable).
+
+\begin{thebibliography}{10}
+\bibitem{Murphy}
+G.~Murphy, {\em $C^*$-Algebras and Operator Theory}.
+\newblock Academic Press, 1990.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

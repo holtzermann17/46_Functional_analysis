@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalDecompositionTheorem}
+\pmcreated{2013-03-22 17:32:34}
+\pmmodified{2013-03-22 17:32:34}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{orthogonal decomposition theorem}
+\pmrecord{4}{39942}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A99}
+\pmsynonym{closed subspaces of Hilbert spaces are complemented}{OrthogonalDecompositionTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $X$ be an Hilbert space and $A \subseteq X$ a closed subspace. Then the \PMlinkname{orthogonal complement}{Complimentary} of $A$, denoted $A^{\perp}$, is a topological complement of $A$. That means $A^{\perp}$ is closed and
+\begin{displaymath}
+X =A \oplus A^{\perp} \;.
+\end{displaymath}
+
+{\bf Proof :}
+\begin{itemize}
+\item $A^{\perp}$ is closed : 
+
+This follows easily from the continuity of the inner product. If a sequence $(x_n)$ of elements in $A^{\perp}$ converges to an element $x_0 \in X$, then
+\begin{displaymath}
+\langle x_0, a \rangle = \langle \lim_{n \rightarrow \infty} x_n, a \rangle = \lim_{n \rightarrow \infty}\langle x_n, a \rangle = 0\;\;\; \text{for every} a \in A
+\end{displaymath}
+which implies that $x_0 \in A^{\perp}$.
+
+\item $X=A \oplus A^{\perp}$ : 
+
+Since $X$ is \PMlinkname{complete}{Complete} and $A$ is closed, $A$ is a \PMlinkescapetext{complete} subspace of $X$. Therefore, for every $x \in X$, there exists a best approximation of $x$ in $A$, which we denote by $a_0 \in A$, that satisfies $x-a_0 \in A^{\perp}$ (see this \PMlinkname{entry}{BestApproximationInInnerProductSpaces}).
+
+This allows one to write $x$ as a sum of elements in $A$ and $A^{\perp}$
+\begin{displaymath}
+x= a_0 + (x-a_0)
+\end{displaymath}
+which proves that
+\begin{displaymath}
+X= A + A^{\perp} \; .
+\end{displaymath}
+
+Moreover, it is easy to see that
+\begin{displaymath}
+A \cap A^{\perp} = \{0\}
+\end{displaymath}
+since if $y \in A \cap A^{\perp}$ then $\langle y, y \rangle = 0$, which means $y=0$.
+
+We conclude that $X=A \oplus A^{\perp}$. $\square$
+\end{itemize}
+
+
+%%%%%
+%%%%%
+\end{document}

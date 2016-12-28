@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TfIsADistributionOfZerothOrder}
+\pmcreated{2013-03-22 13:44:28}
+\pmmodified{2013-03-22 13:44:28}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{$T_f$ is a distribution of zeroth order}
+\pmrecord{6}{34434}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46F05}
+\pmclassification{msc}{46-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\newcommand{\cD}[0]{\mathcal{D}}
+
+To check that $T_f$ is a \PMlinkname{distribution of zeroth order}{Distribution4},
+we shall use
+condition (3) on \PMlinkname{this page}{Distribution4}.
+First, it is clear that $T_f$ is a linear mapping.
+To see that $T_f$ is continuous, suppose $K$ is a compact set in
+$U$ and $u\in \cD_K$, i.e., $u$ is a smooth function with support in $K$.
+We then have
+\begin{eqnarray*}
+|T_f(u)| &=& |\int_K f(x) u(x) dx |\\
+   &\le& \int_K |f(x)| \,\, |u(x)| dx \\
+   &\le& \int_K |f(x)| dx \, ||u||_\infty.
+\end{eqnarray*}
+Since $f$ is locally integrable, it follows that $C=\int_K |f(x)| dx$
+is finite, so
+$$ |T_f(u)| \le C ||u||_\infty.$$
+Thus $f$ is a distribution of zeroth order (\cite{lang}, pp. 381). $\Box$
+
+\begin{thebibliography}{9}
+ \bibitem{lang}
+ S. Lang, \emph{Analysis II},
+ Addison-Wesley Publishing Company Inc., 1969.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

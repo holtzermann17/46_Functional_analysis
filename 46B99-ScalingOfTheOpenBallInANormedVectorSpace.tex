@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ScalingOfTheOpenBallInANormedVectorSpace}
+\pmcreated{2013-03-22 15:33:25}
+\pmmodified{2013-03-22 15:33:25}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{scaling of the open ball in a normed vector space}
+\pmrecord{7}{37458}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+% This is written from scratch with no reference
+
+Let $V$ be a vector space over a field $F$ (real or complex), and let 
+$\Vert\cdot \Vert$ be a norm on $V$. Further, 
+for $r>0$, $v\in V$, let
+$$
+ B_r(v) = \{ w\in V: \Vert w-v\Vert < r \}.
+$$
+Then for any non-zero $\lambda\in F$, we have 
+$$
+  \lambda B_r(v) = B_{|\lambda| r}(\lambda v).
+$$
+
+The claim is clear for $\lambda =0$, so we can assume that $\lambda \neq 0$. 
+Then
+\begin{eqnarray*}
+\lambda B_r(v) &=&  \{ z\in V: \Vert w-v\Vert < r\ \mbox{and}\ z=\lambda w \} \\
+               &=&  \{ z\in V: \Vert \frac{z}{\lambda}-v\Vert < r \} \\
+               &=&  \{ z\in V: \Vert z-\lambda v\Vert < |\lambda| r \} \\
+               &=&  B_{|\lambda| r}(\lambda v).
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

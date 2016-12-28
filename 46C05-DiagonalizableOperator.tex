@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiagonalizableOperator}
+\pmcreated{2013-03-22 17:33:47}
+\pmmodified{2013-03-22 17:33:47}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{diagonalizable operator}
+\pmrecord{6}{39972}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmclassification{msc}{47A05}
+\pmrelated{SpectralTheoremForHermitianMatrices}
+\pmdefines{unitarily diagonalizable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{diagonalizable}
+
+The expression "\emph{diagonalizable operator}" has several meanings in operator theory. The purpose of this entry is to present some commonly used concepts where this terminology appears.
+
+
+\subsection{Definition 1}
+Let $H$ be a finite dimensional Hilbert space. A linear operator $T:H\longrightarrow H$ is said to be {\bf diagonalizable} if the corresponding matrix (in a given basis) is a \PMlinkname{diagonalizable matrix}{Diagonalizable2}.
+
+The above definition is equivalent to: There exists a basis of $H$ consisting of eigenvectors of $T$.
+
+{\bf Remark -} This is a common definition in linear algebra.
+\subsection{Definition 2}
+Let $H$ be a finite dimensional Hilbert space. A linear operator $T:H\longrightarrow H$ is said to be {\bf diagonalizable} if there is an orthonormal basis of $H$ in which $T$ is represented by a diagonal matrix.
+
+The above definition is equivalent to: There exists an orthonormal basis of $H$ consisting of eigenvectors of $T$.
+
+Another equivalent definition is: There exists an orthonormal basis $\{e_1, \dots, e_n\}$ of $H$ and values $\lambda_1, \dots, \lambda_2 \in \mathbb{C}$ such that
+\begin{displaymath}
+T(x)=\sum_{i=1}^n \lambda_i \langle x, e_i \rangle e_i
+\end{displaymath}
+{\bf Remarks -}
+\begin{itemize}
+\item In \PMlinkname{linear algebra}{LinearAlgebra} such operators are also called {\bf unitarily diagonalizable}.
+\item Diagonalizable operators (in this sense) are always normal operators. The \PMlinkname{Spectral theorem for normal   operators}{SpectralTheoremForHermitianMatrices} assures that the converse is also true.
+\end{itemize}
+
+\subsection{Definition 3}
+Let $H$ be a Hilbert space. A bounded linear operator $T:H\longrightarrow H$ is said to be {\bf diagonalizable} if there exists an orthonormal basis consisting of eigenvectors of $T$.
+
+An equivalent definition is: There exists an orthonormal basis $\{e_i\}_{i \in J}$ of $H$ and values $\{\lambda_i\}_{i \in J}$ such that
+\begin{displaymath}
+T(x)= \sum_{i \in J} \lambda_i \langle x, e_i \rangle e_i
+\end{displaymath}
+
+{\bf Remarks -}
+\begin{itemize}
+\item If $H$ is finite dimensional this is the same as definition 2.
+\item Diagonalizable operators (in this sense) are always normal operators. For compact operators the converse is assured by an appropriate version of the spectral theorem for compact normal operators.
+\end{itemize}
+
+\subsection{Definition 4}
+Let $H$ be a Hilbert space. A linear operator $T:H\longrightarrow H$ is said to be {\bf diagonalizable} if it is \PMlinkescapetext{unitarily equivalent} to a \PMlinkname{multiplication operator}{MultiplicationOperatorOnMathbbL22} in some \PMlinkname{$L^2$-space}{L2SpacesAreHilbertSpaces}, i.e. if there exists
+
+\begin{itemize}
+\item a measure space $(X, \mathcal{B}, \mu)$,
+\item a unitary operator $U: L^2(X) \longrightarrow H$ and
+\item a function $f \in$ \PMlinkname{$L^{\infty}(X)$}{LpSpace} such that
+\end{itemize}
+
+\begin{displaymath}
+T=U M_f U^*
+\end{displaymath}
+
+where $M_f: L^2(X) \longrightarrow L^2(X)$ is the \PMlinkname{operator of multiplication}{MultiplicationOperator} by $f$
+\begin{displaymath}
+M_f(\psi) = f .\psi \;\;.
+\end{displaymath}
+
+{\bf Remarks -}
+\begin{itemize}
+\item If $H = \mathbb{C}^n$ the above definition is equivalent to say that $T$ is unitarily diagonalizable (Definition 2). Indeed, we can think of $\mathbb{C}^n$ as $L^2(\{1, \dots, n\})$ with the counting measure. In this case, multiplication operators correspond to diagonal matrices.
+\item Diagonalizable operators (in this sense) are necessarily normal operators (since multiplication operators are so). The discussion about the converse result is the content of general versions of the spectral theorem.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

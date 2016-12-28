@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryLocallyIntegrableFunctionIsADistribution}
+\pmcreated{2013-03-22 13:44:25}
+\pmmodified{2013-03-22 13:44:25}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{every locally integrable function is a distribution}
+\pmrecord{8}{34433}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+\pmclassification{msc}{46F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\newcommand{\cD}[0]{\mathcal{D}}
+
+Suppose $U$ is an open set in $\sR^n$ and $f$ is a locally
+integrable function on $U$, i.e., $f\in L^1_{\scriptsize{\mbox{loc}}}(U)$.
+Then the mapping
+\begin{eqnarray*}
+T_f: \cD(U) &\to& \sC \\
+     u      &\mapsto& \int_U f(x) u(x) dx
+\end{eqnarray*}
+is a zeroth order distribution. (See parent entry for notation $\cD(U)$.)
+
+\PMlinkname{(proof)}{T_fIsADistributionOfZerothOrder}
+
+If $f$ and $g$ are both locally integrable functions on an open set $U$,
+and $T_f=T_g$, then it follows (see 
+\PMlinkname{this page}{TheoremForLocallyIntegrableFunctions}),
+that $f=g$ almost everywhere. Thus, the mapping $f\mapsto T_f$
+is a linear injection when $L^1_{\scriptsize{\mbox{loc}}}$ is equipped with
+the usual equivalence relation for an $L^p$-space. For this reason,
+one usually writes $f$ for the distribution $T_f$.
+%%%%%
+%%%%%
+\end{document}

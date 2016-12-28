@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalDivisorOfZero}
+\pmcreated{2013-03-22 16:12:15}
+\pmmodified{2013-03-22 16:12:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{topological divisor of zero}
+\pmrecord{7}{38299}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+\pmsynonym{generalized divisor of zero}{TopologicalDivisorOfZero}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $A$ be a normed ring.\, An element $a\in A$ is said to be a \emph{left topological divisor of zero} if there is a sequence $a_n$ with\, $\|a_n\|=1$\, for all $n$ such that\, $$\lim_{n\to\infty}\|aa_n\| = 0.$$\, Analogously, $a$ is a \PMlinkescapetext{\emph{right topological divisor of zero}} if\, $$\lim_{n\to\infty}\|b_na\| = 0,$$ for some sequence $b_n$ with\, $\|b_n\|=1$.\, The element $a$ is a \emph{topological divisor of zero} if it is both a left and a \PMlinkescapetext{right} topological divisor of zero.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item Any zero divisor is a topological divisor of zero.
+\item If $a$ is a (left) topological divisor of zero, then $ba$ is a (left) topological divisor of zero.  As a result, $a$ is never a unit, for if $b$ is its inverse, then $1=ba$ would be a topological divisor of zero, which is impossible.
+\item In a commutative Banach algebra $A$, an element is a topological divisor of zero if it lies on the boundary of $U(A)$, the group of units of $A$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

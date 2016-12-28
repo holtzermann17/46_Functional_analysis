@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeakTopology}
+\pmcreated{2013-03-22 15:07:05}
+\pmmodified{2013-03-22 15:07:05}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{weak-* topology}
+\pmrecord{8}{36855}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A03}
+\pmsynonym{weak-* topology}{WeakTopology}
+\pmsynonym{weak-$*$ topology}{WeakTopology}
+\pmsynonym{weak-star topology}{WeakTopology}
+\pmrelated{WeakHomotopyAdditionLemma}
+\pmdefines{weak topology}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+Let $X$ be a locally convex topological vector space (over $\mathbb{C}$ or $\mathbb{R}$), and let $X^*$ be the set of continuous linear functionals on $X$ (the continuous dual of $X$). 
+If $f \in X^*$ then let $p_{f}$ denote the seminorm $p_f(x) = \lvert f(x) \rvert$, and let $p_x(f)$ denote the seminorm $p_x(f) = \lvert f(x) \rvert$.
+Obviously any normed space is a locally convex topological vector space so $X$ could be a normed space.
+
+\begin{defn}
+The topology on $X$ defined by the seminorms $\{ p_f \mid f \in X^* \}$ is called the {\em weak topology} and the topology on $X^*$ defined by the seminorms $\{ p_x \mid x \in X \}$ is called the {\em weak-$*$ topology}.
+\end{defn}
+
+The weak topology on $X$ is usually denoted by $\sigma(X,X^*)$ and the weak-$*$
+topology on $X^*$ is usually denoted by $\sigma(X^*,X)$.  Another common notation is $(X,wk)$ and $(X^*,wk-*)$
+
+Topology defined on a space $Y$ by seminorms $p_\iota$, $\iota \in I$ means that we take the sets $\{ y \in Y \mid p_\iota(y) < \epsilon \}$ for all $\iota \in I$ and $\epsilon > 0$ as a subbase for the topology (that is finite intersections of such sets form the basis).
+
+The most striking result about weak-$*$ topology is the Alaoglu's theorem which asserts that for $X$ being a normed space, a closed ball (in the operator norm) of $X^*$ is weak-$*$ compact.  There is no similar result for the weak topology on $X$, unless $X$ is a reflexive space.
+
+Note that $X^*$ is sometimes used for the algebraic dual of a space and $X'$ is used for the continuous dual.  In functional analysis $X^*$ always means the continuous dual and hence the term {\em weak-$*$ topology}.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:funcanal}
+John B.\@ Conway.
+{\em \PMlinkescapetext{A Course in Functional Analysis}},
+Springer-Verlag, New York, New York, 1990.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

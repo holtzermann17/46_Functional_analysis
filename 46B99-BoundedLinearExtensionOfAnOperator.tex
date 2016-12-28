@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedLinearExtensionOfAnOperator}
+\pmcreated{2013-03-22 17:35:17}
+\pmmodified{2013-03-22 17:35:17}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{bounded linear extension of an operator}
+\pmrecord{11}{40000}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmclassification{msc}{47A05}
+\pmsynonym{continuous extension of an operator}{BoundedLinearExtensionOfAnOperator}
+\pmdefines{completion of normed spaces is a covariant functor}
+\pmdefines{continuous extension of a normed algebra homomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsection{Bounded Linear Extension}
+
+Let $X$ and $Y$ be normed vector spaces and denote by $\widetilde{X}$ and $\widetilde{Y}$ their completions.
+
+$\,$
+
+{\bf Theorem 1 -} Every bounded linear operator $T:X \longrightarrow Y$ can be extended to a bounded linear operator $\widetilde{T} : \widetilde{X} \longrightarrow \widetilde{Y}$. Moreover, this extension is unique and $\|T\| = \|\widetilde{T}\|$.
+
+$\,$
+
+In particular, if $Y$ is a Banach space and $S \subseteq X$ is a (not necessarily \PMlinkname{closed}{ClosedSet}) subspace of $X$, an operator $T:S \longrightarrow Y$ has an extension $\widetilde{T} : \overline{S} \longrightarrow Y$ to $\overline{S}$ (the \PMlinkname{closure}{Closure} of $S$), which is unique and such that $\|T\|= \|\widetilde{T}\|$.
+
+\subsection{Functorial Property of the Extension}
+
+The extension of bounded linear operators between two normed vector spaces to their completions is functorial. More precisely, let $\mathbf{NVec}$ be the category of normed vector spaces (whose \PMlinkname{morphisms}{Category} are the bounded linear operators) and $\mathbf{Ban}$ the categroy of Banach spaces (whose \PMlinkescapetext{morphisms} are also the bounded linear operators). We have that
+
+$\,$
+
+{\bf Theorem 2 -} The completion $\,\widetilde{\,} : \mathbf{NVec} \longrightarrow \mathbf{Ban}$, which associates each normed vector space $X$ with its completion $\widetilde{X}$ and each bounded linear operator $T$ with its extension $\widetilde{T}$, is a covariant functor.
+
+$\,$
+
+This, in particular, implies that $\widetilde{T_1T_2} = \widetilde{T_1}\widetilde{T_2}$.
+
+\subsection{Extensions in Spaces with Additional Structure}
+
+When the normed vector spaces $X$ and $Y$ have some additional structure (for example, when $X$ and $Y$ are normed algebras) it is interesting to know if the (unique) extension of a morphism $T:X \longrightarrow Y$ preserves the additional structure. The following theorem states that this indeed the case for normed algebras or normed *-algebras.
+
+$\,$
+
+{\bf Theorem 3 -} If $X$ and $Y$ be normed vector spaces that are also normed algebras (normed *-algebras) and $T:X \longrightarrow Y$ is a bounded homomorphism (bounded *-homomorphism), then the unique bounded linear extension $\widetilde{T}$ of $T$ is also an homomorphism (*-homomorphism).
+
+$\,$
+
+Thus, completion is also a covariant functor from the category of normed algebras (normed *-algebras) to category of Banach algebras (Banach *-algebras).
+%%%%%
+%%%%%
+\end{document}

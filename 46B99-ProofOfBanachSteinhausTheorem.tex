@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBanachSteinhausTheorem}
+\pmcreated{2013-03-22 14:48:41}
+\pmmodified{2013-03-22 14:48:41}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of Banach-Steinhaus theorem}
+\pmrecord{6}{36470}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let
+$$E_n = \{x\in X: \|T(x)\|\leq n\textnormal{ for all }T\in \mathcal{F}\}.$$
+From the hypothesis, we have that
+$$\bigcup_{n=1}^\infty E_n = X.$$
+Also, each $E_n$ is closed, since it can be written as
+$$E_n = \bigcap_{T\in\mathcal{F}}{T^{-1}(B(0,n))},$$
+where $B(0,n)$ is the closed ball centered at $0$ with radius $n$ in $Y$,
+and each of the sets in the intersection is closed due to the continuity of the operators.
+Now since $X$ is a Banach space, Baire's category theorem 
+implies that there exists $n$ such that $E_n$ has
+nonempty interior. So there is $x_0\in E_n$ and $r>0$ such 
+that $B(x_0,r)\subset E_n$. Thus if $\|x\|\leq r$, we have
+$$\|T(x)\|-\|T(x_0)\|\leq \|T(x_0)+T(x)\|=\|T(x_0+x)\|\leq n$$
+for each $T\in \mathcal{F}$, and so
+$$\|T(x)\|\leq n+\|T(x_0)\|$$
+so if $\|x\|\leq 1$, we have 
+$$\|T(x)\|= \frac{1}{r}\|T(rx)\| \leq \frac{1}{r}\left(n+\|T(x_0)\|\right) = c,$$
+and this means that
+$$\|T\| = \sup\{\|Tx\|: \|x\|\leq 1\} \leq c$$
+for all $T\in\mathcal{F}$.
+%%%%%
+%%%%%
+\end{document}

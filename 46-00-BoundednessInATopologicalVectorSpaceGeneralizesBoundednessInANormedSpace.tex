@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundednessInATopologicalVectorSpaceGeneralizesBoundednessInANormedSpace}
+\pmcreated{2013-03-22 15:33:29}
+\pmmodified{2013-03-22 15:33:29}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{boundedness in a topological vector space generalizes boundedness in a normed space}
+\pmrecord{7}{37459}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+% This is written from scratch with no external reference
+Boundedness in a topological vector space is a generalization of boundedness in a normed space. 
+
+Suppose $(V,\Vert\cdot \Vert)$ is a normed vector space over $\C$, and suppose $B$ is bounded in the sense of the parent entry. Then for the unit ball 
+
+$$ B_1(0)=\{ v\in V : \Vert v \Vert <1\}$$
+there exists some $\lambda \in \C$ such that $B\subseteq \lambda B_1(0)$. Using 
+\PMlinkname{this result}{ScalingOfTheOpenBallInANormedVectorSpace}, it follows that 
+
+$$  B \subseteq B_{|\lambda|}(0).$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InjectiveCalgebraHomomorphismIsIsometric}
+\pmcreated{2013-03-22 18:00:35}
+\pmmodified{2013-03-22 18:00:35}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{injective $C^*$-algebra homomorphism is isometric}
+\pmrecord{6}{40524}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $\mathcal{A}$ and $\mathcal{B}$ be \PMlinkname{$C^*$-algebras}{CAlgebra} and $\Phi : \mathcal{A} \longrightarrow \mathcal{B}$ an injective *-homomorphism. Then $\|\Phi(x)\|=\|x\|$ and $\sigma(\Phi(x)) = \sigma(x)$ for every $x \in \mathcal{A}$, where $\sigma(y)$ denotes the spectrum of the element $y$.
+
+$\,$
+
+{\bf \emph{Proof:}} It suffices to prove the result for unital $C^*$-algebras, since the general case follows directly by considering the minimal unitizations of $\mathcal{A}$ and $\mathcal{B}$. So we assume that $\mathcal{A}$ and $\mathcal{B}$ are unital and we will denote their identity elements by $e$, being clear from context which one is being used.
+
+Let us first prove the second part of the theorem for normal elements $x \in \mathcal{A}$. It is clear that $\sigma(\Phi(x)) \subseteq \sigma(x)$ since if $x - \lambda e$ invertible for some $\lambda \in \mathcal{C}$, then so is $\Phi(x) - \lambda e = \Phi(x - \lambda e)$. Suppose the inclusion is strict, then there is a non-zero function $f \in C(\sigma(x))$ whose restriction to $\sigma(\Phi(x))$ is zero (here $C(\sigma(x))$ denotes the $C^*$-algebra of continuous functions $\sigma(x) \longrightarrow \mathbb{C}$). Thus we have, by the continuous functional calculus, that $f(x) \neq 0$ and also that
+\begin{align*}
+\Phi(f(x))=f(\Phi(x))=0
+\end{align*}
+by the continuous functional calculus and the result on \PMlinkname{this entry}{CAlgebraHomomorphismsPreserveContinuousFunctionalCalculus}. Thus, we conclude that $\Phi$ is not injective and which is a contradiction. Hence we must have $\sigma(\Phi(x)) = \sigma(x)$.
+
+Let $R_{\sigma}(z)$ denote the spectral radius of the element $z$. From the \PMlinkname{norm and spectral radius relation in $C^*$-algebras}{NormAndSpectralRadiusInCAlgebras} we know that, for an arbitrary element $x \in \mathcal{A}$, we have that
+\begin{align*}
+\|x\|^2=R_{\sigma}(x^*x)
+\end{align*}
+Since the element $x^*x$ is normal, from the preceding paragraph it follows that $R_{\sigma}(x^*x)=R_{\sigma}(\Phi(x^*x))$, and hence we conclude that
+\begin{align*}
+\|x\|^2=R_{\sigma}(x^*x)=R_{\sigma}\big(\Phi(x)^*\Phi(x)\big)= \|\Phi(x)\|^2
+\end{align*}
+i.e. $\|\Phi(x)\|=\|x\|$.
+
+Since $\Phi$ is isometric, $\Phi(\mathcal{A})$ is closed *-subalgebra of $\mathcal{B}$, i.e. $\Phi(\mathcal{A})$ is a $C^*$-subalgebra of $\mathcal{B}$, and it is isomorphic to $\mathcal{A}$. Using the spectral invariance theorem we conclude that $\sigma(x)=\sigma(\Phi(x))$ for every $x \in \mathcal{A}$. $\square$
+%%%%%
+%%%%%
+\end{document}

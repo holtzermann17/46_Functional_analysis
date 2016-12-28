@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaplaceTransformOfDiracDelta}
+\pmcreated{2013-03-22 19:10:56}
+\pmmodified{2013-03-22 19:10:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Laplace transform of Dirac delta}
+\pmrecord{11}{42090}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E20}
+\pmclassification{msc}{44A10}
+\pmclassification{msc}{34L40}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkname{Dirac delta}{DiracDeltaFunction} $\delta$ can be interpreted as a linear functional, i.e. a linear mapping from a function space, consisting e.g. of certain real functions, to $\mathbb{R}$ (or $\mathbb{C}$), having the property
+$$\delta[f] \;=\; f(0).$$
+One may think this as the inner product
+$$\langle f,\,\delta\rangle \;=\; \int_0^\infty\!f(t)\delta(t)\,dt$$
+of a function $f$ and another ``function'' $\delta$, when the well-known \PMlinkescapetext{formula}
+$$\int_0^\infty\!f(t)\delta(t)\,dt \;=\; f(0)$$
+is true.\, Applying this to\, $f(t) := e^{-st}$,\, one gets
+$$\int_0^\infty\!e^{-st}\delta(t)\,dt \;=\; e^{-0},$$
+i.e. the Laplace transform
+\begin{align}
+\mathcal{L}\{\delta(t)\} \;=\; 1.
+\end{align}
+By the delay theorem, this result may be generalised to
+$$\mathcal{L}\{\delta(t\!-\!a))\} \;=\; e^{-as}.$$\\
+
+
+
+When introducing some ``nascent Dirac delta function'', for example
+\begin{align*}
+\eta_\varepsilon(t) \;:=\; 
+\begin{cases}
+\frac{1}{\varepsilon} \quad \mbox{for}\;\; 0 \le t \le \varepsilon,\\
+0 \quad \mbox{for} \qquad t > \varepsilon,
+\end{cases}
+\end{align*}
+as an ``approximation'' of Dirac delta, we obtain the Laplace transform
+$$\mathcal{L}\{\eta_\varepsilon(t)\} \;=\; \int_0^\infty\!e^{-st}\eta_\varepsilon(t)\,dt
+\;=\; \int_0^\varepsilon\frac{e^{-st}}{\varepsilon}\,dt+\int_\varepsilon^\infty\!e^{-st}\cdot0\,dt 
+\;=\; \frac{1}{\varepsilon}\int_0^\varepsilon\!e^{-st}\,dt \;=\; \frac{1\!-\!e^{-\varepsilon s}}{\varepsilon s}.$$
+As the Taylor expansion shows, we then have
+$$\lim_{\varepsilon\to0+}\mathcal{L}\{\eta_\varepsilon(t)\} \;=\; 1,$$
+being in accordance with (1).
+
+%%%%%
+%%%%%
+\end{document}

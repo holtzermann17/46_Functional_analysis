@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsometricIsomorphism}
+\pmcreated{2013-03-22 17:34:17}
+\pmmodified{2013-03-22 17:34:17}
+\pmowner{Gorkem}{3644}
+\pmmodifier{Gorkem}{3644}
+\pmtitle{isometric isomorphism}
+\pmrecord{8}{39982}
+\pmprivacy{1}
+\pmauthor{Gorkem}{3644}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmrelated{Isometry}
+\pmdefines{isometrically isomorphic}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amssymb,amsbsy}
+\usepackage{graphicx,color}
+\usepackage{epsfig}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{rk}[thm]{Remark}
+\newtheorem{crl}[thm]{Corollary}
+\newtheorem{stp}{Step}
+
+\newcommand{\disp}{\displaystyle}
+\newcommand{\dintl}{\disp\int\limits}
+\newcommand{\dsuml}{\disp\sum\limits}
+\newcommand{\hsp}{\hspace{30pt}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\trns}{\,\widehat{}\,\,}
+
+\newcommand{\bthm}{\begin{thm}}
+\newcommand{\ethm}{\end{thm}}
+\newcommand{\bstp}{\begin{stp}}
+\newcommand{\estp}{\end{stp}}
+\newcommand{\blemma}{\begin{lemma}}
+\newcommand{\elemma}{\end{lemma}}
+\newcommand{\bprop}{\begin{prop}}
+\newcommand{\eprop}{\end{prop}}
+\newcommand{\bpf}{\begin{pf}}
+\newcommand{\epf}{\end{pf}}
+\newcommand{\bdefn}{\begin{defn}}
+\newcommand{\edefn}{\end{defn}}
+\newcommand{\brk}{\begin{rk}}
+\newcommand{\erk}{\end{rk}}
+\newcommand{\bcrl}{\begin{crl}}
+\newcommand{\ecrl}{\end{crl}}
+
+
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\brackets}[1]{\left[#1\right]}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\supnorm}[1]{\norm{#1}_\infty}
+\newcommand{\normt}[1]{\norm{#1}_2}
+\newcommand{\ip}[2]{\left\langle#1 , #2\right\rangle}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\calg}[1]{\mathcal{#1}}
+
+
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\qed}{$\ \ \ \ \ \Box$}
+\newcommand{\qedin}{\ \ \ \ \ \Box}
+\newcommand{\Tr}{\operatorname{\Tr}}
+
+\newenvironment{pf}{\begin{trivlist}\item[\hskip%
+\labelsep{\bf Proof.}]}
+{\rm\end{trivlist}}
+
+\begin{document}
+Let $(X, \norm{\ }_X)$ and $(Y, \norm{\ }_Y)$ be normed vector spaces.  A surjective linear map $T\colon X \rightarrow Y$ is called an \emph{isometric isomorphism} between $X$ and $Y$ if
+$$
+\norm{Tx}_Y = \norm{x}_X,\  \mbox{for all}\  x\in X.
+$$
+
+In this case, $X$ and $Y$ are said to be isometrically isomorphic.
+
+Two isometrically isomorphic normed vector spaces share the same \PMlinkescapetext{structure}, so they are usually identified with each other.
+%%%%%
+%%%%%
+\end{document}

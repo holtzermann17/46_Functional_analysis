@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocalizationForDistributions}
+\pmcreated{2013-03-22 13:46:17}
+\pmmodified{2013-03-22 13:46:17}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{localization for distributions}
+\pmrecord{9}{34477}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+\pmclassification{msc}{46F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{index}
+
+\newcommand{\supp}[0]{\operatorname{supp}}
+\newcommand{\cD}[0]{\mathcal{D}}
+
+{\bf Definition}
+Suppose $U$ is an open set in $\sR^n$ and $T$ is a 
+distribution $T\in \cD'(U)$. Then we say that $T$ \emph{vanishes} on
+an open set $V\subset U$, if the restriction of $T$ to $V$ is 
+the zero distribution on $V$. In other words, $T$ vanishes on $V$, if
+$T(v)=0$ for all $v\in C_0^\infty(V)$. (Here $C_0^\infty(V)$ is the set
+of smooth function with compact support in $V$.) Similarly, we say that
+two distributions $S,T\in \cD'(U)$ are \emph{equal}, or 
+\emph{coincide} on $V$, if $S-T$ vanishes on $V$. We then 
+write: $S=T$ on $V$. 
+
+{\bf Theorem}\cite{folland, hormander} 
+Suppose $U$ is an open set in $\sR^n$ and 
+$\{U_i\}_{i\in I}$ is an open cover of $U$, i.e., 
+$$U=\bigcup_{i\in I} U_i.$$
+Here, $I$ is an arbitrary index set. If $S,T$ are distributions on $U$, 
+such that $S=T$ on each $U_i$, then $S=T$ (on U). 
+
+{\bf Proof.} Suppose $u\in \cD(U)$. Our aim is to show that $S(u)=T(u)$. 
+First, we have $\supp u \subset K$ for some compact $K\subset U$. 
+\PMlinkname{It follows}{YIsCompactIfAndOnlyIfEveryOpenCoverOfYHasAFiniteSubcover} that there exist a finite collection of $U_i$:s from the open cover, 
+say $U_1, \ldots, U_N$, such that $K\subset \cup_{i=1}^N U_i$.
+By a smooth partition of unity, there
+are smooth functions $\phi_1, \ldots, \phi_N: U\to \sR$ such that
+\begin{enumerate}
+\item$ \supp \phi_i \subset U_i$ for all $i$.
+\item  $\phi_i(x) \in [0,1]$ for all $x\in U$ and all $i$,
+\item $\sum_{i=1}^N \phi_i(x) = 1$ for all $x\in K$.
+\end{enumerate}
+From the first property, and from a property for the \PMlinkname{support of a function}{SupportOfFunction},
+it follows that 
+$\supp \phi_i u \subset \supp \phi_i \cap \supp u \subset U_i$. 
+Therefore,  for each $i$,
+$S(\phi_i u)=T(\phi_i u)$ since $S$ and $T$ conicide 
+on $U_i$. 
+Then
+\begin{eqnarray*}
+S(u) = \sum_{i=1}^N S(\phi_i u) = \sum_{i=1}^N T(\phi_i u) = T(u),
+\end{eqnarray*}
+and the theorem follows. $\Box$
+
+\begin{thebibliography}{9}
+\bibitem{folland}
+ G.B. Folland, \emph{Real Analysis: Modern Techniques and Their Applications}, 2nd ed, John Wiley \& Sons, Inc., 1999.
+\bibitem{rudin_fap}
+ W. Rudin, \emph{Functional Analysis},
+ McGraw-Hill Book Company, 1973.
+ \bibitem{hormander}
+ L. H\"ormander, \emph{The Analysis of Linear Partial Differential Operators I,
+ (Distribution theory and Fourier Analysis)}, 2nd ed, Springer-Verlag, 1990.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

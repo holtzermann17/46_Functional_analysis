@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProperSubspacesOfATopologicalVectorSpaceHaveEmptyInterior}
+\pmcreated{2013-03-22 17:34:23}
+\pmmodified{2013-03-22 17:34:23}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proper subspaces of a topological vector space have empty interior}
+\pmrecord{6}{39984}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $V$ be a topological vector space. Every proper subspace $S \subset V$ has empty interior.
+
+{\bf Proof :} Let $S$ be a subspace of $V$. Suppose there is a non-empty open set $A \subseteq S$.
+
+Fix a point $a_0 \in A \subseteq S$. Since the vector sum operation is continuous, translations of open sets are again open sets. In particular, the set $A - a_0 := \{x-a_0 : x \in A\}$ is an open set of $V$ that contains the origin $0$.
+
+As $S$ is a vector subspace and $A \subseteq S$, we see that the translation $A-a_0$ is still contained in $S$.
+
+Since the scalar multiplication operation is continuous it follows easily that, for every $x \in V$, the function $f_x: \mathbb{K} \longrightarrow V$ given by
+\begin{displaymath}
+f_x (\lambda) = \lambda x
+\end{displaymath}
+is also continuous.
+
+Consider now any vector $v \in V$. The set $f_v^{-1}(A-a_0)$ is an open set that contains $0$. Thus, taking a value $\lambda \in f_v^{-1}(A-a_0)$ we see that
+\begin{displaymath}
+\lambda v \in A-a_0 ,
+\end{displaymath}
+i.e. we can multiply $v$ by a sufficiently small $\lambda$ such that $\lambda v$ belongs to the open set $A - a_0$.
+
+Since the set $A- a_0$ is contained in $S$, we see that $\lambda v \in S$, and therefore $v \in S$.
+
+This proves that $V=S$, i.e. $S$ is not proper.
+
+We conclude that if $S$ is proper then $S$ has empty interior. $\square$
+%%%%%
+%%%%%
+\end{document}

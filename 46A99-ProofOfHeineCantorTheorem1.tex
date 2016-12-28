@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHeineCantorTheorem}
+\pmcreated{2013-03-22 13:31:26}
+\pmmodified{2013-03-22 13:31:26}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Heine-Cantor theorem}
+\pmrecord{5}{34114}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We prove this theorem in the case when $X$ and $Y$ are metric spaces.
+
+Suppose $f$ is not uniformly continuous. Then
+\[
+  \exists \epsilon>0\ \forall \delta>0\ \exists x,y\in X \quad
+  d(x,y)< \delta \ \mathrm{but}\ d(f(x),f(y))\ge \epsilon.
+\]
+In particular by letting $\delta=1/k$ we can construct two sequences $x_k$ and $y_k$ such that
+\[
+  d(x_k,y_k) < 1/k\ \mathrm{and}\ d(f(x_k),f(y_k)\ge \epsilon.
+\]
+
+Since $X$ is compact the two sequence have convergent subsequences i.e. 
+\[
+  x_{k_j} \to \bar x \in X, \quad y_{k_j} \to \bar y \in X.
+\]
+Since $d(x_k,y_k)\to 0$ we have $\bar x = \bar y$. Being $f$ continuous we hence conclude $d(f(x_{k_j}),f(y_{k_j})) \to 0$ which is a contradiction being $d(f(x_k),f(y_k))\ge \epsilon$.
+%%%%%
+%%%%%
+\end{document}

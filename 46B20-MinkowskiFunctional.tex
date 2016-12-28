@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinkowskiFunctional}
+\pmcreated{2013-03-22 14:50:44}
+\pmmodified{2013-03-22 14:50:44}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Minkowski  functional}
+\pmrecord{18}{36515}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B20}
+%\pmkeywords{Minkowski}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a normed space and let 
+   $K$ an absorbing  convex subset of $X$ such that 
+   $0$ is in the interior of $K$.
+Then the 
+  \emph{Minkowski functional} 
+  $\rho \colon X \to \mathbb{R}$ is defined as 
+$$
+  \rho(x) = \inf \{ \lambda>0 \colon x \in \lambda K \}.
+$$
+
+We put $\rho(x) = 0$ whenever $x = 0$.  Clearly $\rho(x) \geq 0$ for all $x$.
+
+It is important to note that in general $\rho(x) \neq \rho(-x)$.
+
+{\bf Properties}\\
+$\rho$ is positively $1$- homogeneous.  This means that $$\rho(s \cdot x) = s \cdot \rho(x)$$
+for $s > 0$.
+%%%%%
+%%%%%
+\end{document}

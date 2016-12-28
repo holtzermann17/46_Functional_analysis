@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryHilbertSpaceHasAnOrthonormalBasis}
+\pmcreated{2013-03-22 17:56:05}
+\pmmodified{2013-03-22 17:56:05}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{every Hilbert space has an orthonormal basis}
+\pmrecord{4}{40431}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Every Hilbert space $H \neq \{0\}$ has an orthonormal basis.
+
+$\,$
+
+{\bf \emph{Proof :}} As could be expected, the proof makes use of Zorn's Lemma. Let $\mathcal{O}$ be the set of all orthonormal sets of $H$. It is clear that $\mathcal{O}$ is non-empty since the set $\{x\}$ is in $\mathcal{O}$, where $x$ is an element of $H$ such that $\|x\| = 1$.
+
+The elements of $\mathcal{O}$ can be ordered by inclusion, and each chain $\mathcal{C}$ in $\mathcal{O}$ has an upper bound, given by the union of all elements of $\mathcal{C}$. Thus, Zorn's Lemma assures the existence of a maximal element $B$ in $\mathcal{O}$. We claim that $B$ is an orthonormal basis of $H$.
+
+It is clear that $B$ is an orthonormal set, as it belongs to $\mathcal{O}$. It remains to see that the linear span of $B$ is dense in $H$.
+
+Let $\overline{\mathrm{span}\,B}$ denote the closure of the span of $B$. Suppose $\overline{\mathrm{span}\,B} \neq H$. By the orthogonal decomposition theorem we know that
+\begin{displaymath}
+H = \overline{\mathrm{span}\,B} \oplus (\overline{\mathrm{span}\,B})^{\perp}  
+\end{displaymath}
+Thus, we conclude that $(\overline{\mathrm{span}\,B})^{\perp} \neq \{0\}$, i.e. there are elements which are \PMlinkname{orthogonal}{OrthogonalVectors} to $\overline{\mathrm{span}\,B}$. This contradicts the maximality of $B$ since, by picking an element $y \in (\overline{\mathrm{span}\,B})^{\perp}$ with $\|y\| = 1$,  $B \cup \{y\}$ would belong belong to $\mathcal{O}$ and would be greater than $B$.
+
+Hence, $\overline{\mathrm{span}\,B} = H$, and this finishes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

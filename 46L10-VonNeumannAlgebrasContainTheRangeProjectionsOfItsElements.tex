@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VonNeumannAlgebrasContainTheRangeProjectionsOfItsElements}
+\pmcreated{2013-03-22 17:28:57}
+\pmmodified{2013-03-22 17:28:57}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{von Neumann algebras contain the range projections of its elements}
+\pmrecord{5}{39869}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L10}
+\pmclassification{msc}{47A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf \PMlinkescapetext{Proposition} -} Let $T$ be an operator in a von Neumann algebra $\mathcal{M}$ acting on an Hilbert space $H$. Then the orthogonal projection onto the range of $T$ and the orthogonal projection onto the kernel of $T$ both belong to $\mathcal{M}$.
+
+{\bf Proof :} Let $T=VR$ be the polar decomposition of $T$ with $KerV=KerR$.
+
+By the result on the \PMlinkname{parent entry}{PolarDecompositionInVonNeumannAlgebras} we see that $V \in \mathcal{M}$.
+
+As $V$ is a partial isometry, $VV^*$ is the (\PMlinkescapetext{orthogonal}) projection onto the range of $T$, and $I-V^*V$ is the (\PMlinkescapetext{orthogonal}) projection onto the kernel of $T$, where $I$ is the identity operator in $\mathcal{M}$.
+
+Therefore the (\PMlinkescapetext{orthogonal}) projections onto the range and kernel of $T$ both belong to $\mathcal{M}$. $\square$
+%%%%%
+%%%%%
+\end{document}

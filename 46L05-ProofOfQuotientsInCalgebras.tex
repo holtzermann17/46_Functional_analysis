@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfQuotientsInCalgebras}
+\pmcreated{2013-03-22 17:41:56}
+\pmmodified{2013-03-22 17:41:56}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of quotients in $C^*$-algebras}
+\pmrecord{7}{40141}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{lies on}
+
+{\bf Proof:} We have that $\mathcal{I}$ is \PMlinkname{self-adjoint}{InvolutaryRing}, since it is a closed ideal of a \PMlinkname{$C^*$-algebra}{CAlgebra} (see \PMlinkname{this entry}{ClosedIdealsInCAlgebrasAreSelfAdjoint}). Hence, the involution in $\mathcal{A}$ induces a well-defined involution in $\mathcal{A}/\mathcal{I}$ by $(x+\mathcal{I})^*:=x^*+\mathcal{I}$.
+
+Recall that, since $\mathcal{I}$ is closed, the quotient norm is indeed a norm in $\mathcal{A}/\mathcal{I}$ that makes $\mathcal{A}/\mathcal{I}$ a Banach algebra (see \PMlinkname{this entry}{QuotientsOfBanachAlgebras}). Thus we only have to prove the $C^*$ \PMlinkescapetext{equality} to prove that $\mathcal{A}/\mathcal{I}$ is a $C^*$-algebra.
+
+Recall that \PMlinkname{$C^*$-algebras have approximate identities}{CAlgebrasHaveApproximateIdentities}. Notice that $\mathcal{I}$ itself is a $C^*$-algebra and pick an approximate identity $(e_{\lambda})$ in $\mathcal{I}$ such that
+\begin{itemize}
+\item each $e_{\lambda}$ is positive.
+\item $\|e_{\lambda}\|\leq 1$
+\end{itemize}
+
+We will only prove the case when $\mathcal{A}$ has an identity element $e$. For the non-unital case, one can consider $\mathcal{A}$ as a $C^*$-subalgebra of its minimal unitization and the same proof will still work.
+
+Let $\|\cdot\|_{q}$ denote the quotient norm in $\mathcal{A}/\mathcal{I}$. We claim that for every $x \in \mathcal{A}$:
+\begin{align}
+\|x + \mathcal{I}\|_q = \lim_{\lambda}\|x(e-e_{\lambda})\|
+\end{align}
+We will prove the above equality as a lemma at the end of the entry. Assuming this result, it follows that for every $a \in \mathcal{A}$
+\begin{align*}
+\|x+\mathcal{I}\|_q^2 = \lim \|x(e-e_{\lambda})\|^2 = \lim \|(e-e_{\lambda})x^*x(e-e_{\lambda})\| \leq \lim \|(e-e_{\lambda})\|\|x^*x(e-e_{\lambda})\|
+\end{align*}
+
+Since each $e_{\lambda}$ is positive and $\|e_{\lambda}\|\leq 1$ we know that its spectrum lies on the interval $[0,1]$. Hence $e-e_{\lambda}$ is also positive and its spectrum also lies on the interval $[0,1]$. Thus, $\|e-e_{\lambda}\|\leq 1$. Therefore:
+\begin{align*}
+\|x+\mathcal{I}\|_q^2 \leq \lim \|(e-e_{\lambda})\|\|x^*x(e-e_{\lambda})\| \leq \lim \|x^*x(e-e_{\lambda})\| = \|x^*x+\mathcal{I}\|_q
+\end{align*}
+
+Since $\mathcal{A}/\mathcal{I}$ is a Banach algebra, we also have $\|x^*x+\mathcal{I}\|_q\leq \|x+\mathcal{I}\|_q^2$ and so
+\begin{displaymath}
+\|x+\mathcal{I}\|_q^2=\|x^*x+\mathcal{I}\|_q
+\end{displaymath}
+which proves that $\mathcal{A}/\mathcal{I}$ is a $C^*$-algebra. $\square$
+
+$\;$
+
+We now prove equality (1) as a lemma.
+
+{\bf Lemma -} Suppose $\mathcal{A}$ is a $C^*$-algebra with identity element $e$. Let $\mathcal{I} \subset \mathcal{A}$ be a closed ideal and $(e_{\lambda})$ be an approximate identity in $\mathcal{I}$ such that each $e_{\lambda}$ is positive and $\|e_{\lambda}\|\leq 1$. Then
+\begin{displaymath}
+\|x + \mathcal{I}\|_q = \lim_{\lambda}\|x(e-e_{\lambda})\|
+\end{displaymath}
+for every $x$ in $\mathcal{A}$.
+
+{\bf Proof:} Since $y(e-e_{\lambda})\longrightarrow 0$ for every $y \in \mathcal{I}$ it follows that
+\begin{eqnarray*}
+\limsup \|x(e-e_{\lambda})\|& = & \limsup\|x-xe_{\lambda}-y+ye_{\lambda}\|\\
+& = & \limsup\|(x-y)(e-e_{\lambda})\|\\
+& \leq & \|x-y\|
+\end{eqnarray*}
+
+Therefore, taking the infimum over all $y \in \mathcal{I}$ we obtain:
+\begin{displaymath}
+\limsup \|x(e-e_{\lambda})\| \leq \inf_{y \in \mathcal{I}} \|x-y\| = \|x+\mathcal{I}\|_q
+\end{displaymath}
+
+Also, since $xe_{\lambda} \in \mathcal{I}$,
+\begin{displaymath}
+\liminf\|x(e-e_{\lambda})\|\geq \inf_{y \in \mathcal{I}} \|x-y\| = \|x+\mathcal{I}\|_q
+\end{displaymath}
+and this proves the lemma. $\square$
+%%%%%
+%%%%%
+\end{document}

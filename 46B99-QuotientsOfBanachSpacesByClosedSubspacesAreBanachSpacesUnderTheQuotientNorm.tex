@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientsOfBanachSpacesByClosedSubspacesAreBanachSpacesUnderTheQuotientNorm}
+\pmcreated{2013-03-22 17:23:01}
+\pmmodified{2013-03-22 17:23:01}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{quotients of Banach spaces by closed subspaces are Banach spaces under the quotient norm}
+\pmrecord{7}{39750}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $X$ be a Banach space and $M$ a closed subspace. Then $X/M$ with the quotient norm is a
+ Banach space.
+
+{\bf Proof :} In {\PMlinkescapetext{order}} to prove that $X/M$ is a Banach space it is enough to prove that every series in $X/M$
+ that converges absolutely also converges in $X/M$.
+
+Let $\sum_{n} X_n$ be an absolutely convergent series in $X/M$, i.e., $\sum_{n} \|X_n\|_{X/M} < \infty$.
+By definition of the quotient norm, there exists $x_n \in X_n$ such that
+
+\begin{displaymath}
+\|x_n \| \le \|X_n \|_{X/M} + 2^{-n}
+\end{displaymath}
+
+It is clear that $\sum_{n} \|x_n\| < \infty$ and so, as $X$ is a Banach space, $\sum_{n} x_n$ is
+ convergent.
+
+Let $x = \sum_{n} x_n$ and $s_k = \sum_{n=1}^k x_n$. We have that
+
+\begin{displaymath}
+x - s_k + M = (x+M) - (s_k +M) = (x+M) - \sum_{n=1}^k (x_n +M) = (x+M) - \sum_{n=1}^k X_n
+\end{displaymath}
+
+Since $\|x-s_k + M \|_{X/M} \leq \|x-s_k\| \longrightarrow 0$ we see that $\sum_n X_n$ converges in $X/M$
+ to $x+M$. $\square$
+%%%%%
+%%%%%
+\end{document}

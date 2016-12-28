@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BanachSteinhausTheorem}
+\pmcreated{2013-03-22 14:48:39}
+\pmmodified{2013-03-22 14:48:39}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Banach-Steinhaus theorem}
+\pmrecord{5}{36469}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmsynonym{Principle of Uniform Boundedness}{BanachSteinhausTheorem}
+\pmsynonym{Uniform Boundedness Principle}{BanachSteinhausTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $X$ be a Banach space and $Y$ a normed space. 
+If a family $\mathcal{F}\subset
+\mathscr{B}(X,Y)$ of bounded operators from $X$ to $Y$ satisfies
+$$\sup\{\|T(x)\|: T\in \mathcal{F}\}<\infty$$
+for each $x\in X$, then
+$$\sup\{\|T\|: T\in \mathcal{F}\}<\infty,$$
+i.e. $\mathcal{F}$ is a bounded subset of $\mathscr{B}(X,Y)$ 
+with the usual operator norm. In other words, 
+there exists a constant $c$ such that for all $x\in X$ and $T\in \mathcal{F}$,
+$$\|Tx\|\leq c\|x\|.$$
+%%%%%
+%%%%%
+\end{document}

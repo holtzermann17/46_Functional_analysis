@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PythagoreanTheoremInInnerProductSpaces}
+\pmcreated{2013-03-22 17:32:13}
+\pmmodified{2013-03-22 17:32:13}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Pythagorean theorem in inner product spaces}
+\pmrecord{5}{39934}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmsynonym{Pythagoras theorem in inner product spaces}{PythagoreanTheoremInInnerProductSpaces}
+\pmrelated{PythagorasTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf \PMlinkescapetext{Pythagorean theorem} -} Let $X$ be an inner product space (over $\mathbb{R}$ or $\mathbb{C}$) and $x, y \in X$ two orthogonal vectors. Then
+\begin{displaymath}
+\|x+y\|^2 = \|x\|^2 + \|y\|^2.
+\end{displaymath}
+
+{\bf Proof :} As $x \perp y$ one has $\langle x, y \rangle = 0$. Then
+\begin{eqnarray*}
+\|x+y\|^2 & = & \langle x+y, x+y \rangle \\
+& = & \langle x, x \rangle + \langle x, y \rangle + \langle y, x \rangle + \langle y, y \rangle \\
+& = & \|x\|^2 + \langle x, y \rangle + \overline{\langle x, y \rangle} +\|y\|^2 \\
+& = & \|x\|^2 + \|y\|^2 \qquad\qquad\qquad\quad \square
+\end{eqnarray*}
+
+$Remark -$ This theorem is valid (with the same proof) for spaces with a semi-definite inner product.
+%%%%%
+%%%%%
+\end{document}

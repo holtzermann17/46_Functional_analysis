@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Frame1}
+\pmcreated{2013-03-22 14:25:37}
+\pmmodified{2013-03-22 14:25:37}
+\pmowner{swiftset}{1337}
+\pmmodifier{swiftset}{1337}
+\pmtitle{frame}
+\pmrecord{9}{35935}
+\pmprivacy{1}
+\pmauthor{swiftset}{1337}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+\pmrelated{RieszSequence}
+\pmrelated{SetOfSampling}
+\pmdefines{Parseval frame}
+\pmdefines{tight frame}
+\pmdefines{frame constants}
+\pmdefines{frame bounds}
+\pmdefines{synthesis operator}
+\pmdefines{analysis operator}
+\pmdefines{frame operator}
+\pmdefines{Grammian}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{constants}
+\PMlinkescapeword{collection}
+\paragraph{Introduction}
+
+The concept of a frame is a generalization of the concept of an orthonormal basis: each vector in the space can be represented as a sum of the elements in the frame, but not necessarily uniquely. It is because of this redundancy in representation that frames have found important applications. Surpisingly, despite the fact that frames do not in general consist of orthonormal vectors, the frame representation of a vector may still satisfy the Parseval equation.
+
+\paragraph{Definition}
+A frame in a Hilbert space $H$ is a collection $(x_i)_{i=1}^n$ of vectors in $H$ such that there exist constants $A, B > 0$ such that for all $x \in H$,
+$$A \|x\|^2 \leq \sum_i |\langle x, x_i\rangle|^2 \leq B\|x\|^2$$
+
+The constants $A, B$ are called the lower and upper frame bounds respectively, or the frame constants. The optimal frame constants $A^\prime$ and $B^\prime$ are defined respectively as the supremum and infimum of all possible lower and upper frame bounds. When $A=B$, the frame is a tight frame, or an $A$-tight frame. A $1$-tight frame is referred to as a Parseval frame, and the Parseval equation holds with respect to the frame elements:
+
+$$x = \sum_{i=1}^n \langle x, x_i \rangle x_i$$
+
+for all $x \in H$.
+
+\paragraph{Associated Operators (for finite frames)}Let $\dim H = n$ and $\{x_i\}_{i=1}^k$ be a frame in $H$ ($k \ge n$). 
+
+The {\it analysis} operator $\theta: H \rightarrow {\mathbb C}^k$  is the function defined such that $\theta: x \mapsto (\langle x, x_i \rangle)_i.$
+
+The {\it synthesis} operator $\tau: {\mathbb C}^k \rightarrow H$ is the function defined such that $(c_i)_i^k \mapsto \sum_{i=1}^k c_i x_i.$
+
+$\tau = \theta^\ast$, that is, $\langle \theta x, y\rangle_{{\mathbb C}^k} = \langle x, \tau y\rangle_H$ for all $x \in H$ and all $y \in {\mathbb C}^k$.
+
+\begin{eqnarray*}
+\langle \theta x, y\rangle_{{\mathbb C}^k} & = & \langle (\langle x, x_i \rangle_H)_{i=1}^k, (y_i)_{i=1}^k \rangle_{{\mathbb C}^k} \\
+& = & \sum_{i=1}^k \langle x, x_i \rangle_H \overline{y_i} = \sum_{i=1}^k \langle x, y_i x_i \rangle_H \\
+&= & \langle x , \sum_{i=1}^k y_i x_i \rangle_H = \langle x, \tau y \rangle_H
+\end{eqnarray*}
+
+The {\it frame} operator is defined as the $n\times n$ matrix $\theta^\ast\theta : H \rightarrow H$ such that $\theta^\ast\theta : x \mapsto \sum_{i=1}^k \langle x, x_i \rangle x_i$ for all $x \in H$.
+
+The {\it Grammian} operator is defined as the composition $\theta \theta^\ast: {\mathbb C}^k \rightarrow {\mathbb C}^k$. 
+
+The Grammian and frame operators have the same nonzero eigenvalues.
+%%%%%
+%%%%%
+\end{document}

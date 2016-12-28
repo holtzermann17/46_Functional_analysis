@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryFiniteDimensionalNormedVectorSpaceIsABanachSpace}
+\pmcreated{2013-03-22 14:56:31}
+\pmmodified{2013-03-22 14:56:31}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{every finite dimensional normed vector space is a Banach space}
+\pmrecord{10}{36633}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}
+Every finite dimensional normed vector space is a Banach space.
+\end{thm}
+
+\emph{Proof.} Suppose $(V,\Vert\cdot\Vert)$ is the normed vector space, 
+    and $(e_i)_{i=1}^N$ is a basis for $V$. 
+For $x=\sum_{j=1}^N \lambda_j e_j$, we can then define 
+$$
+  \Vert x \Vert' = \sqrt{\sum_{j=1}^N |\lambda_j|^2}
+$$
+whence $\Vert\cdot\Vert'\colon V\to \sR$ is a norm for $V$. 
+Since 
+\PMlinkname{all norms on a finite dimensional vector space are equivalent}{ProofThatAllNormsOnFiniteVectorSpaceAreEquivalent}, 
+there is a constant $C>0$ such that
+$$
+ \frac{1}{C} \Vert x \Vert' \le \Vert x \Vert \le C \Vert x \Vert', \quad x\in V.
+$$
+To prove that $V$ is a Banach space, let $x_1,x_2,\ldots$ be a Cauchy sequence
+in $(V,\Vert\cdot \Vert)$. That is, 
+   for all $\varepsilon>0$ there is an $M\ge 1$ such that 
+$$
+  \Vert x_j-x_k \Vert <\varepsilon, \ \ \mbox{for all} j,k\ge M.
+$$
+Let us write each $x_k$ in this sequence in the basis $(e_j)$ 
+   as $x_k=\sum_{j=1}^N \lambda_{k,j} e_j$ for some constants 
+   $\lambda_{k,j}\in \C$. 
+For $k,l\ge 1$ we then have
+\begin{eqnarray*}
+\Vert x_k-x_l\Vert   &\ge& \frac{1}{C} \Vert x_k-x_l \Vert' \\
+   &\ge& \frac{1}{C} \sqrt{\sum_{j=1}^N |\lambda_{k,j}-\lambda_{l,j}|^2} \\
+   &\ge& \frac{1}{C} |\lambda_{k,j}-\lambda_{l,j}|
+\end{eqnarray*}
+for all $j=1,\ldots, N$.
+It follows that 
+   $(\lambda_{k,1})_{k=1}^\infty, \ldots, (\lambda_{k,N})_{k=1}^\infty$
+   are Cauchy sequences in $\C$. As $\C$ is complete, these converge to 
+   some complex numbers $\lambda_1, \ldots, \lambda_N$. 
+   Let $x=\sum_{j=1}^N \lambda_j e_j$. 
+
+For each $k=1,2,\ldots$, we then have
+\begin{eqnarray*}
+\Vert x-x_k\Vert &\le& C \Vert x-x_k\Vert' \\
+                 &\le& C \sqrt{\sum_{j=1}^N |\lambda_{j}-\lambda_{k,j}|^2}.
+\end{eqnarray*}
+By taking $k\to \infty$ it follows that $(x_j)$ converges to $x\in V$. $\Box$
+%%%%%
+%%%%%
+\end{document}

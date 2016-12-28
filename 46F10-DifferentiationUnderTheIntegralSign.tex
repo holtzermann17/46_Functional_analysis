@@ -1,0 +1,297 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentiationUnderTheIntegralSign}
+\pmcreated{2013-03-22 16:26:37}
+\pmmodified{2013-03-22 16:26:37}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{differentiation under the integral sign}
+\pmrecord{16}{38599}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46F10}
+\pmclassification{msc}{28A25}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{26A24}
+\pmsynonym{Leibniz's rule}{DifferentiationUnderTheIntegralSign}
+\pmrelated{DerivativeOfRiemannIntegral}
+\pmrelated{IntegrationUnderIntegralSign}
+\pmrelated{HolomorphicFunctionAssociatedWithContinuousFunction}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+%\usepackage{graphicx}
+%\usepackage{psfrag}
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\providecommand{\ddx}[1]{\frac{d #1}{dx}}
+\providecommand{\pdx}[1]{\frac{\partial #1}{\partial x}}
+\providecommand{\ipdx}[1]{\partial #1 / \partial x}
+\providecommand{\pdxi}[1]{\frac{\partial #1}{\partial x_i}}
+\providecommand{\ipdxi}[1]{\partial #1 / \partial x_i}
+
+\newtheorem{thm}{Theorem}
+
+\providecommand{\fnl}[2]{\langle {#1}, {#2} \rangle}
+\newcommand{\sD}{\mathcal{D}}
+
+\begin{document}
+\PMlinkescapeword{sides}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{restriction}
+\PMlinkescapeword{conjecture}
+\PMlinkescapeword{place}
+\PMlinkescapeword{even}
+\PMlinkescapeword{variations}
+\PMlinkescapeword{type}
+\PMlinkescapeword{types}
+\PMlinkescapeword{volumes}
+
+The technique of \emph{differentiation under the integral sign}
+concerns the interchange of the operation of differentiation
+with respect to a parameter with the operation of integration
+over some other variable:
+\[
+\pdx{} \int_\Omega f(x, \omega) \, d\omega = \int_\Omega 
+\pdx{} f(x,\omega) \, d\omega\,.
+\]
+
+Intuitively, the rule ought to work because 
+differentiation commutes with finite summation,
+and one may conjecture that it can also 
+commute with infinite summation (in the form of the integral),
+at least in some cases.
+
+The theorems below give some sufficient conditions,
+in increasing generality and sophistication,
+for which the swap of differentiation and
+integration is legal.
+
+\subsection*{Formal statements}
+
+\begin{thm}[Elementary Calculus version]\label{thm:elem}
+Let $f\colon [a,b] \times Y \to \real$ be a function,
+with $[a,b]$ being a closed interval, and
+$Y$ being a compact subset\footnote{Assumed to be Jordan-measurable if the Riemann integral is to be used.} of $\real^n$.
+Suppose that both $f(x,y)$ and $\ipdx{f(x,y)}$ are continuous 
+in the variables $x$ and $y$ jointly.
+Then $\int_Y f(x.y) \, dy$ exists as a continuously differentiable function of
+$x$ on $[a,b]$, with derivative
+\[
+\ddx{} \int_Y f(x, y) \, dy = \int_Y \pdx{} f(x,y) \, dy\,.
+\]
+\end{thm}
+
+Theorem 1 is the formulation of integration
+under the integral sign that usually appears in elementary Calculus texts.
+Unfortunately, its restriction that $Y$ must
+be compact can be quite severe for applications: e.g.
+integrals over $(-\infty,+\infty)$ are not included.
+Theorem 2 below addresses this problem and others:
+
+\begin{thm}[Measure theory version]\label{thm:meas}
+Let $X$ be an open subset of $\real$, and $\Omega$ be a measure space.
+Suppose $f\colon X \times \Omega \to \real$ satisfies
+the following conditions:
+\begin{enumerate}
+\item
+$f(x, \omega)$ is a Lebesgue-integrable function of $\omega$ for each $x \in X$.
+\item
+For almost all 
+$\omega \in \Omega$, the derivative $\ipdx{f(x,\omega)}$ exists for all $x \in X$.
+\item
+There is an integrable function $\Theta\colon \Omega \to \real$ such that 
+$\absW{\ipdx{f(x,\omega)}} \leq \Theta(\omega)$
+for all $x \in X$.
+\end{enumerate}
+Then for all $x \in X$,
+\[
+\ddx{} \int_\Omega f(x, \omega) \, d\omega = \int_\Omega 
+\pdx{} f(x,\omega) \, d\omega\,.
+\]
+\end{thm}
+
+Theorem 2 suffices for many applications,
+but using the Fundamental Theorem of Calculus for Lebesgue integration,
+we can weaken the hypotheses for differentiating under
+the integral sign even further:
+
+\begin{thm}
+Let $X$ be an open subset of $\real$, and $\Omega$ be a measure space.
+Suppose that a function $f\colon X \times \Omega \to \real$ satisfies
+the following conditions:
+\begin{enumerate}
+\item
+$f(x,\omega)$ is a measurable function of $x$ and $\omega$
+jointly, and is integrable over $\omega$, for almost all $x \in X$ held fixed.
+\item
+For almost all 
+$\omega \in \Omega$, $f(x,\omega)$ is an absolutely continuous
+function of $x$.  (This guarantees that $\ipdx{f(x,\omega)}$ exists
+almost everywhere.)
+\item
+$\ipdx{f}$ is ``locally integrable'' --- that is, for
+all compact intervals $[a,b]$ contained in $X$:
+\[
+\int_{a}^b \int_\Omega \absW{ \pdx{} f(x,\omega)} \, d\omega \, dx < \infty\,.
+\]
+\end{enumerate}
+Then $\int_\Omega f(x,\omega) \, d\omega$ is an absolutely continuous function of $x$, and for almost every $x \in X$, its derivative exists
+and is given by
+\[
+\ddx{} \int_\Omega f(x, \omega) \, d\omega = \int_\Omega 
+\pdx{} f(x,\omega) \, d\omega\,.
+\]
+\end{thm}
+
+If the Kurzweil-Henstock integral --- which has 
+a stronger \PMlinkname{Fundamental Theorem of Calculus}{FundamentalTheoremOfCalculusForKurzweilHenstockIntegral}
+ ---
+is used in place
+of the Lebesgue integral,
+Theorem 3 can be generalized to a formulation
+that provides also the \emph{necessary} 
+conditions for differentiation under the integral sign.
+See \cite{Talvila} for the full details.
+
+Yet this is not the end of the story.
+There are some applications in which the integrand is too ``irregular'', 
+or the integral of the differentiated integrand
+becomes divergent, and neither Theorem 2 or Theorem 3 would apply.
+However, if we use generalized functions 
+(all of which can be differentiated at will),
+then we can extend the technique of differentiation under 
+the integral sign further,
+and make sense of any ``irregular'' integrals that may result:
+
+\begin{thm}[Distribution theory version]
+Let $X$ be an open set in $\real^m$, and $\Omega$ be a measure space.
+Given $f(x,\omega)$, for each $\omega \in \Omega$, a generalized function of $x \in X$ (in the sense of Schwartz's theory of distributions), 
+define:
+\[
+\fnl{\int_\Omega f(\cdot,\omega) \, d\omega}{\phi} := 
+\int_\Omega \fnl{f(\cdot, \omega)}{\phi} \, d\omega\,,
+\quad \phi \in \sD(X)\,.
+\]
+Assume
+the above integral is well-defined and gives a distribution.
+Then
+\[
+\pdxi{}  \,
+\int_\Omega f(x, \omega) \, d\omega
+= \int_\Omega \pdxi{} f(x, \omega) \, d\omega\,.
+\]
+where $\ipdxi{}$ refers to the generalized derivative 
+of generalized functions on both sides of the equation.
+\end{thm}
+
+For an absolutely continuous function,
+the generalized derivative coincides with the ordinary derivative,
+so Theorem 4 indeed generalizes Theorem 3.
+On the other hand, there are cases where 
+the integrand is not absolutely continuous --- and so
+has a generalized derivative different from the ordinary derivative
+--- yet its integral has a classical derivative that is
+represented by the final equation of Theorem 4.  For instance,
+the integrand may involve a step function,
+and its derivative would thus involve a Dirac delta distribution,
+that when integrated, yields an ordinary locally-integrable
+function (of the parameter $x$).
+
+Theorem 4 is not so well-publicized,
+but appears, for example, in \cite{Jones}, and hinted
+at in a comment in \cite{Schwartz}.
+
+\subsection*{Other variations}
+
+There are other frequently-used variations of the theorems above.
+
+\textbf{Moving domains of integration}.
+Not only can the integrand vary with the parameter,
+we can consider domains of integration,
+subsets of $\real^n$, that vary with the parameter.  
+
+In the one-dimensional case,
+for continuously differentiable functions
+$\alpha\colon [a,b] \to \real$, $\beta\colon [a,b] \to \real$, and 
+$f\colon [a,b] \times \real \to \real$, we have:
+\[
+\ddx{} \int_{\alpha(x)}^{\beta(x)} f(x,y) \, dy
+= \int_{\alpha(x)}^{\beta(x)}
+\pdx{f(x,y)} \, dy +
+\frac{d\beta(x)}{dx} f(x, \beta(x)) - \frac{d\alpha(x)}{dx} f(x, \alpha(x))\,.
+\] 
+This result can be extrapolated from Theorem \ref{thm:elem},
+with the help of the Fundamental Theorem of Calculus and
+the \PMlinkname{multi-variate chain rule}{ChainRuleSeveralVariables}.
+
+Generalizations to varying smooth surfaces or volumes --- or, more generally, 
+$k$-dimensional differentiable manifolds in $\real^n$ --- can be obtained
+by using integrals of differential forms on \PMlinkname{chains}{NChain},
+and Stokes' Theorem.  Details can be found in \cite{Flanders}.
+
+\textbf{Different types of integrals}.
+The differentiation can also be taken under
+integrals other than of the standard Riemann type,
+such as the line integrals and surface integrals of vector calculus,
+or complex contour integrals.
+(Actually, these kinds of integrals can be re-formulated as
+Lebesgue integrals, so Theorem \ref{thm:meas} applies to them.)
+
+\textbf{Complex variables}. 
+Other applications require differentiating holomorphic functions with respect to a complex variable, and Theorem \ref{thm:meas} generalizes directly to this situation, without requiring differentiation with respect to real variables as an intermediary.
+
+
+\begin{thebibliography}{XXXXXX}
+\bibitem[Flanders]{Flanders}
+Harley Flanders. ``Differentiation under the Integral Sign''.
+\emph{American Mathematical Monthly}, vol. 80 (June-July 1973), p. 615-627.
+
+\bibitem[Folland]{Folland}
+Gerald B. Folland. \emph{Real Analysis: Modern Techniques and Their Applications}, second ed. Wiley-Interscience, 1999.
+
+\bibitem[Jones]{Jones}
+D. S. Jones. \emph{The Theory of Generalized Functions}, second ed.
+Cambridge University Press, 1982.
+
+\bibitem[Munkres]{Munkres}
+James R. Munkres. \emph{Analysis on Manifolds}.
+Westview Press, 1991.
+
+\bibitem[Schwartz]{Schwartz}
+Laurent Schwartz. \emph{Th\'eorie des Distributions}, vol. I.
+Hermann, 1957.
+
+\bibitem[Talvila]{Talvila}
+Erik Talvila. ``\PMlinkexternal{Necessary and Sufficient Conditions for Differentiating Under the Integral Sign}{http://www.math.ualberta.ca/~etalvila/papers/difffinal.pdf}''.
+\emph{American Mathematical Monthly}, vol. 108 (June-July 2001), p. 544-548.
+
+\end{thebibliography}
+
+The author of this entry has also written an exposition,
+``\PMlinkexternal{Differentiation under the Integral Sign using Weak Derivatives}{http://gold-saucer.afraid.org/math/diff-int/diff-int.pdf}'',
+containing a proof of Theorem 4 along with detailed computational examples.
+
+%%%%%
+%%%%%
+\end{document}

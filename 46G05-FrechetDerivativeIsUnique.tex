@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrechetDerivativeIsUnique}
+\pmcreated{2013-03-22 16:08:35}
+\pmmodified{2013-03-22 16:08:35}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Fr\'echet derivative is unique}
+\pmrecord{12}{38221}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46G05}
+\pmrelated{derivative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\textbf{Theorem}
+The Fr\'echet derivative is unique.\\
+{\textbf{Proof.}
+Assume that both $A$ and $B$ in $L(\mathsf{V,W})$ satisfy the condition for the \PMlinkname{Fr\'echet derivative}{derivative2} at the point $\mathbf{x}$. To prove that they are equal we will show that for all $\varepsilon >0$ the operator norm $\|A-B\|$ is not greater than $\varepsilon$. By the definition of limit there exists a positive $\delta$ such that for all $\|\mathbf{h}\|\leq\delta$
+\[\|f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-A\mathbf{h}\|\leq\frac{\varepsilon}{2}\cdot\|\mathbf{h}\|
+\mbox{ and }
+\|f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-B\mathbf{h}\|\leq\frac{\varepsilon}{2}\cdot\|\mathbf{h}\|\]
+holds. This gives
+\begin{align*}
+\|(A-B)\mathbf{h}\|&=\|(f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-A\mathbf{h})-(f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-B\mathbf{h})\|\\
+&\leq\|f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-A\mathbf{h}\|+\|f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})-B\mathbf{h}\|\\
+&<\varepsilon\cdot\|\mathbf{h}\|.
+\end{align*}
+Now we have
+\[\delta\cdot\|A-B\|=\delta\cdot\sup_{\|\mathbf{g}\|\leq 1}\|(A-B)\mathbf{g}\|=\sup_{\|\mathbf{g}\|\leq\delta}\|(A-B)\mathbf{g}\|\leq\sup_{\|\mathbf{g}\|\leq\delta}\varepsilon\cdot\|\mathbf{g}\|\leq\varepsilon\cdot\delta,
+\]
+thus $\|A-B\|\leq\varepsilon$ as we wanted to show.
+%%%%%
+%%%%%
+\end{document}

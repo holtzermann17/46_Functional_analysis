@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchursConditionForAMatrixToBeABoundedOperatorOnL2}
+\pmcreated{2013-03-22 15:57:18}
+\pmmodified{2013-03-22 15:57:18}
+\pmowner{Gorkem}{3644}
+\pmmodifier{Gorkem}{3644}
+\pmtitle{Schur's condition for a matrix to be a bounded operator on $l^2$}
+\pmrecord{5}{37967}
+\pmprivacy{1}
+\pmauthor{Gorkem}{3644}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmsynonym{Schur's Lemma}{SchursConditionForAMatrixToBeABoundedOperatorOnL2}
+\pmsynonym{Schur's Lemma for infinite matrices}{SchursConditionForAMatrixToBeABoundedOperatorOnL2}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[mathcal]{euscript}
+\usepackage{mathrsfs}
+\usepackage{amsfonts,amssymb,amsbsy,amsmath}
+%\usepackage{graphicx,color}
+\usepackage{color}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{rk}[thm]{Remark}
+\newtheorem{crl}[thm]{Corollary}
+\newtheorem{stp}{Step}
+
+\newcommand{\disp}{\displaystyle}
+\newcommand{\dintl}{\disp\int\limits}
+\newcommand{\dsuml}{\disp\sum\limits}
+\newcommand{\hsp}{\hspace{30pt}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\trns}{\,\widehat{}\,\,}
+
+\newcommand{\bthm}{\begin{thm}}
+\newcommand{\ethm}{\end{thm}}
+\newcommand{\bstp}{\begin{stp}}
+\newcommand{\estp}{\end{stp}}
+\newcommand{\blemma}{\begin{lemma}}
+\newcommand{\elemma}{\end{lemma}}
+\newcommand{\bprop}{\begin{prop}}
+\newcommand{\eprop}{\end{prop}}
+\newcommand{\bpf}{\begin{pf}}
+\newcommand{\epf}{\end{pf}}
+\newcommand{\bdefn}{\begin{defn}}
+\newcommand{\edefn}{\end{defn}}
+\newcommand{\brk}{\begin{rk}}
+\newcommand{\erk}{\end{rk}}
+\newcommand{\bcrl}{\begin{crl}}
+\newcommand{\ecrl}{\end{crl}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\brackets}[1]{\left[#1\right]}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\supnorm}[1]{\norm{#1}_\infty}
+\newcommand{\normt}[1]{\norm{#1}_2}
+\newenvironment{proof}{\begin{trivlist}\item[\hskip%
+\labelsep{\bf Proof.}]}%
+{\hfill$\square$\rm\end{trivlist}}
+\begin{document}
+\begin{thm} 
+    Let $B$ be a matrix defined on $T\times T$ for some countable set $T$.  If there exists a positive number $C$ such that
+    $$
+        \sum_{t\in T}|b(s,t)|<C \ \text{for all\ }s\ \ \ \text{and} \ \ \  \sum_{s\in T}|b(s,t)|<C \  \text{for all\ } t,
+    $$
+    then $B$ is a bounded operator on $l^2(T)$ with its operator  norm $\norm{B}$ less than or equal to $C$.
+\end{thm}
+    \begin{proof}
+        Let $x$ be a sequence in $l^2(T)$.  We have
+        \begin{align*}
+            \norm{Bx}_2^2 & = \sum_{s\in T}\left|\sum_{t\in T}b(s,t)x(t)\right|^2\\
+            &\leq
+            \sum_{s\in T}\left[\sum_{t\in T}\sqrt{|b(s,t)|}\left(\sqrt{|b(s,t)|}|x(t)|\right)\right]^2\\
+            &\leq
+            \sum_{s\in T}\left[\left(\sum_{t\in T}|b(s,t)|\right)\left(\sum_{t\in T}|b(s,t)||x(t)|^2\right)\right]\\
+            &\leq
+            C\sum_{s\in T}\sum_{t\in T}|b(s,t)||x(t)|^2\\
+            &\leq
+            C\sum_{t\in T}|x(t)|^2\sum_{s\in T}|b(s,t)|\\
+            &\leq
+            C^2\sum_{t\in T}|x(t)|^2.
+        \end{align*}
+    Therefore we have $\normt{Bx}\leq C\normt{x}$ for all $x \in l^2(T)$, hence $\norm{B}\leq C$.
+    \end{proof}
+%%%%%
+%%%%%
+\end{document}

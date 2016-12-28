@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedOperatorsOnAHilbertSpaceFormACalgebra}
+\pmcreated{2013-03-22 14:47:12}
+\pmmodified{2013-03-22 14:47:12}
+\pmowner{HkBst}{6197}
+\pmmodifier{HkBst}{6197}
+\pmtitle{bounded operators on a Hilbert space form a $C^*$-algebra}
+\pmrecord{9}{36438}
+\pmprivacy{1}
+\pmauthor{HkBst}{6197}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmrelated{RepresentationOfAC_cG_dTopologicalAlgebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newenvironment{lm}{\par\noindent\textbf{Lemma }}{}
+\newenvironment{prf}{\par\noindent\textbf{Proof: }}{$\Box$}
+\begin{document}
+In this entry we show how the algebra $\mathrm{B}(H)$ of bounded linear operators on an Hilbert space $H$ is one of the most natural examples of \PMlinkname{$C^*$-algebras}{CAlgebra}. In fact, by the Gelfand-Naimark representation theorem, every $C^*$-algebra is isomorphic to a *-subalgebra of $\mathrm{B}(H)$ for some Hilbert space $H$.
+
+\begin{lm}
+If $H$ is a Hilbert space, then $\mathrm{B}(H)$, the algebra of bounded linear operators on $H$, is a $*$-algebra.
+\end{lm}
+\begin{prf}
+Let $H$ be a Hilbert space. We must prove that the adjugation is an involution.
+Let $\{P, Q\} \subset \mathrm{B}(H)$ and $l \in \mathbf{C}$. For every $\{x, y\} \subset H$ we have
+\begin{enumerate}
+\item $\langle P^{**} x | y \rangle = \langle x | P^*y \rangle = \langle P x | y \rangle$ so $P^{**} = P$,
+\item $\langle (PQ)^* x | y \rangle = \langle x | PQ y \rangle = \langle P^* x | Q y \rangle = \langle Q^* P^* x | y \rangle$ so $(PQ)^* = Q^*\
+P^*$ and
+\item $\langle (lP+Q)^* x | y \rangle = \langle x | (lP+Q) y \rangle = l \langle x | Py \rangle + \langle x | Qy \rangle = l\langle P^* x | y \rangle + \langle Q^* x | y \rangle = \langle (l^*P^* + Q^*) x | y \rangle$ so $(lP+Q)^* = l^*P^* + Q^*$,
+\end{enumerate}
+so we see that the adjugation is an involution and thus $\mathrm{B}(H)$ is a $*$-algebra.
+\end{prf}
+
+\begin{lm}
+If $H$ is a Hilbert space, then $\mathrm{B}(H)$ is a Banach algebra.
+\end{lm}
+\begin{prf}
+Let $H$ be a Hilbert space and let $\{P, Q\} \subset \mathrm{B}(H)$. We have
+$$\|PQ\| = \sup_{x \in H \setminus \{0\} } \frac{\| PQx \|_H}{\| x \|_H} \le \sup_{x \in H \setminus \{0\} } \frac{\|P\| \| Qx \|_H}{\| x \|_H\
+} = \|P\| \|Q\|,$$
+so we see that $\mathrm{B}(H)$ is a Banach algebra.
+\end{prf}
+
+\begin{lm}
+If $H$ is a Hilbert space, then $\mathrm{B}(H)$ is a $C^*$-algebra.
+\end{lm}
+\begin{prf}
+Let $H$ be a Hilbert space and let $P \in \mathrm{B}(H)$. We have
+\begin{eqnarray*}
+\|P\|^2 &=& \sup_{x \in H \setminus \{0\}} \frac{\|Px\|_H^2}{\|x\|_H^2} = \sup_{x \in H \setminus \{0\}} \frac{\langle Px | Px \rangle}{\|x\|_H^2} = \sup_{x \in H \setminus \{0\}} \frac{\langle P^*Px | x \rangle}{\|x\|_H^2}\\
+&\le& \sup_{x \in H \setminus \{0\}} \frac{\|P^*Px\|_H \|x\|_H}{\|x\|_H^2} = \sup_{x \in H \setminus \{0\} } \frac{\| P^*Px \|_H}{\| x \|_H} = \|P^*P\|
+\end{eqnarray*}
+so $\|P\|^2 \le \|P^*P\|$ and because of the previous two lemmas say $\mathrm{B}(H)$ is a Banach algebra with involution it is a $C^*$-algebra.
+\end{prf}
+
+\begin{lm}
+If $H$ is a Hilbert space, then every closed $*$-subalgebra of $\mathrm{B}(H)$ is a $C^*$-algebra.
+\end{lm}
+\begin{prf}
+Let $A$ be a closed $*$-subalgebra of $\mathrm{B}(H)$. Because $A$ is a closed subspace of a Banach space it is itself a Banach space and thus a Banach algebra with an involution and also a $C^*$-algebra.
+\end{prf}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SequentialCharacterizationOfBoundedness}
+\pmcreated{2013-03-22 13:48:17}
+\pmmodified{2013-03-22 13:48:17}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{sequential characterization of boundedness}
+\pmrecord{8}{34525}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Theorem} \cite{rudin_fap, cristescu}
+A set $B$ in a real (or possibly complex) 
+topological vector space $V$ 
+is \PMlinkname{bounded}{BoundedSetInATopologicalVectorSpace} if and only if the
+ following condition holds: 
+ \begin{enumerate}
+ \item[] If $\{z_i\}_{i=1}^\infty$ is a sequence in $B$, and $\{\lambda_i\}_{i=1}^\infty$
+ is a sequence of scalars (in $\sR$ or $\mathbb{C}$), 
+ such that $\lambda_i \to 0$, then $\lambda_i z_i\to 0$ in $V$.
+ \end{enumerate}
+ 
+ \begin{thebibliography}{9}
+ \bibitem{rudin_fap}
+ W. Rudin, \emph{Functional Analysis},
+ McGraw-Hill Book Company, 1973.
+\bibitem{cristescu} R. Cristescu, \emph{Topological vector spaces},
+Noordhoff International Publishing, 1977.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

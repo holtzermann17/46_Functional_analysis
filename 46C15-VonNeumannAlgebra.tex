@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VonNeumannAlgebra}
+\pmcreated{2013-03-22 17:21:44}
+\pmmodified{2013-03-22 17:21:44}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{von Neumann algebra}
+\pmrecord{29}{39722}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C15}
+\pmclassification{msc}{46H35}
+\pmclassification{msc}{46L10}
+\pmsynonym{$W^*$-algebra}{VonNeumannAlgebra}
+%\pmkeywords{operator algebras}
+%\pmkeywords{C*-algebras}
+%\pmkeywords{groupoid C*-dynamical systems}
+%\pmkeywords{Hilbert spaces}
+\pmrelated{CAlgebra}
+\pmrelated{TopologicalAlgebra}
+\pmrelated{Commutant}
+\pmrelated{GroupoidCDynamicalSystem}
+\pmrelated{Algebras2}
+\pmrelated{CAlgebra3}
+\pmrelated{WeakHopfCAlgebra2}
+\pmrelated{HAlgebra}
+\pmrelated{LocallyCompactQuantumGroup}
+\pmrelated{QuantumGroupsAndVonNeumannAlgebras}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{theories}
+
+\section*{Definition}
+
+Let $H$ be an Hilbert space, and let $B(H)$ be the *-algebra of bounded operators in $H$.
+
+A {\bf von Neumann algebra} (or $W^*$-algebra) $\mathcal M$ is a *-subalgebra of $B(H)$ 
+that contains the identity operator and satisfies one of the following equivalent conditions:
+\begin{enumerate}
+\item $\mathcal M$ is closed in the weak operator topology.
+\item $\mathcal M$ is closed in the strong operator topology.
+\item $\mathcal M = \mathcal M''$, i.e. $\mathcal M$ equals its double commutant.
+\end{enumerate}
+
+The equivalence between the above conditions is given by the von Neumann double commutant theorem.
+
+Since the weak and strong operator topology are weaker than the norm topology, it follows that every von Neumann algebra is a norm closed *-subalgebra of $B(H)$. Thus, von Neumann algebras are a particular class of \PMlinkname{$C^*$-algebras}{CAlgebra} and the results and tools from the $C^*$ theory are also applicable in the setting of von Neumann algebras. Nevertheless, the philosophy behind von Neumann algebras is quite different from that of $C^*$-algebras and the tools and techniques for each theory turn out to be different as well.
+
+\section*{Examples:}
+\begin{enumerate}
+\item $B(H)$ is itself a von Neumann algebra.
+\item \PMlinkname{$L^{\infty}(\mathbb{R})$}{LinftyXDmu} as subalgebra of $B(L^2(\mathbb{R}))$ is a von Neumann algebra.
+\end{enumerate}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyConvexTopologicalVectorSpace}
+\pmcreated{2013-03-22 13:44:03}
+\pmmodified{2013-03-22 13:44:03}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{locally convex topological vector space}
+\pmrecord{9}{34424}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A03}
+\pmclassification{msc}{46-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+%\renewcommand{\bibname}{References}
+ % The below lines should work as the command
+ % \renewcommand{\bibname}{References}
+ % without creating havoc when rendering an entry in 
+ % the page-image mode.
+ \makeatletter
+ \@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+ \makeatother
+\begin{document}
+{\bf Definition} Let $V$ be a topological vector space over a subfield of the complex numbers (usually taken to be $\mathbb{R}$ or $\mathbb{C}$). If the topology of $V$ 
+has a basis where each member is
+a convex set, then $V$ is a \emph{locally convex topological 
+vector space} \cite{folland}. 
+
+Though most vector spaces occurring in practice are locally convex, the spaces $L^p$ for $0<p<1$ are examples of spaces which are not locally convex.
+
+\begin{thebibliography}{9}
+ \bibitem{folland}
+G.B. Folland, \emph{Real Analysis: Modern Techniques and Their Applications}, 2nd ed, John Wiley \& Sons, Inc., 1999.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

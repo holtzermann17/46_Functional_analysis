@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRieszRepresentationTheoremForSeparableHilbertSpaces}
+\pmcreated{2013-03-22 14:34:20}
+\pmmodified{2013-03-22 14:34:20}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of Riesz representation theorem for separable Hilbert spaces}
+\pmrecord{6}{36130}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+%\pmkeywords{Hilbert}
+%\pmkeywords{Riesz}
+%\pmkeywords{representation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\lbrace {\bf e}_0, {\bf e}_1, {\bf e}_2, \ldots \rbrace$ be an orthonormal basis for the Hilbert space $\mathcal{H}$.  Define $$c_i = f({\bf e}_i)\qquad \mbox{ and } \qquad v = \sum_{k=0}^n {\bar c}_i {\bf e}_i.$$  The \PMlinkname{linear map}{ContinuousLinearMapping} $f$ is continuous if and only if it is bounded, i.e. there exists a constant $C$ such that $|f(v)| \le C \|v\|$.  Then $$f(v) = \sum_{k=0}^n {\bar c}_k f({\bf e}_k) = \sum_{k=0}^n |c_k|^2 \le C \sqrt{\sum_{k=0}^n |c_k|^2}.$$  Simplifying, $\sum_{k=0}^n |c_k|^2 \le C^2$.  Hence $\sum_{k=0}^\infty c_k {\bf e}_k$ converges to an element $u$ in $H$.
+
+For every basis element, $f({\bf e}_i) = c_k = \langle u, {\bf e}_i \rangle$.  By linearity, it will also be true that $$f(v) = \langle u, v \rangle\mbox{ if $v$ is a finite superposition of basis vectors.}$$  Any vector in the Hilbert space can be written as the limit of a sequence of finite superpositions of basis vectors hence, by continuity, $$f(v) = \langle u, v \rangle\mbox{ for all }v \in \mathcal{H}$$
+
+It is easy to see that $u$ is unique.  Suppose there existed two vectors $u_1$ and $u_2$ such that $f(v) = \langle u_1, v \rangle = \langle u_2, v \rangle$.  Then $\langle u_1 - u_2, v \rangle = 0$ for all vectors $v \in \mathcal{H}$.  But then, $\langle u_1 - u_2, u_1 - u_2 \rangle = 0$ which is only possible if $u_1 - u_2 = 0$, i.e. if $u_1 = u_2$.
+%%%%%
+%%%%%
+\end{document}

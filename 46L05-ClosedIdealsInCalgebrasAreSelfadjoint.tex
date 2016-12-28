@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosedIdealsInCalgebrasAreSelfadjoint}
+\pmcreated{2013-03-22 17:30:42}
+\pmmodified{2013-03-22 17:30:42}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{closed ideals in $C^*$-algebras are self-adjoint}
+\pmrecord{9}{39902}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{46H10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{self-adjoint}
+\PMlinkescapeword{closed}
+
+{\bf Theorem -} Every \PMlinkname{closed}{ClosedSet} \PMlinkname{two-sided ideal}{IdealOfAnAlgebra} $\mathcal{I}$ of a \PMlinkname{$C^*$-algebra}{CAlgebra} $\mathcal{A}$ is \PMlinkname{self-adjoint}{InvolutaryRing}, i.e.
+\begin{center}
+if $x \in \mathcal{I}$ then $x^* \in \mathcal{I}$.
+
+\end{center}
+
+{\bf Proof :} Let $\mathcal{I}^* := \{a^* : a \in \mathcal{I}\}$.
+
+Since $\mathcal{I}$ is closed and the involution mapping is continuous, it follows that $\mathcal{I}^*$ is also closed.
+
+We claim that $\mathcal{I}^*$ is also a \PMlinkescapetext{two-sided ideal} of $\mathcal{A}$. To see this let $a,b \in \mathcal{I}$, $x \in \mathcal{A}$ and $\lambda \in \mathbb{C}$. Then
+\begin{itemize}
+\item $a^* + \lambda b^* = (a+\overline{\lambda}b)^* \in \mathcal{I}^*$ since $a + \overline{\lambda} b \in \mathcal{I}$ 
+\item $xa^* =(ax^*)^* \in \mathcal{I}^*$ since $ax^* \in \mathcal{I}$.
+\item $a^*x=(x^*a)^* \in \mathcal{I}^*$ since $x^*a \in \mathcal{I}$
+\end{itemize}
+
+Let $\mathcal{B} := \mathcal{I} \cap \mathcal{I}^*$.
+
+$\mathcal{B}$ is a $C^*$-subalgebra of $\mathcal{A}$ (it is a norm-closed, involution-closed, subalgebra of $\mathcal{A}$).
+
+It is known that every $C^*$-algebra has an approximate identity consisting of positive elements with norm less than $1$ (see this \PMlinkname{entry}{CAlgebrasHaveApproximateIdentities}).
+
+Let $(e_{\lambda})_{\lambda \in \Lambda}$ be an approximate identity for $\mathcal{B}$ with the above \PMlinkescapetext{properties}:
+\begin{enumerate}
+\item each $e_{\lambda}$ is positive (hence self-adjoint) and
+\item $\|e_{\lambda}\| \leq 1\;\;\;\forall_{\lambda \in \Lambda}$
+\end{enumerate}  
+
+We now prove $\mathcal{I}$ is self-adjoint:
+
+Let $a \in \mathcal{I}$. We have that
+\begin{eqnarray*}
+\|a^*-a^*e_{\lambda}\|^2 & = & \|(a^*-a^*e_{\lambda})^*\cdot(a^*-a^*e_{\lambda})\| \\
+& = & \|(a- e_{\lambda}a)\cdot(a^*- a^*e_{\lambda})\| \\
+& = & \|(aa^*-aa^*e_{\lambda}) -e_{\lambda}(aa^*-aa^*e_{\lambda})\| \\
+& \leq & \|aa^*-aa^*e_{\lambda}\| + \|e_{\lambda}\|\cdot \|aa^*-aa^*e_{\lambda}\| \\
+& \leq & \|aa^*-aa^*e_{\lambda}\| + \|aa^*-aa^*e_{\lambda}\| \\
+& = & 2 \|aa^*-aa^*e_{\lambda}\|
+\end{eqnarray*}
+
+Taking limits in both \PMlinkescapetext{sides} we obtain
+\begin{displaymath}
+\lim_{\lambda}\|a^*-a^*e_{\lambda}\|^2 \leq \lim_{\lambda}\;2 \|aa^*-aa^*e_{\lambda}\| = 0
+\end{displaymath}
+since $aa^* \in \mathcal{I}\cap\mathcal{I}^*=\mathcal{B}$ and $(e_{\lambda})_{\lambda \in\Lambda}$ is an approximate identity for $\mathcal{B}$.
+
+As $e_{\lambda} \in \mathcal{I}$ we see that $a^*e_{\lambda} \in \mathcal{I}$.
+
+We conclude from the limit above that $a^*$ is in the closure of $\mathcal{I}$. Therefore $a^*\in \mathcal{I}$.
+
+Hence, $\mathcal{I}$ is self-adjoint. $\square$
+%%%%%
+%%%%%
+\end{document}

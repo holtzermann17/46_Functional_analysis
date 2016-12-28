@@ -1,0 +1,173 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AllNormsOnFinitedimensionalVectorSpacesAreEquivalent}
+\pmcreated{2013-03-22 14:08:54}
+\pmmodified{2013-03-22 14:08:54}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{all norms on finite-dimensional vector spaces are equivalent}
+\pmrecord{15}{35564}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}
+All norms on finite-dimensional vector spaces over ${\mathbb{R}}$
+or ${\mathbb{C}}$
+are \PMlinkname{equivalent}{EquivalentNorms}.
+\end{thm}
+
+A consequence of this is that there is only one norm induced topology on a finite dimensional vector space.  This means that on such a vector space, we
+need not worry about what norm we use when we talk about convergence of a sequence of vectors in norm.  So a standard use of this theorem is in continuity arguments over finite dimensional vector spaces, and it allows you to pick the most convenient norm for your argument (the Euclidean norm is not always very convenient).
+
+This obviously is not true for infinite dimensional spaces, for example see the different \PMlinkname{$L^p$ spaces}{LpSpace}.  Note that the reason all this works is because a unit sphere is compact in a finite dimensional vector space, while that is not true in an infinite dimensional one.
+
+\begin{proof}
+Any such finite-dimensional space is really just the same as ${\mathbb{R}}^n$ so
+we can talk about just those spaces.  That is, any finite-dimensional vector
+space over ${\mathbb{R}}$ or ${\mathbb{C}}$ is isomorphic to ${\mathbb{R}}^n$
+for some $n$ (note that ${\mathbb{C}}$ is just isomorphic to ${\mathbb{R}}^2$
+as a vector space over ${\mathbb{R}}$).
+To see this, just write any element of the space in \PMlinkescapetext{terms} of
+the basis and then define the isomorphism to take that basis to the standard
+basis in ${\mathbb{R}}^n$ and then extend linearly.
+
+First let's show that if two norms are equivalent on the unit sphere
+(all $\vec{x}$ such that $\|\vec{x}\|=1$ with respect to some \PMlinkescapetext{fixed} norm,
+for example the standard Euclidean norm) then they are equivalent everywhere.
+We can write any $\vec{x} \in {\mathbb{R}}^n$ as a multiple of some scalar
+$\gamma \geq 0$ and a vector on the unit sphere, say $\vec{x_0}$, that is
+$\vec{x} = \gamma \vec{x_0}$.
+Then when suppose we have two equivalent
+norms, say $\|\cdot\|_a$ and $\|\cdot\|_b$, on the unit sphere
+\begin{gather*}
+ \alpha \|\vec{x_0}\|_a
+  \leq
+ \|\vec{x_0}\|_b
+  \leq
+ \beta \|\vec{x_0}\|_a
+\\
+ \gamma \alpha \|\vec{x_0}\|_a
+  \leq
+ \gamma \|\vec{x_0}\|_b
+  \leq
+ \gamma \beta \|\vec{x_0}\|_a
+\\
+ \alpha \|\gamma \vec{x_0}\|_a
+  \leq
+ \|\gamma \vec{x_0}\|_b
+  \leq
+ \beta \|\gamma \vec{x_0}\|_a
+\\
+ \alpha \|\vec{x}\|_a
+  \leq
+ \|\vec{x}\|_b
+  \leq
+ \beta \|\vec{x}\|_a .
+\end{gather*}
+So the norms are equivalent everywhere.
+
+Suppose we are working with the 2-norm.  Now we want to show that any other
+norm is a continuous function with respect to the 2-norm.
+Take an arbitrary finite-dimensional space $X$ and
+an arbitrary norm $\|\cdot\|$.
+Also suppose that $\{ \vec{b_i} \}_1^n$ is a basis of $X$ and so an element
+$\vec{x} \in X$ may be written as $\vec{x} = \sum_1^n x_i \vec{b_i}$.
+Now given an
+$\epsilon > 0$, choose $\delta > 0$ such that  $\| \vec{x} - \vec{y} \|_2 <
+\delta$ (the Euclidean distance is less then $\delta$) implies that
+\begin{equation*}
+\max \{ | x_i - y_i | \} < \frac{\epsilon}{\sum_{i=1}^{n} \|\vec{b_i}\|}
+\end{equation*}
+In fact we can just choose $\delta$ to be the right side of
+the above inequality.
+Now we note that the triangle inequality immediately also yields the
+inequality $|\,\|\vec{x}\| - \|\vec{y}\|\,| \leq \|\vec{x}-\vec{y}\|$.  So
+\begin{equation*}
+\begin{split}
+\big|\,\|\vec{x}\| - \|\vec{y}\|\,\big| & \leq \|\vec{x}-\vec{y}\|
+\\
+& = \left\| \sum_{i=1}^n x_i \vec{b_i} - \sum_{i=1}^n y_i \vec{b_i} \right\|
+\\
+& = \left\| \sum_{i=1}^n (x_i-y_i) \vec{b_i} \right\|
+\\
+& \leq \sum_{i=1}^n |x_i-y_i|\, \| \vec{b_i} \|
+\\
+& \leq \left( \max_i |x_i-y_i| \right) \sum_{i=1}^n \| \vec{b_i} \|
+\\
+& < \frac{\epsilon}{\sum_{i=1}^{n} \|\vec{b_i}\|} \sum_{i=1}^n \| \vec{b_i} \|
+\\
+& = \epsilon .
+\end{split}
+\end{equation*}
+And so $\|\cdot\|$ is a continuous function.
+
+Suppose we are given two norms $\|\cdot\|_a$ and $\|\cdot\|_b$, we know
+that they are both continuous functions with respect to the 2-norm.
+And so the function defined as
+\begin{equation*}
+f(\vec{x}) := \frac{\|\vec{x}\|_a}{\|\vec{x}\|_b}
+\end{equation*}
+is a continuous function on the unit sphere (with respect to the 2-norm).
+This function is continuous except perhaps at 0, but we don't
+care about the value at zero.  On the unit sphere however $f(\vec{x})$
+is continuous and thus achieves a maximum and a minimum since the unit sphere
+is compact.  Let's call the minimum and maximum,
+$\alpha$ and $\beta$ respectively.
+Then for any $\vec{x}$ on the unit sphere we have
+\begin{gather*}
+ \alpha
+  \leq
+ f(\vec{x})
+  \leq
+ \beta
+\\
+ \alpha
+  \leq
+ \frac{\|\vec{x}\|_a}{\|\vec{x}\|_b}
+  \leq
+ \beta
+\\
+ \alpha\|\vec{x}\|_b
+  \leq
+ \|\vec{x}\|_a
+  \leq
+ \beta\|\vec{x}\|_b .
+\end{gather*}
+And so the norms are equivalent on the unit sphere and thus as we shown
+above, everywhere.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

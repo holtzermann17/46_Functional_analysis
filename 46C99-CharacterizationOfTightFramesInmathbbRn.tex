@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfTightFramesInmathbbRn}
+\pmcreated{2013-03-22 14:27:08}
+\pmmodified{2013-03-22 14:27:08}
+\pmowner{swiftset}{1337}
+\pmmodifier{swiftset}{1337}
+\pmtitle{characterization of tight frames in ${\mathbb R}^n$}
+\pmrecord{5}{35969}
+\pmprivacy{1}
+\pmauthor{swiftset}{1337}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{exer}{Question}
+\theoremstyle{remark}
+\newtheorem*{soln}{Solution}
+\begin{document}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{order}
+\begin{exer}
+What conditions must the vectors $\{x_i\}_{i=1}^k \subset {\mathbb R}^n$ satisfy in order to be a tight frame in ${\mathbb R}^n$?
+\end{exer}
+
+\begin{soln}
+Let $E$ be the $k \times n$ matrix whose rows are the vectors $\{x_i\}_{i=1}^k$:
+$$ 
+E =
+\begin{pmatrix}
+x_{i,1} & \cdots & x_{i, n} \\
+\vdots  & \ddots & \vdots \\
+x_{k,1} & \cdots & x_{k,n}
+\end{pmatrix}.
+$$
+Then the tight frame condition $\sum_{i=1}^k | \langle x, x_i \rangle |^2 = A \|x\|^2 $ gives $(Ex)^TEx=Ax^Tx$ for all $x \in {\mathbb R}^n$, or $E^TE = AI_n$:
+$$
+E^TE = 
+\begin{pmatrix}
+\sum_{i=1}^k x_{i,1} x_{i,1} & \cdots & \sum_{i=1}^k x_{i,1} x_{i,k} \\
+\vdots & \ddots & \vdots \\
+\sum_{i=1}^k x_{i,k} x_{i, 1} & \cdots & \sum_{i=1}^k x_{i,k} x_{i, k}
+\end{pmatrix}
+= 
+\begin{pmatrix}
+A & \cdots 0 \cdots & 0 \\
+\vdots & \ddots & \vdots \\
+0 & \cdots 0 \cdots & A
+\end{pmatrix} = AI_n.
+$$
+
+Therefore, the vectors 
+$$
+\left\{ x_i =
+\begin{pmatrix}
+x_{i,1} \\
+\vdots \\
+x_{i,n}
+\end{pmatrix}
+\right\}_{i=1}^k
+\subset {\mathbb R}^n $$ are an A-tight frame iff the vectors
+$$
+\left\{ x^\prime_i =
+\begin{pmatrix}
+x_{1,i} \\
+\vdots \\
+x_{k,i}
+\end{pmatrix}
+\right\}_{i=1}^n
+\subset {\mathbb R}^k,$$ i.e., the columns of $E$, are all of norm $\sqrt{A}$ and form an orthogonal family.
+\end{soln}
+%%%%%
+%%%%%
+\end{document}

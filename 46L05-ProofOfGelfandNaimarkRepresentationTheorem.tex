@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGelfandNaimarkRepresentationTheorem}
+\pmcreated{2013-03-22 18:01:17}
+\pmmodified{2013-03-22 18:01:17}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of Gelfand-Naimark representation theorem}
+\pmrecord{7}{40538}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+%\pmkeywords{Gelfand-Naimark representation theorem}
+%\pmkeywords{algebra of bounded operators of a Hilbert space $H$}
+\pmrelated{GelfandNaimarkRepresentationTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{representation}
+\PMlinkescapephrase{representations}
+
+{\bf Proof:} Let $\mathcal{A}$ be a \PMlinkname{$C^*$-algebra}{CAlgebra}. We intend to prove that $\mathcal{A}$ is isometrically isomorphic to a norm closed *-subalgebra of $B(H)$, the algebra of bounded operators of a suitable Hilbert space $H$.
+
+Let $S(\mathcal{A})$ denote the state space of $\mathcal{A}$. For every state $\phi \in S(\mathcal{A})$ the Gelfand-Naimark-Segal construction allows one to construct a \PMlinkname{representation}{BanachAlgebraRepresentation} $\pi_{\phi}: \mathcal{A} \longrightarrow B(H_{\phi})$ of $\mathcal{A}$ in a Hilbert space $H_{\phi}$.
+
+Now consider the \PMlinkname{direct sum}{BanachAlgebraRepresentation} of these representations $\displaystyle \pi := \bigoplus_{\phi \in S(\mathcal{A})} \pi_{\phi}$. Recall that $\pi$ is a representation
+\begin{align*}
+\pi:\mathcal{A} \longrightarrow B\Big(\bigoplus_{\phi \in S(\mathcal{A})} H_{\phi}\Big)
+\end{align*}
+of $\mathcal{A}$ in the \PMlinkname{direct sum of the family of Hilbert spaces}{DirectSumOfHilbertSpaces} $\{H_{\phi}\}_{\phi \in S(\mathcal{A})}$.
+
+We now prove that this representation is injective.
+
+Suppose there exists $a \in \mathcal{A}$ such that $\pi(a)=0$. Then, for all $\phi \in S(\mathcal{A})$, $\pi_{\phi}(a)=0$.  Thus, by definition of $\pi_{\phi}$,
+\begin{align*}
+\phi(a)=\langle \pi_{\phi}(a) \xi_{\phi}, \xi_{\phi} \rangle = 0
+\end{align*}
+where $\xi_{\phi} \in H_{\phi}$ is the cyclic vector associated with $\pi_{\phi}$. Since for every $\phi \in S(\mathcal{A})$ we have $\phi(a)=0$, we can conclude that $a=0$ (see \PMlinkname{this entry}{PropertiesOfStates}), i.e. $\pi$ is injective.
+
+Since an \PMlinkname{injective *-homomorphism between $C^*$-algebras is isometric}{InjectiveCAlgebraHomomorphismIsIsometric}, we conclude that $\pi$ is also isometric. Hence $\pi(\mathcal{A})$ is a closed *-subalgebra of $\displaystyle B\Big(\bigoplus_{\phi \in S(\mathcal{A})} H_{\phi}\Big)$. Thus, we have proven that $\pi$ is an isometric isomorphism between $\mathcal{A}$ and a closed *-subalgebra of $B(H)$, for a suitable Hilbert space $H$. $\square$
+%%%%%
+%%%%%
+\end{document}

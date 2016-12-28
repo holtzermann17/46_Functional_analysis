@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBesselInequality}
+\pmcreated{2013-03-22 12:46:41}
+\pmmodified{2013-03-22 12:46:41}
+\pmowner{ariels}{338}
+\pmmodifier{ariels}{338}
+\pmtitle{proof of Bessel inequality}
+\pmrecord{4}{33090}
+\pmprivacy{1}
+\pmauthor{ariels}{338}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\size}[1]{\left|#1\right|}
+\newcommand{\scalar}[2]{\left\langle#1,#2\right\rangle}
+Let
+$$
+r_n = x - \sum_{k=1}^{n} \scalar{x}{e_k}\cdot e_k.
+$$
+Then for $j=1,\ldots,n$,
+\begin{eqnarray}
+\scalar{r_n}{e_j} &=
+\scalar{x}{e_j} -
+\sum_{k=1}^{n} \scalar{\scalar{x}{e_k}\cdot e_k}{e_j} \\
+&= \scalar{x}{e_j} -
+\scalar{x}{e_j}\scalar{e_j}{e_j} = 0
+\end{eqnarray}
+so $e_1,\ldots,e_n,r_n$ is an orthogonal series.
+
+Computing norms, we see that
+$$
+\norm{x}^2 = \norm{r_n + \sum_{k=1}^{n} \scalar{x}{e_k}\cdot e_k}^2 =
+\norm{r_n}^2 + \sum_{k=1}^{n} \size{\scalar{x}{e_k}}^2 \ge
+\sum_{k=1}^{n} \size{\scalar{x}{e_k}}^2.
+$$
+So the series
+$$
+\sum_{k=1}^{\infty} \size{\scalar{x}{e_k}}^2
+$$
+converges and is bounded by $\norm{x}^2$, as required.
+%%%%%
+%%%%%
+\end{document}

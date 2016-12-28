@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommutantOfBHIsmathbbCI}
+\pmcreated{2013-03-22 18:39:35}
+\pmmodified{2013-03-22 18:39:35}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{commutant of $B(H)$ is $\mathbb{C}I$}
+\pmrecord{7}{41403}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L10}
+\pmsynonym{center of $B(H)$}{CommutantOfBHIsmathbbCI}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $H$ be a Hilbert space and $B(H)$ its algebra of bounded operators. We denote by $I$ the identity operator of $B(H)$ and by $\mathbb{C}I$ the set of all multiples of $I$, that is $\mathbb{C}I := \{ \lambda I : \lambda \in \mathbb{C}\}$. Let $B(H)'$ denote the commutant of $B(H)$, which is precisely the center of $B(H)$.
+
+$\,$
+
+{\bf Theorem -} We have that $B(H)' = \mathbb{C}I$.
+
+As a particular case, we see that the center of the matrix algebra $Mat_{n \times n} (\mathbb{C})$ consists solely of the multiples of the identity matrix, i.e. a matrix in $Mat_{n \times n} (\mathbb{C})$ that commutes with all other matrices is necessarily a multiple of the identity matrix.
+
+$\,$
+
+{\bf \emph{\PMlinkescapetext{Proof}:}} For each $x, y \in H$ we denote by $T_{x,y}$ the operator given by
+\begin{align*}
+T_{x,y} z:= \langle z, x \rangle y\,, \qquad\qquad z \in H
+\end{align*}
+
+Let $S \in B(H)'$. We must have $ST_{x,y} = T_{x,y}S$ for all $x,y \in H$, hence
+\begin{align}
+\langle z, x \rangle Sy = \langle Sz,x \rangle y\,, \qquad\qquad \forall x,y,z \in H
+\end{align}
+
+Choosing a non-zero $x$ and taking $z = x$, we see that
+
+\begin{align*}
+Sy = \frac{\langle Sx, x \rangle}{\langle x, x \rangle} y\,, \qquad\qquad y \in H, x \in H \setminus \{0\}
+\end{align*}
+
+Hence, $\displaystyle \frac{\langle Sx, x \rangle}{\langle x, x \rangle}$ must be constant for all $x \in H \setminus \{0\}$. Denote by $\lambda \in \mathbb{C}$ this constant.
+
+We have that $Sy = \lambda y$ for all $y \in H$, which simply means that $S = \lambda I$. Thus, $B(H)' \subseteq \mathbb{C} I$.
+
+It is clear that the multiples of the identity operator commute with all operators, hence we also have $\mathbb{C} I \subseteq B(H)'$.
+
+We conclude that $B(H)' = \mathbb{C} I$. $\square$
+%%%%%
+%%%%%
+\end{document}

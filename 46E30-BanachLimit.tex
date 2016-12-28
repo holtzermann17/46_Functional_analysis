@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BanachLimit}
+\pmcreated{2013-03-22 15:23:00}
+\pmmodified{2013-03-22 15:23:00}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{Banach limit}
+\pmrecord{7}{37213}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E30}
+\pmclassification{msc}{40A05}
+\pmrelated{AlmostConvergent}
+\pmrelated{ConstructionOfBanachLimitUsingLimitAlongAnUltrafilter}
+\pmrelated{ConstructionOfBanachLimitUsingLimitAlongAnUltrafilter2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\complex}{\mathbb{C}}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\newcommand{\elli}{\ell^\infty}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\DeclareMathOperator{\zRe}{Re}
+\DeclareMathOperator{\zIm}{Im}
+\begin{document}
+Consider the set $c_0$ of all convergent complex-valued sequences $\{ x(n) \}_{n \in \nat}$.
+The limit operation $x \mapsto \lim_{n \to \infty} x(n)$
+is a linear functional on $c_0$, by the usual limit laws.
+A \defnterm{Banach limit} is, loosely speaking, any linear functional that generalizes $\lim$ to apply to non-convergent sequences as well. The formal definition follows:
+
+Let $\elli$ be the set of bounded complex-valued sequences $\{ x(n) \}_{n \in \nat}$, equipped
+with the sup norm.
+Then $c_0 \subset \elli$, and $\lim\colon c_0 \to \complex$ is a linear functional.
+A \defnterm{Banach limit} is any continuous linear functional $\phi \in (\elli)^*$ satisfying:
+\begin{enumerate}[i]
+\item
+$\phi(x) = \lim_n x(n)$ if $x \in c_0$ (That is, $\phi$ extends $\lim$.)
+\item
+$\norm{\phi} = 1$.
+\item
+$\phi (Sx) = \phi(x)$, where $S\colon \elli \to \elli$ is the shift operator defined by $Sx(n) = x(n+1)$. (Shift invariance)
+\item
+If $x(n) \geq 0$ for all $n$, then $\phi(x) \geq 0$. (Positivity)
+\end{enumerate}
+
+There is not necessarily a unique Banach limit. Indeed, Banach limits are often constructed
+by extending $\lim$ with the Hahn-Banach theorem (which in turn invokes the Axiom of Choice).
+
+Like the limit superior and limit inferior, the Banach limit can be applied for situations
+where one wants to algebraically manipulate limit equations or inequalities, 
+even when it is not assured beforehand
+that the limits in question exist (in the classical sense).
+
+\section{Some consequences of the definition}
+The positivity condition ensures that the Banach limit of a real-valued sequence is real-valued,
+and that limits can be compared: 
+if $x \leq y$, then $\phi(x) \leq \phi(y)$.
+In particular, given a real-valued sequence $x$, by comparison with the sequences
+$y(n) = \inf_{k \geq n} x(k)$ and $z(n) = \sup_{k \geq n} x(k)$,
+it follows that $\liminf_n x(n) \leq \phi(x) \leq \limsup_n x(n)$.
+
+The shift invariance allows any finite number of terms of the sequence to be neglected when taking the Banach limit, as is possible with the classical limit.
+
+On the other hand, $\phi$ can never be multiplicative, meaning that
+$\phi(xy) = \phi(x) \phi(y)$ fails.
+For a counter-example, set $x = (0, 1, 0, 1, \dotsc)$; then we would have
+$\phi(0) = \phi(x \cdot Sx) = \phi(x) \phi(Sx) = \phi(x)^2$, so $\phi(x) = 0$,
+but $1 = \phi(1) = \phi(x + Sx) = \phi(x) + \phi(Sx) = 2\phi(x) = 0$.
+
+That $\phi$ is continuous means it is compatible with limits in $\elli$.
+For example, suppose that $\{ x_k \}_{k \in \nat} \subset \ell^\infty$,
+and that $\sum_{k=0}^\infty x_k$ is absolutely convergent in $\elli$.
+(In other words, $\sum_{k=0}^\infty \norm{x_k}_\infty < \infty$.)
+Then $\phi(\sum_{k=0}^\infty x_k) = \sum_{k=0}^\infty \phi(x_k)$
+by continuity.
+Observe that this is just the dominated convergence theorem, specialized
+to the case of the counting measure on $\nat$, in disguise.
+
+\section{Other definitions}
+In some definitions of the Banach limit, condition (i) is replaced
+by the seemingly weaker condition that $\phi(1) = 1$ --- 
+the Banach limit of a constant sequence is that constant.
+In fact, the latter condition together with shift invarance implies condition (i).
+
+If we restrict to real-valued sequences,
+condition (ii) is clearly redundant, in view of the other conditions.
+%%%%%
+%%%%%
+\end{document}

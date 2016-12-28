@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassificationOfHilbertSpaces}
+\pmcreated{2013-03-22 17:56:18}
+\pmmodified{2013-03-22 17:56:18}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{classification of Hilbert spaces}
+\pmrecord{10}{40435}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C15}
+\pmclassification{msc}{46C05}
+\pmsynonym{Hilbert spaces of the same dimension are isometrically isomorphic}{ClassificationOfHilbertSpaces}
+\pmrelated{EllpXSpace}
+\pmrelated{OrthonormalBasis}
+\pmrelated{ClassificationOfSeparableHilbertSpaces}
+\pmrelated{CategoryOfHilbertSpaces}
+\pmrelated{RieszFischerTheorem}
+\pmrelated{QuantumGroupsAndVonNeumannAlgebras}
+\pmdefines{every Hilbert space is isometrically isomorphic to a $\ell^2(X)$ space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Hilbert spaces can be classified, up to isometric isomorphism, according to their dimension. Recall that an isometric isomorphism of Hilbert spaces is an unitary transformation, therefore it preserves the vector space structure along with the inner product structure (hence, preserving also the topological structure). Recall also that the dimension of a Hilbert space is a well defined concept, i.e. all orthonormal bases of an Hilbert space share the same cardinality.
+
+The classification theorem we describe here states that two Hilbert spaces $H_1$ and $H_2$ are isometrically isomorphic if and only if they have the same dimension, i.e. if and only if an orthonormal basis of $H_1$ has the same cardinality of an orthonormal basis of $H_2$.
+
+This will be achieved by proving that every Hilbert space is isometrically isomorphic to an \PMlinkname{$\ell^2(X)$ space}{EllpXSpace}, where $X$ has the cardinality of any orthonormal basis of the Hilbert space in consideration.
+
+$\,$
+
+{\bf Theorem 1 -} Suppose $H$ is an Hilbert space and let $I$ be a set that indexes one (and hence, any) orthonormal basis of $H$. Then, $H$ is isometrically isomorphic to $\ell^2(I)$.
+
+$\,$
+
+{\bf Theorem [Classification of Hilbert spaces] -} Two Hilbert spaces $H_1$ and $H_2$ are isometrically isomorphic if and only if they have the same dimension.
+
+$\,$
+
+$\,$
+
+{\bf \emph{Proof of Theorem 1:}} Let $\{e_i\}_{i \in I}$ an orthonormal basis indexed by the set $I$. Let $U: H \longrightarrow \ell^2(I)$ be defined by
+\begin{displaymath}
+Ux \,(i) := \langle x, e_i \rangle
+\end{displaymath}
+We claim that $U$ is an isometric isomorphism. It is clear that $U$ is linear. Using Parseval's equality and the definition of norm in $\ell^2(I)$ it follows that
+\begin{displaymath}
+\|x\|^2 = \sum_{i \in I} |\langle x, e_i \rangle|^2 = \sum_{i \in I} |Ux\,(i)|^2 = \|Ux\|^2_{\ell^2(I)}
+\end{displaymath}
+We conclude that $U$ is isometric. It remains to see that it is surjective (since injectivity follows from the isometric condition).
+
+Let $f \in \ell^2(I)$. By definition of the space $\ell^2(I)$ we must have $\displaystyle \sum_{i \in I} |f(i)|^2 < \infty$, and therefore, using the Riesz-Fischer theorem, the series $\displaystyle \sum_{i\in I} f(i)e_i$ converges to an element $x_0 \in H$. We now see that
+\begin{displaymath}
+Ux_0 \,(j) = \langle x_0, e_j \rangle = \sum_{i \in I} f(i)\langle e_i, e_j\rangle = f(j)
+\end{displaymath}
+or in other \PMlinkescapetext{words}, $Ux_0 = f$. Hence, $U$ is surjective. $\square$
+
+$\,$
+
+{\bf \emph{Proof of the classification theorem :}}
+\begin{itemize}
+\item $(\Longrightarrow)$ Of course, if the Hilbert spaces $H_1$ and $H_2$ are isometrically isomorphic, with isometric isomorphism $U$, then if $\{e_i\}_{i \in I}$ is an orthonormal basis for $H_1$ than $\{Ue_i\}_{i \in I}$ is an orthonormal basis for $H_2$. Hence, $H_1$ and $H_2$ have the same dimension.
+\end{itemize}
+\begin{itemize}
+\item $(\Longleftarrow)$ If the Hilbert spaces $H_1$ and $H_2$ have the same dimension, then we can index any orthonormal basis of $H_1$ and any orthonormal basis of $H_2$ by the same set $I$. Using Theorem 1 we see that $H_1$ and $H_2$ are both isometrically isomorphic to $\ell^2(I)$. Hence $H_1$ and $H_2$ are isometrically isomorphic. $\square$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

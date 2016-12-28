@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAscoliArzelaTheorem}
+\pmcreated{2013-03-22 13:16:19}
+\pmmodified{2013-03-22 13:16:19}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Ascoli-Arzel\`a theorem}
+\pmrecord{12}{33753}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E15}
+
+% this is the default PlanetMath preamble.as yourknowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need 
+% define commands here
+
+%\newtheorem{theorem}
+\begin{document}
+Given $\epsilon>0$ we aim at finding a $4\epsilon$-net in $F$ i.e. a finite set of points $F_\epsilon$ such that 
+\[
+  \bigcup_{f\in F_\epsilon} B_{4\epsilon}(f)\supset F
+\]
+(see the definition of totally bounded).
+Let $\delta>0$ be given with respect to $\epsilon$ in the definition
+of equi-continuity (see uniformly equicontinuous) of $F$.
+Let $X_\delta$ be a $\delta$-lattice in
+$X$ and $Y_\epsilon$ be a  $\epsilon$-lattice in $Y$. 
+Let now $Y_\epsilon^{X_\delta}$ be the set of functions from
+$X_\delta$ 
+to $Y_\epsilon$ and define
+$G_\epsilon\subset Y_\epsilon^{X_\delta}$ by
+\[
+  G_\epsilon = \{ g\in Y_\epsilon^{X_\delta}\colon 
+	\exists f\in F\ \forall x\in X_\delta\quad d(f(x),g(x))<\epsilon\}.
+\]
+Since $Y_\epsilon^{X_\delta}$ is a finite set, 
+$G_\epsilon$ is finite too: say $G_\epsilon=\{g_1,\ldots, g_N\}$.
+Then define $F_\epsilon\subset F$, $F_\epsilon=\{f_1,\ldots, f_N\}$ 
+where $f_k\colon X\to Y$ is a function in $F$ such that 
+$d(f_k(x),g_k(x))<\epsilon$ for all $x\in X_\delta$ (the existence of
+such a function is guaranteed by the definition of $G_\epsilon$).
+
+We now will prove that $F_\epsilon$ is a $4\epsilon$-lattice in $F$.
+Given $f\in F$ choose $g\in
+{Y_\epsilon}^{X_\delta}$ such that for all $x\in X_\delta$ it holds
+$d(f(x),g(x)) < \epsilon$ (this is possible as for all
+$x\in X_\delta$ there exists $y\in Y_\epsilon$ with $d(f(x),y)<\epsilon$). 
+We conclude that $g\in G_\epsilon$ and hence $g=g_k$ for some
+$k\in\{1,\ldots, N\}$. Notice also that for all $x\in X_\delta$ we
+have
+ $d(f(x),f_k(x))\le d(f(x),g_k(x)) + d(g_k(x),f_k(x)) < 2\epsilon$.
+
+Given any $x\in X$ we know that there exists
+$x_\delta\in X_\delta$ such that $d(x,x_\delta)<\delta$. 
+So, by equicontinuity of $F$, 
+\[
+  d(f(x),f_k(x)) \le
+	d(f(x),f(x_\delta)) 
+	+ d(f_k(x),f_k(x_\delta)) + d(f(x_\delta),f_k(x_\delta))
+	< 4\epsilon.
+\]
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectionsAndClosedSubspaces}
+\pmcreated{2013-03-22 17:52:57}
+\pmmodified{2013-03-22 17:52:57}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{projections and closed subspaces}
+\pmrecord{5}{40364}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C07}
+\pmclassification{msc}{46B20}
+\pmsynonym{projection along a closed subspace}{ProjectionsAndClosedSubspaces}
+\pmsynonym{orthogonal projections onto Hilbert subspaces}{ProjectionsAndClosedSubspaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem  1 -} Let $X$ be a Banach space and $M$ a closed subspace. Then,
+\begin{itemize}
+\item $M$ is topologically complemented in $X$ if and only if there exists a continuous projection onto $M$.
+\end{itemize}
+\begin{itemize}
+\item Given a topological complement $N$ of $M$, there exists a unique continuous projection $P$ onto $M$ such that $P(x+y)=x$ for all $x \in M$ and $y \in N$.
+\end{itemize}
+
+
+$\;$
+
+The projection $P$ in the second part of the above theorem is sometimes called the \emph{projection onto $M$ along $N$}.
+
+The above result can be further improved for Hilbert spaces. 
+
+
+$\,$
+
+
+{\bf Theorem 2 - } Let $X$ be a Hilbert space and $M$ a closed subspace. Then, $M$ is topologically complemented in $X$ if and only if there exists an orthogonal projection onto $M$ (which is unique).
+
+$\,$
+
+Since, by the orthogonal decomposition theorem, a closed subspace of a Hilbert space is always topologically complemented by its orthogonal complement ($X=M \oplus M^{\perp}$), it follows that
+
+$\,$
+
+{\bf Corollary -} Let $X$ be a Hilbert space and $M$ a closed subspace. Then, there exists a unique orthogonal projection onto $M$. This establishes a bijective correspondence between orthogonal projections and closed subspaces.
+%%%%%
+%%%%%
+\end{document}

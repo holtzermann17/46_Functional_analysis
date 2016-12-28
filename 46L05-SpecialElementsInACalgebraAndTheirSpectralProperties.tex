@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpecialElementsInACalgebraAndTheirSpectralProperties}
+\pmcreated{2013-03-22 17:28:36}
+\pmmodified{2013-03-22 17:28:36}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{special elements in a $C^*$-algebra and their spectral properties}
+\pmrecord{11}{39862}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmdefines{normal elements and spectral radius}
+\pmdefines{spectrum of self-adjoint elements}
+\pmdefines{spectrum of unitary elements}
+\pmdefines{spectrum of projections}
+\pmdefines{spectrum of positive elements}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{self-adjoint}
+\PMlinkescapeword{normal}
+\PMlinkescapeword{unitary}
+\PMlinkescapeword{positive}
+\PMlinkescapeword{projection}
+\PMlinkescapeword{projections}
+\PMlinkescapeword{partial isometry}
+
+{\bf Definition -} Suppose $\mathcal{A}$ is a \PMlinkname{$C^*$-algebra}{CAlgebra}. An element $x \in \mathcal{A}$ is said to be:
+\begin{itemize}
+\item {\bf normal} if $x^*x = xx^*$
+\item {\bf self-adjoint} if $x^* = x$
+\item {\bf unitary} if $\mathcal{A}$ has an identity element $e$ and $x^*x = xx^* = e$
+\item {\bf positive} if $x = y^*y$ for some element $y \in \mathcal{A}$
+\item {\bf projection} if $x^* = x$ and $x^2=x$
+\item {\bf partial isometry} if $x^*x$ and $xx^*$ are both projections
+\end{itemize}
+
+\subsubsection{Properties of the special elements in terms of their spectrum}
+
+In the following $\sigma(x)$ denotes the spectrum of an element $x$ and $R_{\sigma}(x)$ its spectral radius.
+
+{\bf Theorem 1 -} Suppose $\mathcal{A}$ is a $C^*$-algebra and $x \in \mathcal{A}$. If $x$ is normal then $\|x\| = R_{\sigma}(x)$
+
+{\bf Theorem 2 -} Suppose $\mathcal{A}$ is a $C^*$-algebra and $x \in \mathcal{A}$.
+
+\begin{itemize}
+\item If $x$ is self-adjoint, then $\sigma(x) \subset \mathbb{R}$.
+\item If $x$ is unitary, then $\sigma(x) \subset \partial D$, where $D \subset \mathbb{C}$ is the unit disk.
+\item If $x$ is positive, then $\sigma(x) \subset \mathbb{R}^{+}$
+\item If $x$ is a projection, then $\sigma(x) \subset \{0,1\}$
+\end{itemize}
+
+{\bf Theorem 3 -} Suppose $\mathcal{A}$ is a commutative $C^*$-algebra and $x \in \mathcal{A}$. Then
+
+\begin{itemize}
+\item $x$ is self-adjoint if and only if $\sigma(x) \subset \mathbb{R}$.
+\item $x$ is unitary if and only if $\sigma(x) \subset \partial D$, where $D \subset \mathbb{C}$ is the unit disk.
+\item $x$ is positive if and only if $\sigma(x) \subset \mathbb{R}^{+}$
+\item $x$ is a projection if and only if $\sigma(x) \subset \{0,1\}$
+\end{itemize}
+
+{\bf Theorem 4 -} Suppose $\mathcal{A}$ is a $C^*$-algebra and $x$ is normal in $\mathcal{A}$. Then
+
+\begin{itemize}
+\item $x$ is self-adjoint if and only if $\sigma(x) \subset \mathbb{R}$.
+\item $x$ is unitary if and only if $\sigma(x) \subset \partial D$, where $D \subset \mathbb{C}$ is the unit disk.
+\item $x$ is positive if and only if $\sigma(x) \subset \mathbb{R}^{+}$
+\item $x$ is a projection if and only if $\sigma(x) \subset \{0,1\}$
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

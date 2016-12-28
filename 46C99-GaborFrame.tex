@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaborFrame}
+\pmcreated{2013-03-22 17:08:28}
+\pmmodified{2013-03-22 17:08:28}
+\pmowner{ErlendA}{6587}
+\pmmodifier{ErlendA}{6587}
+\pmtitle{Gabor frame}
+\pmrecord{5}{39448}
+\pmprivacy{1}
+\pmauthor{ErlendA}{6587}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+\pmdefines{Gabor frame}
+\pmdefines{Gabor super-frame}
+\pmdefines{Vector-valued Gabor frame}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{defn}{Definition}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{open}{Open Question}
+\newtheorem*{cond}{Condition}
+\newenvironment{skproof}{\noindent\emph{Sketch Proof.}}{\qed\\}
+\newtheorem*{rem}{Remark}
+
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+
+\newcommand{\eq}{\ensuremath{\thicksim}}
+\newcommand{\iso}{\cong}
+\newcommand{\normal}{\lhd}
+\newcommand{\Aut}[1]{{\ensuremath{\mathrm{Aut}({#1})}}}
+\newcommand{\GL}[2]{{\ensuremath{\mathrm{GL}({#1},{#2})}}}
+\newcommand{\pad}{\ensuremath{\Box}}
+\begin{document}
+\noindent One may be interested in Gabor frames and its related theory if one looks further into the frame framework. First, denote a lattice by $\Lambda=A \mathbb{Z}^{2d}$, where $A$ is an invertible matrix, and let $\pi(\xi,\phi)f=e^{2 \pi i \xi x}f(x-\phi)$
+
+\begin{defn}
+Let $g \in L^2(\mathbb{R}^d)$ be a nonzero window, and let $\lambda \in \Lambda$, then
+\begin{equation*}
+G(g,\lambda)=\left\{ \pi(\lambda)g : \lambda \in \Lambda \right\}
+\end{equation*}
+\noindent is a Gabor system. If $G(g,\lambda)$ is a frame, it's called a Gabor frame for $L^2(\mathbb{R}^d)$
+
+
+\end{defn}
+
+Supose now that one wants to look at a more general framework, and work with functions in $L^2(\mathbb{R}^d,\mathbb{C}^n)$. Then the definition above generalises to
+
+\begin{defn}
+Let $\boldsymbol{g} \in L^2(\mathbb{R}^d,\mathbb{C}^n)$ be a nonzero window and let $\lambda \in \Lambda$, then
+
+\begin{equation*}
+\boldsymbol{G}(\boldsymbol{g},\lambda)=\left\{ \pi(\lambda) \boldsymbol{g} : \lambda \in \Lambda \right\}
+\end{equation*}
+
+\noindent is a Gabor super-frame if the frame inequalities hold, where
+\[ 
+\pi( \xi, \phi ) \boldsymbol{g}=e^{2 \pi \i x \cdot \xi}\left( g_1(x-\phi),g_2(x-\phi),...,g_n(x-\phi) \right)
+\]
+
+\noindent and for $ \boldsymbol{f},\boldsymbol{h} \in L^2(\mathbb{R}^d,\mathbb{C}^n) $
+\[
+\left\langle \boldsymbol{f},\boldsymbol{h} \right\rangle_{L^2(\mathbb{R}^d,\mathbb{C}^n)} 
+= \sum_{i=1}^n \left\langle f_i , h_i \right\rangle_{L^2(\mathbb{R}^d)}
+\]
+
+
+\end{defn}
+
+
+
+\begin{thebibliography}{1}
+\bibitem{gg} Karlheinz GrÃ¶chenig, "Foundations of Time-Frequency Analysis," {\it BirkhhÃ¤user} (2000)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderingOfSelfadjoints}
+\pmcreated{2013-03-22 17:30:37}
+\pmmodified{2013-03-22 17:30:37}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{ordering of self-adjoints}
+\pmrecord{7}{39900}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{A}$ be a \PMlinkname{$C^*$-algebra}{CAlgebra}. Let $\mathcal{A}^+$ denote the set of positive elements of $\mathcal{A}$ and $\mathcal{A}_{sa}$ denote the set of self-adjoint elements of $\mathcal{A}$.
+
+Since $\mathcal{A}^+$ is a \PMlinkname{proper convex cone}{Cone5} (see this \PMlinkname{entry}{PositiveElement3}), we can define a partial order $\leq$ on the set $\mathcal{A}_{sa}$, by setting
+\begin{center}
+$a\leq b$ if and only if $b-a \in \mathcal{A}^+$, i.e. $b-a$ is positive.
+\end{center} 
+
+{\bf Theorem -} The relation $\leq$ is a partial order relation on $\mathcal{A}_{sa}$. Moreover, $\leq$ turns $\mathcal{A}_{sa}$ into an ordered topological vector space.
+
+\subsubsection{Properties:}
+
+\begin{itemize}
+\item $a\leq b \;\Rightarrow\; c^*a\,c\leq c^*b\,c\;\;$ for every $c \in \mathcal{A}$.
+\item If $a$ and $b$ are invertible and $a \leq b$, then $b^{-1} \leq a^{-1}$.
+\item If $\mathcal{A}$ has an identity element $e$, then $-\|a\|e \leq a \leq \|a\|e\;$ for every $a \in \mathcal{A}_{sa}$.
+\item $-b \leq a \leq b \;\Rightarrow \;\|a\| \leq \|b\|$.
+\end{itemize}
+
+\subsubsection{Remark:}
+The proof that $\leq$ is partial order makes no use of the self-adjointness \PMlinkescapetext{property}. In fact, $\mathcal{A}$ itself is an ordered topological vector space under the relation $\leq$.
+
+However, it turns out that this ordering relation provides its most usefulness when restricted to self-adjoint elements. For example, some of the above \PMlinkescapetext{properties} would not hold if we did not restrict to $\mathcal{A}_{sa}$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InvertibleElementsInABanachAlgebraFormAnOpenSet}
+\pmcreated{2013-03-22 17:23:22}
+\pmmodified{2013-03-22 17:23:22}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{invertible elements in a Banach algebra form an open set}
+\pmrecord{6}{39757}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $\mathcal{A}$ be a Banach algebra with identity element $e$ and $G(\mathcal{A})$ be the set of invertible elements in $\mathcal{A}$. Let $B_r(x)$ denote the open ball of radius $r$ centered in $x$.
+
+Then, for all $x \in G(\mathcal{A})$ we have that
+
+\begin{displaymath}
+B_{\|x^{-1}\|^{-1}}(x) \subseteq G(\mathcal{A})
+\end{displaymath}
+
+and therefore $G(\mathcal{A})$ is open in $\mathcal{A}$.
+
+{\bf Proof :} Let $x \in G(\mathcal{A})$ and $y \in B_{\|x^{-1}\|^{-1}}(x)$. We have that
+
+\begin{displaymath}
+\|e-x^{-1}y\| = \|x^{-1}x-x^{-1}y\| = \|x^{-1}(x-y)\| \le \|x^{-1}\|\|x-y\| < \|x^{-1}\|\|x^{-1}\|^{-1} = 1
+\end{displaymath}
+
+So, by the \PMlinkname{Neumann series}{NeumannSeriesInBanachAlgebras} we conclude that $e-(e-x^{-1}y)$ is invertible,
+ i.e. $x^{-1}y \in G(\mathcal{A})$.
+
+As $G(\mathcal{A})$ is a group we must have $y \in G(\mathcal{A})$.
+
+So $B_{\|x^{-1}\|^{-1}}(x) \subseteq G(\mathcal{A})$ and the theorem follows. $\square$
+%%%%%
+%%%%%
+\end{document}

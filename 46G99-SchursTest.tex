@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchursTest}
+\pmcreated{2013-03-22 19:01:19}
+\pmmodified{2013-03-22 19:01:19}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{Schur's Test}
+\pmrecord{6}{41893}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46G99}
+%\pmkeywords{Lp Inequality}
+%\pmkeywords{Bounded Operator}
+%\pmkeywords{Kernel}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+%theorems
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem{Lem}{Theorem}
+\newtheorem{Lem2}{Lemma}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+
+\begin{document}
+\begin{Lem}
+\textbf{(Schur's Test)} Let $(X, \mu)$ be a measure space ($\mu$ a positive measure). Let $K$ be a positive, measurable function on $X \times X$. Define the operator
+\begin{align*}
+T f(x) &:= \int_X K(x,y) f(y) \,d\mu(y), x \in X
+\end{align*}
+
+If for some $1 < p < \infty$ there exists a measurable, strictly positive function $h$ and a constant $M > 0$ such that
+\begin{align*}
+&\int_X K(x,y) h(y)^q \,d\mu(y) \leq M h(x)^q \\
+&\int_X K(x,y) h(x)^p \,d\mu(x) \leq M h(y)^p
+\end{align*}
+
+with $p^{-1} + q^{-1} = 1$, then $||T|| \leq M$ in $L^p(X, d\mu)$. 
+\end{Lem}
+
+
+\begin{proof}
+Let $f \in L^p(X, d\mu)$. We have
+\begin{align*}
+|T f(x)| &\leq \int_{X} h(y) h(y)^{-1} |f(y)| K(x,y) \,d\mu(y) 
+\end{align*}
+
+hence by Hoelder's inequality
+\begin{align*}
+|T f(x)| &\leq \left[\int_X K(x,y) h(y)^q \,d\mu(y) \right]^{\frac{1}{q}} \left[\int_X K(x,y) h(y)^{-p} |f(y)|^p \,d\mu(y)\right]^{\frac{1}{p}}
+\end{align*}
+
+By the first inequality in the assumption we have
+\begin{align*}
+|T f(x)| &\leq M^{\frac{1}{q}} h(x) \left[\int_X K(x,y) h(y)^{-p} |f(y)|^p \,d\mu(y) \right]^{\frac{1}{p}}
+\end{align*}
+
+Evaluating $||T f||_p^p$ by Fubini and the second inequality in the assumption we obtain
+\begin{align*}
+\int_X |T f(x)|^p \,d\mu(x) &\leq M^p \int_X |f(y)|^p \,d\mu(y)
+\end{align*}
+
+This completes the proof. 
+\end{proof}
+
+
+A noted special case is Young's Inequality
+
+\begin{Cor}
+\textbf{(Young)}
+
+Let $K \colon \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{C}$ be Borel-measurable such that there is a constant $C > 0$ with
+\begin{align*}
+& \sup_{x \in \mathbb{R}^n} \int_{\mathbb{R}^n} |K(x,y)| \,d\lambda^n(y) \leq C \\
+& \sup_{y \in \mathbb{R}^n} \int_{\mathbb{R}^n} |K(x,y)| \,d\lambda^n(x) \leq C
+\end{align*}
+
+For $f \in L^p(\mathbb{R}^n)$ ($1 \leq p \leq +\infty$) define
+\begin{align*}
+T(f)(x) &:= \int_{\mathbb{R}^n} K(x,y) f(y)\,d\lambda^n(y)
+\end{align*}
+
+Then $||T f||_p \leq C ||f||_p$. 
+\end{Cor}
+
+\begin{thebibliography}{99}
+\bibitem[Hedenmalm 2000]{hedenmalm} H. Hedenmalm, Boris Korenblum, Kehe Zhu \emph{Theory of Bergman spaces}, Springer Verlag, New York, 2000
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

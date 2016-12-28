@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeakDerivative}
+\pmcreated{2013-03-22 14:54:52}
+\pmmodified{2013-03-22 14:54:52}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{weak derivative}
+\pmrecord{16}{36600}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E35}
+\pmrelated{SobolevSpaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbf R}
+\begin{document}
+Let $f\colon \Omega\to \R$ and $g=(g_1,\ldots,g_n)\colon \Omega\to \R^n$ be locally integrable 
+functions defined on an open set $\Omega\subset \mathbf R^n$.
+We say that $g$ is the \emph{weak derivative} of $f$ if the equality
+\[
+  \int_\Omega f \frac{\partial \phi}{\partial x_i} = - \int_\Omega g_i \phi
+\]
+holds true for all functions $\phi\in\mathcal C^\infty_c(\Omega)$ (smooth functions with compact support in $\Omega$) and for all $i=1,\ldots, n$. Notice that the integrals involved are well defined since $\phi$ is bounded with compact support and because $f$ is assumed to be integrable on compact subsets of $\Omega$.
+
+\subsection*{Comments}
+\begin{enumerate}
+\item
+If $f$ is of class $\mathcal C^1$ then the gradient of $f$ is the weak derivative of $f$ in view of Gauss Green Theorem. So the weak derivative is an extension of the classical derivative. 
+\item
+The weak derivative is unique (as an element of the Lebesgue space $L^1_{\mathrm loc}$) in view of a result about locally integrable functions.
+\item
+The same definition can be given for functions with complex values.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

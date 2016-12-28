@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectSumOfBoundedOperatorsOnHilbertSpaces}
+\pmcreated{2013-03-22 18:00:32}
+\pmmodified{2013-03-22 18:00:32}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{direct sum of bounded operators on Hilbert spaces}
+\pmrecord{7}{40523}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmclassification{msc}{47A05}
+%\pmkeywords{uniformly bounded family of operators}
+%\pmkeywords{direct sum of operators}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{direct sum}
+
+\subsection{Definition}
+Let $\{ H_i\}_{i \in I}$ be a family of Hilbert spaces indexed by a set $I$. For each $i \in I$ let $T_i:H_i \longrightarrow H_i$ be a bounded linear operator on $H_i$ such that the family $\{T_i\}_{i \in I}$ of bounded linear operators is uniformly bounded, i.e. $\sup\,\{\|T_i\|: i \in I\} < \infty$.
+
+{\bf Definition -} The \emph{direct sum} of the uniformly bounded family $\{T_i\}_{i \in I}$ is the operator
+\begin{align*}
+\bigoplus_{i \in I} T_i : \bigoplus_{i \in I} H_i \longrightarrow \bigoplus_{i \in I} H_i
+\end{align*}
+on the direct sum of Hilbert spaces $\bigoplus_{i \in I} H_i$ defined by
+\begin{align*}
+\left( \bigoplus_{i \in I} T_i \;(x)\right)_i := T_i x_i
+\end{align*}
+
+It can be seen that $\bigoplus_{i \in I} T_i$ is well-defined and is in fact a bounded linear operator, whose norm is
+\begin{align*}
+\left\|\bigoplus_{i \in I} T_i \right\| = \sup\,\{\|T_i\| : i \in I\}
+\end{align*}
+
+\subsection{Properties}
+\begin{itemize}
+\item $\displaystyle \bigoplus_{i \in I}  (aT_i + b S_i) = a \bigoplus_{i \in I} T_i + b\bigoplus_{i \in I} S_i$, where $a, b \in \mathbb{C}$.
+\end{itemize}
+\begin{itemize}
+\item $\displaystyle \left(\bigoplus_{i \in I} T_i\right)^* = \bigoplus_{i \in I} T_i^*$.
+\end{itemize}
+\begin{itemize}
+\item $\displaystyle \left(\bigoplus_{i \in I} T_i\right) \left(\bigoplus_{i \in I} S_i\right)  = \bigoplus_{i \in I} T_iS_i$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryFiniteDimensionalSubspaceOfANormedSpaceIsClosed}
+\pmcreated{2013-03-22 14:58:56}
+\pmmodified{2013-03-22 14:58:56}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{every finite dimensional subspace of a normed space is closed}
+\pmrecord{14}{36686}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{54E52}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newtheorem{thm}{Theorem}
+\begin{thm}
+Any finite dimensional subspace of a normed vector space is closed.
+\end{thm}
+
+\textbf{Proof.} Let $(V, \| \cdot \|)$ be such a normed vector space, and $S \subset V$ a finite dimensional vector subspace.
+
+Let $x \in V$, and let $(s_n)_n$ be a sequence in $S$ which converges to $x$. We want to prove that $x \in S$. Because $S$ has finite dimension, we have a basis $\{x_{1}, ..., x_{k}\}$ of $S$. Also, $x \in \operatorname{span}(x_{1}, ..., x_{k}, x)$. But, as proved in the case when $V$ is finite dimensional (see this \PMlinkescapetext{object's} \PMlinkname{parent}{EverySubspaceOfANormedSpaceOfFiniteDimensionIsClosed}), we have that $S$ is closed in $\operatorname{span}(x_{1}, ..., x_{k}, x)$ (taken with the norm induced by $(V, \| \cdot \|)$) with $s_{n} \rightarrow x$, and then $x \in S$. QED.
+
+\subsubsection{Notes}
+The definition of a normed vector space requires the   ground field to be  the real or complex numbers. Indeed, consider the following counterexample if that condition doesn't hold:
+
+$V = \mathbb{R}$ is a $\mathbb{Q}$ - vector space, and $S = \mathbb{Q}$ is a vector subspace of $V$. It is easy to see that $\dim(S) = 1$ (while $\dim(V)$ is infinite), but $S$ is not closed on $V$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfClosedGraphTheorem}
+\pmcreated{2013-03-22 14:48:47}
+\pmmodified{2013-03-22 14:48:47}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of closed graph theorem}
+\pmrecord{5}{36472}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $T\colon X\to Y$ be a linear mapping. Denote its graph by $G(T)$, and let $p_1\colon X\times Y\to X$ and $p_2\colon X\times Y\to Y$ be the projections onto $X$ and $Y$, respectively. We remark that these projections are continuous, by definition of the product of Banach spaces.
+
+If $T$ is bounded, then given a sequence 
+$\{(x_i, Tx_i)\}$ in $G(T)$ which converges to $(x,y)\in X\times Y$, we have that $$x_i = p_1(x_i,Tx_i) \xrightarrow[i\to\infty]{} p_1(x,y) = x$$ 
+and  $$Tx_i = p_2(x_i,Tx_i) \xrightarrow[i\to\infty]{} p_2(x,y) = y,$$
+by continuity of the projections. 
+But then, since $T$ is continuous,
+$$Tx = \lim_{i\to\infty} Tx_i = y.$$
+Thus $(x,y) = (x,Tx)\in G(T)$, proving that $G(T)$ is closed.
+
+Now suppose $G(T)$ is closed. We remark that $G(T)$ is a vector subspace of $X\times Y$, and being closed, it is a Banach space. Consider the operator 
+$\tilde T:X\to G(T)$ defined by $\tilde Tx = (x,Tx)$. It is clear that $\tilde T$ is a bijection, its inverse being $p_1|_{G(T)}$, the restriction of $p_1$ to $G(T)$. Since $p_1$ is continuous on $X\times Y$, the restriction is continuous as well; and since it is also surjective, the open mapping theorem implies that $p_1|_{G(T)}$ is an open mapping, so its inverse must be continuous. That is, $\tilde T$ is continuous, and consequently $T = p_2\circ\tilde T$ is continuous.
+%%%%%
+%%%%%
+\end{document}

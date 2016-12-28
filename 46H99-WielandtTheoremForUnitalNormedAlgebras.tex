@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WielandtTheoremForUnitalNormedAlgebras}
+\pmcreated{2013-03-22 19:01:22}
+\pmmodified{2013-03-22 19:01:22}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{Wielandt theorem for unital normed algebras}
+\pmrecord{6}{41894}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H99}
+%\pmkeywords{commutator}
+%\pmkeywords{hilbert space}
+%\pmkeywords{uncertainty principle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+%theorems
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem{Lem}{Theorem}
+\newtheorem{Lem2}{Lemma}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+
+\begin{document}
+\textbf{Theorem.} (Wielandt (1949)) Let $A$ be a normed unital algebra (with unit $e$). If $x, y \in A$ then $xy - yx \not= e$.
+
+\begin{proof}
+Assume there are $x,y \in A$ such that $xy - yx = e$. Then for all $n \in \mathbb{N}$ we have 
+\begin{align*}
+x^n y - y x^n &= n x^{n-1} \not= 0
+\end{align*}
+
+We prove this by induction over $n \in \mathbb{N}$. It holds for $n = 1$ by assumption. Assume it is valid for $n \in \mathbb{N}$. Then $x^n \not= 0$ and
+\begin{align*}
+x^{n+1} y - y x^{n+1} &= x^n (x y - y x) + (x^n y - y x^n) x \\
+&= x^n e + n x^{n-1} x = x^n e + n x^n = (n+e) x^n
+\end{align*}
+
+From this identity it follows that
+\begin{align*}
+n \|x^{n-1}\| &= \|x^n y - y x^n\| \leq 2 \|x^n\| \|y\| \leq 2 \|x^{n-1}\| \|x\| \|y\| \\
+\end{align*}
+
+It follows that $n \leq 2 ||x|| ||y||$ for all $n \in \mathbb{N}$ which is impossible. 
+\end{proof}
+
+
+\textbf{Corollary.} The identity operator on a Hilbert space $\mathcal{H}$ cannot be expressed as a commutator of two bounded linear operators in $\mathcal{L}(\mathcal{H})$.
+
+
+\textbf{Remark.} The above can be understood as a version of the uncertainty principle in one dimension. Let $H = L^2(\mathbb{R})$. Let $q \colon H \to H$ be $q(f)(x) := xf(x)$ with $D(q) = \{f \in L^2(\mathbb{R}) : x \mapsto x f(x) \in L^2(\mathbb{R})\}$, the coordinate operator and $p \colon H \to H, p(f)(x) = -i f'(x)$ the momentum operator with $D(p) := \{f \in L^2(\mathbb{R}) : f \ \text{absolutely \ continuous}, f' \in L^2(\mathbb{R})\}$. It follows that 
+\begin{align*}
+pq - qp &= -i \mathrm{id}_D \ \text{on} \ D = D(q) \cap D(p) 
+\end{align*}
+
+According to the corollary $D = L^2(\mathbb{R})$ can never be the case.
+
+%%%%%
+%%%%%
+\end{document}

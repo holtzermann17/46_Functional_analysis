@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriterionForABanachalgebraRepresentationToBeIrreducible}
+\pmcreated{2013-03-22 17:27:43}
+\pmmodified{2013-03-22 17:27:43}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{criterion for a Banach *-algebra representation to be irreducible}
+\pmrecord{9}{39845}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46K10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{irreducible}
+\PMlinkescapeword{representation}
+
+{\bf Theorem -} Let $\mathcal{A}$ be a Banach *-algebra, $H$ an Hilbert space and $I$ the identity operator in $H$. A \PMlinkname{representation}{BanachAlgebraRepresentation} $\pi : \mathcal{A} \longrightarrow H$ is topologically irreducible if and only if $\pi(\mathcal{A})' = \mathbb{C}I$, i.e. if and only if the commutant of $\pi(\mathcal{A})$ consists of scalar multiples of the identity operator.
+
+{\bf Proof :} $(\Longrightarrow)$
+
+As $\pi(\mathcal{A})$ is selfadjoint, $\pi(\mathcal{A})'$ is a von Neumann algebra.
+
+Suppose $\pi(\mathcal{A})' \neq \mathbb{C}I$. Then the dimension of $\pi(\mathcal{A})'$ is greater than one.
+
+It is known that von Neumann algebras of dimension greater than one contain non-trivial projections, so there is a projection $P \in \pi(\mathcal{A})'$ such that $P \neq 0$ and $P \neq I$.
+
+As $P \in \pi(\mathcal{A})'$, $P$ commutes with every operator $T \in \pi(\mathcal{A})$, that is $PT=TP$.
+
+Thus $Ran \; P$ is an invariant subspace of every $T \in \pi(\mathcal{A})$. Therefore $\pi$ is not an irreducible representation.
+
+$(\Longleftarrow)$
+
+Conversely, suppose that $\pi$ is not an irreducible representation. There exists a closed $\pi(\mathcal{A})$-invariant subspace different from $\{0\}$ and $H$.
+
+Let $P$ be the projection onto that closed invariant subspace.
+
+Invariance can be expressed as: $\pi(a)P = P \pi(a) P$ for every $a \in \mathcal{A}$. It follows that
+\begin{displaymath}
+P\pi(a) = (\pi(a)^*P)^*=(\pi(a^*)P)^*=(P\pi(a^*)P)^*=P\pi(a^*)^*P=P\pi(a)P=\pi(a)P
+\end{displaymath}
+for every $a \in \mathcal{A}$.
+
+We conclude that $P$ commutes with every element of $\pi(\mathcal{A})$, i.e. $P \in \pi(\mathcal{A})'$.
+
+Thus $\pi(\mathcal{A})' \neq \mathbb{C}I \;\; \square$ 
+%%%%%
+%%%%%
+\end{document}

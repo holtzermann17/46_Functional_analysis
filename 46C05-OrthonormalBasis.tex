@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthonormalBasis}
+\pmcreated{2013-03-22 14:02:29}
+\pmmodified{2013-03-22 14:02:29}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{orthonormal basis}
+\pmrecord{19}{35346}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmsynonym{Hilbert basis}{OrthonormalBasis}
+\pmrelated{RieszSequence}
+\pmrelated{Orthonormal}
+\pmrelated{ClassificationOfHilbertSpaces}
+\pmdefines{dimension of a Hilbert space}
+\pmdefines{dimension}
+
+\def\ip#1{{\langle #1\rangle}}
+
+\begin{document}
+\PMlinkescapeword{even}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{properties}
+
+\section*{Definition}
+
+An \emph{orthonormal basis} (or \emph{Hilbert basis})
+of an inner product space $V$
+is a subset $B$ of $V$ satisfying the following two properties:
+\begin{itemize}
+\item $B$ is an orthonormal set.
+\item The linear span of $B$ is dense in $V$.
+\end{itemize}
+
+The first condition means that all elements of $B$ have norm $1$
+and every element of $B$ is \PMlinkname{orthogonal}{OrthogonalVectors} to every other element of $B$.
+The second condition says that every element of $V$ can be approximated arbitrarily closely by (finite) linear combinations of elements of $B$.
+
+\section*{Orthonormal bases of Hilbert spaces}
+
+Every Hilbert space has an orthonormal basis.
+The cardinality of this orthonormal basis
+is called the \emph{dimension} of the Hilbert space.
+(This is well-defined,
+as the cardinality does not depend on the choice of orthonormal basis.
+This dimension is not in general the same as
+\PMlinkname{the usual concept of dimension for vector spaces}{Dimension2}.)
+
+If $B$ is an orthonormal basis of a Hilbert space $H$,
+then for every $x\in H$ we have
+\[
+  x=\sum_{b\in B}\ip{x,b}b.
+\]
+Thus $x$ is expressed as a (possibly infinite)
+``linear combination'' of elements of $B$.
+The expression is well-defined,
+because only countably many of the terms $\ip{x,b}b$ are non-zero
+(even if $B$ itself is uncountable),
+and if there are infinitely many non-zero terms
+the series is unconditionally convergent.
+For any $x,y\in H$ we also have
+\[
+  \ip{x,y}=\sum_{b\in B}\ip{x,b}\ip{b,y}.
+\]
+
+%%%%%
+%%%%%
+\end{document}

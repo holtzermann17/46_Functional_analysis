@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApproximateIdentity}
+\pmcreated{2013-03-22 17:30:22}
+\pmmodified{2013-03-22 17:30:22}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{approximate identity}
+\pmrecord{6}{39895}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+\pmsynonym{approximate unit}{ApproximateIdentity}
+\pmdefines{left approximate identity}
+\pmdefines{right approximate identity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{A}$ be a Banach algebra.
+
+A {\bf left approximate identity} for $\mathcal{A}$ is a net $(e_{\lambda})_{\lambda \in \Lambda}$ in $\mathcal{A}$ which \PMlinkescapetext{satisfies}:
+\begin{enumerate}
+\item $\|e_{\lambda}\| < C \;\;\;\; \forall_{\lambda \in \Lambda} \;$, for some constant $C$.
+\item $e_{\lambda}a \longrightarrow a\;$, for every $a \in \mathcal{A}$.
+\end{enumerate}
+
+Similarly, a {\bf right approximate identity} for $\mathcal{A}$ is a net $(e_{\lambda})_{\lambda \in \Lambda}$ in $\mathcal{A}$ which \PMlinkescapetext{satisfies}:
+\begin{enumerate}
+\item $\|e_{\lambda}\| < C \;\;\;\; \forall_{\lambda \in \Lambda} \;$, for some constant $C$.
+\item $ae_{\lambda} \longrightarrow a\;$, for every $a \in \mathcal{A}$.
+\end{enumerate}
+
+An {\bf approximate identity} for a $\mathcal{A}$ is a net $(e_{\lambda})_{\lambda \in \Lambda}$ in $\mathcal{A}$ which is both a left and right approximate identity.
+
+\subsubsection{Remarks:}
+\begin{itemize}
+\item There are examples of Banach algebras that do not have approximate \PMlinkescapetext{identities}.
+\item If $\mathcal{A}$ has an identity element $e$, then clearly $e$ itself is an approximate identity for $\mathcal{A}$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

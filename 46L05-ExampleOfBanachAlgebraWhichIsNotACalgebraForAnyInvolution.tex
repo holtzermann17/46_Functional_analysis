@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfBanachAlgebraWhichIsNotACalgebraForAnyInvolution}
+\pmcreated{2013-03-22 17:25:54}
+\pmmodified{2013-03-22 17:25:54}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{example of Banach algebra which is not a $C^*$-algebra for any involution}
+\pmrecord{5}{39807}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmdefines{finite dimensional $C^*$-algebras are semi-simple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider the Banach algebra $\mathcal{A}= \left\{ 
+\begin{bmatrix}
+\lambda I_n & A \\
+0 & \lambda I_n
+\end{bmatrix} :\; \lambda \in \mathbb{C},\;\; A \in Mat_{n \times n}(\mathbb{C}) \right\}$ with the usual matrix operations and matrix norm, where $I_n$ denotes the identity matrix in $Mat_{n \times n}(\mathbb{C})$.
+
+{\bf Claim -} $\mathcal{A}$ is not a \PMlinkname{$C^*$-algebra}{CAlgebra} for any involution $*$.
+
+To prove the above claim we will give a \PMlinkescapetext{simple} proof of a more general fact about finite dimensional $C^*$-algebras, which clearly shows the \PMlinkescapetext{algebraic restrictions} for a Banach algebra to be a $C^*$-algebra for some involution.
+
+{\bf Theorem -} Every finite dimensional $C^*$-algebra is semi-simple, i.e. its Jacobson radical is $\{0\}$.
+
+{\bf Proof :} Let $\mathcal{B}$ be a finite dimensional $C^*$-algebra. Let $a$ be an element of $J(\mathcal{B})$, the Jacobson radical of $\mathcal{B}$.
+
+$J(\mathcal{B})$ is an ideal of $\mathcal{B}$, so $a^*a \in J(\mathcal{B})$.
+
+The Jacobson radical of a finite dimensional algebra is nilpotent, therefore there exists $n \in \mathbb{N}$ such that $(a^*a)^n=0$. Then, by the $C^*$ condition and the fact that $a^*a$ is selfadjoint,
+\begin{displaymath}
+0 = \|(a^*a)^{2^n}\| = \|a^*a\|^{2^n} = \|a\|^{2^{n+1}}
+\end{displaymath}
+so $a = 0$ and $J(\mathcal{B})$ is trivial. $\square$
+
+We now prove the above claim.
+
+{\bf Proof of the claim:} It is easy to see that 
+$\left\{ 
+\begin{bmatrix}
+0 & A \\
+0 & 0
+\end{bmatrix} : \; A \in Mat_{n \times n}(\mathbb{C}) \right\}$ is the only maximal ideal of $\mathcal{A}$. Therefore the Jacobson radical of $\mathcal{A}$ is not trivial.
+
+By the theorem we conclude that there is no involution $*$ that makes $\mathcal{A}$ into a $C^*$-algebra.$\square$
+
+{\bf Remark -} It could happen that there were no involutions in $\mathcal{A}$ and so the above claim would be uninteresting. That's not the case here. For example, one can see that $[a_{i,j}] \longrightarrow [\overline{a}_{2n+1-j,2n+1-i}]$ defines an involution in $\mathcal{A}$ (this is just the \PMlinkescapetext{conjugate transpose} taken over the other diagonal of the matrix).
+%%%%%
+%%%%%
+\end{document}

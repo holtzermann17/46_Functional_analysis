@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfParallelogramLaw1}
+\pmcreated{2013-03-22 16:08:15}
+\pmmodified{2013-03-22 16:08:15}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of parallelogram law}
+\pmrecord{6}{38211}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmrelated{ProofOfParallelogramLaw}
+\pmrelated{AlternateProofOfParallelogramLaw}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The proof supplied here for the parallelogram law uses the properties of norms and inner products.  See the entries about these \PMlinkescapetext{objects} for more details regarding the following calculations.
+
+\begin{proof}
+
+\begin{center}
+\begin{tabular}{ll}
+$\Vert x+y \Vert^2+\Vert x-y \Vert^2$ & $=\langle x+y,x+y \rangle + \langle x-y,x-y \rangle$ \\
+& $=\langle x,x+y \rangle + \langle y,x+y \rangle + \langle x,x-y \rangle - \langle y,x-y \rangle$ \\
+& $=\overline{\langle x+y,x \rangle}+\overline{\langle x+y,y \rangle}+\overline{\langle x-y,x \rangle}-\overline{\langle x-y,y \rangle}$ \\
+& $\displaystyle =\overline{\langle x,x \rangle + \langle y,x \rangle}+\overline{\langle x,y \rangle + \langle y,y \rangle}+\overline{\langle x,x \rangle - \langle y,x \rangle}-\left( \overline{\langle x,y \rangle - \langle y,y \rangle} \right)$ \\
+& $=\overline{\langle x,x \rangle}+\overline{\langle y,x \rangle}+\overline{\langle x,y \rangle}+\overline{\langle y,y \rangle}+\overline{\langle x,x \rangle}-\overline{\langle y,x \rangle}-\overline{\langle x,y \rangle}+\overline{\langle y,y \rangle}$ \\
+& $=\langle x,x \rangle + \langle y,y \rangle + \langle x,x \rangle + \langle y,y \rangle$ \\
+& $=2\langle x,x \rangle +2 \langle y,y \rangle$ \\
+& $=2 \Vert x \Vert^2+2 \Vert y \Vert^2$. \end{tabular}
+\end{center}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

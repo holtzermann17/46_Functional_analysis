@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AllOrthonormalBasesHaveTheSameCardinality}
+\pmcreated{2013-03-22 17:56:10}
+\pmmodified{2013-03-22 17:56:10}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{all orthonormal bases have the same cardinality}
+\pmrecord{7}{40433}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmsynonym{dimension of an Hilbert space is well-defined}{AllOrthonormalBasesHaveTheSameCardinality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem. --} All orthonormal bases of an Hilbert space $H$ have the same cardinality. It follows that the concept of dimension of a Hilbert space is well-defined.
+
+$\,$
+
+{\bf \emph{Proof:}} When $H$ is finite-dimensional (as a vector space), every orthonormal basis is a Hamel basis of $H$. Thus, the result follows from the fact that all Hamel bases of a vector space have the same cardinality (see \PMlinkname{this entry}{AllBasesForAVectorSpaceHaveTheSameCardinality}).
+
+We now consider the case where $H$ is infinite-dimensional (as a vector space). Let $\{e_i\}_{i \in I}$ and $\{f_j\}_{j \in J}$ be two orthonormal basis of $H$, indexed by the sets $I$ and $J$, respectively. Since $H$ is infinite dimensional the sets $I$ and $J$ must be infinite.
+
+We know, from Parseval's equality, that for every $x \in H$
+\begin{displaymath}
+\|x\|^2 = \sum_{i \in I} |\langle x, e_i \rangle|^2
+\end{displaymath}
+We know that, in the above sum, $\langle x, e_i \rangle \neq 0$ for only a countable number of $i \in I$.  Thus, considering $x$ as $f_j$, the set $I_j := \{ i \in I: \langle f_j, e_i \rangle \neq 0 \}$ is countable.   Since for each $i \in I$ we also have
+\begin{displaymath}
+\|e_i\|^2 = \sum_{j \in J}| \langle e_i, f_j \rangle|^2
+\end{displaymath}
+there must be $j \in J$ such that $\langle f_j, e_i \rangle \neq 0$. We conclude that $\displaystyle I = \bigcup_{j \in J} I_j$.
+
+Hence, since each $I_j$ is countable, $I \leq J\!\times\!\mathbb{N} \cong J$ (because $J$ is infinite).
+
+An analogous \PMlinkescapetext{argument} proves that $J \leq I$.  Hence, by the Schroeder-Bernstein theorem $J$ and $I$ have the same cardinality. $\square$
+%%%%%
+%%%%%
+\end{document}

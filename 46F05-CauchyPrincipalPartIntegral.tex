@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyPrincipalPartIntegral}
+\pmcreated{2013-03-22 13:46:04}
+\pmmodified{2013-03-22 13:46:04}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Cauchy principal part integral}
+\pmrecord{10}{34472}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46F05}
+\pmclassification{msc}{46-00}
+\pmsynonym{Cauchy principal value}{CauchyPrincipalPartIntegral}
+\pmrelated{ImproperIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\newcommand{\cpv}[0]{\operatorname{p.\!v.}(\frac{1}{x})}
+\newcommand{\cD}[0]{\mathcal{D}}
+\newcommand{\supp}[0]{\operatorname{supp}}
+
+{\bf Definition} \cite{reed, igari, rauch} 
+Let $C_0^\infty(\sR)$ be the set of smooth functions with compact support on $\sR$. 
+Then the \emph{Cauchy principal part integral} (or, more in line with the notation, the \emph{Cauchy principal value}) $\cpv $ 
+is mapping $\cpv \,: C_0^\infty(\sR) \to  \sC$ defined as
+$$\cpv (u)=\lim_{\varepsilon\to 0+} \int_{|x|>\varepsilon} \frac{u(x)}{x} dx$$
+for $u\in C_0^\infty(\sR)$. 
+
+{\bf Theorem} The mapping $\cpv$
+is a \PMlinkname{distribution of first order}{Distribution4}. 
+That is, $\cpv \in \cD'^1(\sR)$. 
+
+(\PMlinkname{proof.}{Operatornamepvfrac1xIsADistributionOfFirstOrder})
+
+\subsubsection{Properties}
+\begin{enumerate}
+\item The distribution $\cpv$ is obtained as the limit (\cite{rauch}, pp. 250)
+$$ \frac{\chi_{n |x|}}{x} \to \cpv. $$
+as $n\to \infty$.
+Here, $\chi$ is the characteristic function, 
+the locally integrable functions on the left hand side 
+should be interpreted as distributions
+(see \PMlinkname{this page}{EveryLocallyIntegrableFunctionIsADistribution}), 
+and the limit should be taken in $\cD'(\sR)$.  It should also be noted that $\cpv$ can be represented by a proper integral as
+$$ \cpv(u)=\int_0^\infty \frac{u(x)-u(-x)}{x},$$ where we have used the fact that the integrand is continuous because of the differentiability at 0.  In fact, this viewpoint can be used to somewhat vastly increase the set of functions for which this principal value is well-defined, such as functions that are integrable, satisfy a Lipschitz condition at 0, and whose behavior for large $x$ makes the integral converge at infinity.
+\item Let $\ln |t|$ be the distribution induced by the 
+locally integrable function $\ln |t| : \sR\to \sR$. Then, 
+for the \PMlinkname{distributional derivative}{OperationsOnDistributions} $D$, 
+we have  (\cite{igari}, pp. 149)
+$$ D (\ln |t|) = \cpv.$$
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{reed} M. Reed, B. Simon,
+  \emph{Methods of Modern Mathematical Physics: Functional Analysis I},
+Revised and enlarged edition,  Academic Press, 1980. 
+\bibitem{igari} S. Igari, \emph{Real analysis - With an introduction to Wavelet Theory}, American Mathematical Society, 1998.
+\bibitem{rauch} J. Rauch,
+ \emph{Partial Differential Equations}, Springer-Verlag, 1991.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

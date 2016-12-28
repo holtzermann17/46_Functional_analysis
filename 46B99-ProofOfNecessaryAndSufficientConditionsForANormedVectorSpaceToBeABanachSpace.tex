@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfNecessaryAndSufficientConditionsForANormedVectorSpaceToBeABanachSpace}
+\pmcreated{2013-03-22 17:35:11}
+\pmmodified{2013-03-22 17:35:11}
+\pmowner{willny}{13192}
+\pmmodifier{willny}{13192}
+\pmtitle{proof of necessary and sufficient conditions for a normed vector space to be a Banach space}
+\pmrecord{4}{39998}
+\pmprivacy{1}
+\pmauthor{willny}{13192}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We prove here that in order for a normed space, say $X$, with the norm, say $\|\cdot\|$ to be
+Banach, it is necessary and sufficient that convergence of every absolutely convergent series in $X$
+implies convergence of the series in $X$.
+\\
+\\Suppose that $X$ is Banach. Let a sequence $(x_n)$ be in $X$ such that the series
+$$\sum_n{\|x_n\|}$$
+converges. Then for all $\epsilon > 0$ there exists $N$ such that for all $m > n > N$ we have
+$$\left\|\sum_{n+1}^m{x_n}\right\|\leq\sum_{n+1}^m{\|x_n\|} < \epsilon$$
+Hence
+$$s_k = \sum_{n=1}^k{x_n}$$ is a Cauchy sequence in $X$. Since $X$ is Banach, $s_k$ converges in $X$.
+\\
+\\Conversely, suppose that absolute convergence implies convergence. Let $(x_n)$ be a Cauchy sequence
+in $X$. Then for all $m \geq 1$ there exists $N_m$ such that for all $k, k' \geq N_m$ we have $\|x_k - x_{k'}\| < 1/m^2$.
+We'll conveniently choose $N_m$ so that $N_m$ is an increasing sequence in $m$. Then in particular, $\|x_{N_m} - x_{N_{m+1}}\| < 1/m^2$. Hence we have,
+$$\sum_{m = 1}^M{\|x_{N_m} - x_{N_{m+1}}\|} < \sum_{m=1}^M{\frac{1}{m^2}}$$
+The sum on the right converges, so must the sum on the left. Since absolute convergence implies convergence,
+we must have
+$$\sum_{m = 1}^M{(x_{N_m} - x_{N_{m+1}})}$$
+converges as $M$ tends to infinity. So there is an $s$ in $X$ which is the limit of the sum above. As a telescoping
+series, however, the sum above converges to $\lim_{M\rightarrow\infty}({x_{N_1} - x_{N_m}}) = s$. Since $s$ and $x_{N_1}$ are both in $X$, so is the limit of $x_{N_m}$, which is a subsequence of the Cauchy sequence $(x_n)$. Hence $(x_n)$ converges in $X$. So $X$ is Banach.
+\\
+\\This completes the proof.
+%%%%%
+%%%%%
+\end{document}

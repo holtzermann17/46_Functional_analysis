@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Cn}
+\pmcreated{2013-03-22 14:59:43}
+\pmmodified{2013-03-22 14:59:43}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{$C^n$}
+\pmrecord{13}{36701}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A99}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{26A15}
+\pmsynonym{$C^1$}{Cn}
+\pmsynonym{$C^2$}{Cn}
+\pmsynonym{$C^k$}{Cn}
+\pmsynonym{$C^\infty$}{Cn}
+\pmrelated{Derivative}
+\pmrelated{SmoothFunctionsWithCompactSupport}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Let $f\colon \R\to\R$ be a function. We say that $f$ is of class $C^1$ if $f'$ exists and is continuous.
+
+We also say that $f$ is of class $C^n$ if its $n$-th derivative exists and is continuous (and therefore all other previous derivatives exist and are continuous too).
+
+The class of continuous functions is denoted by $C^0$. So we get the 
+following relationship among these classes:
+\[
+C^0\supset C^1\supset C^2\supset C^3 \supset \ldots
+\]
+
+Finally, the class of functions that have continuous derivatives of any order is denoted by $C^\infty$ and thus
+\[
+C^\infty = \bigcap_{n=0}^\infty C^n.
+\]
+It holds that any function that is differentiable is also continuous
+(see \PMlinkname{this entry}{DifferentiableFunctionsAreContinuous}). 
+Therefore, $f\in C^\infty$ if and only if every derivative of $f$ exists.
+
+The previous concepts can be extended to functions $f\colon \R^m \to \R$, 
+where $f$ being of class $C^n$ amounts to asking that all the 
+partial derivatives of order $n$ be continuous. 
+For instance, $f\colon\R^m\to \R$ being $C^2$ means that
+\[
+\frac{\partial^2 f}{\partial x_j\partial x_i}
+\]
+exists and are all continuous for any $i,j$ from $1$ to $m$.
+
+\subsubsection*{$C^n$ functions on an open set of $\R^m$}
+Sometimes we need to talk about continuity not globally on $\R$, 
+but on some interval or open set. 
+
+If $U\subseteq \R^m$ is an open set, and $f\colon U\to \R$ 
+(or $f\colon U\to \C$)
+we say that $f$ is of class $C^n$ if $\partial^\alpha f$
+exist and are continuous for all multi-indices $\alpha$ with $|\alpha|\le n$. 
+See \PMlinkname{this page}{MultiIndexNotation} for the multi-index notation.
+%%%%%
+%%%%%
+\end{document}

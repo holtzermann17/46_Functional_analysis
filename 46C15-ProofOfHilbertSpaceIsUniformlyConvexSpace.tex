@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHilbertSpaceIsUniformlyConvexSpace}
+\pmcreated{2013-03-22 15:20:48}
+\pmmodified{2013-03-22 15:20:48}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of  Hilbert space is uniformly convex space}
+\pmrecord{16}{37167}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C15}
+\pmclassification{msc}{46H05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We prove that in fact an inner product space is uniformly convex.
+Let $\epsilon >0$, $u,v \in H$ such that $\|u\|\leq 1$, $\|v\|\leq 1$, $\|u-v\|\geq \epsilon$. Put $\delta = 1-\frac{1}{2}\sqrt{4-\epsilon^2}$.
+Then $\delta >0$ and by the parallelogram law
+\begin{eqnarray*}
+\Vert u+v\Vert^2 & = & \Vert u + v \Vert^2 + \Vert u-v\Vert^2 - \Vert u-v\Vert^2\\
+&=& 2 \Vert u \Vert^2 + 2\Vert v \Vert^2 - \Vert u-v\Vert^2 \\
+& \leq &  4  - \epsilon^2 \\
+& = & 4(1-\delta)^2.\\
+\end{eqnarray*}
+Hence,  $\Vert\frac{u+v}{2}\Vert\leq 1-\delta$. 
+
+Since a Hilbert space is an inner product space, 
+ a Hilbert space \PMlinkescapetext{satisfies} the conditions of a uniformly convex space.
+%%%%%
+%%%%%
+\end{document}

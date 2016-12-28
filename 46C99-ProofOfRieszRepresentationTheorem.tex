@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRieszRepresentationTheorem}
+\pmcreated{2013-03-22 17:32:37}
+\pmmodified{2013-03-22 17:32:37}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of Riesz representation theorem}
+\pmrecord{5}{39943}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Existence -} If $f=0$ we can just take $u=0$ and thereby have $f(x) =0= \langle x, 0\rangle$ for all $x \in \mathcal{H}$.
+
+Suppose now $f \neq 0$, i.e. $Ker f \neq \mathcal{H}$.
+
+Recall that, since $f$ is \PMlinkname{continuous}{ContinuousMap}, $Ker f$ is a closed subspace of $\mathcal{H}$ (continuity of $f$ implies that $f^{-1}(0)$ is closed in $\mathcal{H}$). It then follows from the orthogonal decomposition theorem that
+\begin{displaymath}
+\mathcal{H} = Ker f \oplus (Ker f)^{\perp}
+\end{displaymath}
+and as $Ker f \neq \mathcal{H}$ we can find $z \in (Ker f)^{\perp}$ such that $\|z\| = 1$.
+
+It follows easily from the linearity of $f$ that for every $x \in \mathcal{H}$ we have
+\begin{displaymath}
+f(x)z-f(z)x \in Ker f
+\end{displaymath}
+and since $z \in (Ker f)^{\perp}$
+\begin{eqnarray*}
+\quad\quad\quad\quad\quad\quad 0 & = & \langle f(x)z -f(z)x, z \rangle \\
+& = & f(x)\langle z, z\rangle - f(z)\langle x, z\rangle \\
+& = & f(x)\|z\|^2 -  \langle x, \overline{f(z)} z\rangle \\
+& = & f(x) -  \langle x, \overline{f(z)} z\rangle
+\end{eqnarray*}
+
+which implies
+\begin{displaymath}
+f(x) = \langle x, \overline{f(z)} z\rangle \; .
+\end{displaymath}
+
+The theorem then follows by taking $u = \overline{f(z)} z$.
+
+{\bf Uniqueness -} Suppose there were $u_1, u_2 \in \mathcal{H}$ such that for every $x \in \mathcal{H}$
+\begin{displaymath}
+f(x)= \langle x, u_1 \rangle = \langle x, u_2 \rangle .
+\end{displaymath}
+
+Then $\langle x, u_1 -u_2 \rangle = 0$ for every $x \in \mathcal{H}$. Taking $x = u_1 - u_2$ we obtain $\|u_1-u_2\|^2 = 0$, which implies $u_1 = u_2$. $\square$
+%%%%%
+%%%%%
+\end{document}

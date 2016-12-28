@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MaximalIdealsOfTheAlgebraOfContinuousFunctionsOnACompactSet}
+\pmcreated{2013-03-22 17:44:57}
+\pmmodified{2013-03-22 17:44:57}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{maximal ideals of the algebra of continuous functions on a compact set}
+\pmrecord{5}{40200}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{46J20}
+\pmclassification{msc}{46J10}
+\pmclassification{msc}{16W80}
+\pmsynonym{character space of the algebra of continuous functions on a compact set}{MaximalIdealsOfTheAlgebraOfContinuousFunctionsOnACompactSet}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a compact Hausdorff space and $C(X)$ the Banach algebra of continuous functions $X \longrightarrow \mathbb{C}$ (with the sup norm).
+
+In this entry we are interested in identifying the maximal ideals and the character space of $C(X)$. Since $C(X)$ is a Banach algebra with an identity element, there is a bijective correspondence between the character space of $C(X)$ and the set of maximal ideals of this algebra, given by
+\begin{displaymath}
+\phi \longleftrightarrow Ker\; \phi
+\end{displaymath}
+Hence, by identifying the character space of $C(X)$ we are able to identify its maximal ideals.\\
+
+$\;$
+
+{\bf Theorem 1 -} Let $\Delta$ be the character space of $C(X)$. For each $x \in X$ let $ev_x \in \Delta$ be the point-evaluation at $x$, i.e.
+\begin{displaymath}
+ev_x(f)=f(x)\;, \qquad\qquad\;f \in C(X)
+\end{displaymath}
+Then the mapping $x \longmapsto ev_x$ is an homeomorphism between $\Delta$ and $X$.\\
+
+$\;$
+
+Thus, the character space of $C(X)$ is homeomorphic to $X$ via point-evaluations.
+
+Now, the maximal ideals of $C(X)$ correspond to the kernels of the point-evaluation functions. The kernel of $ev_x$, the point-evaluation at $x$, is just
+\begin{align*}
+\{f \in C(X) : f(x) = 0 \}
+\end{align*}
+i.e., the functions that vanish at $x$.
+
+Thus, each maximal ideal of $C(X)$ is just the set of functions that vanish in a given point.
+
+\subsection{Generalization to locally compact Hausdorff spaces}
+Now, let $X$ be a locally compact Hausdorff space and $C_0(X)$ the space of continuous functions $X \longrightarrow \mathbb{C}$ that vanish at infinity.
+
+There is a generalization of Theorem 1 above that allows one to identify the character space of $C_0(X)$, but since this algebra is not unital unless $X$ is compact, we cannot identify its maximal ideals by the above method.\\
+
+$\;$
+
+{\bf Theorem 2-} Let $\Delta$ be the character space of $C_0(X)$. For each $x \in X$ let $ev_x \in \Delta$ be the point-evaluation at $x$, i.e.
+\begin{displaymath}
+ev_x(f)=f(x)\;, \qquad\qquad\;f \in C_0(X)
+\end{displaymath}
+Then the mapping $x \longmapsto ev_x$ is an homeomorphism between $\Delta$ and $X$.\\
+
+$\;$
+
+Thus, the character space of $C_0(X)$ is also homeomorphic to $X$ via point-evaluations.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalComplement}
+\pmcreated{2013-03-22 17:32:31}
+\pmmodified{2013-03-22 17:32:31}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{topological complement}
+\pmrecord{5}{39941}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A99}
+\pmclassification{msc}{15A03}
+\pmdefines{topologically complementary}
+\pmdefines{topologically complemented}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsubsection{Definition}
+Let $X$ be a topological vector space and $M \subseteq X$ a \PMlinkname{closed}{ClosedSet} subspace.
+
+If there exists a closed subspace $N \subseteq X$ such that
+\begin{displaymath}
+M \oplus N = X
+\end{displaymath}
+we say that $M$ is {\bf topologically complemented}.
+
+In this case $N$ is said to be a {\bf topological complement} of $M$, and also $M$ and $N$ are said to be {\bf topologically complementary} subspaces.
+
+\subsubsection{Remarks}
+\begin{itemize}
+\item It is known that every subspace $M \subseteq X$ has an algebraic complement, i.e. there exists a subspace $N \subseteq X$ such that $M \oplus N = X$. The existence of topological complements, however, is not always assured.
+\item If $X$ is an Hilbert space, then each closed subspace $M \subseteq X$ is topologically complemented by its orthogonal complement $M^{\perp}$, i.e.
+\begin{displaymath}
+M \oplus M^{\perp} = X .
+\end{displaymath} 
+\item Moreover, for Banach spaces the converse of the last paragraph also holds, i.e. if each closed subspace is topologically complemented then $X$ is isomorphic a Hilbert space. This is the \PMlinkname{Lindenstrauss-Tzafriri theorem}{CharacterizationOfAHilbertSpace}.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

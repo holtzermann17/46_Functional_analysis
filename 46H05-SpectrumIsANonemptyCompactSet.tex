@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpectrumIsANonemptyCompactSet}
+\pmcreated{2013-03-22 17:25:05}
+\pmmodified{2013-03-22 17:25:05}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{spectrum is a non-empty compact set}
+\pmrecord{10}{39791}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $\mathcal{A}$ be a complex Banach algebra with identity element. The spectrum of each $a \in \mathcal{A}$ is a non-empty compact set in $\mathbb{C}$.
+
+$\emph{Remark}$ : For Banach algebras over $\mathbb{R}$ the spectrum of an element is also a compact set, although it can be empty. To assure that it is not the empty set, proofs usually involve \PMlinkname{Liouville's theorem}{LiouvillesTheorem2} for \PMlinkescapetext{functions} of a complex \PMlinkescapetext{variable} with values in a Banach algebra.
+
+{\bf \emph{Proof :}} Let $e$ be the identity element of $\mathcal{A}$. Let $\sigma(a)$ denote the spectrum of the element $a \in \mathcal{A}$.
+\begin{itemize}
+\item {\bf \PMlinkescapetext{Compactness} -} For each $\lambda \in \mathbb{C}$ such that $|\lambda| > \|a\|$ one has $\|\lambda^{-1}a\|<1$, and so, by the \PMlinkname{Neumann series}{NeumannSeriesInBanachAlgebras}, $e-\lambda^{-1}a$ is invertible. Since
+\begin{displaymath}
+a-\lambda e=-\lambda(e-\lambda^{-1}a)
+\end{displaymath}
+we see that $a-\lambda e$ is also invertible.
+
+We conclude that $\sigma(a)$ is contained in a disk of radius $\|a\|$, and therefore it is bounded.
+
+Let $\phi : \mathbb{C} \longrightarrow \mathcal{A}$ be the function defined by
+\begin{displaymath}
+\phi(\lambda) = a - \lambda e
+\end{displaymath}
+
+It is known that the set $\mathcal{G}$ of the invertible elements of $\mathcal{A}$ is open (see \PMlinkname{this entry}{InvertibleElementsInABanachAlgebraFormAnOpenSet}).
+
+Since $\phi^{-1}(\mathcal{G})=\mathbb{C}-\sigma(a)$ and $\phi$ is a continuous function we see that that $\sigma(a)$ is a closed set in $\mathbb{C}$.
+
+As $\sigma(a)$ is a bounded closed subset of $\mathbb{C}$, it is compact.
+
+\item {\bf Non-emptiness -} Suppose that $\sigma(a)$ was empty. Then the resolvent \PMlinkescapetext{function} $R_a$ is defined in $\mathbb{C}$.
+
+We can see that $R_a$ is bounded since it is continuous in the closed disk $|\lambda|<\|a\|$ and, for $\lambda >\|a\|$, we have (again, by the \PMlinkname{Neumann series}{NeumannSeriesInBanachAlgebras})
+\begin{eqnarray*}
+\|R_a(\lambda)\| & = & \|(a-\lambda e)^{-1}\| \\ 
+& = & \|\lambda^{-1}(e-\lambda^{-1}a)^{-1}\| \\ 
+& \leq & \frac{|\lambda|^{-1}}{1-|\lambda|^{-1}\|a\|} \\
+& = & \frac{1}{|\lambda|-\|a\|}
+\end{eqnarray*}
+and therefore $\displaystyle \lim_{|\lambda| \rightarrow \infty} R_a(\lambda) = 0$, which shows that $R_a$ is bounded.
+
+The resolvent function, $R_a$, is \PMlinkname{analytic}{BanachSpaceValuedAnalyticFunctions} (see \PMlinkname{this entry}{ResolventFunctionIsAnalytic}). As it is defined in $\mathbb{C}$, it is a bounded entire function. Applying \PMlinkname{Liouville's theorem}{LiouvillesTheorem2} we conclude that it must be constant (see this \PMlinkname{this entry}{BanachSpaceValuedAnalyticFunctions} for an idea of how 
+\PMlinkescapetext{Liouville's theorem} holds for Banach space valued functions).
+
+Since $R_a(\lambda)$ converges to $0$ as $|\lambda| \rightarrow \infty$ we see that $R_a$ must be identically zero.
+
+Thus, we have arrived to a contradiction since $0$ is not invertible.
+
+Therefore $\sigma(a)$ is non-empty.$\square$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

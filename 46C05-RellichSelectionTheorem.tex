@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RellichSelectionTheorem}
+\pmcreated{2013-03-22 14:38:55}
+\pmmodified{2013-03-22 14:38:55}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Rellich selection theorem}
+\pmrecord{7}{36239}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $D$ be an open subset of $\mathbb{R}^n$.  If, for a sequence of functions $f_i \colon D \to \mathbb{R}$, $i = 1,2,\ldots$ there exists a constant $B>0$ such that 
+ $$(\forall i) \qquad \| f_i \|_{L^2 (D)} = \int_D f_i^2 \, d^n x < B$$
+and
+ $$(\forall i) \, (\forall j \in \{1, \ldots n \}) \qquad \int_D \left( {\partial f_i \over \partial x_j} \right)^2 \, d^n x < B$$
+then there exists a subsequence which is convergent in the $L^2 (D)$ norm.
+%%%%%
+%%%%%
+\end{document}

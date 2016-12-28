@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WienerAlgebra}
+\pmcreated{2013-03-22 17:22:55}
+\pmmodified{2013-03-22 17:22:55}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Wiener algebra}
+\pmrecord{10}{39748}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46J10}
+\pmclassification{msc}{43A50}
+\pmclassification{msc}{42A20}
+\pmclassification{msc}{46K05}
+\pmdefines{Wiener theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsubsection{Definition and classification of the Wiener algebra}
+Let $W$ be the space of all complex functions on $[0,2\pi[$ whose Fourier series converges
+ absolutely, that is, all functions $f:[0,2\pi[ \longrightarrow \mathbb{C}$ whose Fourier series
+\begin{displaymath}
+f(t)= \sum_{n=-\infty}^{+\infty} \hat{f}(n)e^{int}
+\end{displaymath}
+is such that $\sum_{n} |\hat{f}(n)| < \infty$ .
+
+Under pointwise operations and the norm $\|f \| = \sum_{n} |\hat{f}(n)|\,,$ $W$ is a commutative Banach
+ algebra of continuous functions, with an identity element. $W$ is usually called the {\bf Wiener algebra}.
+
+{\bf Theorem -} $W$ is isometrically isomorphic to the Banach algebra $\ell^1(\mathbb{Z})$ with the
+ convolution product. The isomorphism is given by:
+\begin{displaymath}
+(a_k)_{k \in \mathbb{Z}} \longleftrightarrow f(t) = \sum_{n=-\infty}^{+\infty} a_k e^{int}
+\end{displaymath}
+
+\subsubsection{Wiener's Theorem}
+
+{\bf Theorem (Wiener) -} If $f \in W$ has no zeros then $1/f \in W$, that is, $1/f$ has an
+ absolutely convergent Fourier series.
+
+{\bf Proof :} We want to prove that $f$ is invertible in $W$. As $W$ is commutative, that is the same as proving
+ that $f$ does not belong to any maximal ideal of $W$. Therefore we only need to show that $f$ is not in the
+ kernel of any multiplicative linear functional of $W$.
+
+Let $\phi$ be a multiplicative linear functional in $W$. We have that
+
+\begin{displaymath}
+\phi (f)= \phi \Big( \sum_{n=-\infty}^{+\infty} \hat{f}(n)e^{int} \Big) = \sum_{n=-\infty}^{+\infty} \hat{f}(n)\phi (e^{int}) = \sum_{n=-\infty}^{+\infty} \hat{f}(n)\phi^n (e^{it})
+\end{displaymath}
+
+Since $\|\phi\|=1$ we have that
+\begin{displaymath}
+|\phi (e^{it})| \le \|\phi\|\|e^{it}\|=\|e^{it}\|=1
+\end{displaymath}
+and
+\begin{displaymath}
+|\phi (e^{-it})| \le \|\phi\|\|e^{-it}\|=\|e^{-it}\|=1
+\end{displaymath}
+
+Since $1=|\phi(e^{it}e^{-it})|=|\phi(e^{it})||\phi(e^{-it})|$ we deduce that
+\begin{displaymath}
+|\phi (e^{it})|=1
+\end{displaymath}
+
+We can conclude that
+\begin{center}
+$\phi(e^{it})=e^{it_0}\;$ for some $t_0 \in [0,2\pi[$
+\end{center}
+
+Therefore we obtain
+\begin{displaymath}
+\phi (f)= \sum_{n=-\infty}^{+\infty} \hat{f}(n)e^{int_0} = f(t_0)
+\end{displaymath}
+which is non-zero by definition of $f$.
+
+We conclude that $f$ does not belong to the kernel of any multiplicative linear functional $\phi$. $\square$
+
+\subsubsection{Remark}
+The Wiener algebra is a Banach *-algebra with the involution given by $f^*(t):=\overline{f(-t)}$, but it is not a \PMlinkname{$C^*$-algebra}{CAlgebra} under this involution.
+%%%%%
+%%%%%
+\end{document}

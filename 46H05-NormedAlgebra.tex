@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormedAlgebra}
+\pmcreated{2013-03-22 16:11:38}
+\pmmodified{2013-03-22 16:11:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{normed algebra}
+\pmrecord{13}{38286}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+\pmrelated{GelfandTornheimTheorem}
+\pmrelated{SuperfieldsSuperspace}
+\pmdefines{normed ring}
+\pmdefines{topological algebra}
+\pmdefines{real normed algebra}
+\pmdefines{complex normed algebra}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A ring $A$ is said to be a \emph{normed ring} if $A$ possesses a norm $\| \cdot \|$, that is, a non-negative real-valued function $\|\cdot \|:A\to \mathbb{R}$ such that for any $a,b\in A$,
+\begin{enumerate}
+\item $\|a\|=0$ iff $a=0$,
+\item $\|a+b\|\le \|a\|+\|b\|$, 
+\item $\|-a\|=\|a\|$, and
+\item $\|ab\|\le \|a\|\|b\|$.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item If $A$ contains the multiplicative identity $1$, then $0<\|1\| \le\|1\|\|1\|$ and so $1\le \|1\|$.  
+\item However, it is usually required that in a normed ring, $\|1\|=1$.
+\item $\|\cdot\|$ defines a metric $d$ on $A$ given by $d(a,b)=\|a-b\|$, so that $A$ with $d$ is a metric space and one can set up a topology on $A$ by defining its subbasis a collection of $B(a,r):=\lbrace x\in A\mid d(a,x)< r\rbrace$ called \emph{open balls} for any $a\in A$ and $r>0$.  With this definition, it is easy to see that $\|\cdot\|$ is continuous.
+\item Given a sequence $\lbrace a_n\rbrace$ of elements in $A$, we say that $a$ is a limit point of $\lbrace a_n\rbrace$, if $$\lim_{n\to\infty}\|a_n-a\|=0.$$  By the triangle inequality, $a$, if it exists, is unique, and so we also write $$a=\lim_{n\to\infty}a_n.$$
+\item In addition, the last condition ensures that the ring multiplication is continuous.
+\end{itemize}
+
+An algebra $A$ over a field $k$ is said to be a \emph{normed algebra} if 
+\begin{enumerate}
+\item $A$ is a normed ring with norm $\|\cdot\|$,
+\item $k$ is equipped with a valuation $| \cdot |$, and
+\item $\|\alpha a\|=|\alpha|\|a\|$ for any $\alpha \in k$ and $a\in A$.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item Alternatively, a normed algebra $A$ can be defined as a normed vector space with a multiplication defined on $A$ such that multiplication is continuous with respect to the norm $\|\cdot\|$.
+\item Typically, $k$ is either the reals $\mathbb{R}$ or the complex numbers $\mathbb{C}$, and $A$ is called a \emph{real normed algebra} or a \emph{complex normed algebra} correspondingly.
+\item A normed algebra that is complete with respect to the norm is called Banach algebra (the underlying field must be complete and algebraically closed), paralleling with the analogy with a Banach space versus a normed vector space.
+\item Normed rings and normed algebras are special cases of the more general notions of a topological ring and a \emph{topological algebra}, the latter of which is defined as a topological ring over a field such that the scalar multiplication is continuous.
+\end{itemize}
+
+\begin{thebibliography}{7}
+\bibitem{nm} M. A. Naimark: {\em Normed Rings}, Noordhoff, (1959).
+\bibitem{cr} C. E. Rickart: {\em General Theory of Banach Algebras}, Van Nostrand, 1960.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

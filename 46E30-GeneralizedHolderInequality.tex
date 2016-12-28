@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedHolderInequality}
+\pmcreated{2013-03-22 16:54:35}
+\pmmodified{2013-03-22 16:54:35}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{generalized H\"older inequality}
+\pmrecord{8}{39170}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Theorem} Let $1 \le r < \infty$ and $1 \le p_j < \infty$, where
+$\sum_{j=1}^{n} \frac{1}{p_j} = \frac{1}{r}$. If $f_j \in L^{p_j}$ for $1 \le j \le n$, then
+
+$\prod_{j=1}^{n} f_j \in L^r$ and
+$$
+|| \prod_{j=1}^{n} f_j ||_r \le \prod_{j=1}^{n} ||f_j||_{p_j} .
+$$
+
+The usual H\"older inequality has $n=2$ and $r=1$.
+
+Let  $X$ be a finite  set, say $X=\{x_1, \ldots, x_m\}$ and $\mu$ is the counting measure on $X$, so that $\mu(\{x_i\}) = 1$ for all $i$. Let 
+$f_j(x_i) = a_{ij} \ge 0$ for $j=1, \ldots, n$ and take $r=1$. Then the inequality becomes:
+
+$$
+\sum_{i=1}^{m} \prod_{j=1}^{n} a_{ij} \le \prod_{j=1}^n ( \sum_{i=1}^{m} {a_{ij}}^{p_j})^{\frac{1}{p_j}} \quad.
+$$.
+
+Now let $\alpha_j = \frac{1}{p_j}$,  and $b_{ij} = {a_{ij}}^{p_j}$. Then the
+inequality becomes:
+$$
+\sum_{i=1}^{m} \prod_{j=1}^{n} {b_{ij}}^{\alpha_{j}} \le \prod_{j=1}^{n} (\sum_{i=1}^{m} b_{ij}) ^ {\alpha_{j}}.
+$$
+
+%%%%%
+%%%%%
+\end{document}

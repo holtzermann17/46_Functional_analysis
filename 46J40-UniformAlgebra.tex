@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformAlgebra}
+\pmcreated{2013-03-22 19:04:20}
+\pmmodified{2013-03-22 19:04:20}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{Uniform Algebra}
+\pmrecord{5}{41957}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46J40}
+\pmclassification{msc}{46J10}
+%\pmkeywords{uB algebra}
+%\pmkeywords{uniform algebra}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+%theorems
+\theoremstyle{definition}
+\newtheorem*{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem{Lem}{Theorem}
+\newtheorem{Lem2}{Lemma}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+\newtheorem*{Prop}{Proposition}
+
+
+
+
+\begin{document}
+\begin{Def}
+A commutative, unital Banach algebra $(\mathcal{A}, \|\cdot\|)$ is called \emph{uniform Banach algebra} (for short: uB algebra) if for all $f \in \mathcal{A}$ we have
+\begin{align*}
+\|f^2\| &= \|f\|^2
+\end{align*}
+\end{Def}
+
+In what follows we will show that the Gelfand transform $\Gamma_{\mathcal{A}} \colon \mathcal{A} \mapsto \hat{\mathcal{A}}$ of a commutative, unital Banach algebra $\mathcal{A}$ is an isometry if and only if $\mathcal{A}$ is a uniform Banach algebra.
+
+Denote by $M(\mathcal{A})$ the space of (continuous) characters on $\mathcal{A}$. 
+Recall that for all $f \in \mathcal{A}$ the spectrum $\sigma(f)$ of $f$ is identical with the range $\hat{f}(M(\mathcal{A}))$ and the spectral radius $r(f) = \|\hat{f}\|_{M(\mathcal{A})} = \lim_{n \to \infty} \|f^n\|^{\frac{1}{n}}$
+
+\textbf{Proposition 1.} A Banach algebra $\mathcal{A}$ is uniform if and only if it's Gelfand transform $\Gamma_{\mathcal{A}} \colon \mathcal{A} \to \hat{\mathcal{A}}, f \mapsto \hat{f}$ is isometric.
+
+\begin{proof}
+If $f \mapsto \hat{f}$ is an isometry we have $\|f^2\| = \|\hat{f}^2\|_{M(\mathcal{A})} = \|\hat{f}\|_{M(\mathcal{A})}^2 = \|f\|^2$. 
+
+Conversely assume $\|f^2\| = \|f\|^2$ for all $f \in \mathcal{A}$. Then by induction we have $\|f^{2^n}\| = \|f\|^{2^n}$ for all $n \in \mathbb{N}$. Hence $\|f\| = \|f^{2^n}\|^{\frac{1}{2^n}} \to \|\hat{f}\|_{M(\mathcal{A})}$. 
+\end{proof}
+
+The following characterization is also often given as the definition of a uB algebra. 
+
+\textbf{Proposition 2.} A Banach algebra $\mathcal{A}$ is uniform iff it is topologically and algebraically isomorphic to a closed, pointseparating subalgebra of $C(X)$ for $X$ a compact Hausdorff space.
+
+\begin{proof}
+Since $\hat{\mathcal{A}}$ separates the points of the compact, nonempty space $M(\mathcal{A})$ we see that a uB algebra $\mathcal{A}$ must have this property.
+
+Conversely, let $\mathcal{A}$ be a closed pointseparating subalgebra of $C(X)$. Then clearly $\|f\|_X^2 = \|f^2\|_X$ for all $f \in \mathcal{A}$. 
+\end{proof}
+
+\begin{thebibliography}{99}
+\bibitem[Gamelin 2005]{gamelin} Theodore W. Gamelin \emph{Uniform Algebras}, Oxford University Press, New Edition, 2005
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{operatornamepvfrac1xIsADistributionOfFirstOrder}
+\pmcreated{2013-03-22 13:46:07}
+\pmmodified{2013-03-22 13:46:07}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{$\operatorname{p.\!v.}(\frac{1}{x})$ is a distribution of first order}
+\pmrecord{7}{34473}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46F05}
+\pmclassification{msc}{46-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\PMlinkescapeword{finite}
+\newcommand{\cpv}[0]{\operatorname{p.\!v.}(\frac{1}{x})}
+\newcommand{\cD}[0]{\mathcal{D}}
+\newcommand{\supp}[0]{\operatorname{supp}}
+(Following \cite{reed, igari}.)
+%{\bf Proof.} 
+Let $u\in \cD(U)$. Then $\supp u \subset [-k,k]$ for
+some $k>0$. For any $\varepsilon>0$,  $u(x)/x$ is Lebesgue integrable 
+in $|x|\in[\varepsilon,k]$. Thus, by a change of variable, we have
+\begin{eqnarray*}
+\cpv(u) &=& \lim_{\varepsilon\to0+} \int_{[\varepsilon,k]} \frac{u(x)-u(-x)}{x} dx.
+\end{eqnarray*}
+Now it is clear that the integrand is continuous for all $x\in \sR\setminus\{0\}$.
+What is more, the integrand approaches $2u'(0)$ for $x\to 0$, so the
+integrand has a removable discontinuity at $x=0$. That is, by assigning the value 
+$2u'(0)$ to the integrand at $x=0$, the integrand becomes continuous in $[0,k]$.
+This means that the integrand is Lebesgue measurable on $[0,k]$. 
+Then, by defining
+$f_n(x) = \chi_{[1/n,k]} \big(u(x)-u(-x)\big)/x$
+(where $\chi$ is the characteristic function), and
+applying the Lebesgue dominated convergence theorem, we have
+\begin{eqnarray*}
+\cpv(u) &=& \int_{[0,k]} \frac{u(x)-u(-x)}{x} dx.
+\end{eqnarray*}
+It follows that $\cpv(u)$ is finite, i.e., $\cpv$ takes values in $\sC$. 
+Since $\cD(U)$ is a vector space, if follows easily from the above expression 
+that $\cpv$ is linear. 
+
+To prove that $\cpv$ is continuous, we shall use condition (3) on 
+\PMlinkname{this page}{Distribution4}.      
+For this, suppose $K$ is a compact subset of $\sR$ and 
+$u\in \cD_K$. Again, we can assume that $K\subset [-k,k]$ for some $k>0$.
+For $x>0$, we have 
+\begin{eqnarray*}
+|\frac{u(x)-u(-x)}{x}| &=& |\frac{1}{x}\int_{(-x,x)} u'(t) dt| \\
+&\le &  2 ||u'||_\infty,
+\end{eqnarray*}
+where $||\cdot||_\infty$ is the supremum norm. In the first equality we have used the
+fundamental theorem of calculus for the Lebesgue integral (valid since 
+$u$ is absolutely continuous on $[-k,k]$). Thus
+$$ |\cpv(u)| \le 2k ||u'||_\infty$$
+and $\cpv$ is a \PMlinkname{distribution of first order}{Distribution4} as claimed. $\Box$
+
+\begin{thebibliography}{9}
+\bibitem{reed} M. Reed, B. Simon,
+  \emph{Methods of Modern Mathematical Physics: Functional Analysis I},
+Revised and enlarged edition,  Academic Press, 1980. 
+\bibitem{igari} S. Igari, \emph{Real analysis - With an introduction to Wavelet Theory}, American Mathematical Society, 1998.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,323 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyCompactGroupoids}
+\pmcreated{2013-03-22 18:17:51}
+\pmmodified{2013-03-22 18:17:51}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{locally compact groupoids}
+\pmrecord{45}{40915}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46M20}
+\pmclassification{msc}{81R15}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{18B40}
+\pmclassification{msc}{55U40}
+\pmclassification{msc}{22A22}
+\pmsynonym{locally compact topological groupoids}{LocallyCompactGroupoids}
+%\pmkeywords{locally compact groupoids}
+%\pmkeywords{second countable topological space}
+%\pmkeywords{locally compact Hausdorff space}
+%\pmkeywords{topological groupoids}
+%\pmkeywords{continuous inversion maps}
+\pmrelated{Groupoids}
+\pmrelated{TopologicalGroupoid}
+\pmrelated{LocallyCompact}
+\pmrelated{LocallyCompactHausdorffSpace}
+\pmrelated{T2Space}
+\pmrelated{SecondCountable}
+\pmrelated{QuantumGroupoids2}
+\pmrelated{GroupoidAndGroupRepresentationsRelatedToQuantumSymmetries}
+\pmrelated{GroupoidRepresentationsInducedByMeasure}
+\pmrelated{LocallyCompactHausdorffSpace}
+\pmrelated{Cat}
+\pmdefines{locally compact groupoid}
+\pmdefines{groupoid as a small category}
+\pmdefines{topological groupoid}
+\pmdefines{analytic groupoid}
+\pmdefines{locally compact topological group}
+\pmdefines{second countable locally compact groupoid}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+
+\begin{document}
+\section{Locally compact groupoids}
+ This is a specific topic entry defining the basics of locally compact groupoids and related concepts. 
+
+ Let us first recall the related concepts of groupoid and \emph{topological groupoid}, 
+together with the appropriate notations needed to define a \emph{locally compact groupoid}.
+ 
+\subsubsection{Groupoids and topological groupoids: categorical definitions}
+
+ Recall that a groupoid $\grp$ is a small category with inverses 
+over its set of objects $X = Ob(\grp)$~. One writes $\grp^y_x$ for 
+the set of morphisms in $\grp$ from $x$ to $y$~. 
+
+ \emph{A topological groupoid} consists of a space $\grp$, a distinguished subspace 
+$\grp^{(0)} = \obg \subset \grp$, called {\it the space of objects} of $\grp$, 
+together with maps
+\begin{equation}
+r,s~:~ \xymatrix{ \grp \ar@<1ex>[r]^r \ar[r]_s & \grp^{(0)} }
+\end{equation}
+
+called the {\it range} and {\it source maps} respectively,
+together with a law of composition
+\begin{equation}
+\circ~:~ \grp^{(2)}: = \grp \times_{\grp^{(0)}} \grp = \{
+~(\gamma_1, \gamma_2) \in \grp \times \grp ~:~ s(\gamma_1) =
+r(\gamma_2)~ \}~ \lra ~\grp~,
+\end{equation}
+
+such that the following hold~:~
+\begin{enumerate}
+\item[(1)]
+$s(\gamma_1 \circ \gamma_2) = r(\gamma_2)~,~ r(\gamma_1 \circ
+\gamma_2) = r(\gamma_1)$~, for all $(\gamma_1, \gamma_2) \in
+\grp^{(2)}$~.
+
+\item[(2)]
+$s(x) = r(x) = x$~, for all $x \in \grp^{(0)}$~.
+
+\item[(3)]
+$\gamma \circ s(\gamma) = \gamma~,~ r(\gamma) \circ \gamma =
+\gamma$~, for all $\gamma \in \grp$~.
+
+\item[(4)]
+$(\gamma_1 \circ \gamma_2) \circ \gamma_3 = \gamma_1 \circ
+(\gamma_2 \circ \gamma_3)$~.
+
+\item[(5)]
+Each $\gamma$ has a two--sided inverse $\gamma^{-1}$ with $\gamma
+\gamma^{-1} = r(\gamma)~,~ \gamma^{-1} \gamma = s (\gamma)$~.
+
+Furthermore, only for topological groupoids the inverse map needs be continuous.
+It is usual to call $\grp^{(0)} = Ob(\grp)$ {\it the set of objects}
+of $\grp$~. For $u \in Ob(\grp)$, the set of arrows $u \lra u$ forms a
+group $\grp_u$, called the \emph{isotropy group of $\grp$ at $u$}.
+\end{enumerate}
+
+Thus, as is well kown, a topological groupoid is just a groupoid internal to the 
+\PMlinkname{category of topological spaces and continuous maps}{CategoryOfPointedTopologicalSpaces}. The notion of internal groupoid has proved significant in a number of fields, since groupoids generalize bundles of groups, group actions, and equivalence relations. For a further study of groupoids we refer the reader to ref. \cite{Brown2006}.
+
+
+\subsection{Locally compact and analytic groupoids}
+
+\begin{definition}
+A \emph{locally compact groupoid} $\grp_{lc}$ is defined as a groupoid that has also the topological structure of a second countable, \PMlinkname{locally compact Hausdorff space}{LocallyCompactHausdorffSpace}, and if the product and also inversion maps are continuous. Moreover, each $\grp_{lc}^u$ as well as the unit space $\grp_{lc}^0$ is closed in $\grp_{lc}$. 
+\end{definition}
+
+\begin{remark}
+ The locally compact Hausdorff second countable spaces are {\em analytic}.
+
+ One can therefore say also that $\grp_{lc}$ is analytic.
+
+ When the groupoid $\grp_{lc}$ has only one object in its object space, that is, when it becomes a group, the above
+definition is restricted to that of a \emph{locally compact topological group}; it is then a special case of a one-object category with all of its morphisms being invertible, that is also endowed with a locally compact, topological structure.
+
+\end{remark}
+ 
+\begin{thebibliography}{9}
+
+\bibitem{Brown2006}
+R. Brown. (2006). \emph{Topology and Groupoids}. BookSurgeLLC
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

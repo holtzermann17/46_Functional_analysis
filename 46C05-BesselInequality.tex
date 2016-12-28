@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BesselInequality}
+\pmcreated{2013-03-22 12:46:38}
+\pmmodified{2013-03-22 12:46:38}
+\pmowner{ariels}{338}
+\pmmodifier{ariels}{338}
+\pmtitle{Bessel inequality}
+\pmrecord{5}{33089}
+\pmprivacy{1}
+\pmauthor{ariels}{338}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\size}[1]{\left|#1\right|}
+\newcommand{\scalar}[2]{\left\langle#1,#2\right\rangle}
+Let $\Hilb$ be a Hilbert space, and suppose $e_1, e_2, \ldots \in \Hilb$ is an orthonormal sequence.  Then for any $x\in\Hilb$,
+$$
+\sum_{k=1}^{\infty}\size{\scalar{x}{e_k}}^2 \le \norm{x}^2.
+$$
+
+Bessel's inequality immediately lets us define the sum
+$$
+x' = \sum_{k=1}^{\infty}\scalar{x}{e_k}e_k.
+$$
+The inequality means that the series converges.
+
+For a complete orthonormal series, we have Parseval's theorem, which replaces inequality with equality (and consequently $x'$ with $x$).
+%%%%%
+%%%%%
+\end{document}

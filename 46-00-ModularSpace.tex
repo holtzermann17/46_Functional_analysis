@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModularSpace}
+\pmcreated{2013-03-22 16:15:53}
+\pmmodified{2013-03-22 16:15:53}
+\pmowner{gilbert_51126}{14238}
+\pmmodifier{gilbert_51126}{14238}
+\pmtitle{modular space}
+\pmrecord{6}{38374}
+\pmprivacy{1}
+\pmauthor{gilbert_51126}{14238}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{normal}
+Let $\rho$ be a modular on a real or complex vector space $X$. Then the subspace
+\[
+X_\rho := \{x \in X : \lim_{\lambda\rightarrow 0} \rho(\lambda x) = 0\}
+\]
+of $X$ is called the \emph{modular space} corresponding to the modular $\rho$.
+
+%%\emph{Remark.}
+%%Let us show that $X_\rho$ is indeed a subspace of $X$.
+%%From the definition of a modular, it is clear that $0 \in X_\rho$.
+%%Suppose $x \in X_\rho$ and $\alpha$ is a nonzero scalar. Then, since $|\alpha %%/|\alpha|| = 1$, we have
+%%\begin{eqnarray*}
+%%\lim_{\gamma\rightarrow 0} \rho(\frac_{\gamma}^{|\alpha|} \alpha x) 
+%%&=& \lim_{\gamma\rightarrow 0} \rho(\frac_{\alpha}^{|\alpha|} \gamma x) \\
+%%&=& \lim_{\gamma\rightarrow 0} \rho(\gamma x) \\
+%%&=& 0.
+%%\end{eqnarray*} 
+%%Let $\lambda = \frac_{\gamma}^{|\alpha|}$, and observe that %%$\lambda\rightarrow 0$ 
+%%as $\gamma\rightarrow 0$. From above, it follows that $\alpha \in X_\rho$.
+
+%%Now suppose $x,y \in X_\rho$. Then
+%%\begin{eqnarray*}
+%%\lim_{\gamma\rightarrow 0} \rho(\frac_{\gamma}^{2}(x+y)) 
+%%&=& \lim_{\gamma\rightarrow 0} \rho(\frac_{\gamma}^{2} x + \frac_{\gamma}^{2} %%y) \\
+%%&\leq& \lim_{\gamma\rightarrow 0} \rho(\gamma x) 
+%%+\lim_{\gamma\rightarrow 0} \rho(\gamma y) \\
+%%&=& 0.
+%%\end{eqnarray*} 
+%%Hence, 
+%%\[
+%%\lim_{\gamma\rightarrow 0} \rho(\frac_{\gamma}^{2}(x+y)) = 0.
+%%\]
+%%Now let $\lambda = \gamma / 2$, and note that $\lambda\rightarrow 0$ 
+%%as $\gamma\rightarrow 0$. Therefore, it follows that $x+y \in X_\rho$.
+%%Indeed, $X_\rho$ is a subspace of $X$.
+%%%%%
+%%%%%
+\end{document}

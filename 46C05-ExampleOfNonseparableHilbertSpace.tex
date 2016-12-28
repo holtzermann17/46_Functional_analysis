@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfNonseparableHilbertSpace}
+\pmcreated{2013-03-22 15:44:25}
+\pmmodified{2013-03-22 15:44:25}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of non-separable Hilbert space}
+\pmrecord{6}{37691}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmrelated{AlmostPeriodicFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+As an exaple of a Hilbert space which is not separable, one may
+consider the following function space:
+
+Consider real-valued functions on the real line but, instead of the
+usual $L^2$ norm, use the following inner product:
+ \[ (f,g) = \lim_{R \to \infty} {1 \over R} \int_{-R}^{+R} f(x) g(x)
+ \, dx \]
+The first thing to note about this is that non-trivial functions have
+norm 0.  For instance, any function of $L^2$ has zero norm according
+to this inner product.
+
+Define the Hilbert space as the set of equivalence classes of
+functions for which this norm is finite modulo functions for which it
+is zero.  Note that $\sin ax$ and $\sin bx$ are orthogonal under this
+norm if $a \neq b$.  Hence, the set of functions $\sin ax$, where $a$
+is a real number, form an orthonormal set.  Since the number of real
+numbers is uncountable, we have an uncountably infinite orthonormal set, 
+so this Hilbert space is not separable.
+
+It is important not to confuse what we are doing here with the Fourier
+integral.  In that case, we are dealing with $L^2$, the functions
+$\sin ax$ have infinite $L^2$ norm (so they are not elements of that
+Hilbert space) and the expansion of a function in terms of them is a
+direct integral.  By contrast, in the case propounded here, the
+expansion of a function of this space in terms of them would take the
+form of a direct sum, just as with the Fourier series of a function on
+a finite interval.
+%%%%%
+%%%%%
+\end{document}

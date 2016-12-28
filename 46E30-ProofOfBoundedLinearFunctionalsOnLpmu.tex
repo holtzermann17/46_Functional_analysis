@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBoundedLinearFunctionalsOnLpmu}
+\pmcreated{2013-03-22 18:38:19}
+\pmmodified{2013-03-22 18:38:19}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of bounded linear functionals on $L^p(\mu)$}
+\pmrecord{4}{41379}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E30}
+\pmclassification{msc}{28A25}
+%\pmkeywords{$L^p$ space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+If $(X,\mathfrak{M},\mu)$ is a $\sigma$-finite measure-space and $p,q$ are \PMlinkname{H\"older conjugates}{ConjugateIndex} with $p<\infty$, then we show that $L^q$ is isometrically isomorphic to the dual space of $L^p$.
+
+For any $g\in L^q$, define the linear map
+\begin{equation*}
+\Phi_g\colon L^p\rightarrow\mathbb{C},\ f\mapsto \Phi_g(f)=\int fg\,d\mu.
+\end{equation*}
+This is a bounded linear map with operator norm $\Vert\Phi_g\Vert=\Vert g\Vert_q$ (see \PMlinkname{$L^p$-norm is dual to $L^q$}{LpNormIsDualToLq}), so the map $g\mapsto\Phi_g$ gives an isometric embedding from $L^q$ to the dual space of $L^p$. It only remains to show that it is onto.
+
+So, suppose that $\Phi\colon L^p\rightarrow\mathbb{C}$ is a bounded linear map. It needs to be shown that there is a $g\in L^q$ with $\Phi=\Phi_g$.
+As \PMlinkname{any $\sigma$-finite measure is equivalent to a probability measure}{AnySigmaFiniteMeasureIsEquivalentToAProbabilityMeasure}, there is a bounded $h>0$ such that $\int h\,d\mu=1$.
+Let $\tilde\Phi\colon L^\infty\rightarrow\mathbb{C}$ be the bounded linear map given by $\tilde\Phi(f)=\Phi(hf)$. Then, there is a $g_0\in L^1$ such that
+\begin{equation*}
+\Phi(hf)=\tilde\Phi(f)=\int fg_0\,d\mu
+\end{equation*}
+for every $f\in L^\infty$ (see \PMlinkname{bounded linear functionals on $L^\infty$}{BoundedLinearFunctionalsOnLinftymu}). Set $g=h^{-1}g_0$ and, for any $f\in L^p$, let $f_n$ be the sequence
+\begin{equation*}
+f_n = f 1_{\{|h^{-1}f|<n\}}.
+\end{equation*}
+As $h^{-1}f_n\in L^\infty$,
+\begin{equation*}
+\Vert f_ng\Vert_1 =\Vert h^{-1}f_ng_0\Vert_1=\Phi(\operatorname{sign}(fg_0)f_n)\le\Vert\Phi\Vert \Vert f_n\Vert_p.
+\end{equation*}
+Letting $n$ tend to infinity, dominated convergence says that $f_n\rightarrow f$ in the $L^p$-norm, so Fatou's lemma gives
+\begin{equation*}
+\Vert f g\Vert_1\le\liminf_{n\rightarrow\infty}\Vert f_n g\Vert_1\le\Vert\Phi\Vert\Vert f\Vert_p.
+\end{equation*}
+In particular, $\Vert g\Vert_q\le\Vert\Phi\Vert$ (see \PMlinkname{$L^p$-norm is dual to $L^q$}{LpNormIsDualToLq}), so $g\in L^q$. As $|f_ng|\le|fg|$ are in $L^1$, dominated convergence finally gives
+\begin{equation*}
+\int fg\,d\mu =\lim_{n\rightarrow\infty}\int f_ng\,d\mu=\lim_{n\rightarrow\infty}\Phi(f_n)=\Phi(f)
+\end{equation*}
+so $\Phi_g=\Phi$ as required.
+
+%%%%%
+%%%%%
+\end{document}

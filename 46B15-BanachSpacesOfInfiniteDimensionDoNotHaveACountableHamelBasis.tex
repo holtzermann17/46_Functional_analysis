@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BanachSpacesOfInfiniteDimensionDoNotHaveACountableHamelBasis}
+\pmcreated{2013-03-22 14:59:12}
+\pmmodified{2013-03-22 14:59:12}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{Banach spaces of infinite dimension do not have a countable Hamel basis}
+\pmrecord{21}{36691}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B15}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{algebraic}
+\PMlinkescapeword{basis}
+\PMlinkescapeword{even}
+\PMlinkescapeword{examples}
+\PMlinkescapeword{mean}
+
+A Banach space of infinite dimension does not have a countable Hamel basis.
+
+\textbf{Proof}
+
+Let $E$ be such space, and suppose it does have a countable Hamel basis, say $B = (v_{k})_{k \in \mathbb{N}}$. 
+
+Then, by definition of Hamel basis and linear combination, we have that $x \in E$ if and only if $x = \lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$ for some $n \in \mathbb{N}$. Consequently,
+$$
+E = \bigcup \limits_{i=1}^\infty {(\operatorname{span}(v_j)_{j=1}^i)}.
+$$
+This would mean that $E$ is a countable union of proper subspaces of finite dimension (they are proper because $E$ has infinite dimension), but every finite dimensional proper subspace of a normed space is nowhere dense, and then $E$ would be first category. This is absurd, by the Baire Category Theorem.
+
+\textbf{Note}
+
+In fact, the Hamel dimension of an infinite-dimensional Banach space
+is always at least the cardinality of the continuum
+(even if the Continuum Hypothesis fails).
+A one-page proof of this has been given by H.\ Elton Lacey\cite{hel}.
+
+\textbf{Examples}
+
+Consider the set of all real-valued infinite sequences $(x_n)$
+such that $x_n=0$ for all but finitely many $n$.
+
+This is a vector space, with the known operations. Morover, it has infinite dimension: a possible basis is $(e_k)_{k \in \mathbb{N}}$, where 
+$$
+e_i(n)=\begin{cases}
+1, & \text{if }n=i\\
+0, & \text{otherwise}.
+\end{cases}
+$$
+So, it has infinite dimension and a countable Hamel basis.
+Using our result, it follows directly that there is no way to define a norm in this vector space such that it is a complete metric space under the induced metric.
+
+\begin{thebibliography}{9}
+\bibitem{hel}
+ H.\ Elton Lacey,
+ {\it The Hamel Dimension of any Infinite Dimensional Separable Banach Space is c},
+ Amer.\ Math.\ Mon.\ 80 (1973), 298.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

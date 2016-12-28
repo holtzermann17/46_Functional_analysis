@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StoneWeierstrassTheoremForLocallyCompactSpaces}
+\pmcreated{2013-03-22 18:41:09}
+\pmmodified{2013-03-22 18:41:09}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Stone-Weierstrass theorem for locally compact spaces}
+\pmrecord{5}{41437}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46J10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following results generalize the Stone-Weierstrass theorem (and its \PMlinkname{complex version}{StoneWeierstrassTheoremComplexVersion}) for locally compact spaces. The cost of this generalization is that one no longer deals with all continuous functions, but only those that vanish at infinity.
+
+\subsection*{Real version}
+
+{\bf Theorem -} Let $ X$ be a locally compact space and $C_0(X, \mathbb{R})$ the algebra of continuous functions $X \to \mathbb{R}$ that \PMlinkname{vanish at infinity}{ VanishAtInfinity}, endowed with the sup norm $\Vert \cdot \Vert _{\infty}$. Let $\mathcal{A}$ be a subalgebra of $C_0(X; \mathbb{R})$ for which the following conditions hold:
+
+\begin{enumerate}
+\item $\forall x, y \in X, x \ne y, \exists f \in \mathcal{A} : f(x) \neq f(y)\;$, i.e. $ \mathcal{A}$ separates points.
+\item For each $x \in X$ there exists $f \in \mathcal{A}$ such that $f(x) \neq 0$.
+\end{enumerate}
+
+Then $\mathcal{A}$ is dense in $C_0(X; \mathbb{R})$.
+
+\subsection*{Complex version}
+
+{\bf Theorem -} Let $X$ be a locally compact space and $C_0(X)$ the algebra of continuous functions $X \to \mathbb{C}$ that vanish at infinity, endowed with the sup norm $\Vert \cdot \Vert _{\infty}$. Let $\mathcal{A}$ be a subalgebra of $C_0(X)$ for which the following conditions hold:
+
+\begin{enumerate}
+\item $\forall x, y \in X, x \ne y, \exists f \in \mathcal{A} : f(x) \neq f(y)\;$, i.e. $\mathcal{A}$ separates points.
+\item For each $x \in X$ there exists $f \in \mathcal{A}$ such that $f(x) \neq 0$.
+\item If $f \in \mathcal{A}$ then $\overline{f} \in \mathcal{A}\;$, i.e. $ \mathcal{A}$ is a self-adjoint subalgebra of $ C(X)$.
+\end{enumerate}
+
+Then $\mathcal{A}$ is dense in $C_0(X)$.
+
+%%%%%
+%%%%%
+\end{document}

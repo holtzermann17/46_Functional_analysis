@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSobolevInequalityForOmegamathbfRn}
+\pmcreated{2013-03-22 15:05:22}
+\pmmodified{2013-03-22 15:05:22}
+\pmowner{vanschaf}{8061}
+\pmmodifier{vanschaf}{8061}
+\pmtitle{proof of Sobolev inequality for $\Omega=\mathbf{R}^n$}
+\pmrecord{14}{36816}
+\pmprivacy{1}
+\pmauthor{vanschaf}{8061}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\paragraph{Step 1: $u$ is smooth and $p=1$}
+First suppose $u$ is a compactly supported smooth function, and let $(e_k)_{1 \le k \le n}$ denote a basis of $\mathbf{R}^n$. For every $1 \le k \le n$,
+\[
+  u(x)=\int_{-\infty}^0 \frac{\partial u}{\partial x_k}(x+se_k)\,ds.
+\]
+Therefore,
+\[
+  \lvert u(x)\rvert \le S_k(x):=\int_{\mathbf{R}} \bigl\lvert\frac{\partial u}{\partial x_k}(x_1,\dots,x_{k-1},s,x_{k+1},\dots,x_n)\bigr\rvert\,ds.
+\]
+Note that $S_k$ does not depend on $x_k$.
+One also has
+\[
+  \lvert u(x)\rvert^{n/(n-1)}\le \prod_{k=1}^n \lvert S_k(x)\rvert^{1/(n-1)}.
+\]
+The integration of this inequality yields,
+\[
+  \int_{\mathbf{R}^n} \vert u(x)\vert^{n/(n-1)}\,dx\le \int_{\mathbf{R}^n}\prod_{k=1}^n \lvert S_k(x)\rvert^{1/(n-1)}\,dx.
+\]
+Since $S_1$ does not depend on $x_k$, we can apply the generalized H\"older inequality with $n-1$ for the integration with respect to $x_1$ in order to obtain:
+\[
+  \int_{\mathbf{R}^n} \lvert u(x)\rvert^{n/(n-1)}\,dx\le \int_{\mathbf{R}^{n-1}} S_1(x)\prod_{k=2}^n \Bigl(\int_{\mathbf{R}} S_k(x)\,dx_1\Bigr)^{1/(n-1)}\,dx_1\dots dx_n.
+\]
+The repetition of this process for the variables $x_2,\dots,x_n$ gives
+\[
+  \int_{\mathbf{R}^n} \lvert u(x)\rvert^{n/(n-1)}\,dx\le \prod_{k=1}^n \Bigl(\int_{\mathbf{R}^n} \bigl\lvert \frac{\partial u}{\partial x_k}\bigr\rvert\,dx\Bigr)^{1/(n-1)}.
+\]
+By the arithmetic-geometric means inequality, one obtains
+\[
+  \int_{\mathbf{R}^n} \lvert u(x)\rvert^{n/(n-1)}\,dx\le n^ {-n/(n-1)}\Bigl(\sum_{k=1}^n \Bigl(\int_{\mathbf{R}^n} \bigl\lvert \frac{\partial u}{\partial x_k}\bigr\rvert\,dx\Bigr)\Bigr)^{n/(n-1)}.
+\]
+One finally concludes
+\[
+  \lVert u \rVert_{L^{n/(n-1)}} \le n^{1/2-n/(n-1)} \lVert \nabla u \rVert_{L^{n/(n-1)}}.
+\]
+
+\paragraph{Step 2: general $u$ and $p=1$}
+In general if $u \in W^{1,1}(\mathbf{R}^n)$. It can be approximated by a sequence of compactly supported smooth functions $(u_m)$. By step 1, one has
+\[
+  \lVert u_m-u_\ell \rVert_{L^{n/(n-1)}} \le n^{1/2-n/(n-1)} \lVert \nabla u_m-\nabla u_\ell \rVert_{L^{1}}.
+\]
+therefore $(u_m)$ is a Cauchy sequence in $L^{n/(n-1)}(\mathbf{R}^n)$. Since it converges to $u$ in $L^{1}(\mathbf{R}^n)$, the limit of $(u_m)$ is $u$ in $L^{n/(n-1)}(\mathbf{R}^n)$ and one has
+\[
+  \lVert u \rVert_{L^{n/(n-1)}} \le n^{1/2-n/(n-1)} \lVert \nabla u \rVert_{L^{n/(n-1)}}.  
+\]
+
+\paragraph{Step 3: $1<p <n$ and $u$ is smooth}
+Suppose $1 <p <n $ and $u$ is a smooth compactly supported function. 
+Let 
+\[
+  r=\frac{p(n-1)}{n-p}
+\]
+and
+\[
+  v=\lvert u \rvert^r.
+\]
+Since $u$ is smooth, $v \in W^{1,1}$ (It is however not necessarily smooth), and its weak derivative is
+\[
+  \nabla v=r u \lvert u \rvert^{r-2} \nabla u.
+\]
+One has, by the H\"older inequality,
+\[
+  \rVert \nabla v \lVert_{L^1(\mathbf{R}^N)}\le r \rVert \lvert u\rvert^r \lVert_{L^{p/p-1}(\mathbf{R}^N)}\rVert \nabla u \lVert_{L^{p}(\mathbf{R}^N)}
+= r \rVert u \lVert_{L^{np/(n-p)}(\mathbf{R}^N)}^{r-1}\rVert \nabla u \lVert_{L^{p}(\mathbf{R}^N)}
+\]
+Therefore, the Sobolev inequality yields
+\[
+  \rVert u \lVert_{L^{np/(n-p)}(\mathbf{R}^N)}^r
+= \rVert v \lVert_{L^{n/(n-1)}(\mathbf{R}^N)}
+\le r n^{1/2-n/(n-1)}\rVert u \lVert_{L^{np/(n-p)}(\mathbf{R}^N)}^{r-1}\rVert \nabla u \lVert_{L^{p}(\mathbf{R}^N)}.
+\]
+This yields
+\[
+  \rVert u \lVert_{L^{np/(n-p)}(\mathbf{R}^N)}
+\le n^{1/2-n/(n-1)}\frac{p(n-1)}{n-p}\rVert \nabla u \lVert_{L^{p}(\mathbf{R}^N)}.
+\]
+
+\paragraph{Step 4: $1<p <n$ and $u\in W^{1,p}$}
+This is done as step 2.
+
+This proof is due to Gagliardo and Nirenberg, who were the first to prove the inequality for $p=1$. This proof can be also found in \cite{HB,JJ,MW}.
+
+\begin{thebibliography}{99}
+\bibitem{HB} HaÃ¯m \textsc{Brezis}, \emph{Analyse fonctionnelle, ThÃ©orie et applications}, MathÃ©matiques appliquÃ©es pour la maÃ®trise, Masson, Paris, 1983. \PMlinkexternal{[MR85a:46001]}{http://www.ams.org/mathscinet-getitem?mr=0697382}
+
+\bibitem{JJ} JÃ¼rgen \textsc{Jost}, \emph{Partial Differential Equations}, Graduate Texts in Mathematics,  Springer, 2002,  \PMlinkexternal{[MR:2003f:35002]}{http://www.ams.org/mathscinet-getitem?mr=1919991}.
+
+\bibitem{MW} Michel \textsc{Willem}, \emph{Analyse fonctinnelle Ã©lÃ©mentaire}, Cassini, Paris, 2003.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

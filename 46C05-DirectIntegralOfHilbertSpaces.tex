@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectIntegralOfHilbertSpaces}
+\pmcreated{2013-03-22 14:43:57}
+\pmmodified{2013-03-22 14:43:57}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{direct integral of Hilbert spaces}
+\pmrecord{13}{36364}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmdefines{direct integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a measure space with measure $\mu$.  To each point $x \in X$, assign a Hilbert space $H(x)$.  Then the \emph{direct integral} of this family of Hilbert spaces indexed by the points of a measure space, denoted
+ $$\int_{\oplus X} H(x) \, d\mu(x)$$
+is the set of all functions $v \colon X \to \bigcup_{x \in X} H(x)$ (as usual in functional analysis, we regard two functions that disagree on a set of measure zero as the same) such that
+\begin{itemize}
+\item $v(x) \in H(x)$
+\item $\| v(x) \| \in L^2 (X,\mu)$
+\end{itemize}
+Vector addition and scalar multiplication are defined pointwise: $(u + v) (x) = u(x) + v(x)$ and $(sv) (x) = s v(x)$.  The inner product is defined as
+ $$\langle u, v \rangle = \int_X \langle u(x), v(x) \rangle \, dx \qquad.$$
+
+A nice illustration of the direct integral is the expression of $L^2 (\mathbb{R}^2)$ as a direct integral of a continuous infinity of copies of $L^2 (\mathbb{R})$.  Let the space $H(k)$ consists of all functions of the form $(x,y) \in \mathbb{R}^2 \mapsto e^{ikx} g(y)$ such that $\int_{-\infty}^{+\infty} |g(y)|^2 < \infty$.  Define the inner product of two functions $e^{ikx} g_1(y) \in H(k)$ and $e^{ikx} g_2(y) \in H(k)$ as $\int_{-\infty}^{+\infty} g_1 (y) g_2 (y)$.  (By the way, note that $H(k)$ is not a subset of $L^2 (\mathbb{R}^2)$ because the functions contained in $H(k)$ are not square-integrable in the $x$ variable.)
+
+By the definition, the space $\int_{\oplus -\infty}^{+\infty} H(k) \, dk$ consists of functions $(k,x,y) \mapsto e^{ikx} g(k,y)$ such that
+ $$\int_{-\infty}^{+\infty} \|g(k)\|_{H(k)} = \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} |g(k,y)|^2 \,dy \,dk < \infty$$
+Elements of this space may be regarded as functions of $x$ and $y$ in a natural way:
+ $$\tilde g(x,y) = \int_{-\infty}^{+\infty} e^{ikx} g(k,y)$$
+By Parseval's identity, $\tilde g \in L^2 (\mathbb{R}^2)$.
+
+The reason for choosing this example is that it illustrates two situations in which direct integrals are usually encountered.  First, direct integrals can be used to provide an analogue of the decomposition of a vector space as a direct sum of eigenspaces of a matrix for operators with continuous spectra.  The space $H(k)$ in the example can be regarded as the ``eigenspace'' of the formally self-adjoint operator $-i \partial / \partial x$ with eigenvalue $k$.  (It is  not eigenspaces in the strict sense of the term since its elements are not square integrable in $x$.)  The spectrum of this operator is the whole real axis and the direct integral of these ``eigenspaces'' is the whole vector space on which the operator acts.
+
+A second situation which can be illustrated with this example is the use of direct integrals in group representation theory.  Consider the group of translations along the $x$ axis.  Each of the spaces $H(k)$ transforms under a different representation of this group --- under translation by an amount $x_0$ along the $x$ axis, an element of $H(k)$ is multiplied by a factor $e^{i k x_0}$.  The direct integral is the infinite-dimensional analogue of the decomposition of a finite-dimensional vector space on which a group acts as a direct sum of irreducible representations.
+%%%%%
+%%%%%
+\end{document}

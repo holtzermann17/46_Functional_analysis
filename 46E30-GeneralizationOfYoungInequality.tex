@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizationOfYoungInequality}
+\pmcreated{2013-03-22 15:43:08}
+\pmmodified{2013-03-22 15:43:08}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{generalization of Young inequality}
+\pmrecord{25}{37667}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+It's straightforward to extend \PMlinkname{Young inequality}{YoungInequality}
+to an arbitrary finite number of \PMlinkescapetext{terms}: provided that $%
+a_{i}>0$, $c_{i}>0$ and $\sum_{i=1}^{n}\frac{1}{c_{i}}=\frac{1}{r}$, 
+\[
+\left( \prod_{i=1}^{n}a_{i}\right) ^{r}\leq r\sum_{i=1}^{n}\frac{%
+a_{i}^{c_{i}}}{c_{i}}
+\]%
+In fact, 
+\begin{eqnarray*}
+\left( \prod_{i=1}^{n}a_{i}\right) ^{r} &=&\exp \left[ \log \left(
+\prod_{i=1}^{n}a_{i}\right) ^{r}\right]  \\
+&=&\exp \left[ r\sum_{i=1}^{n}\log a_{i}\right]  \\
+&=&\exp \left[ r\sum_{i=1}^{n}\frac{1}{c_{i}}\log \left( a_{i}^{c_{i}}\right)
+\right]  \\
+&=&\exp \left[ \frac{\sum_{i=1}^{n}\frac{1}{c_{i}}\log \left( a_{i}^{c_{i}}\right)
+}{\frac{1}{r}}\right]  \\
+\text{(by Jensen's inequality and monotonicity of exp)} &\leq &\exp \left[ \log \left( \frac{%
+\sum_{i=1}^{n}\frac{1}{c_{i}}a_{i}^{c_{i}}}{\frac{1}{r}}\right) \right]  \\
+&&=r\sum_{i=1}^{n}\frac{a_{i}^{c_{i}}}{c_{i}}
+\end{eqnarray*}
+
+\bigskip 
+
+Remark: in the case 
+\[
+\frac{1}{c_{i}}=1\text{ \ \ \ \ }\forall i
+\]
+one obtains:%
+\[
+\left( \prod_{i=1}^{n}a_{i}\right) ^{\frac{1}{n}}\leq \frac{1}{n}%
+\sum_{i=1}^{n}a_{i}
+\]
+that is, the usual arithmetic-geometric mean inequality, which suggests
+Young inequality could be regarded as a generalization of this classical result.
+Actually, let's consider the following restatement of
+Young inequality. Having defined:
+$w_{i}=\frac{1}{c_{i}}$, \ $\ \ \sum_{i=1}^{n}w_{i}=W=\frac{1}{r}$, 
+$\ \ \ x_{i}=a_{i}^{\frac{1}{w_{i}}}$
+we have:
+\[
+\left( \prod_{i=1}^{n}x_{i}^{w_{i}}\right) ^{\frac{1}{W}}\leq \frac{1}{W}%
+\sum_{i=1}^{n}w_{i}x_{i}
+\]
+This expression shows that Young inequality is nothing else than
+geometric-arithmentic \textit{weighted} \PMlinkname{mean}{ArithmeticMean} inequality.
+%%%%%
+%%%%%
+\end{document}

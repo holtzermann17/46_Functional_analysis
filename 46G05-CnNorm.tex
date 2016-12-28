@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CnNorm}
+\pmcreated{2013-03-22 14:59:46}
+\pmmodified{2013-03-22 14:59:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{$C^n$ norm}
+\pmrecord{9}{36702}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26Axx}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{26A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+One can define an extended norm on the space $C^n (I)$ where $I$ is a subset of $\mathbb{R}$ as follows:
+ $$\| f \|_{C^n} = \sup_{x \in I} \sup_{k \le n} \left| \frac{d^k f}{dx^k} \right|$$
+If $f$ is a function of more than one variable (i.e. lies in $C^n (D)$ for a subset $D \in \mathbb{R}^m$), then one needs to take the supremum over all partial derivatives of order up to $n$.  
+
+That $$\| \cdot \|_{C^n}$$ satisfies the defining conditions for an extended norm follows trivially from the properties of the absolute value (positivity, homogeneity, and the triangle inequality) and the inequality
+ $$\sup (|f| + |g|) < \sup |f| + \sup |g|.$$
+
+If we are considering functions defined on the whole of $\mathbb{R}^m$ or an unbounded subset of $\mathbb{R}^m$, the $C^n$ norm may be infinite.  For example,
+ $$\| e^x \|_{C^n} = \infty$$
+for all $n$ because the $n$-th derivative of $e^x$ is again $e^x$, which blows up as $x$ approaches infinity.  If we are considering functions on a compact (closed and bounded) subset of $\mathbb{R}^m$ however, the $C^n$ norm is always finite as a consequence of the fact that every continuous function on a compact set attains a maximum.  This also means that we may replace the ``$\sup$'' with a ``$\max$'' in our definition in this case.
+
+Having a sequence of functions converge under this norm is the same as having their $n$-th derivatives converge uniformly.  Therefore, it follows from the fact that the uniform limit of continuous functions is continuous that $C^n$ is complete under this norm. (In other words, it is a Banach space.)
+
+In the case of $C^{\infty}$, there is no natural way to impose a norm, so instead one uses all the $C^n$ norms to define the topology in $C^\infty$.  One does this by declaring that a subset of $C^\infty$ is closed if it is closed in all the $C^n$ norms.  A space like this whose topology is defined by an infinite collection of norms is known as a multi-normed space.
+%%%%%
+%%%%%
+\end{document}

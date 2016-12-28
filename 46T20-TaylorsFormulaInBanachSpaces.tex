@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaylorsFormulaInBanachSpaces}
+\pmcreated{2013-03-22 15:28:27}
+\pmmodified{2013-03-22 15:28:27}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{Taylor's formula in Banach spaces}
+\pmrecord{10}{37328}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46T20}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{41A58}
+%\pmkeywords{mean value theorem}
+%\pmkeywords{power series}
+%\pmkeywords{Taylor series}
+%\pmkeywords{Taylor polynomial}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\begin{document}
+Let $U$ be an open subset of a real Banach space $X$.
+If $f\colon U \to \real$ is differentiable $n+1$ times on  $U$,
+it may be expanded by Taylor's formula:
+\begin{equation}\label{taylor}
+f(x) = f(a) + \D f(a) \cdot h + \frac{1}{2!} \D^2 f(a) \cdot h^2
++ \dotsb + \frac{1}{n!} \D^n f(a) \cdot h^n + R_n(x)\,,
+\end{equation}
+with the following expressions for the remainder term $R_n(x)$:
+\begin{align*}
+R_n(x) &= \frac{1}{n!} \, \D^{n+1}f(\eta) \cdot (x-\eta)^n h & \text{Cauchy form of remainder} \\
+R_n(x) &= \frac{1}{(n+1)!} \, \D^{n+1}f(\xi) \cdot h^{n+1} & \text{Lagrange form of remainder} \\
+R_n(x) &= \frac{1}{n!} \int_0^1 \D^{n+1} f(a+th) \cdot ((1-t)h)^n h \, dt & \text{integral form of remainder}
+\end{align*}
+Here $a$ and $x$ must be points of $U$ such that the line segment
+between $a$ and $x$ lie inside $U$, $h$ is $x-a$,
+and the points $\xi$ and $\eta$ lie on the same line segment,
+strictly between $a$ and $x$.
+
+The $k$th Fr\'echet derivative of $f$ at $a$ is being denoted by
+$\D^k f(a)$, to be viewed as a multilinear map $X^k \to \real$.
+The $\cdot h^k$ notation means to evaluate a multilinear map
+at $(h, \dotsc, h)$.
+
+\section{Remainders for vector-valued functions}
+If $Y$ is a Banach space, we may also consider
+Taylor expansions for $f\colon U \to Y$.
+Formula \eqref{taylor} takes the same form,
+but the Cauchy and Lagrange forms of the remainder
+will not be exact;
+they will only be bounds on $R_n(x)$.
+That is, for $f\colon U \to Y$,
+\begin{align*}
+\norm{R_n(x)} &\leq \frac{1}{n!} \, \normW{\D^{n+1}f(\eta) \cdot (x-\eta)^n h} & \text{Cauchy form of remainder} \\
+\norm{R_n(x)} &\leq \frac{1}{(n+1)!} \, \normW{\D^{n+1}f(\xi) \cdot h^{n+1}} & \text{Lagrange form of remainder}
+\end{align*}
+It is not hard to find counterexamples if we attempt to remove the norm signs or change
+the inequality to equality in the above formulas.  
+
+However, the integral form of the remainder continues to hold for $Y \neq \real$,
+although strictly speaking it only applies if the integrand is \emph{integrable}.
+The integral form is also applicable when $X$ and $Y$ are complex Banach spaces.
+
+\section*{Mean Value Theorem}
+The Mean Value Theorem can be obtained
+as the special case $n=0$ with the Lagrange form of the remainder:
+for $f\colon U \to Y$ differentiable,
+\begin{equation}\label{mean-value}
+\norm{f(x) - f(a)} \leq \norm{\D f(\xi) \cdot (x-a)}
+\end{equation}
+If $Y = \real$, then the norm signs may be removed from
+\eqref{mean-value}, and the inequality replaced by equality.
+
+Formula \eqref{mean-value} also holds under the much
+weaker hypothesis
+that $f$ only has a directional derivative along the line
+segment from $a$ to $x$.
+
+\section*{Weaker bounds for the remainder}
+If $f \colon U \to Y$ is only differentiable $n$ times \emph{at} $a$,
+then we cannot quantify the remainder by the $n+1$th derivative,
+but it is still true
+that
+\begin{equation}
+R_n(x) = o( \norm{x-a}^n ) \text{ as $x \to a$. }
+\end{equation}
+
+\section*{Finite-dimensional case}
+If $X = \real^m$ and $Y = \real$,
+$\D^k$ has the following expression in terms of coordinates:
+\[
+\D^k f(a) \cdot (\xi_1, \dotsc, \xi_k) = \sum_{i_1, \dotsc, i_k}
+\frac{\partial^k f}{\partial x^{i_1} \dotsm \partial x^{i_k}} \,
+\xi_1^{i_1} \dotsm \xi_k^{i_k}\,,
+\]
+where each $i_j$ runs from $1, \dotsc, m$ in the sum.
+
+If we collect the equal mixed partials
+(assuming that they are continuous)
+then
+\[
+\frac{1}{k!} \, \D^k f(a) \cdot h^k
+= \sum_{\abs{J} = k} \frac{1}{J!} \frac{\partial^{\abs{J}} f}{\partial x^J} h^J\,,
+\]
+where $J$ is a multi-index of $m$ components, and each component $J_i$ indicates
+how many times the derivative with respect to the $i$th coordinate should be taken,
+and the exponent that the $i$th coordinate of $h$ should be raised to
+in the monomial $h^J$.
+The multi-index $J$ runs through all combinations
+such that $J_1 + \dotsb + J_m = \abs{J} = k$ in the sum.
+The notation $J!$ means $J_1! \dotsm J_m!$.
+
+All this is more easily assimilated if we remember that
+$\D^k f(a) \cdot h^k$ is supposed to be a polynomial of degree $k$.
+Also $\abs{J}!/J!$ is just the multinomial coefficient.
+
+\section*{Taylor series}
+If $\lim_{n \to \infty} R_n(x) = 0$,
+then we may write
+\begin{equation}\label{taylor}
+f(x) = f(a) + \D f(a) \cdot h + \frac{1}{2!} \D^2 f(a) \cdot h^2 + \dotsb
+\end{equation}
+as a convergent infinite series. Elegant as such an expansion is,
+it is not seen very often,
+for the reason that higher order Fr\'echet derivatives, especially in infinite-dimensional spaces,
+are often difficult to calculate.
+
+But a notable exception occurs if a function $f$ is defined by a convergent ``power series''
+\begin{equation}\label{power-series}
+f(x) = \sum_{k=0}^\infty M_k \cdot (x-a)^k
+\end{equation}
+where $\{ M_k : k = 0, 1, \dotsc \}$ is a family of continuous symmetric multilinear functions $X^k \to Y$.
+In this case, the series \eqref{power-series} is the Taylor series for $f$ at $a$.
+
+\begin{thebibliography}{3}
+\bibitem{Wouk}
+Arthur Wouk. {\it A course of applied functional analysis}. Wiley-Interscience, 1979.
+\bibitem{Zeidler}
+Eberhard Zeidler. {\it Applied functional analysis: main principles and their applications}. Springer-Verlag, 1995.
+\bibitem{Spivak}
+Michael Spivak. {\it Calculus}, third edition. Publish or Perish, 1994.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

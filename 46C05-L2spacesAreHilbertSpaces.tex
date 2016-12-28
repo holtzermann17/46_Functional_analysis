@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{L2spacesAreHilbertSpaces}
+\pmcreated{2013-03-22 17:32:25}
+\pmmodified{2013-03-22 17:32:25}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$L^2$-spaces are Hilbert spaces}
+\pmrecord{23}{39939}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmsynonym{square integrable functions form an Hilbert space}{L2spacesAreHilbertSpaces}
+%\pmkeywords{Hilbert spaces}
+%\pmkeywords{Lp space}
+%\pmkeywords{Banach spaces}
+%\pmkeywords{sequilinearity}
+%\pmkeywords{linearity of the Lebesgue integral}
+%\pmkeywords{conjugate symmetry}
+%\pmkeywords{$L^p$-norm}
+\pmrelated{LpSpace}
+\pmrelated{HilbertSpace}
+\pmrelated{MeasureSpace}
+\pmrelated{BanachSpace}
+\pmrelated{RieszFischerTheorem}
+\pmdefines{linear space of square integrable functions}
+\pmdefines{sequilinearity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $(X, \mathfrak{B}, \mu)$ be a measure space. Let $L^2(X)$ denote the \PMlinkname{$L^2$-space}{LpSpace} associated with this measure space, i.e. $L^2(X)$ consists of measurable functions $f:X \longrightarrow \mathbb{C}$ such that
+\begin{displaymath}
+\|f\|_2 := \left (\int_X |f|^2 d\mu \right)^{\frac{1}{2}} < \infty
+\end{displaymath}
+identified up to equivalence almost everywhere.
+
+It is known that all \PMlinkname{$L^p$-spaces}{LpSpace}, with $1\leq p \leq \infty$, are Banach spaces with respect to the \PMlinkname{$L^p$-norm}{LpSpace} $\;\|\cdot\|_p$. For $L^2(X)$ we can say \PMlinkescapetext{even} more:
+
+{\bf Theorem -} $L^2(X)$ is an Hilbert Space with respect to the inner product $\langle \cdot, \cdot \rangle$ defined by
+\begin{displaymath}
+\langle f, g \rangle = \int_X f\overline{g} \;d\mu
+\end{displaymath}
+
+\emph{Proof:}
+
+ \emph{Sesquilinearity} follows from the \PMlinkname{linearity of the Lebesgue integral}{PropertiesOfTheLebesgueIntegralOfLebesgueIntegrableFunctions} (that is, the inner product defined above is linear in the first argument and conjugate linear in the second one). The conjugate symmetry is evident.
+
+Positive definiteness holds by construction: If $\int_X |f|^2 d\mu = 0$, then $|f|^2$ (and therefore $f$) is zero almost everywhere, thus the equivalence class of $f$ is the equivalence class of the zero function (which is the additive neutral element of the space).
+
+Completeness is proved for the general case of $L^p$-spaces in \PMlinkname{this article}{ProofThatLpSpacesAreComplete}.$\square$
+
+\subsubsection{Remarks}
+\begin{itemize}
+\item The spaces $\mathbb{C}^n$ or $\mathbb{R}^n$ with the usual inner product are particular examples of $L^2(X)$, choosing $X = \{1, \dots, n\}$ with the counting measure.
+\item Choosing appropriate spaces $X$ it can be shown that all Hilbert spaces are isometrically isomorphic to a $L^2$-space.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

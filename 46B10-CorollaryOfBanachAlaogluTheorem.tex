@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CorollaryOfBanachAlaogluTheorem}
+\pmcreated{2013-03-22 18:34:45}
+\pmmodified{2013-03-22 18:34:45}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{corollary of Banach-Alaoglu theorem}
+\pmrecord{4}{41303}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+% theorems:
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem{Lem}{Theorem}
+\newtheorem{Lem2}{Lemma}
+\newtheorem*{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+
+% commands
+%\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+
+
+\begin{document}
+\begin{Cor}
+A Banach space $\mathscr{H}$ is isometrically isomorphic to a closed subspace of $C(X)$ for a compact Hausdorff space $X$.
+\end{Cor}
+
+\begin{proof}
+
+Let $X$ be the unit ball $\mathcal{B}(\mathscr{H}^*)$ of $\mathscr{H}^*$. By the Banach-Alaoglu theorem it is compact in the weak-$*$ topology. Define the map $\Phi \colon \mathscr{H} \to C(X)$ by $(\Phi f)(\varphi) = \varphi(f)$. This is linear and we have for $f \in \mathscr{H}$:
+\begin{align*}
+\|\Phi(f)\|_{\infty} &= \sup_{\varphi \in \mathcal{B}(\mathscr{H}^*)} |\Phi(f)(\varphi)| = \sup_{\varphi \in \mathcal{B}(\mathscr{H}^*)} |\varphi(f)| \leq \sup_{\varphi \in \mathcal{B}(\mathscr{H}^*)} \|\varphi\| \|f\| \leq \|f\|
+\end{align*}
+
+With the Hahn-Banach theorem it follows that there is a $\varphi \in \mathcal{B}(\mathscr{H}^*)$ such that $\varphi(f) = \|f\|$. Thus $\|\Phi(f)\|_{\infty} = \|f\|$ and $\Phi$ is an isometric isomorphism, as required.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

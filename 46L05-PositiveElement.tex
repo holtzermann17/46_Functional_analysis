@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PositiveElement}
+\pmcreated{2013-03-22 17:30:31}
+\pmmodified{2013-03-22 17:30:31}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{positive element}
+\pmrecord{8}{39898}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{47L07}
+\pmclassification{msc}{47A05}
+\pmsynonym{positive}{PositiveElement}
+\pmdefines{positive operator}
+\pmdefines{positive cone}
+\pmdefines{square root of positive element}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $H$ be a complex Hilbert space. Let $T:H \longrightarrow H$ be a bounded operator in $H$.
+
+{\bf Definition -} $T$ is said to be a {\bf positive operator} if there exists a bounded operator $A: H \longrightarrow H$ such that
+\begin{displaymath}
+T=A^*A
+\end{displaymath}
+where $A^*$ denotes the adjoint of $A$.
+
+Every positive operator $T$ satisfies the very strong condition $\langle T v , v \rangle \geq 0$ for every $v \in H$ since
+\begin{displaymath}
+\langle T v , v \rangle = \langle A^*A v , v \rangle = \langle A v , Av \rangle = \|Av\|^2 \geq 0
+\end{displaymath}
+
+The converse is also true, although it is not so \PMlinkescapetext{simple} to prove. Indeed,
+
+{\bf Theorem -} $T$ is positive if and only if $\langle Tv, v \rangle \geq 0 \;\;\;\;\forall_{v \in H}$
+
+\subsection{Generalization to $C^*$-algebras}
+
+The above notion can be generalized to elements in an arbitrary \PMlinkname{$C^*$-algebra}{CAlgebra}.
+
+In what follows $\mathcal{A}$ denotes a $C^*$-algebra.
+
+{\bf Definition -} An element $x \in \mathcal{A}$ is said to be {\bf positive} (and denoted $0 \leq x$) if
+\begin{displaymath}
+x=a^*a
+\end{displaymath}
+for some element $a \in \mathcal{A}$.
+
+$Remark -$ Positive elements are clearly \PMlinkname{self-adjoint}{InvolutaryRing}.
+
+\subsection{Positive spectrum}
+
+It can be shown that the positive elements of $\mathcal{A}$ are precisely the normal elements of $\mathcal{A}$ with a positive spectrum. We \PMlinkescapetext{state} it here as a theorem:
+
+{\bf Theorem -} Let $x \in \mathcal{A}$ and $\sigma(x)$ denote its spectrum. Then $x$ is positive if and only if $x$ is \PMlinkescapetext{normal} and $\sigma(x)\subset \mathbb{R}_{0}^+$.
+
+\subsection{Square roots}
+
+Positive elements admit a unique positive square root.
+
+{\bf Theorem -} Let $x$ be a positive element in  $\mathcal{A}$. There is a unique $b \in \mathcal{A}$ such that
+\begin{itemize}
+\item $b$ is positive
+\item $x=b^2$.
+\end{itemize}
+
+The converse is also true (with \PMlinkescapetext{even weaker} assumptions): If $x$ admits a \PMlinkescapetext{self-adjoint} square root then $x$ is positive, since
+\begin{displaymath}
+x=b^2=bb=b^*b
+\end{displaymath}
+
+\subsection{The positive cone}
+
+Another interesting fact about positive elements is that they form a \PMlinkname{proper convex cone}{Cone5} in $\mathcal{A}$, usually called the {\bf positive cone} of $\mathcal{A}$. That is stated in following theorem:
+
+{\bf Theorem -} Let $a, b$ be positive elements in $\mathcal{A}$. Then
+\begin{itemize}
+\item $a+b$ is also positive
+\item $\lambda a$ is also positive for every $\lambda \geq 0$
+\item If both $a$ and $-a$ are positive then $a=0$.
+\end{itemize}
+
+\subsection{Norm closure}
+{\bf Theorem -} The set of positive elements in $\mathcal{A}$ is norm closed.
+%%%%%
+%%%%%
+\end{document}

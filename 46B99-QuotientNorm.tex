@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientNorm}
+\pmcreated{2013-03-22 17:22:58}
+\pmmodified{2013-03-22 17:22:58}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{quotient norm}
+\pmrecord{5}{39749}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $V$ be a normed vector space with norm $\| \cdot \|$. Let $M$ be a closed subspace of $V$ and $V/M$ the
+ quotient vector space.
+
+The norm $\| \cdot \|$ induces a norm $\| \cdot \|_{V/M}$ in $V/M$, called the {\bf quotient norm}, given by
+
+\begin{displaymath}
+\| v+M \|_{V/M}:= \inf_{u \in v+M} \|u\| = \inf_{m \in M} \|v+m\|
+\end{displaymath}
+
+{\bf Theorem -} $\| \cdot \|_{V/M}$ is a norm in $V/M$ iff $M$ is closed in $V$.
+%%%%%
+%%%%%
+\end{document}

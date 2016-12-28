@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectionsAsNoncommutativeCharacteristicFunctions}
+\pmcreated{2013-03-22 17:54:43}
+\pmmodified{2013-03-22 17:54:43}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{projections as noncommutative characteristic functions}
+\pmrecord{11}{40406}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C07}
+\pmclassification{msc}{46L10}
+\pmclassification{msc}{46L51}
+\pmclassification{msc}{46C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{similarities}
+\PMlinkescapephrase{point}
+\PMlinkescapephrase{points}
+\PMlinkescapephrase{positive}
+\PMlinkescapephrase{observations}
+\PMlinkescapephrase{observation}
+
+In this entry we try to exhibit the profound similarities there are between projections in Hilbert spaces and characteristic functions in a measure space. In fact, in the general framing of viewing von Neumann algebras as noncommutative measure spaces, projections are the noncommutative analog of characteristic functions.
+
+{\bf Note -} By a projection we always \PMlinkescapetext{mean} an orthogonal projection.
+
+Let us \PMlinkescapetext{fix} some notation first:
+\begin{itemize}
+\item $H$ denotes a Hilbert space and $B(H)$ its algebra of bounded operators.
+\item $(X, \mathfrak{B}, \mu)$ denotes a measure space.
+\item $\chi_A$ denotes the characteristic function of the measurable set $A \subset X$.
+\end{itemize}
+
+Recall that a projection in $B(H)$ is a bounded operator $P$ such that $P^*P = P$. Let us now point out what projections and characteristic functions have in common. Note that, although we have written our observations in separate points (making it easier to read), they are all closely related.
+
+\subsection{Basic Facts}
+
+\begin{itemize}
+\item Just like projections, characteristic functions satisfy: $\chi_A^2=\chi_A$. Thus, both characteristic functions and projections are idempotents.
+\end{itemize}
+\begin{itemize}
+\item Characteristic functions are \PMlinkescapetext{positive} functions (meaning they take only positive or zero values), just like projections are positive operators.
+\end{itemize}
+\begin{itemize}
+\item Characteristic functions take only the values $0$ and $1$. The spectrum of a projection is contained in $\{0,1\}$. Notice that the spectrum of a normal operator consists precisely of the values of the complex valued function associated with it (using the Gelfand-Naimark theorem and/or the continuous functional calculus).
+\end{itemize}
+\begin{itemize}
+\item A partial ordering can be defined on the set of characteristic functions by saying
+
+\begin{displaymath}
+\chi_A \leq \chi_B \;\;\Longleftrightarrow\;\; A \subseteq B \text{, or equivalently,}\;\;\; \chi_A \leq \chi_B \;\;\Longleftrightarrow\;\; \chi_B- \chi_A \text{is a positive function}.
+\end{displaymath}
+Analogously, a partial ordering can be defined on the set of projections by saying
+
+\begin{displaymath}
+P \leq Q \;\;\Longleftrightarrow\;\; \mathrm{Ran}(P) \subseteq \mathrm{Ran}(Q) \text{, or equivalently,}\;\;\; P \leq Q \;\;\Longleftrightarrow\;\; Q- P \text{is a positive operator}.
+\end{displaymath}
+where $\mathrm{Ran}(P)$ denotes the range of the operator $P$.
+\end{itemize}
+
+\subsection{Projections of $L^{\infty}(X, \mu)$}
+
+The above observations could all be easily derived from the general fact we describe next:
+\begin{itemize}
+\item Consider the Banach algebra $L^{\infty}(X, \mu)$. Functions $f \in L^{\infty}(X, \mu)$ can be seen as multiplication operators in the Hilbert space $L^2(X, \mu)$. Thus, $L^{\infty}(X, \mu)$ can be seen as a closed subalgebra of $B(L^2(X, \mu))$ (it is in fact a von Neumann algebra).
+
+Characteristic functions in $L^{\infty}(X, \mu)$ are exactly the projections of this subalgebra.
+\end{itemize}
+
+\subsection{Measure Theory and the Spectral Theorem}
+
+The next key observation explores the similarities between some facts about measure theory and the spectral theorem of self-adjoint (or normal) operators.
+
+It is a well known fact from measure theory that a continuous function $f:X \longrightarrow \mathbb{R}$ can be approximated by linear combinations of characteristic functions. With some additional effort it can be seen that, in fact, each continuous function $f$ is a (vector valued) integral of characteristic functions
+
+\begin{displaymath}
+f = \int_X f\, d\chi
+\end{displaymath}
+where $\chi$ is the vector measure of characteristic functions $\chi(A):= \chi_A$.
+
+An analogous phenomenon \PMlinkescapetext{occurs} in the spectral theory of normal operators. Notice (as pointed earlier) that the \PMlinkname{$C^*$-algebra}{CAlgebra} theory allows one to see a normal operator as a continuous function. With this \PMlinkescapetext{interpretation} in mind, the spectral theorem of normal operators can be seen as an analog of the previous measure theoretic construction. Recall that the spectral theorem \PMlinkescapetext{states} that a normal operator $N$ can be approximated by linear combinations of projections and can, in fact, be given by a (vector valued) integral of projections:
+
+\begin{displaymath}
+N = \int_{\sigma(N)} \lambda\; dP(\lambda)
+\end{displaymath}
+where $\sigma(N)$ denotes the spectrum of $N$ and $P$ is the projection valued measure associated with $N$.
+%%%%%
+%%%%%
+\end{document}

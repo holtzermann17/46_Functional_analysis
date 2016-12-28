@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTopologicallyIrreducibleRepresentationsAreAlgebraicallyIrreducibleForCalgebras}
+\pmcreated{2013-03-22 19:04:12}
+\pmmodified{2013-03-22 19:04:12}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{proof of topologically irreducible representations are algebraically irreducible for $C^*$-algebras}
+\pmrecord{8}{41954}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\usepackage[sort&compress]{natbib}
+
+% commands
+\newcommand{\scal}[2]{\langle #1, #2 \rangle}
+
+%theorems
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem*{Lem}{Theorem}
+\newtheorem*{Lem2}{Lemma}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+
+\begin{document}
+Denote by $\mathcal{H}$ an arbitrary Hilbert space.
+To fix notation let $\mathcal{U} \subset \mathcal{L}(\mathcal{H})$ be a $C^{\ast}$ subalgebra of $\mathcal{L}(\mathcal{H})$. We then define the \emph{commutator} of $\mathcal{U}$ by
+\begin{align*}
+\mathcal{U}' &:= \{T \in \mathcal{L}(\mathcal{H}) : TU = UT \ \forall U \in \mathcal{U}\}
+\end{align*}
+
+Note that $\mathcal{U}'$ is closed with regard to the weak topology (see \PMlinkname{this entry}{CommutantIsAWeakOperatorClosedSubalgebra}). So $\mathcal{U}'$ is always a von Neumann algebra.
+
+As an immediate consequence of Schur's Lemma for group representations on a Hilbert space we obtain the following result.
+
+\textbf{Lemma.}
+Let $\mathcal{U}$ be a $\ast$-algebra and let $\pi$ be a $\ast$-representation of $\mathcal{U}$ on the Hilbert space $\mathcal{H}$. Then $\pi$ is topologically irreducible iff $\pi(\mathcal{U})' = \mathbb{C} I$. 
+
+
+We can now prove the result.
+
+\textbf{Theorem.}
+Let $\mathcal{U}$ be a $C^{\ast}$ algebra. Assume the $\ast$-representation $\pi$ of $\mathcal{U}$ on the Hilbert space $\mathcal{H}$ is topologically irreducible. Then $\pi$ is algebraically irreducible.   
+
+
+\begin{proof}
+By the Lemma it follows that $\pi(\mathcal{U})' = \mathbb{C} I$. Hence $\pi(\mathcal{U})'' = \mathcal{L}(\mathcal{H})$. By the \PMlinkname{double commutant theorem}{VonNeumannDoubleCommutantTheorem} every operator in $\mathcal{L}(\mathcal{H})_1$ (the unit ball in the set of bounded operators $\mathcal{L}(\mathcal{H})$) belongs to the strong operator closure of $\pi(\mathcal{U})_1$ (the unit ball in $\pi(\mathcal{U})$). 
+
+To show the algebraical irreducibility of $\pi(\mathcal{U})$ it is enough to find for two given vectors $x, y \in \mathcal{H}, x \not= 0$ an element $T \in \mathcal{U}$ such that $\pi(T) x = y$ holds. Indeed, it is enough to consider the case $\|x\| = \|y\| = 1$. 
+
+Now construct the rank one approximation $\tilde{T}_1 := y \otimes x$ ($\Leftrightarrow \tilde{T}_1 z = \scal{x}{z} y, z \in \mathcal{H} \Rightarrow \tilde{T}_1 x = \|x\| y = y$) with a corresponding $T_1 \in \mathcal{U}, \pi(T_1) \in \pi(\mathcal{U})_1$, so that $\|y - \pi(T_1) x\| = \|\tilde{T}_1 x - \pi(T_1) x\| \leq \frac{1}{2}$. 
+
+Approximate further $\tilde{T}_2 := (y - \pi(T_1) x) \otimes x \in \frac{1}{2} \mathcal{L}(\mathcal{H})_1$ and choose $\pi(T_2) \in \frac{1}{2} \pi(\mathcal{U})_1$ with $\|y - \pi(T_1) x - \pi(T_2) x\| = \|\tilde{T}_2 x- \pi(T_2) x\| \leq \frac{1}{2^2}$.
+
+Proceed by induction with $\tilde{T}_n := ( y- \sum_{j=1}^{n-1} \pi(T_j) x) \otimes x \in 2^{-j} \mathcal{L}(\mathcal{H})_1$. Choose $\pi(T_n) \in 2^{-n} \pi(\mathcal{U})_1$ with $\|y - \sum_{j=1}^{n} \pi(T_j) x\| = \|\tilde{T}_n x - \pi(T_n) x \| \leq 2^{-n}$. Then we have $\pi(T) := \sum_{j=1}^n \pi(T_n)$ in $\mathcal{U}$ and $\pi(T) x = y$ which completes the proof. 
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

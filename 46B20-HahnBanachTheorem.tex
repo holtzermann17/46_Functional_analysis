@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HahnBanachTheorem}
+\pmcreated{2013-03-22 12:54:09}
+\pmmodified{2013-03-22 12:54:09}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Hahn-Banach theorem}
+\pmrecord{10}{33252}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B20}
+\pmdefines{bound}
+\pmdefines{bounded}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\pnorm}{\operatorname{p}}
+\newcommand{\snorm}[1]{\pnorm(#1)}
+\begin{document}
+The Hahn-Banach theorem is a foundational result in functional
+analysis.  Roughly speaking, it asserts the existence of a great
+variety of bounded (and hence continuous) linear functionals on an
+normed vector space, even if that space happens to be
+infinite-dimensional. We first consider an
+abstract version of this theorem, and then give the more classical
+result as a corollary.
+
+Let $V$ be a real, or a complex vector space, with $K$
+denoting the corresponding field of scalars, and let
+$$\pnorm:V\rightarrow\reals^+$$ 
+be a seminorm on $V$.
+
+\begin{theorem}
+  Let $f:U\to K$ be a linear functional defined on a subspace
+  $U\subset V$.  If the restricted functional satisfies
+  $$\vert f(\bu)\vert\leq \snorm{\bu},\quad \bu\in U,$$
+  then it can be extended to all of $V$ without violating the above
+  property.  To be more precise, there exists a linear functional
+  $F:V\to K$ such that
+  \begin{align*}
+    F(\bu) &= f(\bu),\quad \bu\in U\\
+    \vert F(\bu) \vert &\leq \snorm{\bu},\quad \bu\in V.
+  \end{align*}  
+\end{theorem}
+
+\begin{definition}
+  We say that a linear functional $f:V\to K$ is \emph{bounded} if 
+  there exists a bound $B\in\reals^+$ such that
+  \begin{equation}
+    \label{eq:bdef}
+    \vert f(\bu)\vert \leq B \snorm{\bu},\quad \bu\in V.    
+  \end{equation}
+  If $f$ is a bounded linear functional, we define $\Vert f\Vert$, the
+  norm of $f$, according to
+  $$\Vert f \Vert = \sup \{ \vert f(\bu)\vert : \snorm{\bu} = 1 \}.$$
+  One can show that $\Vert f\Vert$ is the infimum of all the possible
+  $B$ that satisfy \eqref{eq:bdef}
+\end{definition}
+
+\begin{theorem}[Hahn-Banach]
+  Let $f:U\to K$ be a bounded linear functional defined on a subspace
+  $U\subset V$. Let $\Vert f \Vert_U$ denote the norm of $f$ relative
+  to the restricted seminorm on $U$.  Then there exists a bounded
+  extension $F:V\to K$ with the same norm, i.e.
+  $$\Vert F\Vert_V = \Vert f\Vert_U.$$
+\end{theorem}
+%%%%%
+%%%%%
+\end{document}

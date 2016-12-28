@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WaveletSet}
+\pmcreated{2013-03-22 14:27:10}
+\pmmodified{2013-03-22 14:27:10}
+\pmowner{swiftset}{1337}
+\pmmodifier{swiftset}{1337}
+\pmtitle{wavelet set}
+\pmrecord{7}{35971}
+\pmprivacy{1}
+\pmauthor{swiftset}{1337}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+\pmclassification{msc}{65T60}
+\pmrelated{wavelet}
+\pmrelated{Wavelet}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{open}
+\PMlinkescapeword{contain}
+\PMlinkescapeword{inverse}
+
+\paragraph{Definition}
+An \emph{(orthonormal dyadic) wavelet set} on ${\mathbb R}$ is a subset $E \subset {\mathbb R}$ such that
+\begin{enumerate}
+\item $\chi_E \in L^2({\mathbb R})$ (since $\|\chi_E\| = \sqrt{m(E)}$, this implies $m(E) < \infty$).
+\item $\frac{\chi_E}{\sqrt{m(E)}}$ is the Fourier transform of an orthonormal dyadic wavelet,
+\end{enumerate}
+where $\chi_E$ is the characteristic function of $E$, and $m(E)$ is the Lebesgue measure of $E$.
+
+\paragraph{Characterization}
+$E \subset {\mathbb R}$ is a wavelet set iff
+\begin{enumerate}
+\item $\{E + 2\pi n\}_{n\in {\mathbb Z}}$ is a measurable partition of $\mathbb R$; i.e. ${\mathbb R}\backslash \bigcup_{n\in \mathbb Z} \{ E + 2\pi n\}$ has measure zero, and $\bigcap_{n=i,j} \{E+2\pi n\}$ has measure zero if $i\neq j$. In short, $E$ is a $2\pi$-translation ``tiler'' of $\mathbb R$
+\item $\{2^n E\}_{n\in \mathbb Z}$ is a $2$-dilation ``tiler'' of $\mathbb R$ (once again modulo sets of measure zero).
+\end{enumerate}
+
+\paragraph{Notes}
+There are higher dimensional analogues to wavelet sets in $\mathbb R$, corresponding to wavelets in higher dimensions. Wavelet sets can be used to derive wavelets--- by creating a set $E$ satisfying the conditions given above, and using the inverse Fourier transform on $\chi_E$, you are guaranteed to recover a wavelet. A particularly interesting open question is: do all wavelets contain wavelet sets in their frequency support?
+%%%%%
+%%%%%
+\end{document}

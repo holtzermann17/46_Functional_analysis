@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeakTopologyOfTheSpaceOfRadonMeasures}
+\pmcreated{2013-03-22 15:22:58}
+\pmmodified{2013-03-22 15:22:58}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{weak-* topology of the space of Radon measures}
+\pmrecord{4}{37212}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A03}
+\pmclassification{msc}{28A33}
+\pmrelated{LocallyCompactHausdorffSpace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a locally compact Hausdorff space.
+Let $M(X)$ denote the space of complex Radon measures on $X$, and
+$C_0(X)^*$ denote the dual of the $C_0(X)$, the complex-valued continuous functions on $X$
+vanishing at infinity, equipped with the uniform norm.
+By the Riesz Representation Theorem, $M(X)$ is isometric to $C_0(X)^*$,
+The isometry maps a measure $\mu$ into the linear functional $I_\mu(f) = \int_X f \, d\mu$.
+
+The weak-* topology (also called the vague topology) on $C_0(X)^*$,
+is simply the topology of pointwise convergence of $I_\mu$: 
+$I_{\mu_\alpha} \to I_{\mu}$ if and only if
+$I_{\mu_\alpha}(f) \to I_{\mu}(f)$ for each $f \in C_0(X)$.
+
+The corresponding topology on $M(X)$ induced by the isometry from $C_0(X)^*$ is also called
+the weak-* or vague topology on $M(X)$.  Thus one may talk about ``weak convergence'' of measures 
+$\mu_n \to \mu$.  One of the most important applications of this notion is in probability theory:
+for example, the central limit theorem is essentially the statement that
+if $\mu_n$ are the distributions for certain sums of independent random variables.
+then $\mu_n$ converge weakly to a normal distribution,
+i.e. the distribution $\mu_n$ is ``approximately normal'' for large $n$.
+
+\begin{thebibliography}{9}
+\bibitem{folland}
+G.B. Folland, \emph{Real Analysis: Modern Techniques and Their Applications}, 2nd ed, John Wiley \& Sons, Inc., 1999.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

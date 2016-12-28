@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MazurUlamTheorem}
+\pmcreated{2013-03-22 16:22:50}
+\pmmodified{2013-03-22 16:22:50}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{Mazur-Ulam theorem}
+\pmrecord{12}{38524}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B04}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem*{thm*}{Theorem}
+
+\def\C{\mathbb{C}}
+\def\R{\mathbb{R}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\begin{document}
+\PMlinkescapeword{isometric}
+\PMlinkescapeword{isometries}
+\PMlinkescapeword{isometry}
+\PMlinkescapeword{theorem}
+
+\begin{thm*}
+Every \PMlinkname{isometry}{Isometry} between normed vector spaces over $\R$
+is an affine transformation.
+\end{thm*}
+
+Note that we consider isometries to be surjective by definition.
+The result is not in general true for non-surjective isometric mappings.
+
+The result does not extend to normed vector spaces over $\C$,
+as can be seen from the fact that complex conjugation is an isometry $\C\to\C$
+but is not affine over $\C$.
+(But complex conjugation is clearly affine over $\R$,
+and in general any normed vector space over $\C$
+can be considered as a normed vector space over $\R$,
+to which the theorem can be applied.)
+
+This theorem was first proved by Mazur and Ulam.\cite{mazurulam}
+A simpler proof has been given by Jussi V\"{a}is\"{a}l\"{a}.\cite{vaisala}
+
+\begin{thebibliography}{9}
+\bibitem{mazurulam}
+ S.\ Mazur and S.\ Ulam,
+ {\it Sur les transformations isom\'etriques d'espaces vectoriels norm\'es},
+ C.\ R.\ Acad.\ Sci., Paris 194 (1932), 946--948.
+\bibitem{vaisala}
+ Jussi V\"{a}is\"{a}l\"{a},
+ {\it A proof of the Mazur--Ulam theorem},
+ Amer.\ Math.\ Mon.\ 110, \#7 (2003), 633--635.
+ (A preprint is \PMlinkexternal{available on V\"{a}is\"{a}l\"{a}'s website}{http://www.helsinki.fi/\%7Ejvaisala/mazurulam.pdf}.)
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuousLinearMapping}
+\pmcreated{2013-03-22 13:15:41}
+\pmmodified{2013-03-22 13:15:41}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{continuous linear mapping}
+\pmrecord{7}{33741}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmsynonym{bounded linear mapping}{ContinuousLinearMapping}
+\pmrelated{HomomorphismsOfCAlgebrasAreContinuous}
+\pmrelated{CAlgebra}
+\pmrelated{BoundedLinearFunctionalsOnLpmu}
+\pmdefines{bounded linear transform}
+\pmdefines{bounded linear operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $(V_1,\|\cdot\|_1)$ and $(V_2,\|\cdot\|_2)$ are normed vector spaces, a linear mapping $T:V_1\rightarrow V_2$ is continuous if it is continuous in the metric induced by the norms. 
+
+If there is a nonnegative constant $c$ such that 
+$\|T(x)\|_2\leq c\|x\|_1$ for each $x\in V_1$, we say that $T$ is \emph{\PMlinkescapetext{bounded}}. This should not be confused with the usual terminology referring to a bounded function as one that has bounded range. In fact, bounded linear mappings usually have unbounded ranges. 
+
+The expression \emph{bounded linear mapping} is often  used in functional analysis to refer to continuous linear mappings as well. This is because the two definitions are equivalent:
+
+If $T$ is bounded, then $\|T(x)-T(y)\|_2 = \|T(x-y)\|_2 \leq c\|x-y\|_1$, so $T$ is a Lipschitz function. Now suppose $T$ is continuous. Then there exists $r>0$ such that $\|T(x)\|_2 \leq 1$ when $\|x\|_1\leq r$. For any $x\in V_1$,  we then have \[\frac{r}{\|x\|_1}\|T(x)\|_2 = \|T\left(\frac{r}{\|x\|_1}x\right)\|_2 \leq 1,\]
+hence $\|T(x)\|_2\leq r\|x\|_1$; so $T$ is bounded.
+
+It can be shown that a linear mapping between two topological vector spaces is continuous if and only if it is \PMlinkname{continuous at}{Continuous} $0$ \cite{rudin_fap}.
+
+\begin{thebibliography}{9}
+ \bibitem{rudin_fap}
+ W. Rudin, \emph{Functional Analysis},
+ McGraw-Hill Book Company, 1973.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

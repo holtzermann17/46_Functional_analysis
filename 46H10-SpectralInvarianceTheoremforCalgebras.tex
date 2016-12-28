@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpectralInvarianceTheoremforCalgebras}
+\pmcreated{2013-03-22 17:29:53}
+\pmmodified{2013-03-22 17:29:53}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{spectral invariance theorem (for $C^*$-algebras)}
+\pmrecord{7}{39886}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H10}
+\pmclassification{msc}{46L05}
+\pmsynonym{spectral invariance theorem}{SpectralInvarianceTheoremforCalgebras}
+\pmsynonym{invariance of the spectrum of $C^*$-subalgebras}{SpectralInvarianceTheoremforCalgebras}
+\pmdefines{invertibility in $C^*$-subalgebras}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The spectral permanence theorem (\PMlinkescapetext{parent} entry) relates the spectrums $\sigma_{\mathcal{B}}(x)$ and $\sigma_{\mathcal{A}}(x)$ of an element $x \in \mathcal{B} \subseteq \mathcal{A}$ relatively to the Banach algebras $\mathcal{B}$ and $\mathcal{A}$.
+
+For \PMlinkname{$C^*$-algebras}{CAlgebra} the situation is quite \PMlinkescapetext{simple}.
+
+{\bf Spectral invariance theorem -} Suppose $\mathcal{A}$ is a unital $C^*$-algebra and $\mathcal{B} \subseteq \mathcal{A}$ a $C^*$-subalgebra that contains the identity of $\mathcal{A}$. Then for every $x \in \mathcal{B}$ one has
+\begin{displaymath}
+\sigma_{\mathcal{B}}(x)=\sigma_{\mathcal{A}}(x).
+\end{displaymath}
+
+The spectral invariance theorem is a straightforward corollary of the next more general theorem about invertible elements in $C^*$-subalgebras.
+
+{\bf Theorem -} Let $x \in \mathcal{B} \subset \mathcal{A}$ be as above. Then $x$ is invertible in $\mathcal{B}$ if and only if $x$ invertible in $\mathcal{A}$.
+
+{\bf Proof :}
+\begin{itemize} 
+\item $(\Longrightarrow)$
+
+If $x$ is invertible in $\mathcal{B}$ then it is clearly invertible in $\mathcal{A}$.
+
+\item $(\Longleftarrow)$
+
+If $x$ is invertible in $\mathcal{A}$, then so is $y=x^*x$. Thus, $0 \notin \sigma_{\mathcal{A}}(y)$.
+
+Since $y$ is \PMlinkname{self-adjoint}{InvolutaryRing}, $\sigma_{\mathcal{A}}(y) \subseteq \mathbb{R}$ (see this \PMlinkname{entry}{SpecialElementsInACAlgebraAndTheirSpectralProperties}), and so $\mathbb{C} - \sigma_{\mathcal{A}}(y)$ has no \PMlinkname{bounded}{Bounded} connected components.
+
+By the \PMlinkname{spectral permanence theorem}{SpectralPermanenceTheorem} we must have $\sigma_{\mathcal{B}}(y)=\sigma_{\mathcal{A}}(y)$. Hence, $0 \notin \sigma_{\mathcal{B}}(y)$, i.e. $y$ is invertible in $\mathcal{B}$.
+
+It follows that $x^{-1}=(x^*x)^{-1}x^*=y^{-1}x^* \in \mathcal{B}$, i.e. $x$ is invertible in $\mathcal{B}$. $\square$
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

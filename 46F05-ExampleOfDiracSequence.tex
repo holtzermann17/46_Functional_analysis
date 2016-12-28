@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfDiracSequence}
+\pmcreated{2013-03-22 14:13:10}
+\pmmodified{2013-03-22 14:13:10}
+\pmowner{Johan}{1032}
+\pmmodifier{Johan}{1032}
+\pmtitle{example of Dirac sequence}
+\pmrecord{8}{35655}
+\pmprivacy{1}
+\pmauthor{Johan}{1032}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46F05}
+\pmrelated{Distribution4}
+\pmrelated{DeltaDistribution}
+\pmrelated{DiracDeltaFunction}
+\pmrelated{ConstructionOfDiracDeltaFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\supp}[0]{\operatorname{supp}}
+\begin{document}
+We can construct a Dirac sequence $\{\delta_n\}_{n\in \mathbb{N}_+}$ by choosing
+$$
+\delta_n(x) = \frac{n}{\pi(1+n^2x^2)}.
+$$
+To show that conditions 1 and 3 in the definition of a Dirac sequence are satisfied is trivial and condition 2 is also fulfilled since
+$$
+\int_{-\infty}^{\infty}\delta_n (x)dx = \frac{1}{\pi}\cdot \int_{-\infty}^{\infty} \frac{n}{1+n^2x^2} dx = \left[\begin{tabular}{ll}$y=nx$ \\ $dy=n\cdot dx$ \end{tabular}\right]= \frac{1}{\pi}\cdot\int_{-\infty}^{\infty}  \frac{1}{1+y^2} dy = \frac{1}{\pi}\cdot \arctan{y}\Big\lvert_{y=-\infty}^{\infty} =\frac{1}{\pi}\cdot\pi =1
+$$
+for all $n\in\mathbb{N}_+$, hence $\{\delta_n\}_{n\in\mathbb{N}_+}$ is a Dirac sequence. \\ \\
+ To prove that it actually converges in $\mathcal{D}'(\mathbb{R})$ (the space of all distributions on $\mathcal{D}(\mathbb{R})$) to the Dirac delta distribution $\delta$, we must show that
+$$
+\lim_{n\to \infty} \int_{\mathbb{R}} \delta_n(x)\varphi(x)dx = \varphi(0)
+$$
+for any test function $\varphi\in\mathcal{D}(\mathbb{R})$ (a topological vector space of smooth functions with compact support). Let us take an arbitrary test function $\varphi\in\mathcal{D}(\mathbb{R})$ and assume that the closed and compact set $\supp(\varphi)$ is contained in some open interval $(a,b)\subset \mathbb{R}$ ($a<0$ and $b>0$). Using the triangle inequality and the fact that $\int_{\mathbb{R}}\delta_n(x)dx=1$ for all $n\in\mathbb{N}_+$ we can write
+$$
+\left| \int_{-\infty}^{\infty}\delta_n(x)\varphi(x)dx -\varphi(0) \right| = \left|\int_{-\infty}^{\infty}\delta_n(x)(\varphi(x)-\varphi(0))dx \right| \leq
+$$
+$$
+\leq  \underbrace{\varphi(0) \int_{-\infty}^{a}\left|\delta_n(x)\right|dx}_{I_1} +  \underbrace{\int_{a}^{b}\left|\delta_n(x)(\varphi(x)-\varphi(0))\right|dx}_{I_2}
++ \underbrace{\varphi(0) \int_{b}^{\infty}\left|\delta_n(x)\right|dx}_{I_3}
+$$
+It is easy to see that $\lim_{n\to \infty} \delta_n(x)=0$, $\forall x\in (-\infty,a] \cup [b,\infty)$ and therefore
+$\lim_{n\to \infty} I_1 = 0$
+and $\lim_{n\to \infty} I_3 = 0$.
+Finally we want to estimate $I_2$ when $n\to\infty$.
+$$
+I_2 = \int_{a}^{b}\left|\delta_n(x)\right| \underbrace{\left|(\varphi(x)-\varphi(0))\right|}_{\leq |x|\cdot \sup{|\varphi'(x)|}}dx \leq \sup{|\varphi'(x)|} \cdot \int_{a}^{b}\left|\delta_n(x)x \right| dx =
+$$
+$$
+= \sup{|\varphi'(x)|} \cdot \frac{1}{\pi}\int_{a}^{b}\left|\frac{nx}{1+(nx)^2}\right| dx = \sup{|\varphi'(x)|} \cdot \frac{1}{\pi}\left( -\int_{a}^{0}\frac{nx}{1+(nx)^2} dx +\int_{0}^{b}\frac{nx}{1+(nx)^2} dx \right)=  
+$$
+$$
+= \sup{|\varphi'(x)|} \cdot \frac{1}{\pi}\left( - \left(\frac{1}{2n}\cdot \text{ln}|1+(nx)^2| \Big\lvert_{x=a}^{0}\right) +\left( \frac{1}{2n}\cdot \text{ln}|1+(nx)^2| \Big\lvert_{x=0}^{b} \right) \right)= 
+$$
+$$
+= \sup{|\varphi'(x)|} \cdot \frac{1}{\pi}\left( \frac{1}{2n}\cdot \text{ln}|1+(na)^2| + \frac{1}{2n}\cdot \text{ln}|1+(nb)^2|  \right)
+$$
+We now conclude that $\lim_{n\to \infty} I_2 = 0$. This means that $\lim_{n\to\infty}I_1+I_2+I_3=0$ which shows that $\{ \delta_n \}_{n\in\mathbb{N}_+}$ converges to the Dirac delta distribution $\delta$.
+%%%%%
+%%%%%
+\end{document}

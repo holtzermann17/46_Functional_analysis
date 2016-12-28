@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriteriaForExistenceOfAntidervatives}
+\pmcreated{2013-03-22 19:14:00}
+\pmmodified{2013-03-22 19:14:00}
+\pmowner{scineram}{4030}
+\pmmodifier{scineram}{4030}
+\pmtitle{criteria for existence of antidervatives}
+\pmrecord{9}{42157}
+\pmprivacy{1}
+\pmauthor{scineram}{4030}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46G05}
+%\pmkeywords{derivative antiderivative primitive function differential calculus}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+Let $X$ be a normed space, $Y$ a Banach space, $U\subset X$ a connected open set, $f\colon U\to L(X;Y)$ a continuous function, where $L(X;Y)$ is the space of continuous linear operators. In this article a path is a curve that has bounded variation. The following theorems give necessary and sufficient conditions for $f$ to have an antiderivatives.
+
+\begin{thm}
+The following conditions are equivalent:
+\begin{enumerate}
+\item $f$ has an antiderivative on $U$,
+\item for any $\gamma$ closed path in $U$ $\int_\gamma f=0$,
+\item for any $\gamma$, $\delta$ paths in $U$ that have the same starting and endpoints $\int_\gamma f=\int_\delta f$.
+\end{enumerate}
+\end{thm}
+
+The next theorem states criteria for the existence of local antiderivatives.
+
+\begin{thm}
+The following conditions are equivalent:
+\begin{enumerate}
+\item $f$ has an antiderivative locally,
+\item for $\gamma$, $\delta$ homotopic closed paths in $U$ $\int_\gamma f=\int_\delta f$,
+\item if $\gamma$ is a triangular path such that its convex hull is in $U$, then $\int_\gamma f=0$.
+\end{enumerate}
+\end{thm}
+With the stronger assumption that $f$ is differenciable we can obtain a more easily applicable condition. We introduce the  canonical isometric isomorphism
+\[\pi_{1,1}\colon L(X;L(X;Y))\to L_2(X;Y),\quad u\mapsto((x_1,x_2)\mapsto u(x_1)(x_2))\]
+where $L_2(X;Y)$ is the space of bilinear operators from $X$ to $Y$. If $F$ is an antiderivative of $f$, then $\pi_{1,1}(Df(x))=D^2F(x)$ and by Clairaut's theorem the second derivative is symmetric. The following theorems assert that the reverse is also true.
+
+\begin{thm}
+If $f$ is differentiable, then it has an antiderivative locally if and only if $\pi_{1,1}(Df(x))$ is symmetric for all $x\in U$.
+\end{thm}
+
+Combining these three theorems immediately gives the following.
+
+\begin{cor}
+If $U$ is simply connected and $f$ is differentiable, then it has an antiderivative on $U$ if and only if $\pi_{1,1}(Df(x))$ is symmetric for all $x\in U$.
+\end{cor}
+
+%%%%%
+%%%%%
+\end{document}

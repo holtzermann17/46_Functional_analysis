@@ -1,0 +1,166 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BanachSpaceValuedAnalyticFunctions}
+\pmcreated{2013-03-22 17:29:33}
+\pmmodified{2013-03-22 17:29:33}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Banach space valued analytic functions}
+\pmrecord{10}{39880}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46G20}
+\pmclassification{msc}{46G12}
+\pmclassification{msc}{46G10}
+\pmclassification{msc}{30G30}
+\pmclassification{msc}{47A56}
+\pmsynonym{Banach space valued holomorphic function}{BanachSpaceValuedAnalyticFunctions}
+\pmsynonym{analytic Banach space valued function}{BanachSpaceValuedAnalyticFunctions}
+\pmsynonym{holomorphic Banach space valued function}{BanachSpaceValuedAnalyticFunctions}
+\pmdefines{contour integral of Banach space valued functions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{type}
+\PMlinkescapeword{differentiable}
+\PMlinkescapeword{differentiable function}
+\PMlinkescapeword{Lemma}
+
+The classical notions of complex analytic function, holomorphic function and contour integral of a complex function are easily generalized to functions $f: \mathbb{C} \longrightarrow X$ taking values on a complex Banach space $X$.
+
+Moreover, the classical theory of complex analytic functions can still be applied, with suitable adjustments, to Banach space valued functions. In this way, important theorems such as Liouville's theorem remain valid under this generalization.
+
+In this entry we provide the definitions of analyticity and holomorphicity for Banach space valued functions, we give a definition of countour \PMlinkescapetext{integral} for this type of functions and discuss some useful results which enable the generalization of the classical theory.
+
+\subsection{Analiticity}
+Let $\Omega \subseteq \mathbb{C}$ be an open set and $X$ a complex Banach space.
+
+A function $f:\Omega \longrightarrow X$ is said to be {\bf analytic} if each point $\lambda_0 \in \Omega$ has a neighborhood in which $f$ is the uniform limit of a power series with coefficients in $X$ centered in $\lambda_0$
+\begin{displaymath}
+f(\lambda)= \sum_{k=0}^{\infty} a_k (\lambda -\lambda_0)^k, \;\;\;\;\;\;\; a_k \in X
+\end{displaymath}
+
+Abel's theorem on power series is still applicable changing absolute values $|.|$ by vector norms $\|.\|$ when appropriate.
+
+\subsection{Holomorphicity}
+
+A function $f:\Omega \longrightarrow X$ is said to be {\bf differentiable} at a point $\lambda_0 \in \Omega$ if the following limit exists (as a limit in $X$)
+\begin{displaymath}
+f'(\lambda_0):= \lim_{\lambda \rightarrow \lambda_0} \frac{f(\lambda)-f(\lambda_0)}{\lambda - \lambda_0}
+\end{displaymath}
+
+$f$ is said to be {\bf \PMlinkescapetext{holomorphic}} in $S \subset \Omega$ if it is differentiable in a neighborhood of $S$.
+
+The following Lemma is usefull in the generalization of the classical theory of holomorphic functions.
+
+{\bf Lemma 1 -} Let $f : \Omega \longrightarrow X$ be a differentiable function at $\lambda_0 \in \Omega$. Let $\phi: X \longrightarrow \mathbb{C}$ be a continuous linear functional in $X$. Then $\phi \circ f : \Omega \longrightarrow \mathbb{C}$ is differentiable at $\lambda_0$ (in the classical sense) and 
+\begin{displaymath}
+(\phi \circ f)'(\lambda_0) = \phi(f'(\lambda_0))
+\end{displaymath}
+
+{\bf Proof :}
+\begin{eqnarray*}
+(\phi \circ f)'(\lambda_0) & = & \lim_{\lambda \rightarrow \lambda_0} \frac{\phi (f(\lambda))- \phi (f(\lambda_0))}{\lambda - \lambda_0} \\ 
+& = & \lim_{\lambda \rightarrow \lambda_0} \phi \left(\frac{f(\lambda)- f(\lambda_0)}{\lambda - \lambda_0}\right) \\
+& = & \phi \left(\lim_{\lambda \rightarrow \lambda_0} \frac{f(\lambda)- f(\lambda_0)}{\lambda - \lambda_0}\right) \\
+& = & \phi (f'(\lambda_0))\;\;\;\;\square
+\end{eqnarray*}
+
+\subsection{Contour Integrals}
+
+The usual way to relate the theory of complex analytic functions with the theory of holomorphic functions is by the use contour integrals. It is not different for Banach space valued functions.
+
+We will define contour integrals for continuous Banach space valued functions but there's no particular reason, besides the simplicity of \PMlinkescapetext{presentation}, for restricting to this type of functions.
+
+Let $\gamma : [a,b] \longrightarrow \mathbb{C}$ be a piecewise smooth path in $\Omega \subseteq \mathbb{C}$.
+Let $f : \Omega \longrightarrow X$ be a continuous function. Let $\mathcal{P} = \{t_0, t_1, \dots, t_n\}$ be a partition of $[a,b]$.
+
+We define the {\bf \PMlinkescapetext{Riemann sums}}
+\begin{displaymath}
+R_{\gamma}(f, \mathcal{P}) := \sum_{k=1}^n f(\gamma(t_k))(\gamma(t_k)-\gamma(t_{k-1}))
+\end{displaymath}
+and the {\bf \PMlinkescapetext{norm}} of a partition $\mathcal{P}$ as
+\begin{displaymath}
+\|\mathcal{P}\| :=\max_k |t_k - t_{k-1}|
+\end{displaymath}
+
+The {\bf contour integral} of $f$ along $\gamma$ is the element of $X$ defined by
+\begin{displaymath}
+\int_{\gamma} f(\lambda) d\lambda := \lim_{\|\mathcal{P}\| \rightarrow 0} R_{\gamma}(f,\mathcal{P})
+\end{displaymath}
+
+It can be shown that this limit always exists for continuous functions $f$.
+
+The following Lemma is also usefull 
+
+{\bf Lemma 2 -} Let $\gamma$ and $f$ be as above. Let $\phi :  \longrightarrow \mathbb{C}$ be a continuous linear functional in $X$. Then
+\begin{displaymath}
+\phi \left(\int_{\gamma} f(\lambda) d\lambda \right) = \int_{\gamma} \phi \circ f (\lambda) d\lambda
+\end{displaymath}
+
+{\bf Proof -}
+\begin{eqnarray*}
+\phi \left(\int_{\gamma} f(\lambda) d\lambda \right) & = & \phi \left(\lim_{\|\mathcal{P}\| \rightarrow 0} R_{\gamma}(f,\mathcal{P})\right) \\
+& = & \phi \left(\lim_{\|\mathcal{P}\| \rightarrow 0} \sum_{k=1}^n f(\gamma(t_k))(\gamma(t_k)-\gamma(t_{k-1})) \right) \\
+& = & \lim_{\|\mathcal{P}\| \rightarrow 0} \phi \left(\sum_{k=1}^n f(\gamma(t_k))(\gamma(t_k)-\gamma(t_{k-1}))\right) \\
+& = & \lim_{\|\mathcal{P}\| \rightarrow 0} \sum_{k=1}^n \phi(f(\gamma(t_k)))(\gamma(t_k)-\gamma(t_{k-1})) \\
+& = & \int_{\gamma} \phi \circ f(\lambda) d\lambda \;\;\square
+\end{eqnarray*}
+
+\subsection{Remarks}
+
+We have seen how the classical definitions generalize in straightforward way to Banach space valued functions. In fact, as we said before, the whole classical theory remains valid with proper adjustments.
+
+As a \PMlinkescapetext{simple} example, we will prove a well-known theorem in complex analysis this time for Banach space valued functions.
+
+{\bf Theorem -} Let $f: \Omega \longrightarrow X$ a continuous function with antiderivative $F$. Let $\gamma : [a,b] \longrightarrow \Omega$ be a piecewise smooth path. Then
+\begin{displaymath}
+\int_{\gamma} f(\lambda) d\lambda = F(\gamma(b)) - F(\gamma(a))
+\end{displaymath}
+
+{\bf Proof :} Let $\phi : X \longrightarrow \mathbb{C}$ be a continuous linear functional. Using Lemmas 1 and 2
+\begin{displaymath}
+\phi \left(\int_{\gamma} f(\lambda) d\lambda \right) = \int_{\gamma} \phi \circ f(\lambda) d\lambda = \int_{\gamma} \phi \circ F'(\lambda) d\lambda = \int_{\gamma} (\phi \circ F)'(\lambda) d\lambda 
+\end{displaymath}
+
+$(\phi \circ F)'$ is a continuous function $\Omega \longrightarrow \mathbb{C}$. As we know, this theorem is valued for complex valued functions. Then
+\begin{displaymath}
+\int_{\gamma} (\phi \circ F)'(\lambda) d\lambda = (\phi \circ F)(\gamma (b)) - (\phi \circ F)(\gamma (a)) = \phi [F(\gamma (b)) -F(\gamma (a))]
+\end{displaymath}
+
+Therefore
+\begin{displaymath}
+\phi \left(\int_{\gamma} f(\lambda) d\lambda - (F(\gamma (b)) -F(\gamma (a))) \right) = 0 \;\;\;\; \forall_{\phi \in X'}
+\end{displaymath}
+
+As $X$ is a Banach space, its \PMlinkname{dual space $X'$ separates points}{DualSpaceSeparatesPoints}, so we must have $\int_{\gamma} f(\lambda) d\lambda - (F(\gamma (b)) -F(\gamma (a))) =0$ i.e.
+\begin{displaymath}
+\int_{\gamma} f(\lambda) d\lambda = F(\gamma (b)) -F(\gamma (a)) \;\;\;\square
+\end{displaymath}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GelfandTransform}
+\pmcreated{2013-03-22 17:22:39}
+\pmmodified{2013-03-22 17:22:39}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Gelfand transform}
+\pmrecord{26}{39743}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L35}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{46J40}
+\pmclassification{msc}{46J05}
+\pmclassification{msc}{46H05}
+%\pmkeywords{Gelfand transform}
+%\pmkeywords{C*-algebra}
+%\pmkeywords{C*- algebra representations}
+%\pmkeywords{CompactQuantumGroup}
+\pmrelated{MultiplicativeLinearFunctional}
+\pmrelated{NoncommutativeTopology}
+\pmrelated{CAlgebra3}
+\pmrelated{CAlgebra}
+\pmrelated{CompactQuantumGroup}
+\pmdefines{classification of commutative $C^*$-algebras}
+\pmdefines{commutative $C^*$-algebras classification}
+\pmdefines{Gelfand-Naimark theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsection*{The Gelfand Transform} Let $\mathcal{A}$ be a Banach algebra over $\mathbb{C}$.
+ Let $\bigtriangleup$ be the space of all
+ multiplicative linear functionals in $\mathcal{A}$, endowed with the weak-* topology. Let
+ $C(\bigtriangleup)$ denote the algebra of complex valued continuous functions in $\bigtriangleup$.
+
+The {\bf Gelfand transform} is the mapping
+\begin{center}
+
+$\widehat{}\;\;:\mathcal{A} \longrightarrow C(\bigtriangleup)$
+
+$x \longmapsto \widehat{x}$
+\end{center}
+
+where $\widehat{x} \in C(\bigtriangleup)$ is defined by
+ $\;\;\widehat{x} (\phi) := \phi(x), \;\;\;\forall \phi \in \bigtriangleup$
+
+The Gelfand transform is a continuous homomorphism from $\mathcal{A}$ to $C(\bigtriangleup)$.
+
+{\bf Theorem -} Let $C_{0}(\bigtriangleup)$ denote the algebra of complex valued continuous functions in $\bigtriangleup$, that vanish at infinity.
+ The image of the Gelfand transform is contained in $C_{0}(\bigtriangleup)$.
+
+
+The Gelfand transform is a very useful tool in the study of commutative Banach algebras and, particularly,
+ commutative \PMlinkname{$C^*$-algebras}{CAlgebra}.
+
+\subsection*{Classification of commutative $C^*$-algebras: Gelfand-Naimark theorems}
+
+The following results are called the Gelfand-Naimark theorems. They classify all commutative $C^*$-algebras and all commutative $C^*$-algebras with identity element.
+
+{\bf Theorem 1 -} Let $\mathcal{A}$ be a $C^*$-algebra over $\mathbb{C}$. Then $\mathcal{A}$ is
+ *-isomorphic to $C_{0}(X)$ for some locally compact Hausdorff space $X$. Moreover, the Gelfand transform is a
+ *-isomorphism between $\mathcal{A}$ and $C_{0}(\bigtriangleup)$.
+
+{\bf Theorem 2 -} Let $\mathcal{A}$ be a unital $C^*$-algebra over $\mathbb{C}$. Then $\mathcal{A}$ is
+ *-isomorphic to $C(X)$ for some compact Hausdorff space $X$. Moreover, the Gelfand transform is a
+ *-isomorphism between $\mathcal{A}$ and $C(\bigtriangleup)$.
+
+The above theorems can be substantially improved. In fact, there is an \PMlinkname{equivalence}{EquivalenceOfCategories} between the category of commutative $C^*$-algebras and the category of locally compact Hausdorff spaces. For more \PMlinkescapetext{information} and details about this, see the entry about the general \PMlinkname{Gelfand-Naimark theorem}{GelfandNaimarkTheorem}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfConvergenceTheorem}
+\pmcreated{2013-03-22 13:44:36}
+\pmmodified{2013-03-22 13:44:36}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{proof of convergence theorem}
+\pmrecord{10}{34437}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+\pmclassification{msc}{46F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\newcommand{\cD}[0]{\mathcal{D}}
+\newcommand{\scomp}[0]{C^\infty_0}
+Let us show the equivalence of (2) and (3).
+First, the proof  that (3) implies (2) is a direct calculation. 
+Next, let us show that (2) implies (3): 
+Suppose $Tu_i \to 0$ in $\sC$, and if $K$ is a  compact set in $U$, and  
+$\{u_i\}_{i=1}^\infty$ is a sequence in $\cD_K$ such that
+for any multi-index $\alpha$, we have 
+$$ D^\alpha u_i \to 0$$
+in the supremum norm $\lVert\cdot\rVert_\infty$ as $i\to \infty$.
+For a contradiction, suppose there is a compact set $K$ in $U$
+such that for all constants $C>0$ and $k\in\{0, 1,2,\ldots\}$ there exists 
+a function $u\in \cD_K$ such that 
+$$|T(u)|> C\sum_{|\alpha|\le k} ||D^\alpha u||_\infty.$$
+Then, for $C=k=1,2,\ldots$ we obtain functions $u_1,u_2,\ldots$ in $\cD(K)$
+such that 
+$ |T(u_i)| > i\sum_{|\alpha|\le i} ||D^\alpha u_i||_\infty.$
+Thus $|T(u_i)|>0$ for all $i$, so for $v_i=u_i/|T(u_i)|$, we have
+$$ 1> i\sum_{|\alpha|\le i} ||D^\alpha v_i||_\infty.$$
+It follows that $||D^\alpha u_i||_\infty< 1/i$ 
+for any multi-index $\alpha$ with $|\alpha|\le i$.
+Thus $\{v_i\}_{i=1}^\infty$ satisfies our assumption, whence $T(v_i)$ should tend to $0$. 
+However, for all $i$, we have $T(v_i)= 1$. This contradiction 
+completes the proof.
+%%%%%
+%%%%%
+\end{document}

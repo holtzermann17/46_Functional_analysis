@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfClassificationOfSeparableHilbertSpaces}
+\pmcreated{2013-03-22 14:34:11}
+\pmmodified{2013-03-22 14:34:11}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of classification of separable Hilbert spaces}
+\pmrecord{5}{36127}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C15}
+%\pmkeywords{Hilbert space}
+%\pmkeywords{separable}
+\pmrelated{VonNeumannAlgebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The strategy will be to show that any separable, infinite
+dimensional Hilbert space $H$ is equivalent to $\ell^2$, where
+$\ell^2$ is the space of all square summable sequences.  Then it
+will follow that any two separable, infinite dimensional Hilbert
+spaces, being equivalent to the same space, are equivalent to each
+other.
+
+Since $H$ is separable, there exists a countable dense subset $S$ of
+$H$.  Choose an enumeration of the elements of $S$ as $s_0, s_1,
+s_2, \ldots$.  By the Gram-Schmidt orthonormalization procedure, one
+can exhibit an orthonormal set $e_0, e_1, e_2, \ldots$ such that
+each $e_i$ is a finite linear combination of the $s_i$'s.
+
+Next, we will demonstrate that Hilbert space spanned by the $e_i$'s
+is in fact the whole space $H$.  Let $v$ be any element of $H$.
+Since $S$ is dense in $H$, for every integer $n$, there exists an
+integer $m_n$ such that
+ $$\| v - s_{m_n} \| \le 2^{-n}$$
+The sequence $(s_{m_0}, s_{m_1}, s_{m_2}, \ldots)$ is a Cauchy
+sequence because
+ $$\| s_{m_i} - s_{m_j} \| \le \| s_{m_i} - v\| + \|
+v - s_{m_j} \| \le 2^{-i} + 2^{-j}$$
+ Hence the limit of this sequence must lie in the Hilbert space spanned by
+$\{s_0, s_1,  s_2, \ldots\}$, which is the same as the Hilbert space
+spanned by $\{e_0, e_1, e_2, \ldots\}$.  Thus, $\{e_0, e_1, e_2,
+\ldots\}$ is an orthonormal basis for $H$.
+
+To any $v \in H$ associate the sequence $U(v) = ( \langle v, s_0
+\rangle, \langle v, s_1 \rangle, \langle v, s_2 \rangle, \ldots )$.
+That this sequence lies in $\ell^2$ follows from the generalized Parseval equality
+ $$\|v\|^2 = \sum_{k=0}^\infty \langle v, s_k \rangle$$
+which also shows that $\|U(v)\|_{\ell^2} = \|v\|_H$.  On the other
+hand, let $(w_0, w_1, w_2, \ldots)$ be an element of $\ell^2$. Then,
+by definition, the sequence of partial sums $(w_0^2, w_0^2 + w_1^2,
+w_0^2 + w_1^2 + w_2^2, \ldots)$ is a Cauchy sequence.  Since
+ $$\| \sum_{i=0}^m w_i e_i - \sum_{i=0}^n w_i e_i \|^2 = \sum_{i=0}^m w_i^2 -
+ \sum_{i=0}^n w_i^2$$
+ if $m>n$, the sequence of partial sums of $\sum_{k=0}^\infty w_i e_i$
+is also a Cauchy sequence, so $\sum_{k=0}^\infty w_i e_i$ converges
+and its limit lies in $H$.  Hence the operator $U$ is invertible and
+is an isometry between $H$ and $\ell^2$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RieszSequence}
+\pmcreated{2013-03-22 14:26:53}
+\pmmodified{2013-03-22 14:26:53}
+\pmowner{swiftset}{1337}
+\pmmodifier{swiftset}{1337}
+\pmtitle{Riesz sequence}
+\pmrecord{7}{35963}
+\pmprivacy{1}
+\pmauthor{swiftset}{1337}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmrelated{OrthonormalBasis}
+\pmrelated{HilbertSpace}
+\pmrelated{Frame2}
+\pmrelated{AnEquivalentConditionForTheTranslatesOfAnL_2FunctionToFormARieszBasis}
+\pmdefines{Riesz basis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\paragraph{Definition}
+A sequence of vectors $(x_n)$ in a Hilbert space $H$ is called a Riesz sequence if there exist constants $0 < c \leq C$ such that 
+$$ c\left( \sum_n |a_n|^2 \right) \leq \left\| \sum_n a_n x_n \right\|^2 \leq C \left( \sum_n |a_n|^2 \right) $$
+for all sequences of scalars $(a_n) \in l^2$. A Riesz sequence is called a Riesz basis if $\overline{\mathop{\rm span} (x_n)} = H$.
+
+If $H$ is a finite-dimensional space, then every basis of $H$ is a Riesz basis.
+%%%%%
+%%%%%
+\end{document}

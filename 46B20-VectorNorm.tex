@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorNorm}
+\pmcreated{2013-03-22 11:43:00}
+\pmmodified{2013-03-22 11:43:00}
+\pmowner{mike}{2826}
+\pmmodifier{mike}{2826}
+\pmtitle{vector norm}
+\pmrecord{30}{30091}
+\pmprivacy{1}
+\pmauthor{mike}{2826}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B20}
+\pmclassification{msc}{18-01}
+\pmclassification{msc}{20H15}
+\pmclassification{msc}{20B30}
+\pmrelated{Vector}
+\pmrelated{Metric}
+\pmrelated{Norm}
+\pmrelated{VectorPnorm}
+\pmrelated{NormedVectorSpace}
+\pmrelated{MatrixNorm}
+\pmrelated{MatrixPnorm}
+\pmrelated{FrobeniusMatrixNorm}
+\pmrelated{CauchySchwarzInequality}
+\pmrelated{MetricSpace}
+\pmrelated{VectorSpace}
+\pmrelated{LpSpace}
+\pmrelated{OperatorNorm}
+\pmrelated{BoundedOperator}
+\pmrelated{SemiNorm}
+\pmrelated{BanachSpace}
+\pmrelated{HilbertSpace}
+\pmrelated{UnitVector}
+\pmdefines{normed vector space}
+\pmdefines{Euclidean norm}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+A vector norm on the real vector space $V$ is a function $f : V \to \mathbb{R}$ that satisfies the following properties:
+
+\begin{eqnarray*}
+    f(x) = 0 \iff x = 0 && \\
+    f(x) \ge 0          && x \in V \\
+    f(x+y) \leq f(x)+f(y) && x,y \in V \\
+    f(\alpha x) = |\alpha|f(x) && \alpha \in \mathbb{R},x\in V
+\end{eqnarray*}
+
+Such a function is denoted as $||\,x\,||$.  Particular norms are distinguished by subscripts, such
+as $||\,x\,||_V$, when referring to a norm in the space $V$.  A \emph{unit vector} with respect to the norm $||\,\cdot\,||$ is a vector $x$ satisfying
+$||\,x\,|| = 1$.\\
+
+A vector norm on a complex vector space is defined similarly.
+
+A common (and useful) example of a real norm is the Euclidean norm given by $||x||=(x_1^2 + x_2^2 +  \cdots + x_n^2)^{1/2}$ defined on $V=\mathbb{R}^n$.
+Note, however, that there exists vector spaces which are metric, but upon which it is not possible to define a norm. If it possible, the space is called a {\em normed vector space}. Given a metric on the vector space, a necessary and sufficient condition for this space to be a normed space, is
+\begin{eqnarray*}
+     d(x+a,y+a)=&d(x,y) & \forall x,y,a \in V\\
+     d(\alpha x,\alpha y)=&|\alpha|d(x,y) &\forall x,y \in V, \alpha \in \mathbb{R}\\
+\end{eqnarray*}
+But given a norm, a metric can always be defined by the equation $ d(x,y)=||x-y||$. Hence every normed space is a metric space.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

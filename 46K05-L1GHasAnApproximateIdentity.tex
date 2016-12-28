@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{L1GHasAnApproximateIdentity}
+\pmcreated{2013-03-22 17:42:40}
+\pmmodified{2013-03-22 17:42:40}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$L^1(G)$ has an approximate identity}
+\pmrecord{9}{40155}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46K05}
+\pmclassification{msc}{43A20}
+\pmclassification{msc}{22D05}
+\pmclassification{msc}{22A10}
+\pmdefines{$L^1(G)$ has an identity element iff $G$ is discrete}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $G$ be a locally compact topological group. In general, the Banach *-algebra $L^1(G)$ (\PMlinkname{parent entry}{L1GIsABanachAlgebra}) does not have an identity element. In fact:
+
+{\bf \PMlinkescapetext{Proposition} -} $L^1(G)$ has an identity element if and only if $G$ is discrete.
+
+When $G$ is discrete the identity element of $L^1(G)$ is just the Dirac delta, i.e. the function that takes the value $1$ on the identity element of $G$ and vanishes everywhere else.
+
+Nevertheless, $L^1(G)$ has always an approximate identity.
+
+{\bf Theorem -} $L^1(G)$ has an approximate identity $(e_{\lambda})_{\lambda \in \Lambda}$. Moreover the approximate identity $(e_{\lambda})_{\lambda \in \Lambda}$ can be chosen to \PMlinkescapetext{satisfy} the following \PMlinkescapetext{properties}:
+\begin{itemize}
+\item $e_{\lambda}$ is \PMlinkname{self-adjoint}{InvolutaryRing},
+\item $\|e_\lambda\|_1 = 1$,
+\item $e_{\lambda} \in C_c(G)$
+\end{itemize}
+where $C_c(G)$ stands for the space of continuous functions $G \longrightarrow \mathbb{C}$ with compact support.
+%%%%%
+%%%%%
+\end{document}

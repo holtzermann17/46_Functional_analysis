@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectSumOfHilbertSpaces}
+\pmcreated{2013-03-22 14:43:55}
+\pmmodified{2013-03-22 14:43:55}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{direct sum of Hilbert spaces}
+\pmrecord{10}{36363}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+\pmrelated{CategoryOfHilbertSpaces}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need 
+
+% define commands here
+
+\begin{document}
+Let $\{H_i\}_{i \in I}$ be a family of Hilbert spaces indexed by a set $I$.  The direct sum of this family of Hilbert spaces, denoted as
+ $$\bigoplus_{i \in I} H_i$$
+consists of all elements $v$ of the \PMlinkname{Cartesian product}{GeneralizedCartesianProduct} of $\{H_i\}_{i \in I}$ such that $\sum \| v_i\|^2 < \infty$. Of course, for the previous sum to be finite only at most a countable number of $v_i$ can be non-zero.
+
+Vector addition and scalar multiplication are defined termwise:  If $u, v \in \bigoplus_{i \in I} H_i$, then $(u+v)_i = u_i + v_i$ and $(sv)_i = s v_i$.
+
+ The inner product of two vectors is defined as
+ $$\langle u, v \rangle = \sum_{i \in I} \langle u_i, v_i \rangle$$
+
+
+Linked PDF file:
+
+http://images.planetmath.org/cache/objects/6363/pdf/DirectSumOfHilbertSpaces.pdf
+
+%%%%%
+%%%%%
+\end{document}

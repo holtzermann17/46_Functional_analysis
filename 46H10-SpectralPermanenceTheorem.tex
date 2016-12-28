@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpectralPermanenceTheorem}
+\pmcreated{2013-03-22 17:29:50}
+\pmmodified{2013-03-22 17:29:50}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{spectral permanence theorem}
+\pmrecord{5}{39885}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H10}
+\pmclassification{msc}{46H05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{A}$ be a unital complex Banach algebra and $\mathcal{B} \subseteq \mathcal{A}$ a Banach subalgebra that contains the identity of $\mathcal{A}$.
+
+For every element $x \in \mathcal{B}$ it makes sense to speak of the spectrum $\sigma_{\mathcal{B}}(x)$ of $x$ relative to  $\mathcal{B}$ as well as the spectrum $\sigma_{\mathcal{A}}(x)$ of $x$ relative to $\mathcal{A}$.
+
+We provide here three results of increasing sophistication which relate both these spectrums, $\sigma_{\mathcal{B}}(x)$ and $\sigma_{\mathcal{A}}(x)$. Any of the last two is usually refered to as the {\bf spectral permanence theorem}.
+
+{\bf \PMlinkescapetext{Proposition} -} Let $\mathcal{B} \subseteq \mathcal{A}$ be as above. For every element $x \in \mathcal{B}$ we have
+\begin{displaymath}
+\sigma_{\mathcal{A}}(x) \subseteq \sigma_{\mathcal{B}}(x).
+\end{displaymath}
+
+This first result is purely \PMlinkescapetext{algebraic}. It is a straightforward consequence of the fact that invertible elements in $\mathcal{B}$ are also invertible in $\mathcal{A}$.
+
+The other inclusion, $\sigma_{\mathcal{B}}(x) \subseteq \sigma_{\mathcal{A}}(x)$, is not necessarily true. It is true, however, if one considers the boundary $\partial \sigma_{\mathcal{B}}(x)$ instead.
+
+{\bf Theorem -} Let $\mathcal{B} \subseteq \mathcal{A}$ be as above. For every element $x \in \mathcal{B}$ we have
+\begin{displaymath}
+\partial \sigma_{\mathcal{B}}(x) \subseteq \sigma_{\mathcal{A}}(x).
+\end{displaymath}
+
+Since the spectrum is a non-empty compact set in $\mathbb{C}$, one can decompose $\mathbb{C} - \sigma_{\mathcal{A}}(x)$ into its connected components, obtaining an unbounded component $\Omega_{\infty}$ together with a sequence of bounded components $\Omega_1, \Omega_2, \dots$,
+\begin{displaymath}
+\mathbb{C}-\sigma_{\mathcal{A}}(x) = \Omega_{\infty} \cup \Omega_{1} \cup \Omega_{2} \cup \cdots
+\end{displaymath}
+Of course there may be only a finite number of bounded components or \PMlinkescapetext{even} none.
+
+{\bf Theorem -} Let $ x \in \mathcal{B} \subseteq \mathcal{A}$ be as above. Then $\sigma_{\mathcal{B}}(x)$ is obtained from $\sigma_{\mathcal{A}}(x)$ by adjoining to it some (possibly none) bounded components of $\mathbb{C}-\sigma_{\mathcal{A}}(x)$.
+
+As an example, if $\sigma_{\mathcal{A}}(x)$ is the unit circle, then $\sigma_{\mathcal{B}}(x)$ can only possibly be the unit circle or the closed unit disk.
+%%%%%
+%%%%%
+\end{document}

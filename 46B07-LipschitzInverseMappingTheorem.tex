@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LipschitzInverseMappingTheorem}
+\pmcreated{2013-03-22 14:25:13}
+\pmmodified{2013-03-22 14:25:13}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Lipschitz inverse mapping theorem}
+\pmrecord{7}{35927}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B07}
+\pmclassification{msc}{47J07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\lip}{\operatorname{Lip}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $(E,\|\cdot\|)$ be a Banach space and let $A\colon E\to E$ be a
+bounded linear isomorphism with
+bounded inverse (i.e. a topological linear automorphism);
+let $B(r)$ be the ball with center 0
+and radius $r$ (we allow $r=\infty$). Then for any Lipschitz map
+$\phi\colon B(r)\to E$
+such that $\lip \phi < \|A^{-1}\|^{-1}$ and $\phi(0)=0$, there are open sets
+$U\subset E$ and $V\subset B(r)$ and a map $T \colon U\to V$ such that $T(A+\phi) = I|_V$ and $(A+\phi)T = I|_U$.
+In other words, there is a local inverse of $A+\phi$ near zero. Furthermore, the inverse $T$ is Lipschitz with $\lip T \leq (\|A\|+\lip \phi)^{-1}$ and
+$$B\left(r(\|A^{-1}\|^{-1} - \lip \phi)\right)\subset U.$$
+
+\emph{Remark.} The inclusion above implies that $A+\phi\colon E\to E$ is invertible if $r=\infty$.
+
+\emph{Remark.} $\lip \phi$ denotes the smallest Lipschitz constant of $\phi$.
+%%%%%
+%%%%%
+\end{document}

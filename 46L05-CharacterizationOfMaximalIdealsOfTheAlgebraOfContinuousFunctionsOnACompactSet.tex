@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfMaximalIdealsOfTheAlgebraOfContinuousFunctionsOnACompactSet}
+\pmcreated{2013-03-22 17:45:08}
+\pmmodified{2013-03-22 17:45:08}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{characterization of maximal ideals of the algebra of continuous functions on a compact set}
+\pmrecord{9}{40203}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{46J20}
+\pmclassification{msc}{46J10}
+\pmclassification{msc}{16W80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+Let $X$ be a compact topological space and let $C(X)$ be the algebra of continuous
+real-valued functions on this space.  In this entry, we shall examine the maximal
+ideals of this algebra.
+
+\begin{thm}  Let $X$ be a compact topological space and $I$ be an ideal of $C(X)$.
+Then either $I = C(x)$ or there exists a point $p \in X$ such that $f(p) = 0$ for
+all $f \in I$.
+\end{thm}
+
+\begin{proof}
+Assume that, for every point $p \in X$, there exists a continuous function $f \in I$ 
+such that $f(p) \not= 0$.  Then, by continuity, there must exist an
+open set $U$ containing $p$ so that $f(q) \not= 0$ for all $q \in U$.  Thus, we may
+assign to each point $p \in X$ a continuous function $f \in I$ and
+an open set $U$ of $X$ such that $f(q) \neq 0$ for all $q \in U$.  Since this 
+collection of open sets covers $X$, which is compact, there must exists a finite
+subcover which also covers $X$.  Call this subcover $U_1, \ldots, U_n$ and the
+corresponding functions $f_1, \ldots f_n$.  Consider the function $g$ defined as
+$g(x) = (f_1(x))^2 + \cdots + (f_n(x))^2$.  Since $I$ is an ideal, $g \in I$.  For every
+point $p \in X$, there exists an integer $i$ between $1$ and $n$ such that $f_i (p) 
+\not= 0$.  This implies that $g(p) \neq 0$.  Since $g$ is a continuous function on
+a compact set, it must attain a minimum.  By construction of $g$, the value of $g$
+at its minimum cannot be negative; by what we just showed, it cannot equal zero either.
+Hence being bounded from below by a positive number, $g$ has a continuous inverse.  
+But, if an ideal contains an invertible element, it must be the whole algebra.  Hence,
+we conclude that either there exists a point $p \in x$ such that $f(p) = 0$ for all 
+$f \in I$ or $I = C(x)$.
+\end{proof}
+
+\begin{thm}
+Let $X$ be a compact Hausdorff topological space.  Then an ideal is maximal if
+and only if it is the ideal of all points which go zero at a given point.
+\end{thm}
+
+\begin{proof}
+By the previous theorem, every non-trivial ideal must be a subset of an ideal of
+functions which vanish at a given point.  Hence, it only remains to prove that
+ideals of functions vanishing at a point is maxiamal.
+
+Let $p$ be a point of $X$.  Assume that the ideal of functions vanishing at $p$
+is properly contained in ideal $I$.  Then there must exist a function $f \in I$
+such that $f (p) \neq 0$ (otherwise, the inclusion would not be proper).  Since
+$f$ is continuous, there will exist an open neighborhood $U$ of $p$ such that
+$f(x) \neq 0$ when $x \in U$.  By Urysohn's theorem, there exists a continuous 
+function $h \colon X \to \mathbb{R}$ such that $f(p) = 0$ and $f(x) = 0$ for
+all $x \in X \setminus U$.  Since $I$ was assumed to contain all functions vanishing 
+at $p$, we must have $f \in I$.  Hence, the function $g$ defined by $g(x) = 
+(f(x))^2 + (h(x))^2$ must also lie in $I$.  By construction, $g(g) > 0$
+when $x \in U$ and when $g(x) \in X \setminus U$.  Because $X$ is compact,
+$g$ must attain a minimum somewhere, hence is bounded from below by a
+positive number.  Thus $g$ has a continuous inverse, so $I = C(X)$, hence the
+ideal of functions vanishing at $p$ is maximal.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

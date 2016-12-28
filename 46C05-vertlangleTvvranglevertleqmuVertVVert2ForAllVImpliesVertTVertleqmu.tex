@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{vertlangleTvvranglevertleqmuVertVVert2ForAllVImpliesVertTVertleqmu}
+\pmcreated{2013-03-22 15:25:33}
+\pmmodified{2013-03-22 15:25:33}
+\pmowner{Gorkem}{3644}
+\pmmodifier{Gorkem}{3644}
+\pmtitle{$\vert\langle Tv,v \rangle\vert \leq {\mu} \Vert v \Vert ^2$ for all $v$ implies $\Vert T \Vert \leq {\mu}$}
+\pmrecord{16}{37271}
+\pmprivacy{1}
+\pmauthor{Gorkem}{3644}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem*{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+Let $H$ be a unitary space, $T$ be a self-adjoint
+linear operator and $\mu\geq 0$.  If $\vert\ip{Tv}{v}\vert\leq \mu
+\|v\|^2$ for all $v\in H$ then $T$ is a bounded operator and
+$\|T\|\leq \mu$.
+\end{theorem}
+
+
+
+\begin{proof}
+ We will show that $\norm{Tv}\leq \mu\norm{v}$ for all $v\in H$.
+This is trivial if $\norm{Tv}$ or $\norm{v}$ is zero, so assume
+they are not. Let $\lambda$ be any positive number.
+\begin{align*}
+\norm{Tv}^2 & = \ip{Tv}{Tv}\\
+&=\frac{1}{4}\left[ \ip{T\left(\lambda v +
+\frac{1}{\lambda}Tv\right)}{\left(\lambda v +
+\frac{1}{\lambda}Tv\right)} - \ip{T\left(\lambda v -
+\frac{1}{\lambda}Tv\right)}{\left(\lambda v
+-\frac{1}{\lambda}Tv\right)}\right]\\
+&\leq \frac{\mu}{4}\left[\norm{\lambda v + \frac{1}{\lambda}Tv}^2
++\norm{\lambda v - \frac{1}{\lambda}Tv}^2 \right]\\
+&\leq\frac{\mu}{2}\left[\lambda^2\norm{v}^2 +
+\frac{1}{\lambda^2}\norm{Tv}^2 \right]
+\end{align*}
+Now if we put $\displaystyle \lambda^2 =
+\frac{\norm{Tv}}{\norm{v}}$ we get $\norm{Tv}^2 \leq
+\mu\norm{Tv}\norm{v}$ hence $\norm{Tv}\leq \mu \norm{v}$.
+\end{proof}
+
+\textbf{ Reference:}
+
+F. Riesz  and B. Sz-Nagy, \emph{Functional Analysis}, F. Ungar
+Publishing, 1955, chap VI.
+%%%%%
+%%%%%
+\end{document}

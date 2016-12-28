@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{L1GIsABanachalgebra}
+\pmcreated{2013-03-22 17:42:14}
+\pmmodified{2013-03-22 17:42:14}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$L^1(G)$ is a Banach *-algebra}
+\pmrecord{15}{40146}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46K05}
+\pmclassification{msc}{46H05}
+\pmclassification{msc}{44A35}
+\pmclassification{msc}{43A20}
+\pmclassification{msc}{22D05}
+\pmclassification{msc}{22A10}
+\pmrelated{DualGroupOfGIsHomeomorphicToTheCharacterSpaceOfL1G}
+\pmrelated{ConvolutionsOfComplexFunctionsOnLocallyCompactGroups}
+\pmdefines{$L^1(\mathbb{R})$ is a Banach *-algebra}
+\pmdefines{group algebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{involution}
+
+\subsection{The Banach *-algebra $L^1(\mathbb{R})$.}
+
+Consider the Banach space \PMlinkname{$L^1(\mathbb{R})$}{LpSpace}, i.e. the space of Borel measurable functions $f:\mathbb{R} \longrightarrow \mathbb{C}$ such that
+\begin{displaymath}
+\|f\|_1 := \int_{\mathbb{R}} |f(x)|\; dx < \infty
+\end{displaymath}
+identified up to equivalence almost everywhere.
+
+The convolution product of functions $f, g \in L^1(\mathbb{R})$, given by
+\begin{displaymath}
+(f * g)(z) = \int_{\mathbb{R}} f(x)g(z-x)dx ,
+\end{displaymath}
+is a well-defined product in $L^1(\mathbb{R})$, i.e. $f*g \in L^1(\mathbb{R})$, that satisfies the inequality
+\begin{displaymath}
+\|f*g\|_1 \leq \|f\|_1\|g\|_1\;.
+\end{displaymath}
+Therefore, with the convolution product, $L^1(\mathbb{R})$ is a Banach algebra.
+
+Moreover, we can define an \PMlinkname{involution}{InvolutaryRing} in $L^1(\mathbb{R})$ by $f^*(x)=\overline{f(-x)}$. With this involution $L^1(\mathbb{R})$ is Banach *-algebra.
+
+\subsection{Generalization to $L^1(G)$.}
+Let $G$ be a locally compact topological group and $\mu$ its left Haar measure. Consider the space \PMlinkname{$L^1(G)$}{LpSpace} consisting of measurable functions $f:G \longrightarrow \mathbb{C}$ such that
+\begin{displaymath}
+\|f\|_1 := \int_G |f|\; d\mu < \infty
+\end{displaymath}
+identified up to equivalence almost everywhere.
+
+The convolution product of functions $f, g \in L^1(G)$, given by
+\begin{displaymath}
+(f * g)(s) = \int_G f(t)g(t^{-1}s)\;d\mu(t) ,
+\end{displaymath}
+is a well-defined product in $L^1(G)$, i.e. $f*g \in L^1(G)$, that satisfies the inequality
+\begin{displaymath}
+\|f*g\|_1 \leq \|f\|_1\|g\|_1\;.
+\end{displaymath}
+Therefore, with this convolution product, $L^1(G)$ is a Banach algebra.
+
+An involution can also be defined in $L^1(G)$ by $f^*(s) = \Delta_G(s^{-1})\overline{f(s^{-1})}$, where $\Delta_G$ is the modular function of $G$.
+
+With this product and involution $L^1(G)$ is a Banach *-algebra.
+
+\subsection{Commutative case: the group algebra.}
+
+The algebras $L^1(G)$ are commutative if and only if the group $G$ is commutative.
+
+Commutative groups are of course \PMlinkname{unimodular}{UnimodularGroup2}, hence $\Delta_G (s) = 1$ for all $s \in G$.
+
+So in the commutative case the convolution product and involution are given, respectively, by
+\begin{eqnarray*}
+(f * g)(s) & = & \int_G f(t)g(s-t)\;d\mu(t)\\
+f^*(s) & = & \overline{f(-s)}
+\end{eqnarray*}
+and $L^1(G)$ is called the \emph{group algebra} of $G$.
+
+For finite groups, the group algebra defined as above coincides with the \PMlinkname{group algebra $\mathbb{C}(G)$}{GroupRing}.
+
+\subsection{An equivalent construction}
+In the construction of $L^1(G)$ presented above we are considering equivalence classes of measurable functions on $G$ with respect to the Haar measure. To avoid this kind of measure theoretic considerations it is sometimes better to work with another (\PMlinkescapetext{equivalent}) definition of $L^1(G)$:
+
+Let $C_c(G)$ be the space of continuous functions $G \longrightarrow \mathbb{C}$ with compact support. We can endow this space with a convolution product, an involution and a norm by setting
+\begin{eqnarray*}
+(f * g)(s) & = & \int_G f(t)g(t^{-1}s)\;d\mu(t)\\
+f^*(s) & = & \Delta_G(s^{-1})\overline{f(s^{-1})}\\
+\|f\|_1 & = & \int_G |f|\; d\mu
+\end{eqnarray*}
+With this operations and norm, $C_c(G)$ has a normed *-algebra \PMlinkescapetext{structure} and $L^1(G)$ can be defined as its completion.
+%%%%%
+%%%%%
+\end{document}

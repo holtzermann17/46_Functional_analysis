@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientsOfBanachAlgebras}
+\pmcreated{2013-03-22 17:41:54}
+\pmmodified{2013-03-22 17:41:54}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{quotients of Banach algebras}
+\pmrecord{6}{40140}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H10}
+\pmclassification{msc}{46H05}
+\pmclassification{msc}{46B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $\mathcal{A}$ be a Banach algebra and $\mathcal{I} \subseteq \mathcal{A}$ a \PMlinkname{closed}{ClosedSet} ideal. Then $\mathcal{A}/\mathcal{I}$ is Banach algebra under the quotient norm.
+
+$\;$
+
+{\bf Proof:} Denote the quotient norm by $\|\cdot\|_q$.
+
+By the \PMlinkname{parent entry}{QuotientsOfBanachSpacesByClosedSubspacesAreBanachSpacesUnderTheQuotientNorm} we know that $\mathcal{A}/\mathcal{I}$ is a Banach space under the quotient norm. Thus, we only need to show the normed algebra inequality:
+\begin{displaymath}
+\|ab+\mathcal{I}\|_q \leq \|a+\mathcal{I}\|_q \|b+\mathcal{I}\|_q
+\end{displaymath}
+for every $a, b \in \mathcal{A}$.
+
+Using the fact that $\mathcal{A}$ is a Banach algebra and the definition of quotient norm we have that:
+\begin{eqnarray*}
+\|ab+\mathcal{I}\|_q & = & \inf_{z \,\in\, ab + \mathcal{I}} \|z\| = \inf_{u \,\in\, a + \mathcal{I}\atop v \,\in\, b + \mathcal{I}} \|uv\| \\
+& \leq & \inf_{u \,\in\, a + \mathcal{I}\atop v \,\in\, b + \mathcal{I}} \|u\|\|v\| \leq \inf_{u \,\in\, a + \mathcal{I}}\|u\| \inf_{v \,\in\, b + \mathcal{I}}\|v\| \\
+& = & \|a+ \mathcal{I}\|_q \|b+ \mathcal{I}\|_q
+\end{eqnarray*}
+
+$\square$
+%%%%%
+%%%%%
+\end{document}

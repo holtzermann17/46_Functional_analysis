@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpaceOfRapidlyDecreasingFunctions}
+\pmcreated{2013-03-22 13:44:50}
+\pmmodified{2013-03-22 13:44:50}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{space of rapidly decreasing functions}
+\pmrecord{8}{34444}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46F05}
+\pmsynonym{Schwartz space}{SpaceOfRapidlyDecreasingFunctions}
+\pmrelated{DiscreteTimeFourierTransformInRelationWithItsContinousTimeFourierTransfrom}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\newcommand{\cD}[0]{\mathcal{D}}
+ \newcommand{\scomp}[0]{C^\infty_0}
+ \newcommand{\cS}[0]{\mathcal{S}}
+
+The function space of rapidly decreasing functions $\cS$ has the
+important property that the Fourier transform is an endomorphism
+on this space. This property enables one, by duality, to 
+define the Fourier transform
+for elements in the dual space of $\cS$, that is, for tempered 
+distributions. 
+
+{\bf Definition}  
+The \emph{space of rapidly decreasing functions} on $\sR^n$
+is the function space
+\begin{eqnarray*}
+\cS(\sR^n)=\{ f \in C^\infty(\sR^n) \mid \sup_{x\in \sR^n} \mid \, ||f||_{\alpha,\beta} <
+ \infty\, \mbox{for all multi-indices}  \, \alpha, \beta \},
+\end{eqnarray*}
+where $C^\infty(\sR^n)$ is the set of smooth functions 
+from $\sR^n$ to $\sC$, and 
+$$||f||_{\alpha,\beta}=||x^\alpha D^\beta f||_\infty.$$
+Here, $||\cdot||_\infty$ is the supremum norm, and we use 
+multi-index notation.
+When the dimension $n$ is clear, it is convenient to write 
+$\cS=\cS(\sR^n)$. The space $\cS$ is also called the 
+\emph{Schwartz space}, after Laurent Schwartz
+(1915-2002) \cite{schwartz_bib}.
+
+
+\subsubsection{Examples of functions in $\cS$} 
+\begin{enumerate}
+\item If $i$ is a multi-index, and $a$ is a positive
+real number, then
+$$ x^i \exp\{-a x^2\} \in \cS.$$
+\item Any smooth function with compact support $f$ is in $\cS$.
+This is clear since any derivative of $f$ is continuous, so
+$x^\alpha D^\beta f$ has a maximum in $\sR^n$. 
+\end{enumerate}
+
+\subsubsection{Properties}
+\begin{enumerate}
+\item 
+$\cS$ is a complex vector space. In other words, 
+$\cS$ is closed under point-wise addition and under 
+multiplication by a complex scalar. 
+\item Using Leibniz' rule, it follows that $\cS$ is also closed
+under point-wise multiplication; if $f,g\in \cS$, then
+$fg: x\mapsto f(x)g(x)$ is also in $\cS$.
+\item For any $1\le p\le \infty$, we have \cite{reed}
+$$ \cS\subset L^p,$$
+and if $p<\infty$, then $\cS$ is also dense in $L^p$. 
+\item The Fourier transform is a linear isomorphism $\cS\to\cS$. 
+\end{enumerate}
+
+
+\begin{thebibliography}{9}
+ \bibitem{hormander}
+ L. H\"ormander, \emph{The Analysis of Linear Partial Differential Operators I,
+ (Distribution theory and Fourier Analysis)}, 2nd ed, Springer-Verlag, 1990.
+ \bibitem{schwartz_bib} 
+ The MacTutor History of Mathematics archive,
+ \PMlinkexternal{Laurent Schwartz}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Schwartz.html}
+\bibitem{reed} M. Reed, B. Simon,
+  \emph{Methods of Modern Mathematical Physics: Functional Analysis I},
+Revised and enlarged edition,  Academic Press, 1980.
+\bibitem{wikiTemp} Wikipedia, 
+ \PMlinkexternal{Tempered distributions}{http://en.wikipedia.org/wiki/Tempered_distribution}
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

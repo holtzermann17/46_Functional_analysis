@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosureOfAVectorSubspaceIsAVectorSubspace}
+\pmcreated{2013-03-22 15:00:19}
+\pmmodified{2013-03-22 15:00:19}
+\pmowner{loner}{106}
+\pmmodifier{loner}{106}
+\pmtitle{closure of a vector subspace is a vector subspace}
+\pmrecord{8}{36710}
+\pmprivacy{1}
+\pmauthor{loner}{106}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{54A05}
+\pmrelated{ClosureOfAVectorSubspaceIsAVectorSubspace}
+\pmrelated{ClosureOfSetsClosedUnderAFinitaryOperation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm} In a topological vector space 
+the \PMlinkname{closure}{Closure} of a vector subspace is a vector subspace. 
+\end{thm}
+
+\begin{proof}
+Let $X$ be the topological vector space over $\mathbbmss{F}$ where 
+$\mathbbmss{F}$ is either $\R$ or $\C$, let $V$ be a vector subspace
+in $X$, and let $\overline{V}$ be the closure of $V$. 
+To prove that $\overline{V}$
+is a vector subspace of $X$, it suffices
+to prove that $\overline{V}$ is non-empty, and
+$$
+   \lambda x + \mu y \in \overline{V}
+$$
+whenever $\lambda,\mu \in \mathbbmss{F}$ and $x,y\in \overline{V}$. 
+
+First, as $V\subseteq \overline{V}$, $\overline{V}$ contains the zero vector,
+and $\overline{V}$ is non-empty. 
+Suppose $\lambda,\mu,x,y$ are as above. 
+Then there are nets $(x_i)_{i \in I}$, $(y_j)_{j \in J}$ in $V$ converging to 
+$x,y$, respectively. 
+In a topological vector space, addition and multiplication are continuous
+operations. It follows that there is a net $(\lambda x_k + \mu y_k)_{k \in K}$ that converges to $\lambda x + \mu y$.
+
+We have proven that $\lambda x + \mu y \in \overline{V}$, so 
+$\overline{V}$ is a vector subspace.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

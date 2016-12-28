@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GelfandMazurTheorem}
+\pmcreated{2013-03-22 17:29:03}
+\pmmodified{2013-03-22 17:29:03}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{Gelfand-Mazur theorem}
+\pmrecord{7}{39871}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $\mathcal{A}$ be a unital Banach algebra over $\mathbb{C}$ that is also a division algebra (i.e. every non-zero element is invertible). Then $\mathcal{A}$ is isometrically isomorphic to $\mathbb{C}$.
+
+{\bf Proof :} Let $e$ denote the unit of $\mathcal{A}$.
+
+Let $x \in \mathcal{A}$ and $\sigma(x)$ be its spectrum. It is known that the \PMlinkname{spectrum is a non-empty set}{SpectrumIsANonEmptyCompactSet} in $\mathbb{C}$.
+
+Let $\lambda \in \sigma(x)$. Since $x-\lambda e$ is not invertible and $\mathcal{A}$ is a division algebra, we must have $x-\lambda e = 0$ and so $x=\lambda e$
+
+Let $\phi : \mathbb{C} \longrightarrow \mathcal{A}$ be defined by $\phi(\lambda)=\lambda e$.
+
+It is clear that $\phi$ is an injective algebra homomorphism.
+
+By the above discussion, $\phi$ is also surjective.
+
+It is isometric because $\|\lambda e\| = |\lambda| \|e\| = |\lambda|$
+
+Therefore, $\mathcal{A}$ is isometrically isomorphic to $\mathbb{C}$. $\square$
+%%%%%
+%%%%%
+\end{document}

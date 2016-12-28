@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLpnormIsDualToLq}
+\pmcreated{2013-03-22 18:38:16}
+\pmmodified{2013-03-22 18:38:16}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of $L^p$-norm is dual to $L^q$}
+\pmrecord{4}{41378}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E30}
+\pmclassification{msc}{28A25}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+Let $(X,\mathfrak{M},\mu)$ be a $\sigma$-finite measure space and $p,q$ be H\"older conjugates. Then, we show that a measurable function $f\colon X\rightarrow\mathbb{R}$ has $L^p$-norm
+\begin{equation}\label{eq:1}
+\Vert f\Vert_p=\sup\left\{\Vert fg\Vert_1: g\in L^q, \Vert g\Vert_q=1\right\}.
+\end{equation}
+Furthermore, if either $p<\infty$ and $\Vert f\Vert_p<\infty$ or $p=1$ then $\mu$ is not required to be $\sigma$-finite.
+
+If $\Vert f\Vert_p=0$ then $f$ is zero almost everywhere, and both sides of equality (\ref{eq:1}) are zero. So, we only need to consider the case where $\Vert f\Vert_p>0$.
+
+Let $K$ be the right hand side of equality (\ref{eq:1}).
+For any $g\in L^q$ with $\Vert g \Vert_q=1$, the H\"older inequality gives $\Vert fg\Vert_1\le \Vert f\Vert_p$, so $K\le\Vert f\Vert_p$. Only the reverse inequality remains to be shown.
+
+If $1<p<\infty$ and $\Vert f\Vert_p<\infty$ then, setting $g=|f|^{p-1}$ gives
+\begin{equation*}
+\Vert g\Vert_q=\left(\int |f|^p\,d\mu\right)^{\frac{1}{q}}=\Vert f\Vert_p^{p-1}<\infty.
+\end{equation*}
+Therefore, $g\in L^q$ and,
+\begin{equation*}
+K\ge \Vert f (g/\Vert g\Vert_q)\Vert_1
+=\Vert |f|^p\Vert_1/\Vert g\Vert_q=\Vert f\Vert_p^p/\Vert f\Vert_p^{p-1}=\Vert f\Vert_p.
+\end{equation*}
+On the other hand, if $p=1$ so that $q=\infty$, then setting $g=1$ gives $\Vert g\Vert_q=1$ and
+\begin{equation*}
+K\ge\Vert fg\Vert_1=\Vert f\Vert_1.
+\end{equation*}
+
+So, we have shown that $K=\Vert f\Vert_p$ when $p<\infty$ and $\Vert f\Vert_p<\infty$, and when $p=1$. From now on, it is assumed that the measure is $\sigma$-finite. Then there is a sequence $A_n\in\mathfrak{M}$ increasing to the whole of $X$ and such that $\mu(A_n)<\infty$.
+
+Now consider the case where $1<p<\infty$ and $\Vert f\Vert_p=\infty$. Let $f_n$ be the sequence of functions \begin{equation*}
+f_n=1_{A_n}1_{|f|\le n}f
+\end{equation*}
+then, $|f_n|\le |f|$ and monotone convergence gives $\Vert f_n\Vert_p\rightarrow \Vert f \Vert_p=\infty$. Therefore,
+\begin{equation*}
+K\ge\sup\left\{\Vert f_n g\Vert_1:g\in L^q, \Vert g\Vert_q=1\right\}=\Vert f_n\Vert_p.
+\end{equation*}
+and letting $n$ go to infinity gives $K=\infty$.
+
+We finally consider $p=\infty$. Then, for any $L<\Vert f\Vert_p$ there exists a set $A\in\mathfrak{M}$ with $\mu(A)>0$ such that $|f|\ge L$ on $A$.
+Also, monotone convergence gives $\mu(A\cap A_n)\rightarrow\mu(A)$ and, therefore, $\mu(A\cap A_n)>0$ eventually. Replacing $A$ by $A\cap A_n$ if necessary, we may suppose that $\mu(A)<\infty$. So, setting $g=1_A/\mu(A)$ gives $\Vert g\Vert_1=1$ and,
+\begin{equation*}
+K\ge\Vert fg\Vert_1=\int_A |f|\,d\mu / \mu(A)\ge L.
+\end{equation*}
+Letting $L$ increase to $\Vert f\Vert_p$ gives $K\ge \Vert f\Vert_p$ as required.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfStoneWeierstrassTheorem}
+\pmcreated{2013-03-22 14:35:01}
+\pmmodified{2013-03-22 14:35:01}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Stone-Weierstrass theorem}
+\pmrecord{18}{36146}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\bar{\mathcal{A}}$ denote the closure of $\mathcal{A}$ in $C^0 (X, \mathbb{R})$ according to the uniform convergence topology.  We want to show that, if conditions 1 and 2 are satisfied, then  $\bar{\mathcal{A}} = C^0 (X, \mathbb{R})$.
+
+First, we shall show that, if $f \in \bar{\mathcal{A}}$, then $|f| \in \bar{\mathcal{A}}$.  Since $f$ is a continuous function on a compact space $f$ must be bounded -- there exists constants $a$ and $b$ such that $a \le f \le b$.  By the Weierstrass approximation theorem, for every $\epsilon > 0$, there exists a polynomial such that $|P(x) - |x|| < \epsilon$ when $x \in [a,b]$.  (By the way, one does not need the full-blown Weierstrass approximation theorem to show that $P$ exists -- see the entry ``proof of Weierstrass approximation theorem'' for an elementary construction of $P$)  Define $g: X \to \mathbb{R}$ by $g(x) = P(f(x))$.  Since $\bar{\mathcal{A}}$ is an algebra, $g \in \bar{\mathcal{A}}$.  For all $x \in X$, $|g(x) - |f(x)|| < \epsilon$.  Since $\bar{\mathcal{A}}$ is closed under the uniform convergence topology, this implies that $|f| \in \bar{\mathcal{A}}$.
+
+A corollary of the fact just proven is that if $f,g \in \bar{\mathcal{A}}$, then $\max (f,g) \in \bar{\mathcal{A}}$ and $\min (f,g) \in \bar{\mathcal{A}}$.   The reason for this is that one can write
+ $$\max (a,b) = {1 \over 2} \left( a+b + |a-b| \right)$$
+ $$\min (a,b) = {1 \over 2} \left( a+b - |a-b| \right)$$
+
+Second, we shall show that, for every $f \in C^0 (X, \mathbb{R})$, every $x \in X$, and every $\epsilon > 0$, there exists $g_x \in \bar{\mathcal{A}}$ such that $g_x \le f + \epsilon$ and $g_x > f$.  By condition 1, if $y \neq x$, there exists a function ${\tilde h}_{xy} \in \mathcal{A}$ such that ${\tilde h}_{xy} (x) \ne {\tilde h}_{xy} (y)$.  Define
+$h_{xy}$ by $h_{xy} (z) = p {\tilde h}_{xy} (z) + q$, where the constants $p$ and $q$ have been chosen so that
+ $$h_{xy} (x) = f(x) + \frac{\epsilon}{2}$$
+ $$h_{xy} (y) = f(y) - \frac{\epsilon}{2}$$
+By condition 2, $h_{xy} \in \mathcal{A}$.  (Note: This is the only place in the proof where condition 2 is used, but it is crucial since, otherwise, it might not be possible to construct a function which takes arbitrary preassigned values at two distinct points of $X$.  The necessity of condition 2 can be shown by a simple example:  Suppose that $\mathcal{A}$ is the algebra of all continuous functions on $f$ which vanish at a point $O \in X$.  It is easy to see that this algebra satisfies all the hypotheses of the theorem except condition 2 and the conclusion of the theorem 
+does not hold in this case.)
+
+For every $y \ne x$, define the set $U_{xy}$ as
+ $$U_{xy} = \{ z \in X \mid h_{xy} (z) < f(z) + \epsilon \}$$
+Since $f$ and $h_{xy}$ are continuous, $U_{xy}$ is an open set.  Because $x \in U_{xy}$ and $y \in U_{xy}$, $\left\{ U_{xy} \mid y \in X \setminus \{x\} \right\}$ is an open cover of $X$.  By the definition of a compact space, there must exist a finite subcover.  In other words, there exists a finite subset $\{y_1, y_2, \ldots, y_n \} \subset X$ such that $X = \bigcup_{m=0}^n U_{xy_m}$.  Define $$g_x = \min (h_{xy_1}, h_{xy_2}, \ldots, h_{xy_n}).$$  By the corollary of the first part of the proof, $g_x \in \bar{\mathcal{A}}$.  By construction, $g_x(x) = f(x) + \epsilon / 2$ and $g_x < f + \epsilon$.
+
+Third, we shall show that, for every $f \in C^0 (X, \mathbb{R})$ and every $\epsilon > 0$, there exists a function $g \in \bar{\mathcal{A}}$ such that $f \le g < f + \epsilon$.  This will complete the proof becauase it implies that $\bar{\mathcal{A}} = C^0 (X, \mathbb{R})$.  For every $x \in X$, define the set $V_x$ as
+ $$V_x = \{ z \in X \mid g_{x} (z) > f(x) \}$$
+where $g_x$ is defined as before.  Since $f$ and $g_x$ are continuous, $V_x$ is an open set.  Because $g_x(x)=f(x)+ \epsilon /2 > f(x)$, $x \in V_x$.  Hence $\left\{ V_x \mid x \right\}$ is an open cover of $X$.  By the definition of a compact space, there must exist a finite subcover.  In other words, there exists a finite subset $\{x_1, x_2, \ldots x_n \} \subset X$ such that $X = \bigcup_{m=0}^n V_{x_n}$.  Define $g$ as
+ $$g (z) = \max \{ g_{x_1} (z), g_{x_2} (z), \ldots, g_{x_n} (z) \}$$
+By the corollary of the first part of the proof, $g \in \bar{\mathcal{A}}$.  By construction, $g > f$.  Since $g_x < f + \epsilon$ for every $x \in X$, $g < f + \epsilon$.
+%%%%%
+%%%%%
+\end{document}

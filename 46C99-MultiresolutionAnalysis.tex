@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiresolutionAnalysis}
+\pmcreated{2013-03-22 14:26:48}
+\pmmodified{2013-03-22 14:26:48}
+\pmowner{swiftset}{1337}
+\pmmodifier{swiftset}{1337}
+\pmtitle{multiresolution analysis}
+\pmrecord{5}{35961}
+\pmprivacy{1}
+\pmauthor{swiftset}{1337}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46C99}
+\pmsynonym{level of detail}{MultiresolutionAnalysis}
+\pmrelated{Wavelet}
+\pmdefines{scaling function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{function}
+\PMlinkescapeword{density}
+\PMlinkescapeword{separation}
+
+\paragraph{Definition} 
+A \emph{multiresolution analysis} is a sequence $(V_j)_{j\in \mathbb Z}$ of subspaces of $L_2({\mathbb R})$ such that
+\begin{enumerate}
+\item (nesting) $ \ldots \subset V_{-1} \subset V_0 \subset V_1 \subset \ldots $
+\item (density) $\overline{\mathop{\rm span} \bigcup_{j \in \mathbb Z} V_j } = L_2({\mathbb R}) $ 
+\item (separation) $ \bigcap_{j \in \mathbb Z} V_j = \{0\}$
+\item (scaling) $f(x) \in V_j$ if and only if $f(2^{-j} x) \in V_0$
+\item (orthonormal basis) there exists a function $\Phi \in V_0$, called a \emph{scaling function}, such that the system $\{ \Phi(t -m) \}_{m \in \mathbb Z} \}$ is an orthonormal basis in $V_0.$
+\end{enumerate}
+
+\paragraph{Notes}
+Multiresolution analysis, particularly scaling functions, are used to derive wavelets. The $V_j$ are called approximation spaces. Several choices of scaling functions may exist for a given set of approximation spaces--- each determines a unique multiresolution analysis.
+%%%%%
+%%%%%
+\end{document}

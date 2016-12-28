@@ -1,0 +1,264 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedOperator}
+\pmcreated{2013-03-22 14:02:17}
+\pmmodified{2013-03-22 14:02:17}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{bounded operator}
+\pmrecord{19}{35226}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+\pmrelated{VectorNorm}
+
+%fancy typeface/symbols
+%\usepackage{beton}
+%\usepackage{concmath}
+%\usepackage{stmaryrd}
+%margins
+%\usepackage{simplemargins}
+%\usepackage{multicol}
+%\setleftmargin{1in}
+%\setrightmargin{1in}
+%\settopmargin{1in}
+%\setbottommargin{1in}
+% symbols
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[mathscr]{euscript}
+\usepackage[T1]{fontenc}
+% graphics
+%\usepackage{pstricks}
+% math
+\usepackage{amsmath}
+\usepackage{amsopn}
+\usepackage{amstext}
+\usepackage{amsthm}
+% only one theoremstyle 
+%\theoremstyle{definition}   		
+%\newtheorem{exercise}{}[subsection]
+% math operators
+\DeclareMathOperator{\pipe}{{\big |} \hspace{-2.85pt} {\big |}} 
+\DeclareMathOperator{\et}{\&}
+% misc math stuff
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\domain}{\mathrm{domain}}
+\newcommand{\supp}{\mathrm{supp}}
+\newcommand{\diam}{\mathrm{diameter}}
+\newcommand{\incl}{\mathrm{incl}}
+\newcommand{\interior}{\mathrm{interior}}
+\newcommand{\triv}{\mathrm{triv}}
+\newcommand{\image}{\mathrm{image}}
+\newcommand{\closure}{\mathrm{closure}}
+\newcommand{\degree}{\mathrm{degree}}
+\newcommand{\im}{\mathrm{im}}
+\newcommand{\esssup}{\mathrm{ess\ sup}}
+\newcommand{\openset}{\mathrel{{\mathchoice{\rlap{$\subset$}{\;\circ}}%
+   {\rlap{$\subset$}{\;\circ}}%
+   {\rlap{$\scriptstyle\subset$}{\;\circ}}%
+   {\rlap{$\scriptscriptstyle\subset$}{\;\circ}}}}}
+
+% foreignisms
+\newcommand{\ie}{\emph{i.e.},}
+\newcommand{\Ie}{\emph{I.e.},}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\eg}{\emph{e.g.},}
+\newcommand{\Eg}{\emph{E.g.},}
+\newcommand{\ala}{\emph{\'a la}}
+% labels for spaces
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\Q}{\mathbf{Q}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\CP}{\mathbf{CP}}
+\newcommand{\RP}{\mathbf{RP}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Rtw}{\mathbf{R}^2}
+\newcommand{\Rth}{\mathbf{R}^3}
+\newcommand{\Rfo}{\mathbf{R}^4}
+\newcommand{\Rfi}{\mathbf{R}^5}
+\newcommand{\Rp}{\mathbf{R}^p}
+\newcommand{\Rn}{\mathbf{R}^n}
+\newcommand{\Rnmon}{\mathbf{R}^{n-1}}
+\newcommand{\Rnpon}{\mathbf{R}^{n+1}}
+\newcommand{\Rmpon}{\mathbf{R}^{m+1}}
+\newcommand{\RNpon}{\mathbf{R}^{N+1}}
+\newcommand{\Rtwn}{\mathbf{R}^{2n}}
+\newcommand{\RN}{\mathbf{R}^N}
+\newcommand{\Rm}{\mathbf{R}^m}
+\newcommand{\Hon}{\mathbf{H}^1}
+\newcommand{\Htw}{\mathbf{H}^2}
+\newcommand{\Hth}{\mathbf{H}^3}
+\newcommand{\Hn}{\mathbf{H}^n}
+\newcommand{\Torus}{\mathbf{T}}
+\newcommand{\Ttw}{\mathbf{T}^2}
+\newcommand{\Tth}{\mathbf{T}^3}
+\newcommand{\Tn}{\mathbf{T}^n}
+\newcommand{\Son}{\mathbf{S}^1}
+\newcommand{\Stw}{\mathbf{S}^2}
+\newcommand{\Sth}{\mathbf{S}^3}
+\newcommand{\Sfo}{\mathbf{S}^4}
+\newcommand{\Sfi}{\mathbf{S}^5}
+\newcommand{\SN}{\mathbf{S}^N}
+\newcommand{\Sn}{\mathbf{S}^n}
+\newcommand{\Sm}{\mathbf{S}^m}
+\newcommand{\Smmon}{\mathbf{S}^{m-1}}
+\newcommand{\Snmon}{\mathbf{S}^{n-1}}
+\newcommand{\Snmtw}{\mathbf{S}^{n-2}}
+\newcommand{\Hnmon}{\mathbf{H}^{n-1}}
+\newcommand{\Ton}{\mathbf{T}^1}
+\newcommand{\T}{\mathbf{T}}
+% differential operators
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pkd}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+\newcommand{\dkd}[3]{\frac{d^{#3} #1}{d#2^{#3}}}
+\newcommand{\td}[2]{\frac{d #1}{d #2}}
+\newcommand{\pdat}[3]{\left . \frac{\partial #1}{\partial #2}\right|_{#3}}
+\newcommand{\dbyd}[1]{ \frac{d}{d #1}}
+
+% Fri Oct  3 11:00:53 2003 -- should check at some point to see whether the replaced versions are actually used at all, I don't think so
+\newcommand{\ddk}[3]{\frac{d^{#3} #1}{d#2^{#3}}}
+% replaces...
+\newcommand{\dbydk}[2]{ \frac{d^{#2}}{d #1^{#2}}}
+
+\newcommand{\ppk}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+% replaces...
+\newcommand{\pbypk}[2]{ \frac{\partial^{#2}}{\partial #1^{#2}}}
+
+\newcommand{\pp}[2]{\frac{\partial #1}{\partial #2}}
+% replaces...
+\newcommand{\pbyp}[1]{ \frac{\partial}{\partial #1}}
+
+\newcommand{\ddat}[3]{\left .\frac{d #1}{d #2}\right|_{#3}}
+% replaces...
+\newcommand{\dbydat}[2]{\left . \frac{d}{d #1} \right|_{#2}}
+
+\newcommand{\ppkat}[4]{\left .\frac{\partial^{#3} #1}{\partial #2^{#3}}\right|_{#4}}
+
+\newcommand{\ddkat}[4]{\left .\frac{d^{#3} #1}{d#2^{#3}}\right|_{#4}}
+
+% counters for new lists
+%\newcounter{alistctr}
+%\newcounter{Alistctr}
+\newcounter{rlistctr}
+\newcounter{Rlistctr}
+\newcounter{123listctr}
+\newcounter{123listcolonstylectr}
+
+% a,b,c    - small latin letter list
+\newenvironment{alist}{
+\indent \begin{list}{(\alph{alistctr})}{\usecounter{alistctr}}}
+                      {\end{list}\setcounter{alistctr}{0}} 
+% A,B,C    - LARGE LATIN LETTER LIST
+\newenvironment{Alist}{
+\indent \begin{list}{(\Alph{Alistctr})}{\usecounter{Alistctr}}
+                      }
+                      {\end{list}\setcounter{Alistctr}{0}}
+% i,ii,iii - small roman numeral list
+\newenvironment{rlist}{
+\indent \begin{list}{(\roman{rlistctr})}{\usecounter{rlistctr}}
+                      }
+                      {\end{list}\setcounter{rlistctr}{0}} 
+% I,II,III - large roman numeral list
+\newenvironment{Rlist}{
+\indent \begin{list}{(\Roman{Rlistctr})}{\usecounter{Rlistctr}}
+                      }
+                      {\end{list}\setcounter{Rlistctr}{0}}
+%1,2,3 - arabic numeral list
+\newenvironment{123list}{
+\indent \begin{list}{(\arabic{123listctr})}{\usecounter{123listctr}}
+                      }
+                      {\end{list}\setcounter{123listctr}{0}} 
+
+%1:,2:,3: - arabic numeral list with colon decoration
+\newenvironment{123listcolonstyle}{\indent \begin{list}{\arabic{123listcolonstylectr}:}{\usecounter{123listcolonstylectr}}}
+                      {\end{list}\setcounter{123listcolonstylectr}{0}}
+
+% environment for definitions
+\def\defn#1{\addcontentsline{toc}{subsection}{$\ast$} {\footnotesize \noindent \begin{123listcolonstyle} \setlength{\itemsep}{0em} \setlength{\topsep}{0em} \setlength{\parsep}{0em} #1 \end{123listcolonstyle}}}
+
+%environment for proofs
+\def\proof#1{\par {\footnotesize \indent \begin{tabular}{ll} #1  \end{tabular}}}
+
+%% \include{packages}
+%% \include{renewed_commands}
+%% \include{simple_theorems}
+%% \include{abbreviations}
+%% \include{spaces}
+%% \include{new_environments}
+%% \include{margins}
+%% \include{mathoperators}
+%% \include{differentiation}
+%% \include{limited_things}
+%% \include{argawarga}
+\begin{document}
+{\bf Definition} \cite{kreyszig}
+\begin{enumerate}
+\item Suppose $X$ and $Y$ are normed vector spaces with norms $\| \cdot \|_X$ and $\| \cdot \|_Y$. Further, suppose $T$ is a linear map
+$T : X \to Y$. If there is a $C \in \mathbf{R}$ such that for all $x \in X$ we have
+\begin{eqnarray*}
+\| Tx \|_Y &\le& C\| x \|_X,
+\end{eqnarray*}
+then $T$ is a {\bf bounded operator}.
+\item Let $X$ and $Y$ be as above, and let $T : X \to Y$ be a bounded
+operator. Then the {\bf norm} of $T$ is defined as the real number
+$$\| T \| := \mathrm{sup} \left\{ \left. \frac{\| Tx \|_Y}{\| x \|_X} \right| x \in X \setminus \{0\} \right\}.$$ %this is a hack, if you know how to do it correctly, please change this
+Thus the operator norm is the smallest constant $C \in \mathbf{R}$ such that 
+\begin{eqnarray*}
+\| Tx \|_Y  &\le& C \| x \|_X.
+\end{eqnarray*}
+
+Now for any $x \in X \setminus \{0\}$, if we let $y = x/\|x\|$, then linearity implies that
+$$\| Ty \|_Y = \left\| T\left(\frac{x}{\| x \|_X}\right) \right\|_Y = \frac{\| Tx \|_Y}{\|x\|_X}$$
+and thus it easily follows that
+\begin{eqnarray*}
+\| T \| &=& \mathrm{sup} \left\{ \left. \frac{\| Tx \|_Y}{\| x \|_X} \right| x \in X \setminus \{0\} \right\} = \mathrm{sup} \left\{ \| Ty \|_Y \left| x \in X \setminus \{0\}, y=\frac{x}{\|x\|} \right. \right\}\\
+&=& \mathrm{sup} \{ \| Ty \|_Y | y \in X, \|y\| = 1 \}.
+\end{eqnarray*}
+
+In the special case when $X = \{\mathbf{0}\}$ is the zero vector space, any linear
+map $T : X \to Y$ is the zero map since $T(\mathbf{0})=T(0\mathbf{0})=0T(\mathbf{0})=0$. In this
+case, we define $\|T \| := 0$.
+
+\item To avoid cumbersome notational stuff usually one can simplify the symbols
+like $||x||_X$ and $||Tx||_Y$
+by writing only $||x||$, $||Tx||$
+since there is a little danger in confusing which is space about calculating norms.
+
+\end{enumerate}
+
+\subsubsection{TO DO:}
+\begin{enumerate}
+\item The defined norm for mappings is a norm
+\item Examples: identity operator, zero operator: see \cite{kreyszig}.
+\item Give alternative expressions for norm of $T$. \item Discuss boundedness and continuity
+\end{enumerate}
+
+{\bf Theorem} \cite{kreyszig, bachman} Suppose $T : X \to Y$ is a
+linear map between normed vector spaces $X$ and $Y$. If $X$ is finite-dimensional, then $T$ is bounded.
+
+{\bf Theorem} Suppose $T : X \to Y$ is a
+linear map between normed vector spaces $X$ and $Y$. The following are equivalent:
+\begin{enumerate}
+\item $T$ is continuous in some point $x_{0} \in X$
+\item $T$ is uniformly continuous in $X$
+\item $T$ is bounded
+\end{enumerate}
+
+{\bf Lemma} Any bounded operator with a finite dimensional kernel and cokernel has a closed image.
+
+{\bf Proof} By Banach's isomorphism theorem.
+
+\begin{thebibliography}{9}
+ \bibitem{kreyszig} E. Kreyszig,
+ \emph{Introductory Functional Analysis With Applications},
+ John Wiley \& Sons, 1978.
+\bibitem{bachman} G. Bachman, L. Narici, \emph{Functional analysis}, Academic Press, 1966.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

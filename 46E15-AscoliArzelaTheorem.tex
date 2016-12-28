@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AscoliArzelaTheorem}
+\pmcreated{2013-03-22 12:41:00}
+\pmmodified{2013-03-22 12:41:00}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Ascoli-Arzel\`a theorem}
+\pmrecord{13}{32961}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E15}
+\pmsynonym{Arzel\`a-Ascoli theorem}{AscoliArzelaTheorem}
+\pmrelated{MontelsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+%\newtheorem{theorem}
+\begin{document}
+%\begin{theorem}
+Let $\Omega$ be a bounded subset of $\R^n$ and $(f_k)$ a sequence of functions $f_k\colon \Omega\to \R^m$. If $\{f_k\}$ is equibounded and uniformly equicontinuous then there exists a uniformly convergent subsequence $(f_{k_j})$.
+%\end{theorem}
+
+A more abstract (and more general) version is the following.
+
+%\begin{theorem}
+Let $X$ and $Y$ be totally bounded metric spaces and let $F\subset \mathcal C(X,Y)$ be an uniformly equicontinuous family of continuous mappings from $X$ to $Y$. 
+Then $F$ is totally bounded (with respect to the uniform convergence metric induced by $\mathcal C (X,Y)$).
+%\end{theorem}
+
+Notice that the first version is a consequence of the second. 
+Recall, in fact, that a subset of a complete metric space is totally bounded if and only if its closure is compact (or sequentially compact).
+Hence $\Omega$ is totally bounded and all the functions $f_k$ have image in a totally bounded set. Being $F=\{f_k\}$ totally bounded means that $\overline F$ is sequentially compact and hence $(f_k)$ has a convergent subsequence.
+%%%%%
+%%%%%
+\end{document}

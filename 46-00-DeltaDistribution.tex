@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeltaDistribution}
+\pmcreated{2013-03-22 13:45:52}
+\pmmodified{2013-03-22 13:45:52}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{delta distribution}
+\pmrecord{6}{34468}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46-00}
+\pmclassification{msc}{46F05}
+\pmrelated{ExampleOfDiracSequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\newcommand{\cD}[0]{\mathcal{D}}
+
+Let $U$ be an open subset of $\sR^n$ such that $0\in U$.
+Then the \emph{delta distribution} is the mapping 
+\begin{eqnarray*}
+\delta : \cD(U) &\to & \sC \\
+         u   &\mapsto & u(0).
+\end{eqnarray*}
+
+{\bf Claim} The delta distribution is a distribution of zeroth order, i.e.,
+$\delta\in \cD'^0(U)$.
+
+\emph{Proof.} With obvious notation, we have
+\begin{eqnarray*}
+\delta(u+v)&=&(u+v)(0)=u(0)+v(0) = \delta(u) + \delta(v),\\
+\delta(\alpha u) &=& (\alpha u)(0)=\alpha u(0)=\alpha \delta(u),
+\end{eqnarray*}
+so $\delta$ is linear. To see that $\delta$ is continuous, we
+use condition (3) on this \PMlinkname{this page}{Distribution4}.
+Indeed, if $K$ is a compact set in $U$, and $u\in \cD_K$, then
+$$ |\delta(u)| = |u(0)| \le ||u||_\infty,$$
+where $||\cdot||_\infty$ is the supremum norm. $\Box$
+%%%%%
+%%%%%
+\end{document}

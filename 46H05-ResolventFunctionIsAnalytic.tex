@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResolventFunctionIsAnalytic}
+\pmcreated{2013-03-22 17:29:36}
+\pmmodified{2013-03-22 17:29:36}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{resolvent function is analytic}
+\pmrecord{8}{39881}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46H05}
+\pmclassification{msc}{47A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $\mathcal{A}$ be a complex Banach algebra with identity element $e$. Let $x \in \mathcal{A}$ and $\sigma(x)$ denote its spectrum. 
+
+Then, the \PMlinkname{resolvent function}{ResolventMatrix} $R_x : \mathbb{C}-\sigma(x) \longrightarrow \mathcal{A}$ defined by $R_x(\lambda) = (x-\lambda e)^{-1}$ is \PMlinkname{analytic}{BanachSpaceValuedAnalyticFunctions}. 
+
+Moreover, for each $\lambda_0 \in \mathbb{C} - \sigma(x)$ it has the power series \PMlinkescapetext{representation}
+\begin{align}
+R_x(\lambda) = \sum_{n=0}^{\infty} R_x(\lambda_0)^{n+1}(\lambda -\lambda_0)^n
+\end{align}
+where the series converges absolutely for each $\lambda$ in the open disk centered in $\lambda_0$ given by
+\begin{align}
+|\lambda - \lambda_0| < \frac{1}{\|R_x(\lambda_0)\|}
+\end{align}
+
+{\bf Proof :} Analyticity is defined for functions whose domain is open. 
+
+Thus, we start by proving that $\mathbb{C} - \sigma(x)$ is an open set in $\mathbb{C}$. To do so it is enough to prove that for every $\lambda_0 \in \mathbb{C} - \sigma(x)$ the open disk defined by (2) above is contained in $\mathbb{C} - \sigma(x)$.
+
+Let $\lambda_0 \in \mathbb{C} - \sigma(x)$ and $\lambda$ be such that
+\begin{displaymath}
+|\lambda - \lambda_0| < \frac{1}{\|R_x(\lambda_0)\|}
+\end{displaymath}
+
+Then $\|(\lambda - \lambda_0)R_x(\lambda_0)\| < 1$ and by the \PMlinkname{Neumann series}{NeumannSeriesInBanachAlgebras} $e - (\lambda - \lambda_0)R_x(\lambda_0)$ is invertible.
+
+Since $\lambda_0 \notin \sigma(x)$ it follows that $(x-\lambda_0 e)$ is invertible.
+
+Hence, from the equality
+\begin{align}
+x-\lambda e = x- \lambda_0 e - (\lambda - \lambda_0)e = (x-\lambda_0 e)\cdot [e - (\lambda - \lambda_0)R_x(\lambda_0)]
+\end{align}
+we conclude that $x - \lambda e$ is also invertible, i.e. $\lambda \in \mathbb{C} - \sigma(x)$. Thus $\mathbb{C} - \sigma(x)$ is open.
+
+The above proof also pointed out that for every $\lambda_0 \in \mathbb{C}$, $R_x$ is defined in the open disk of radius $\displaystyle \frac{1}{\|R_x(\lambda_0)\|}$ centered in $\lambda_0$.
+
+We now prove the analyticity of the \PMlinkescapetext{resolvent function}.
+
+Taking inverses on the equality (3) above one obtains
+\begin{displaymath}
+R_x(\lambda) = (e-(\lambda-\lambda_0)R_x(\lambda_0))^{-1} \cdot R_x(\lambda_0)
+\end{displaymath}
+
+Again, by the \PMlinkname{Neumann series}{NeumannSeriesInBanachAlgebras}, one obtains
+\begin{displaymath}
+R_x(\lambda) = \left[ \sum_{n=0}^{\infty} R_x(\lambda_0)^{n}(\lambda -\lambda_0)^n \right]\cdot R_x(\lambda_0) =
+\sum_{n=0}^{\infty} R_x(\lambda_0)^{n+1}(\lambda -\lambda_0)^n  \;\;\;\;\square
+\end{displaymath}
+%%%%%
+%%%%%
+\end{document}

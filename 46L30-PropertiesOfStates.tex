@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfStates}
+\pmcreated{2013-03-22 17:45:24}
+\pmmodified{2013-03-22 17:45:24}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{properties of states}
+\pmrecord{5}{40209}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46L30}
+\pmclassification{msc}{46L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathcal{A}$ be a \PMlinkname{$C^*$-algebra}{CAlgebra} and $x \in \mathcal{A}$. 
+
+Let $S(\mathcal{A})$ and $P(\mathcal{A})$ denote the \PMlinkname{state}{State} space and the pure state space of $\mathcal{A}$, respectively.
+
+\subsection{States}
+The \PMlinkescapetext{state} space is sufficiently large to reveal many \PMlinkescapetext{properties} of elements of a $C^*$-algebra.
+
+{\bf Theorem 1-} We have that
+\begin{itemize}
+\item $S(\mathcal{A})$ separates points, i.e. $x= 0$ if and only if $\phi(x) = 0$ for all $\phi \in S(\mathcal{A})$.
+\item $x$ is \PMlinkname{self-adjoint}{InvolutaryRing} if and only if $\phi(x) \in \mathbb{R}$ for all $\phi \in S(\mathcal{A})$.
+\item $x$ is positive if and only if $\phi(x) \geq 0$ for all $\phi \in S(\mathcal{A})$.
+\item If $x$ is \PMlinkname{normal}{InvolutaryRing}, then $\phi(x) = \|x\|$ for some $\phi \in S(\mathcal{A})$.
+\end{itemize}
+
+\subsection{Pure states}
+
+The pure state space is also sufficiently large to \PMlinkescapetext{satisfy} the \PMlinkescapetext{properties} of Theorem 1. Hence, we can replace $S(\mathcal{A})$ by $P(\mathcal{A})$, or by any other family of linear functionals $F$ such that $P(\mathcal{A}) \subset F \subset S(\mathcal{A})$, in the previous result.
+
+{\bf Theorem 2 -} We have that
+\begin{itemize}
+\item $P(\mathcal{A})$ separates points, i.e. $x= 0$ if and only if $\phi(x) = 0$ for all $\phi \in P(\mathcal{A})$.
+\item $x$ is \PMlinkescapetext{self-adjoint} if and only if $\phi(x) \in \mathbb{R}$ for all $\phi \in P(\mathcal{A})$.
+\item $x$ is positive if and only if $\phi(x) \geq 0$ for all $\phi \in P(\mathcal{A})$.
+\item If $x$ is \PMlinkescapetext{normal}, then $\phi(x) = \|x\|$ for some $\phi \in P(\mathcal{A})$.
+\end{itemize}
+
+{\bf \PMlinkescapetext{Proposition} -} Every multiplicative linear functional on $\mathcal{A}$ is a pure state.
+%%%%%
+%%%%%
+\end{document}

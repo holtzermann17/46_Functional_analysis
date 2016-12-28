@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KreinMilmanTheorem}
+\pmcreated{2013-03-22 14:24:58}
+\pmmodified{2013-03-22 14:24:58}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Krein-Milman theorem}
+\pmrecord{6}{35921}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46A03}
+\pmclassification{msc}{52A07}
+\pmclassification{msc}{52A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}
+Let $X$ be a locally convex topological vector space, and let $K \subset X$
+be a compact \PMlinkname{convex subset}{ConvexSet}.  Then $K$ is the closed convex hull of its extreme points.
+\end{thm}
+
+% FIXME: this needs to go into the convex hull entry or some such
+The closed convex hull above is defined as the intersection of all closed convex subsets of $X$ that contain $K$.  This turns out to be the same as the closure of the convex hull in a topological vector space.
+                                                                                
+\begin{thebibliography}{9}
+\bibitem{royden}
+H.\@ L.\@ Royden. \emph{\PMlinkescapetext{Real Analysis}}. Prentice-Hall, Englewood Cliffs, New Jersey, 1988
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NuclearSpace}
+\pmcreated{2013-03-22 16:37:28}
+\pmmodified{2013-03-22 16:37:28}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{nuclear space}
+\pmrecord{6}{38823}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B20}
+%\pmkeywords{Fr\'echet space}
+%\pmkeywords{Banach space}
+%\pmkeywords{semi-norm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+If $E$ is a FrÃ©chet space and $(p_j)$ an increasing sequence of semi-norms on $E$ defining the topology of $E$, we have
+$$
+E=\underset{\longleftarrow}{\lim}\,\widehat E_{p_j},
+$$
+where $\widehat E_{p_j}$ is the Hausdorff completion of $(E,p_j)$ and $\widehat E_{p_{j+1}}\to\widehat E_{p_j}$ the canonical morphism. Here $\widehat E_{p_j}$ is a Banach space for the induced norm $\widehat p_j$.
+
+A FrÃ©chet space $E$ is said to be \emph{nuclear} if the topology of $E$ can be defined by an increasing sequence of semi-norms $p_j$ such that each canonical morphism $\widehat E_{p_{j+1}}\to\widehat E_{p_j}$ of Banach spaces is nuclear.
+
+Recall that a morphism $f\colon E\to F$ of complete locally convex spaces is said to be nuclear if $f$ can be written as
+$$
+f(x)=\sum\lambda_j\xi_j(x)y_j
+$$
+where $(\lambda_j)$ is a sequence of scalars with $\sum|\lambda_j|<+\infty$,$\xi_j\in E'$ an equicontinuous sequence of linear forms and $y_j\in F$ a bounded sequence.
+%%%%%
+%%%%%
+\end{document}

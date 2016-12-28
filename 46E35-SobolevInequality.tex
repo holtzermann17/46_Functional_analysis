@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SobolevInequality}
+\pmcreated{2013-03-22 15:05:14}
+\pmmodified{2013-03-22 15:05:14}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Sobolev inequality}
+\pmrecord{10}{36812}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46E35}
+\pmsynonym{Sobolev embedding}{SobolevInequality}
+\pmsynonym{sobolev immersion}{SobolevInequality}
+\pmsynonym{Gagliardo Nirenberg inequality}{SobolevInequality}
+\pmrelated{LpSpace}
+\pmdefines{Sobolev conjugate}
+\pmdefines{Sobolev exponent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newcommand{\R}{\mathbb R}
+\begin{document}
+For $1\le p < n$, define the \emph{Sobolev conjugate \PMlinkescapetext{exponent}} of $p$ as
+\[
+  p^* := \frac {np}{n-p}.
+\]
+Note that $-n/p^* = 1-n/p$.
+
+In the following statement $\nabla$ represent the weak derivative and $W^{1,p}(\Omega)$ 
+is the Sobolev space of functions $u\in L^p(\Omega)$ whose weak derivative $\nabla u$ is itself in $L^p(\Omega)$.
+
+\begin{theorem}
+Assume that $p\in [1,n)$ and let $\Omega$ be a bounded, open subset of $\R^n$
+with Lipschitz boundary. 
+Then there is a constant $C>0$ such that, for all $u\in W^{1,p}(\Omega)$ one has
+\[
+ \Vert u \Vert_{L^{p^*}(\Omega)} \le C \Vert \nabla u \Vert_{L^p(\Omega)}.
+\]
+\end{theorem}
+
+We can restate the previous Theorem by saying that the Sobolev space $W^{1,p}(\Omega)$ is a subspace of the Lebesgue space $L^{p^*}(\Omega)$ and that the inclusion map $i\colon W^{1,p}(\Omega)\to L^{q^*}(\Omega)$ is continuous.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteRankApproximationOnSeparableHilbertSpaces}
+\pmcreated{2013-03-22 18:23:18}
+\pmmodified{2013-03-22 18:23:18}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{finite rank approximation on separable Hilbert spaces}
+\pmrecord{10}{41033}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{46B99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+
+% commands
+%\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+\newcommand{\scal}[2]{\langle #1, #2 \rangle}
+\begin{document}
+\textbf{Theorem} Let $\mathcal{H}$ be a separable Hilbert space and let $T \in L(\mathcal{H})$. Then $T$ is a compact operator iff there is a sequence $\{F_n\}$ of finite rank operators with $\|T - F_n\| \to 0$.
+
+\begin{proof}
+$(\Rightarrow)$: Assume $T$ is compact on $\mathcal{H}$ and $\{e_n\}$ is an orthonormal basis of $\mathcal{H}$. Define:
+\begin{align*}
+P_n f &= \sum_{k=0}^n \scal{f}{e_k} e_k 
+\end{align*}
+
+It is clear that the $P_n$ have finite rank and that we have $\Vert P_n f\Vert \leq \Vert f\Vert$ for all $n \in \mathbb{N}$, $f \in \mathcal{H}$. 
+
+Let $\mathcal{B}$ be the unit ball in $\mathcal{H}$. We have that $P_n \to I$ pointwise. Since the $P_n$ are contractive they are equicontinuous, hence $P_n$ converges uniformly to $I$ on compact sets, and in particular on $ \overline{T(\mathcal{B})}$, which is compact by assumption.
+Therefore $P_n T \to T$ uniformly on $\mathcal{B}$, hence $\|P_n T - T\| \to 0$. 
+Since $P_n T$ is bounded and of finite rank the first direction follows.
+
+$(\Leftarrow)$: Now let $\{F_n\}$ be a sequence of bounded operators of finite rank with $\|T - F_n\| \to 0$. 
+We have to show that $T(\mathcal{B})$ is relatively compact in $\mathcal{H}$. This is equivalent to $T(\mathcal{B})$ being totally bounded in $\mathcal{H}$.
+So we are left to show that for all $\epsilon > 0$ there is an $\epsilon$-net $x_1, \cdots, x_n \in \mathcal{H}$ so that:
+\begin{align*}
+T(\mathcal{B}) &\subseteq \bigcup_{k=1}^n B_{\epsilon}(x_k)
+\end{align*}
+
+So choose $\epsilon > 0$ and $n \in \mathbb{N}$ fixed so that:
+\begin{displaymath}
+\|F_n - T\| < \frac{\epsilon}{2}
+\end{displaymath}
+
+Choose $x_1, \cdots, x_m \in \mathcal{H}$ with:
+\begin{align*}
+F_n(\mathcal{B}) &\subseteq \bigcup_{k=1}^m B_{\frac{\epsilon}{2}}(x_k)
+\end{align*}
+
+Hence (by the triangle inequality):
+\begin{align*}
+T(\mathcal{B}) &\subseteq \bigcup_{k=1}^m B_{\epsilon}(x_k)
+\end{align*}
+
+and we are done. 
+\end{proof}
+%%%%%
+%%%%%
+\end{document}
