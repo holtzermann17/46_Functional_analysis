@@ -1,0 +1,268 @@
+<!DOCTYPE html><html>
+<head>
+<title>Gelfand-Naimark-Segal construction</title>
+<!--Generated on Fri Feb  9 21:44:08 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Gelfand-Naimark-Segal construction</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>GNS Construction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The Gelfand-Naimark-Segal construction (or GNS construction) is a fundamental idea in the  of  . It provides a procedure to construct and study representations of <math id="S1.p1.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CAlgebra</span>) and is the first step on the proof of the Gelfand-Naimark representation theorem, which  that every <math id="S1.p1.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra is isometrically isomorphic to a closed *-subalgebra of <math id="S1.p1.m3" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the algebra of bounded operators on a Hilbert space <math id="S1.p1.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">There are generalizations of this construction for Banach *-algebras with an approximate unit, and some of the results stated here are in fact valid for this kind of algebras, but we will restrict our attention to the <math id="S1.p2.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> case.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Representations associated with positive linear functionals</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p1.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> be a <math id="S2.p1.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra and <math id="S2.p1.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> a positive linear functional in <math id="S2.p1.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">We are going to construct a representation <math id="S2.p2.m1" class="ltx_Math" alttext="\pi_{\phi}" display="inline"><msub><mi>π</mi><mi>ϕ</mi></msub></math> of <math id="S2.p2.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> and for that we need to construct a suitable Hilbert space.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Let us endow <math id="S2.p3.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> with a semi-inner product defined by <math id="S2.p3.m2" class="ltx_Math" alttext="\langle x,y\rangle_{\phi}:=\phi(y^{*}x)" display="inline"><mrow><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">⟩</mo></mrow><mi>ϕ</mi></msub><mo>:=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>y</mi><mo>*</mo></msup><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Now we define the set</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="N_{\phi}:=\{x\in\mathcal{A}:\langle x,x\rangle_{\phi}=0\}" display="block"><mrow><msub><mi>N</mi><mi>ϕ</mi></msub><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow><mo>:</mo><mrow><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mi>x</mi><mo stretchy="false">⟩</mo></mrow><mi>ϕ</mi></msub><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is easily seen that <math id="S2.p3.m3" class="ltx_Math" alttext="N_{\phi}" display="inline"><msub><mi>N</mi><mi>ϕ</mi></msub></math> is a closed left ideal (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Ideal</span>) in <math id="S2.p3.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> (using the Cauchy-Schwarz inequality, which is valid in semi-inner product spaces), so that <math id="S2.p3.m5" class="ltx_Math" alttext="\langle\cdot,\cdot\rangle_{\phi}" display="inline"><msub><mrow><mo stretchy="false">⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">⟩</mo></mrow><mi>ϕ</mi></msub></math> induces a well defined inner product on the quotient (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/QuotientModule</span>) <math id="S2.p3.m6" class="ltx_Math" alttext="\mathcal{A}/N_{\phi}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>/</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow></math>. The completion of <math id="S2.p3.m7" class="ltx_Math" alttext="\mathcal{A}/N_{\phi}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>/</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow></math> is then an Hilbert space, which we will be denoted by <math id="S2.p3.m8" class="ltx_Math" alttext="H_{\phi}" display="inline"><msub><mi>H</mi><mi>ϕ</mi></msub></math>.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">We will now define a representation of <math id="S2.p4.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> on <math id="S2.p4.m2" class="ltx_Math" alttext="H_{\phi}" display="inline"><msub><mi>H</mi><mi>ϕ</mi></msub></math> by left multiplication. For every <math id="S2.p4.m3" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math> let <math id="S2.p4.m4" class="ltx_Math" alttext="\pi_{\phi}(a)" display="inline"><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the operator of left multiplication by <math id="S2.p4.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> on <math id="S2.p4.m6" class="ltx_Math" alttext="\mathcal{A}/N_{\phi}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>/</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow></math>, i.e.</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\pi(a)\,(x+N_{\phi}):=ax+N_{\phi}" display="block"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p"><math id="S2.p5.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 1 -</span> The function <math id="S2.p6.m1" class="ltx_Math" alttext="\pi_{\phi}(a):\mathcal{A}/N_{\phi}\longrightarrow\mathcal{A}/N_{\phi}" display="inline"><mrow><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>/</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow><mo>⟶</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>/</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow></mrow></mrow></math> defined above is linear and bounded (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BoundedOperator</span>), with <math id="S2.p6.m2" class="ltx_Math" alttext="\|\pi_{\phi}(a)\|\leq\|a\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mo>∥</mo><mi>a</mi><mo>∥</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p"><math id="S2.p7.m1" class="ltx_Math" alttext="\;" display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">Being bounded, the operator <math id="S2.p8.m1" class="ltx_Math" alttext="\pi_{\phi}(a)" display="inline"><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> extends uniquely to a bounded operator on <math id="S2.p8.m2" class="ltx_Math" alttext="H_{\phi}" display="inline"><msub><mi>H</mi><mi>ϕ</mi></msub></math>, which we denote by the same symbol, <math id="S2.p8.m3" class="ltx_Math" alttext="\pi_{\phi}(a)" display="inline"><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p9.m1" class="ltx_Math" alttext="B(H_{\phi})" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>H</mi><mi>ϕ</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> be the algebra of bounded operators on <math id="S2.p9.m2" class="ltx_Math" alttext="H_{\phi}" display="inline"><msub><mi>H</mi><mi>ϕ</mi></msub></math>.</p>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p"><math id="S2.p10.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S2.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 2 -</span> The function <math id="S2.p11.m1" class="ltx_Math" alttext="\pi_{\phi}:\mathcal{A}\longrightarrow B(H_{\phi})" display="inline"><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>⟶</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>H</mi><mi>ϕ</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> defined by <math id="S2.p11.m2" class="ltx_Math" alttext="a\mapsto\pi_{\phi}(a)" display="inline"><mrow><mi>a</mi><mo>↦</mo><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is a <math id="S2.p11.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra representation of <math id="S2.p11.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>.</p>
+</div>
+<div id="S2.p12" class="ltx_para">
+<p class="ltx_p">This representation is called the <span class="ltx_text ltx_font_bold">GNS representation</span> associated to <math id="S2.p12.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Cyclic vectors and GNS pairs</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S3.p1.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> had an identity element <math id="S3.p1.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>. In this case it is easily seen that there exists a cyclic vector <math id="S3.p1.m3" class="ltx_Math" alttext="\xi_{\phi}\in H_{\phi}" display="inline"><mrow><msub><mi>ξ</mi><mi>ϕ</mi></msub><mo>∈</mo><msub><mi>H</mi><mi>ϕ</mi></msub></mrow></math>, i.e. a vector <math id="S3.p1.m4" class="ltx_Math" alttext="\xi_{\phi}" display="inline"><msub><mi>ξ</mi><mi>ϕ</mi></msub></math> such that <math id="S3.p1.m5" class="ltx_Math" alttext="\pi_{\phi}(\mathcal{A})\,\xi_{\phi}" display="inline"><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>ξ</mi><mi>ϕ</mi></msub></mrow></math> is dense (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Dense</span>) in <math id="S3.p1.m6" class="ltx_Math" alttext="H_{\phi}" display="inline"><msub><mi>H</mi><mi>ϕ</mi></msub></math>. This cyclic vector can just be chosen as <math id="S3.p1.m7" class="ltx_Math" alttext="e+N_{\phi}" display="inline"><mrow><mi>e</mi><mo>+</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow></math>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Moreoever, this cyclic vector <math id="S3.p2.m1" class="ltx_Math" alttext="\xi_{\phi}:=e+N_{\phi}" display="inline"><mrow><msub><mi>ξ</mi><mi>ϕ</mi></msub><mo>:=</mo><mrow><mi>e</mi><mo>+</mo><msub><mi>N</mi><mi>ϕ</mi></msub></mrow></mrow></math> is such that <math id="S3.p2.m2" class="ltx_Math" alttext="\phi(a)=\langle\pi_{\phi}(a)\,\xi_{\phi},\xi_{\phi}\rangle_{\phi}" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>ξ</mi><mi>ϕ</mi></msub></mrow><mo>,</mo><msub><mi>ξ</mi><mi>ϕ</mi></msub><mo stretchy="false">⟩</mo></mrow><mi>ϕ</mi></msub></mrow></math> for every <math id="S3.p2.m3" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math>.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Thus, in this case the representation <math id="S3.p3.m1" class="ltx_Math" alttext="\pi_{\phi}" display="inline"><msub><mi>π</mi><mi>ϕ</mi></msub></math> is cyclic (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BanachAlgebraRepresentation</span>) and <math id="S3.p3.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is a vector state of <math id="S3.p3.m3" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>. The result is still valid for general <math id="S3.p3.m4" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras:</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p"><math id="S3.p4.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 3 -</span> Let <math id="S3.p5.m1" class="ltx_Math" alttext="\pi_{\phi}" display="inline"><msub><mi>π</mi><mi>ϕ</mi></msub></math> be the representation of <math id="S3.p5.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> defined previously. Then there exists a vector <math id="S3.p5.m3" class="ltx_Math" alttext="\xi_{\phi}\in H_{\phi}" display="inline"><mrow><msub><mi>ξ</mi><mi>ϕ</mi></msub><mo>∈</mo><msub><mi>H</mi><mi>ϕ</mi></msub></mrow></math> such that</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\pi_{\phi}(\mathcal{A})\,\xi_{\phi}" display="inline"><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>ξ</mi><mi>ϕ</mi></msub></mrow></math> is dense in <math id="I1.i1.p1.m2" class="ltx_Math" alttext="H_{\phi}" display="inline"><msub><mi>H</mi><mi>ϕ</mi></msub></math>, i.e. <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\pi_{\phi}" display="inline"><msub><mi>π</mi><mi>ϕ</mi></msub></math> is cyclic,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\phi(a)=\langle\pi_{\phi}(a)\,\xi_{\phi},\xi_{\phi}\rangle_{\phi}" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>π</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>ξ</mi><mi>ϕ</mi></msub></mrow><mo>,</mo><msub><mi>ξ</mi><mi>ϕ</mi></msub><mo stretchy="false">⟩</mo></mrow><mi>ϕ</mi></msub></mrow></math> for every <math id="I1.i2.p1.m2" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math>, i.e. <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is a vector state.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p"><math id="S3.p6.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">Any pair <math id="S3.p7.m1" class="ltx_Math" alttext="(\pi,\xi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>π</mi><mo>,</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="S3.p7.m2" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is a representation of <math id="S3.p7.m3" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> on a Hilbert space <math id="S3.p7.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> and <math id="S3.p7.m5" class="ltx_Math" alttext="\xi\in H" display="inline"><mrow><mi>ξ</mi><mo>∈</mo><mi>H</mi></mrow></math>, satisfying the above conditions for <math id="S3.p7.m6" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\pi(\mathcal{A})\,\xi" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ξ</mi></mrow></math> is dense in <math id="I2.i1.p1.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>,</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="\phi(a)=\langle\pi(a)\,\xi,\xi\rangle" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ξ</mi></mrow><mo>,</mo><mi>ξ</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> for every <math id="I2.i2.p1.m2" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">is called a <span class="ltx_text ltx_font_bold">GNS pair</span> for <math id="S3.p7.m7" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>.</p>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p"><math id="S3.p8.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 4 -</span> All GNS pairs for <math id="S3.p9.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> are  (in the sense that the corresponding representations are unitarily equivalent).</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Irreducible representations</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">We know that are ”plenty” of states on <math id="S4.p1.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PropertiesOfStates</span>)), and so we have assured the existence of many (cyclic) representations. An interesting fact is that this representations associated to states are irreducible (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BanachAlgebraRepresentation</span>) exactly when the state is a pure state:</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p"><math id="S4.p2.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 5 -</span> Let <math id="S4.p3.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> be a state on <math id="S4.p3.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>. Then the representation <math id="S4.p3.m3" class="ltx_Math" alttext="\pi_{\phi}" display="inline"><msub><mi>π</mi><mi>ϕ</mi></msub></math> is irreducible if and only if <math id="S4.p3.m4" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is a pure state.</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p"><math id="S4.p4.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">The fact that there are ”plenty” of pure states in a <math id="S4.p5.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra allows one to assure the existence of irreducible representations that preserve the norm of a given element in <math id="S4.p5.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p"><math id="S4.p6.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 6 -</span> Let <math id="S4.p7.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> be a <math id="S4.p7.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra. For every element <math id="S4.p7.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> there exists an irreducible representation <math id="S4.p7.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> of <math id="S4.p7.m5" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> such that <math id="S4.p7.m6" class="ltx_Math" alttext="\|\pi(a)\|=\|a\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><mrow><mo>∥</mo><mi>a</mi><mo>∥</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p"><math id="S4.p8.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">This last theorem is a fundamental step in the proof of the Gelfand-Naimark representation theorem.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Gelfand-Naimark-Segal construction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GelfandNaimarkSegalConstruction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:47:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:47:40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GNS construction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CAlgebra3</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RepresentationOfAC_cG_dTopologicalAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GNS pair</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GNS representation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">pure states and irreducible representations</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:44:08 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

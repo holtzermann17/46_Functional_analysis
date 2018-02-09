@@ -1,0 +1,175 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of von Neumann double commutant theorem</title>
+<!--Generated on Fri Feb  9 21:44:01 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of von Neumann double commutant theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma -</span> Let <math id="p2.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be a Hilbert space and <math id="p2.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> its algebra of bounded operators. Let <math id="p2.m3" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math> be a *-subalgebra of <math id="p2.m4" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> that contains the identity operator and is closed in the strong operator topology. If <math id="p2.m5" class="ltx_Math" alttext="T\in\mathcal{N}^{\prime\prime}" display="inline"><mrow><mi>T</mi><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′′</mo></msup></mrow></math>, the double commutant of <math id="p2.m6" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math>, then for each <math id="p2.m7" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math> there is an operator <math id="p2.m8" class="ltx_Math" alttext="A\in\mathcal{N}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi></mrow></math> such that <math id="p2.m9" class="ltx_Math" alttext="\|(A-T)x\|&lt;1" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>∥</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">:</em> Let <math id="p3.m1" class="ltx_Math" alttext="\overline{\mathcal{N}x}\subseteq H" display="inline"><mrow><mover accent="true"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow><mo>¯</mo></mover><mo>⊆</mo><mi>H</mi></mrow></math> be the closure of the subspace <math id="p3.m2" class="ltx_Math" alttext="\mathcal{N}x:=\{Sx:S\in\mathcal{N}\}" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow><mo>:=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>S</mi><mo>⁢</mo><mi>x</mi></mrow><mo>:</mo><mrow><mi>S</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. It is clear that <math id="p3.m3" class="ltx_Math" alttext="\mathcal{N}x" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow></math> is an invariant subspace for <math id="p3.m4" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math>, hence so is its closure <math id="p3.m5" class="ltx_Math" alttext="\overline{\mathcal{N}x}" display="inline"><mover accent="true"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow><mo>¯</mo></mover></math> (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/InvariantSubspacesForSelfAdjointAlgebrasOfOperators</span>), Proposition 5).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let <math id="p4.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be the orthogonal projection onto <math id="p4.m2" class="ltx_Math" alttext="\overline{\mathcal{N}x}" display="inline"><mover accent="true"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow><mo>¯</mo></mover></math>. Since <math id="p4.m3" class="ltx_Math" alttext="\overline{\mathcal{N}x}" display="inline"><mover accent="true"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow><mo>¯</mo></mover></math> is invariant for <math id="p4.m4" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math>, we have that <math id="p4.m5" class="ltx_Math" alttext="P\in\mathcal{N}^{\prime}" display="inline"><mrow><mi>P</mi><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′</mo></msup></mrow></math> (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/InvariantSubspacesForSelfAdjointAlgebrasOfOperators</span>), last theorem). Since <math id="p4.m6" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math> contains the identity operator, we know that <math id="p4.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> belongs to <math id="p4.m8" class="ltx_Math" alttext="\overline{\mathcal{N}x}" display="inline"><mover accent="true"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow><mo>¯</mo></mover></math>. Hence,</p>
+</div>
+<div id="p5" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle Tx=TPx=PTx" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the last equality comes from the fact that <math id="p5.m1" class="ltx_Math" alttext="T\in\mathcal{N}^{\prime\prime}" display="inline"><mrow><mi>T</mi><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′′</mo></msup></mrow></math> and <math id="p5.m2" class="ltx_Math" alttext="P\in\mathcal{N}^{\prime}" display="inline"><mrow><mi>P</mi><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′</mo></msup></mrow></math>. Thus, we see that <math id="p5.m3" class="ltx_Math" alttext="Tx\in\overline{\mathcal{N}x}" display="inline"><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∈</mo><mover accent="true"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>⁢</mo><mi>x</mi></mrow><mo>¯</mo></mover></mrow></math>, which implies that there exists an <math id="p5.m4" class="ltx_Math" alttext="A\in\mathcal{N}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi></mrow></math> such that <math id="p5.m5" class="ltx_Math" alttext="\|Tx-Ax\|&lt;1" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>∥</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>. <math id="p5.m6" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><math id="p6.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><math id="p7.m1" class="ltx_Math" alttext="(1)\Longrightarrow(2)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⟹</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> Since <math id="p7.m2" class="ltx_Math" alttext="\mathcal{M}^{\prime\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′′</mo></msup></math> is the commutant of some set, namely it is the commutant of <math id="p7.m3" class="ltx_Math" alttext="\mathcal{M}^{\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′</mo></msup></math>, it follows that <math id="p7.m4" class="ltx_Math" alttext="\mathcal{M}^{\prime\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′′</mo></msup></math> is closed in the weak operator topology (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CommutantIsAWeakOperatorClosedSubalgebra</span>)). But we are assuming that <math id="p7.m5" class="ltx_Math" alttext="\mathcal{M}=\mathcal{M}^{\prime\prime}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>=</mo><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′′</mo></msup></mrow></math>, hence <math id="p7.m6" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> is closed in the weak operator topology.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><math id="p8.m1" class="ltx_Math" alttext="(2)\Longrightarrow(3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>⟹</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> This part is obvious since the weak operator topology is weaker than the strong operator topology.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p"><math id="p9.m1" class="ltx_Math" alttext="(3)\Longrightarrow(1)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>⟹</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math> Suppose <math id="p9.m2" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> is closed in the strong operator topology.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">A subset of <math id="p10.m1" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> is always contained in its double commutant, thus <math id="p10.m2" class="ltx_Math" alttext="\mathcal{M}\subseteq\mathcal{M}^{\prime\prime}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>⊆</mo><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′′</mo></msup></mrow></math>. So it remains to prove the opposite inclusion.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Let <math id="p11.m1" class="ltx_Math" alttext="T\in\mathcal{M}^{\prime\prime}" display="inline"><mrow><mi>T</mi><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′′</mo></msup></mrow></math>. We are going to prove that <math id="p11.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> belongs to the strong operator closure of <math id="p11.m3" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math>, and since <math id="p11.m4" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> is closed under this topology, it will follow that <math id="p11.m5" class="ltx_Math" alttext="T\in\mathcal{M}" display="inline"><mrow><mi>T</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Recall that the strong operator topology is the topology in <math id="p12.m1" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> generated by the family of seminorms <math id="p12.m2" class="ltx_Math" alttext="\|\cdot\|_{x},x\in H" display="inline"><mrow><mo>∥</mo><mo>⋅</mo><msub><mo>∥</mo><mi>x</mi></msub><mo>,</mo><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math> defined by <math id="p12.m3" class="ltx_Math" alttext="\|S\|_{x}:=\|Sx\|" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>S</mi><mo>∥</mo></mrow><mi>x</mi></msub><mo>:=</mo><mrow><mo>∥</mo><mrow><mi>S</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∥</mo></mrow></mrow></math>. A local base around <math id="p12.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>, in this topology, consists of sets of the form</p>
+</div>
+<div id="p13" class="ltx_para">
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle V(x_{1},\dots,x_{n};\,\epsilon):=\{S\in B(H):\|(S-T)x_{i}\|\leq%
+\epsilon,i=1,\dots,n\}\,,\qquad\qquad x_{1},\dots,x_{n}\in H,\epsilon&gt;0" display="inline"><mrow><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo rspace="4.2pt">;</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>S</mi><mo>∈</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mrow><mo>∥</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>-</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>∥</mo></mrow><mo>≤</mo><mi>ϵ</mi></mrow><mo>,</mo><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></mrow><mo rspace="4.2pt" stretchy="false">}</mo></mrow><mo rspace="42.5pt">,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mi>H</mi></mrow><mo>,</mo><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">We can however consider <math id="p14.m1" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> to be <math id="p14.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, since <math id="p14.m3" class="ltx_Math" alttext="V(x_{1},\dots,x_{n};\,\epsilon)=V(\epsilon^{-1}x_{1},\dots,\epsilon^{-1}x_{n};1)" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo rspace="4.2pt">;</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>ϵ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msup><mi>ϵ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">For every <math id="p15.m1" class="ltx_Math" alttext="x_{1},\dots,x_{n}\in H" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>∈</mo><mi>H</mi></mrow></math> we want to find <math id="p15.m2" class="ltx_Math" alttext="A\in\mathcal{M}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math> such that <math id="p15.m3" class="ltx_Math" alttext="A\in V(x_{1},\dots,x_{n};\,1)" display="inline"><mrow><mi>A</mi><mo>∈</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>;</mo><mn> 1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, i.e. such that <math id="p15.m4" class="ltx_Math" alttext="\|(A-T)x_{i}\|&lt;1" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>∥</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, for each <math id="p15.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>.</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Let <math id="p16.m1" class="ltx_Math" alttext="\widetilde{H}" display="inline"><mover accent="true"><mi>H</mi><mo>~</mo></mover></math> be the direct sum of Hilbert spaces <math id="p16.m2" class="ltx_Math" alttext="\widetilde{H}:=\oplus_{i=1}^{n}H" display="inline"><mrow><mover accent="true"><mi>H</mi><mo>~</mo></mover><mo>:=</mo><mrow><msubsup><mo>⊕</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mi>H</mi></mrow></mrow></math>. For every <math id="p16.m3" class="ltx_Math" alttext="A\in B(H)" display="inline"><mrow><mi>A</mi><mo>∈</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> let <math id="p16.m4" class="ltx_Math" alttext="\widetilde{A}\in B(\widetilde{H})" display="inline"><mrow><mover accent="true"><mi>A</mi><mo>~</mo></mover><mo>∈</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>H</mi><mo>~</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be the direct sum of bounded operators (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DirectSumOfBoundedOperatorsOnHilbertSpaces</span>) <math id="p16.m5" class="ltx_Math" alttext="\widetilde{A}:=\oplus_{i=1}^{n}A" display="inline"><mrow><mover accent="true"><mi>A</mi><mo>~</mo></mover><mo>:=</mo><mrow><msubsup><mo>⊕</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mi>A</mi></mrow></mrow></math>, i.e.</p>
+</div>
+<div id="p17" class="ltx_para">
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\widetilde{A}(y_{1},\dots,y_{n})=(Ay_{1},\dots,Ay_{n})\,,\qquad%
+\qquad y_{1},\dots,y_{n}\in H" display="inline"><mrow><mrow><mrow><mover accent="true"><mi>A</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo rspace="42.5pt">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>∈</mo><mi>H</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">We have that <math id="p18.m1" class="ltx_Math" alttext="\mathcal{N}:=\{\widetilde{A}:A\in\mathcal{M}\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mover accent="true"><mi>A</mi><mo>~</mo></mover><mo>:</mo><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is a *-algebra of bounded operators in <math id="p18.m2" class="ltx_Math" alttext="\widetilde{H}" display="inline"><mover accent="true"><mi>H</mi><mo>~</mo></mover></math>.</p>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 1 -</span> <math id="p19.m1" class="ltx_Math" alttext="\widetilde{T}\in\mathcal{N}^{\prime\prime}" display="inline"><mrow><mover accent="true"><mi>T</mi><mo>~</mo></mover><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′′</mo></msup></mrow></math>.</p>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p">The algebra <math id="p20.m1" class="ltx_Math" alttext="B(\widetilde{H})" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>H</mi><mo>~</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> can be canonically identified with the algebra of <math id="p20.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrices with entries in <math id="p20.m3" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and <math id="p20.m4" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math> corresponds to the diagonal matrices with an element <math id="p20.m5" class="ltx_Math" alttext="A\in\mathcal{M}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math> in the diagonal. Thus, it is easy to check that <math id="p20.m6" class="ltx_Math" alttext="\mathcal{N}^{\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′</mo></msup></math> is precisely the set of matrices whose entries belong to <math id="p20.m7" class="ltx_Math" alttext="\mathcal{M}^{\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′</mo></msup></math>.</p>
+</div>
+<div id="p21" class="ltx_para">
+<p class="ltx_p">Since the unit matrices (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/UnitMatrix</span>) belong to <math id="p21.m1" class="ltx_Math" alttext="\mathcal{N}^{\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′</mo></msup></math>, it follows that <math id="p21.m2" class="ltx_Math" alttext="\mathcal{N}^{\prime\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′′</mo></msup></math> consists solely of diagonal matrices with one element on the diagonal (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CentralizerOfMatrixUnits</span>)). It is easy to check that <math id="p21.m3" class="ltx_Math" alttext="\mathcal{N}^{\prime\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′′</mo></msup></math> is precisely the set of diagonal matrices with one element of <math id="p21.m4" class="ltx_Math" alttext="\mathcal{M}^{\prime\prime}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′′</mo></msup></math> in the diagonal. Hence, we conclude that <math id="p21.m5" class="ltx_Math" alttext="\widetilde{T}\in\mathcal{N}^{\prime\prime}" display="inline"><mrow><mover accent="true"><mi>T</mi><mo>~</mo></mover><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′′</mo></msup></mrow></math>, and Claim 1 is proved.</p>
+</div>
+<div id="p22" class="ltx_para">
+<p class="ltx_p">Now, we observe that <math id="p22.m1" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math> is a *-subalgebra of <math id="p22.m2" class="ltx_Math" alttext="B(\widetilde{H})" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>H</mi><mo>~</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> that contains the identity operator. Since <math id="p22.m3" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> is closed in the strong operator topology, it follows easily that <math id="p22.m4" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math> is also closed in the strong operator topology. Since <math id="p22.m5" class="ltx_Math" alttext="\widetilde{T}\in\mathcal{N}^{\prime\prime}" display="inline"><mrow><mover accent="true"><mi>T</mi><mo>~</mo></mover><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>′′</mo></msup></mrow></math>, Lemma 1  that for each <math id="p22.m6" class="ltx_Math" alttext="\widetilde{x}:=(x_{1},\dots,x_{n})\in\widetilde{H}" display="inline"><mrow><mover accent="true"><mi>x</mi><mo>~</mo></mover><mo>:=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mover accent="true"><mi>H</mi><mo>~</mo></mover></mrow></math> there exists an operator <math id="p22.m7" class="ltx_Math" alttext="\widetilde{A}\in\mathcal{N}" display="inline"><mrow><mover accent="true"><mi>A</mi><mo>~</mo></mover><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi></mrow></math> such that <math id="p22.m8" class="ltx_Math" alttext="\|(\widetilde{A}-\widetilde{T})\widetilde{x}\|&lt;1" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo>~</mo></mover><mo>-</mo><mover accent="true"><mi>T</mi><mo>~</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>~</mo></mover></mrow><mo>∥</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>. But this is implies that <math id="p22.m9" class="ltx_Math" alttext="\|(A-T)x_{i}\|&lt;1" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>∥</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math> for each <math id="p22.m10" class="ltx_Math" alttext="1\leq i\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math>.</p>
+</div>
+<div id="p23" class="ltx_para">
+<p class="ltx_p">Thus, <math id="p23.m1" class="ltx_Math" alttext="T\in V(x_{1},\dots,x_{n};\,1)" display="inline"><mrow><mi>T</mi><mo>∈</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>;</mo><mn> 1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence we conclude that <math id="p23.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> belongs to the  operator closure of <math id="p23.m3" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math>, but since <math id="p23.m4" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> is closed under this topology, <math id="p23.m5" class="ltx_Math" alttext="T\in\mathcal{M}" display="inline"><mrow><mi>T</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math>.</p>
+</div>
+<div id="p24" class="ltx_para">
+<p class="ltx_p">We conclude that <math id="p24.m1" class="ltx_Math" alttext="\mathcal{M}^{\prime\prime}=\mathcal{M}" display="inline"><mrow><msup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>′′</mo></msup><mo>=</mo><mi class="ltx_font_mathcaligraphic">ℳ</mi></mrow></math>. <math id="p24.m2" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of von Neumann double commutant theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfVonNeumannDoubleCommutantTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46H35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 46K05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:44:01 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html><html>
+<head>
+<title>C^*-algebra</title>
+<!--Generated on Fri Feb  9 21:43:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">
+<math id="m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Definition</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S1.p1.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras are a type of involutive Banach algebras which arise
+in the study of operators on Hilbert spaces, Lie group
+representations, locally compact topological spaces, knots, noncommutative , among other
+topics in mathematics and theoretical physics . Their study was initiated in the 1930’s with the purpose of axiomatizing quantum mechanics, and still today, <math id="S1.p1.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras play a decisive role in formulations of quantum statistical mechanics and quantum .</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The defining property of these algebras is
+that the norm and the involution are related in a very special way.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition 1</span> - <em class="ltx_emph ltx_font_italic">A <math id="S1.p3.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo mathvariant="normal">*</mo></msup></math><span class="ltx_text ltx_font_bold ltx_font_upright">-algebra</span> <math id="S1.p3.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></math> is a Banach *-algebra such that
+<math id="S1.p3.m3" class="ltx_Math" alttext="\|a^{*}a\|=\|a\|^{2}" display="inline"><mrow><mrow><mo mathvariant="normal">∥</mo><mrow><msup><mi>a</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="italic">⁢</mo><mi>a</mi></mrow><mo mathvariant="normal">∥</mo></mrow><mo mathvariant="normal">=</mo><msup><mrow><mo mathvariant="normal">∥</mo><mi>a</mi><mo mathvariant="normal">∥</mo></mrow><mn mathvariant="normal">2</mn></msup></mrow></math> for all <math id="S1.p3.m4" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></mrow></math></em>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">The equality in Definition 1 is sometimes called the <math id="S1.p4.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math><span class="ltx_text ltx_font_bold"> axiom</span>. It turns out that one can weaken this condition and still specify
+the same  of algebras.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition 2</span> - <em class="ltx_emph ltx_font_italic">A <math id="S1.p5.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo mathvariant="normal">*</mo></msup></math><span class="ltx_text ltx_font_bold ltx_font_upright">-algebra</span> <math id="S1.p5.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></math> is a Banach algebra with an antilinear
+involution <math id="S1.p5.m3" class="ltx_Math" alttext="*" display="inline"><mo mathvariant="normal">*</mo></math> such that <math id="S1.p5.m4" class="ltx_Math" alttext="\|a\|^{2}\leq\|a^{*}a\|" display="inline"><mrow><msup><mrow><mo mathvariant="normal">∥</mo><mi>a</mi><mo mathvariant="normal">∥</mo></mrow><mn mathvariant="normal">2</mn></msup><mo mathvariant="normal">≤</mo><mrow><mo mathvariant="normal">∥</mo><mrow><msup><mi>a</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="italic">⁢</mo><mi>a</mi></mrow><mo mathvariant="normal">∥</mo></mrow></mrow></math> for all <math id="S1.p5.m5" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></mrow></math>.</em></p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition 3</span> - <em class="ltx_emph ltx_font_italic">A <math id="S1.p6.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo mathvariant="normal">*</mo></msup></math><span class="ltx_text ltx_font_bold ltx_font_upright">-algebra</span> <math id="S1.p6.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></math> is a Banach algebra with an antilinear
+involution <math id="S1.p6.m3" class="ltx_Math" alttext="*" display="inline"><mo mathvariant="normal">*</mo></math> such that <math id="S1.p6.m4" class="ltx_Math" alttext="\|a^{*}a\|=\|a^{*}\|\|a\|" display="inline"><mrow><mrow><mo mathvariant="normal">∥</mo><mrow><msup><mi>a</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="italic">⁢</mo><mi>a</mi></mrow><mo mathvariant="normal">∥</mo></mrow><mo mathvariant="normal">=</mo><mrow><mrow><mo mathvariant="normal">∥</mo><msup><mi>a</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">∥</mo></mrow><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal">∥</mo><mi>a</mi><mo mathvariant="normal">∥</mo></mrow></mrow></mrow></math></em></p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>C* Norm</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S2.p1.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras are a very peculiar type of topological algebras. The <math id="S2.p1.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> axiom, deceptively , imposes severe  on the the algebraic and
+topological structure of a <math id="S2.p1.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">A most striking consequence of the <math id="S2.p2.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> axiom is that the norm is solely determined by the algebraic structure of the algebra. More specifically,</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="\|a\|=\sqrt{R_{\sigma}(a^{*}a)}" display="block"><mrow><mrow><mo>∥</mo><mi>a</mi><mo>∥</mo></mrow><mo>=</mo><msqrt><mrow><msub><mi>R</mi><mi>σ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mo>*</mo></msup><mo>⁢</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.p2.m2" class="ltx_Math" alttext="R_{\sigma}(x)" display="inline"><mrow><msub><mi>R</mi><mi>σ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the spectral radius of the element <math id="S2.p2.m3" class="ltx_Math" alttext="x\in\mathcal{A}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math>. For <math id="S2.p2.m4" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> algebras with an identity element <math id="S2.p2.m5" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> we can specify even further: the norm of an element <math id="S2.p2.m6" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math> is determined by</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\|a\|^{2}=\sup\{|\lambda|:\lambda\in\mathbb{C}\;\text{and}\;a^{*}a-\lambda e\;%
+\text{is not invertible}\}" display="block"><mrow><msup><mrow><mo>∥</mo><mi>a</mi><mo>∥</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">|</mo><mi>λ</mi><mo stretchy="false">|</mo></mrow><mo>:</mo><mrow><mi>λ</mi><mo>∈</mo><mrow><mrow><mpadded width="+2.8pt"><mi>ℂ</mi></mpadded><mo>⁢</mo><mpadded width="+2.8pt"><mtext>and</mtext></mpadded><mo>⁢</mo><msup><mi>a</mi><mo>*</mo></msup><mo>⁢</mo><mi>a</mi></mrow><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>e</mi></mpadded><mo>⁢</mo><mtext>is not invertible</mtext></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">This also implies that the norm in a <math id="S2.p3.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra is unique, in the sense that there is no other norm in the algebra that satisfies that <math id="S2.p3.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> axiom, i.e. that turns the algebra into a <math id="S2.p3.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra. This is a stark contrast to the case
+of general normed algebras, where one may find many norms which are
+ with the algebraic structure.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Moreover, the <math id="S2.p4.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> norm occupies a unique  amongst the possible
+norms for an involutive algebra. Suppose that <math id="S2.p4.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is a <math id="S2.p4.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> algebra
+with norm <math id="S2.p4.m4" class="ltx_Math" alttext="\|\cdot\|_{C^{*}}" display="inline"><mrow><mo>∥</mo><mo>⋅</mo><msub><mo>∥</mo><msup><mi>C</mi><mo>*</mo></msup></msub></mrow></math>. If <math id="S2.p4.m5" class="ltx_Math" alttext="\|\cdot\|_{B}" display="inline"><mrow><mo>∥</mo><mo>⋅</mo><msub><mo>∥</mo><mi>B</mi></msub></mrow></math> is
+any other norm for which <math id="S2.p4.m6" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is a Banach *-algebra, then we must have</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="\|a\|_{C^{*}}\leq\|a\|_{B}\,,\qquad\forall a\in\mathcal{A}" display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mi>a</mi><mo>∥</mo></mrow><msup><mi>C</mi><mo>*</mo></msup></msub><mo>≤</mo><mpadded width="+1.7pt"><msub><mrow><mo>∥</mo><mi>a</mi><mo>∥</mo></mrow><mi>B</mi></msub></mpadded></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mo>∀</mo><mi>a</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence we see that the <math id="S2.p4.m7" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> norm enjoys an extremal property — it
+is the smallest possible norm for which <math id="S2.p4.m8" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> is a Banach *-algebra.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">There are many other surprising consequences of the <math id="S2.p5.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> axiom, like: *-homomorphisms between <math id="S2.p5.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras are automatically continuous and every <math id="S2.p5.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra is semi-simple, which again are not true for general involutive algebras.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Elements of a C*-algebra</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Like in involutory rings, there are some special elements in <math id="S3.p1.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras that deserve some attention. We recall some definitions here:</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p2.m1" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> be a <math id="S3.p2.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra with identity element <math id="S3.p2.m3" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>. An element <math id="S3.p2.m4" class="ltx_Math" alttext="a\in\mathcal{A}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math> is said to be</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">self-adjoint</span> if <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a^{*}=a" display="inline"><mrow><msup><mi>a</mi><mo>*</mo></msup><mo>=</mo><mi>a</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">unitary</span> if <math id="I1.i2.p1.m1" class="ltx_Math" alttext="a^{*}a=aa^{*}=e" display="inline"><mrow><mrow><msup><mi>a</mi><mo>*</mo></msup><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><msup><mi>a</mi><mo>*</mo></msup></mrow><mo>=</mo><mi>e</mi></mrow></math>
+</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">positive</span> if <math id="I1.i3.p1.m1" class="ltx_Math" alttext="a=b^{*}b" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><msup><mi>b</mi><mo>*</mo></msup><mo>⁢</mo><mi>b</mi></mrow></mrow></math> for some element <math id="I1.i3.p1.m2" class="ltx_Math" alttext="b\in\mathcal{A}" display="inline"><mrow><mi>b</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">It is many times useful to have some interpretation for this elements. One of this interpretations comes from complex analysis: we regard the elements of a <math id="S3.p3.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra as functions with values in <math id="S3.p3.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and the involution as complex conjugation.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">In this frame, self-adjoint elements correspond to real functions, unitary elements correspond to functions whose values lie in the unit circle in <math id="S3.p4.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and positive elements correspond to positive functions (functions with values in <math id="S3.p4.m2" class="ltx_Math" alttext="\mathbb{R^{+}_{0}}" display="inline"><msubsup><mi>ℝ</mi><mn>𝟘</mn><mo>+</mo></msubsup></math>).</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">It is easily seen that self-adjoint elements are closed under addition, multiplication and multiplication by real numbers. It can be proven the same for positive elements (with multiplication by positive numbers).</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">There are some decompositions of elements in a <math id="S3.p6.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra analogous to some decompositions in complex analysis. For instance, every element <math id="S3.p6.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> in a <math id="S3.p6.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra has a unique decomposition of the form</p>
+<table id="S3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex4.m1" class="ltx_Math" alttext="a=x+iy" display="block"><mrow><mi>a</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.p6.m4" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math> are self-adjoint. This is similar to the decomposition of a complex valued function in its real and imaginary parts.</p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">Moreover, every self-adjoint element <math id="S3.p7.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is of the form</p>
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex5.m1" class="ltx_Math" alttext="a=x-y" display="block"><mrow><mi>a</mi><mo>=</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.p7.m2" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math> are positive elements. This is similar to the decomposition of real valued functions in its positive and negative parts.</p>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">There are many other aspects of the theory of <math id="S3.p8.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras for which this kind of interpretation proves to be very insightful.</p>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p">For example, <math id="S3.p9.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras happen to have a natural partial ordering. One can define an
+ordering by declaring that <math id="S3.p9.m2" class="ltx_Math" alttext="x&gt;y" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mi>y</mi></mrow></math> when <math id="S3.p9.m3" class="ltx_Math" alttext="x-y" display="inline"><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow></math> is positive. Given this ordering, one can then
+speak of such things as monotonic functions, monotonic sequences,
+and positive linear functionals on the algebra. These notions, in
+turn, prove to be extremely useful in the study of <math id="S3.p9.m4" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Examples</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Having discussed these algebras in general terms, it is high time
+that we illustrate the definition with some examples.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 1</span></p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">As our first class of examples, we consider algebras of functions.
+Let <math id="S4.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a compact Hausdorff topological space and let
+<math id="S4.p3.m2" class="ltx_Math" alttext="C(X)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the algebra of continuous functions from <math id="S4.p3.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to
+<math id="S4.p3.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>. For the involution operation,
+we take pointwise complex conjugation and for the norm we take the
+norm of uniform convergence:</p>
+<table id="S4.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex6.m1" class="ltx_Math" alttext="\|f\|=\sup_{x\in X}|f(x)|" display="block"><mrow><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is a routine matter to check that the norm and involution
+satisfy the appropriate algebraic requirements. Completeness
+under this norm follows from the fact that the uniform limit
+of continuous functions on a locally compact Hausdorff topological
+space is continuous.
+</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">More generally, instead of a compact space, we can take a locally compact Hausdorff space <math id="S4.p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and consider the algebra <math id="S4.p4.m2" class="ltx_Math" alttext="C_{0}(X)" display="inline"><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> of continuous functions <math id="S4.p4.m3" class="ltx_Math" alttext="X\to\mathbb{C}" display="inline"><mrow><mi>X</mi><mo>→</mo><mi>ℂ</mi></mrow></math> that vanish at infinity, endowed with the same norm and involution. These are important examples of <math id="S4.p4.m4" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras.</p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 2</span></p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">As our second class of examples, we consider operator algebras.
+Let <math id="S4.p6.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be a complex Hilbert space with inner product <math id="S4.p6.m2" class="ltx_Math" alttext="\langle\cdot,\cdot\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">⟩</mo></mrow></math> and
+let <math id="S4.p6.m3" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the algebra of bounded operators on <math id="S4.p6.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. For the
+involution, we take the adjoint operation and as a norm we
+take the usual operator norm:</p>
+<table id="S4.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex7.m1" class="ltx_Math" alttext="\|T\|=\sup_{\|\xi\|=1}\|T\xi\|" display="block"><mrow><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mo>∥</mo><mi>ξ</mi><mo>∥</mo></mrow><mo>=</mo><mn>1</mn></mrow></munder><mo>⁡</mo><mrow><mo>∥</mo><mrow><mi>T</mi><mo>⁢</mo><mi>ξ</mi></mrow><mo>∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Again, it is straightforward to verify that the norm and
+involution satisfy the appropriate algebraic requirements,
+as is done in an attachment to this entry. Completeness
+under the norm follows from a well-known theorem of
+functional analysis.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Commutative and noncommutative C*-algebras</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">The algebras <math id="S5.p1.m1" class="ltx_Math" alttext="C_{0}(X)" display="inline"><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> in Example 1 above are more than just an example. In fact, all commutative <math id="S5.p1.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras are *-isomorphic to <math id="S5.p1.m3" class="ltx_Math" alttext="C_{0}(X)" display="inline"><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> for some locally compact Hausdorff space <math id="S5.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. Moreover, <math id="S5.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is compact if and only if the <math id="S5.p1.m6" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra has an identity element. This is the content of the Gelfand-Naimark theorem.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Furthermore, there is a correspondence between properties of the topological space and properties of the <math id="S5.p2.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra. For example: a compactification of the space corresponds to a unitization of the <math id="S5.p2.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra; the space is connected if and only if the <math id="S5.p2.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra has no non-trivial projections, among many other interesting correspondences.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">For this reason, the theory of (noncommutative) <math id="S5.p3.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras is many times called noncommutative topology (click on the link for more information).</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p"><math id="S5.p4.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">The second example is also more than just an example of <math id="S5.p5.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras. In fact, by the Gelfand-Naimark representation theorem, all <math id="S5.p5.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras are *-isomorphic to a norm closed *-subalgebra of <math id="S5.p5.m3" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>, for some Hilbert space <math id="S5.p5.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.</p>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">Note, however, that this does not provide a “classification” of <math id="S5.p6.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras since we do not know in general what are the closed *-subalgebras of <math id="S5.p6.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>. This is merely a (very-important) structural theorem. The classification problem for <math id="S5.p6.m3" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras is still open.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Additional Examples</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 3</span></p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">Compact operators in a Hilbert space <math id="S6.p2.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> form a closed ideal of <math id="S6.p2.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Moreover, this ideal is also closed for the involution of operators. Hence, the algebra of compact operators, <math id="S6.p2.m3" class="ltx_Math" alttext="K(H)" display="inline"><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is a <math id="S6.p2.m4" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra.</p>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 4</span></p>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.p4.m1" class="ltx_Math" alttext="(X,\mathfrak{B},\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>𝔅</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> be a measure space. The space <math id="S6.p4.m2" class="ltx_Math" alttext="L^{\infty}(X)" display="inline"><mrow><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LpSpace</span>) is an algebra under pointwise operations. We can define an involution again by complex conjugation and we consider the essential supremum norm <math id="S6.p4.m3" class="ltx_Math" alttext="\|\cdot\|_{\infty}" display="inline"><mrow><mo>∥</mo><mo>⋅</mo><msub><mo>∥</mo><mi mathvariant="normal">∞</mi></msub></mrow></math>. It can be readily verified that, under these operations and norm, <math id="S6.p4.m4" class="ltx_Math" alttext="L^{\infty}(X)" display="inline"><mrow><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a <math id="S6.p4.m5" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra.</p>
+</div>
+<div id="S6.p5" class="ltx_para">
+<p class="ltx_p">The algebras <math id="S6.p5.m1" class="ltx_Math" alttext="L^{\infty}(X)" display="inline"><mrow><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> are also particularly important since they are examples of von Neumann algebras, which are a specific kind of <math id="S6.p5.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebras.</p>
+</div>
+<div id="S6.p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">
+<math id="S6.p6.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Calgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:57:55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:57:55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">34</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L87</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">C*-algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">C* algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupCAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">VonNeumannAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NoncommutativeGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupoidCConvolutionAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupoidCDynamicalSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CAlgebra3</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NuclearCAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HomomorphismsOfCAlgebrasAreContinuous</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ContinuousLinearMapping</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OperatorNorm</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">C_cG</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UniformContinuityOverLocallyCompa</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">
+<math id="S6.p6.m2" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math> axiom</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:43:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

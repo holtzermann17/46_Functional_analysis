@@ -1,0 +1,247 @@
+<!DOCTYPE html><html>
+<head>
+<title>space of rapidly decreasing functions</title>
+<!--Generated on Fri Feb  9 21:40:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">space of rapidly decreasing functions</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The function space of rapidly decreasing functions <math id="p2.m1" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> has the
+important property that the Fourier transform is an endomorphism
+on this space. This property enables one, by duality, to
+define the Fourier transform
+for elements in the dual space of <math id="p2.m2" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math>, that is, for tempered
+distributions.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>
+The <em class="ltx_emph ltx_font_italic">space of rapidly decreasing functions</em> on <math id="p3.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+is the function space</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\mathcal{S}(\mathbb{R}^{n})=\{f\in C^{\infty}(\mathbb{R}^{n})\mid%
+\sup_{x\in\mathbb{R}^{n}}\mid\,||f||_{\alpha,\beta}&lt;\infty\,\mbox{for all %
+multi-indices}\,\alpha,\beta\}," display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>f</mi><mo>∈</mo><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo>∣</mo><munder><mo movablelimits="false">sup</mo><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></munder><mo rspace="4.2pt">∣</mo><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo><msub><mo stretchy="false">|</mo><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>&lt;</mo><mpadded width="+1.7pt"><mi mathvariant="normal">∞</mi></mpadded><mpadded width="+1.7pt"><mtext>for all multi-indices</mtext></mpadded><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">}</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p3.m2" class="ltx_Math" alttext="C^{\infty}(\mathbb{R}^{n})" display="inline"><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> is the set of smooth functions
+from <math id="p3.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> to <math id="p3.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, and</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="||f||_{\alpha,\beta}=||x^{\alpha}D^{\beta}f||_{\infty}." display="block"><mrow><mrow><msub><mrow><mo fence="true">||</mo><mi>f</mi><mo fence="true">||</mo></mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>=</mo><msub><mrow><mo fence="true">||</mo><mrow><msup><mi>x</mi><mi>α</mi></msup><mo>⁢</mo><msup><mi>D</mi><mi>β</mi></msup><mo>⁢</mo><mi>f</mi></mrow><mo fence="true">||</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here, <math id="p3.m5" class="ltx_Math" alttext="||\cdot||_{\infty}" display="inline"><mrow><mo stretchy="false">|</mo><mo stretchy="false">|</mo><mo>⋅</mo><mo stretchy="false">|</mo><msub><mo stretchy="false">|</mo><mi mathvariant="normal">∞</mi></msub></mrow></math> is the supremum norm, and we use
+multi-index notation.
+When the dimension <math id="p3.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is clear, it is convenient to write
+<math id="p3.m7" class="ltx_Math" alttext="\mathcal{S}=\mathcal{S}(\mathbb{R}^{n})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>=</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. The space <math id="p3.m8" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is also called the
+<em class="ltx_emph ltx_font_italic">Schwartz space</em>, after Laurent Schwartz
+(1915-2002) <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>.</p>
+</div>
+<section id="S0.SS0.SSS1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.0.1 </span>Examples of functions in <math id="S0.SS0.SSS1.m1" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math>
+</h2>
+
+<div id="S0.SS0.SSS1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i1.p1.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> is a multi-index, and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is a positive
+real number, then</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="x^{i}\exp\{-ax^{2}\}\in\mathcal{S}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mo>-</mo><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Any smooth function with compact support <math id="I1.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is in <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math>.
+This is clear since any derivative of <math id="I1.i2.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous, so
+<math id="I1.i2.p1.m4" class="ltx_Math" alttext="x^{\alpha}D^{\beta}f" display="inline"><mrow><msup><mi>x</mi><mi>α</mi></msup><mo>⁢</mo><msup><mi>D</mi><mi>β</mi></msup><mo>⁢</mo><mi>f</mi></mrow></math> has a maximum in <math id="I1.i2.p1.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S0.SS0.SSS2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.0.2 </span>Properties</h2>
+
+<div id="S0.SS0.SSS2.p1" class="ltx_para">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is a complex vector space. In other words,
+<math id="I2.i1.p1.m2" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is closed under point-wise addition and under
+multiplication by a complex scalar.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Using Leibniz’ rule, it follows that <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is also closed
+under point-wise multiplication; if <math id="I2.i2.p1.m2" class="ltx_Math" alttext="f,g\in\mathcal{S}" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow></math>, then
+<math id="I2.i2.p1.m3" class="ltx_Math" alttext="fg:x\mapsto f(x)g(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>x</mi><mo>↦</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> is also in <math id="I2.i2.p1.m4" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">For any <math id="I2.i3.p1.m1" class="ltx_Math" alttext="1\leq p\leq\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>≤</mo><mi mathvariant="normal">∞</mi></mrow></math>, we have <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathcal{S}\subset L^{p}," display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>⊂</mo><msup><mi>L</mi><mi>p</mi></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and if <math id="I2.i3.p1.m2" class="ltx_Math" alttext="p&lt;\infty" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, then <math id="I2.i3.p1.m3" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math> is also dense in <math id="I2.i3.p1.m4" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">The Fourier transform is a linear isomorphism <math id="I2.i4.p1.m1" class="ltx_Math" alttext="\mathcal{S}\to\mathcal{S}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+L. Hörmander, <em class="ltx_emph ltx_font_italic">The Analysis of Linear Partial Differential Operators I,
+(Distribution theory and Fourier Analysis)</em>, 2nd ed, Springer-Verlag, 1990.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+The MacTutor History of Mathematics archive,
+<span class="ltx_text ltx_font_typewriter">http://www-gap.dcs.st-and.ac.uk/ history/Mathematicians/Schwartz.html</span>Laurent Schwartz
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> M. Reed, B. Simon,
+<em class="ltx_emph ltx_font_italic">Methods of Modern Mathematical Physics: Functional Analysis I</em>,
+Revised and enlarged edition, Academic Press, 1980.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock"> Wikipedia,
+<span class="ltx_text ltx_font_typewriter">http://en.wikipedia.org/wiki/Tempered_distribution</span>Tempered distributions
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">space of rapidly decreasing functions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SpaceOfRapidlyDecreasingFunctions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:44:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:44:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matte (1858)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46F05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Schwartz space</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DiscreteTimeFourierTransformInRelationWithItsContinousTimeFourierTransfrom</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:40:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html><html>
+<head>
+<title>frame</title>
+<!--Generated on Fri Feb  9 21:39:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">frame</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Introduction</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">The concept of a frame is a generalization of the concept of an orthonormal basis: each vector in the space can be represented as a sum of the elements in the frame, but not necessarily uniquely. It is because of this redundancy in representation that frames have found important applications. Surpisingly, despite the fact that frames do not in general consist of orthonormal vectors, the frame representation of a vector may still satisfy the Parseval equation.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Definition</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">A frame in a Hilbert space <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is a collection <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="(x_{i})_{i=1}^{n}" display="inline"><msubsup><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math> of vectors in <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> such that there exist constants <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="A,B&gt;0" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> such that for all <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A\|x\|^{2}\leq\sum_{i}|\langle x,x_{i}\rangle|^{2}\leq B\|x\|^{2}" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mn>2</mn></msup></mrow><mo>≤</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder><msup><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>≤</mo><mrow><mi>B</mi><mo>⁢</mo><msup><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">The constants <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> are called the lower and upper frame bounds respectively, or the frame constants. The optimal frame constants <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="A^{\prime}" display="inline"><msup><mi>A</mi><mo>′</mo></msup></math> and <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="B^{\prime}" display="inline"><msup><mi>B</mi><mo>′</mo></msup></math> are defined respectively as the supremum and infimum of all possible lower and upper frame bounds. When <math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>, the frame is a tight frame, or an <math id="S0.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>-tight frame. A <math id="S0.SS0.SSS0.Px2.p2.m6" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>-tight frame is referred to as a Parseval frame, and the Parseval equation holds with respect to the frame elements:</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p3" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="x=\sum_{i=1}^{n}\langle x,x_{i}\rangle x_{i}" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px2.p4" class="ltx_para">
+<p class="ltx_p">for all <math id="S0.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Associated Operators (for finite frames)</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\dim H=n" display="inline"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mi>H</mi></mrow><mo>=</mo><mi>n</mi></mrow></math> and <math id="S0.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="\{x_{i}\}_{i=1}^{k}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup></math> be a frame in <math id="S0.SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> (<math id="S0.SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="k\geq n" display="inline"><mrow><mi>k</mi><mo>≥</mo><mi>n</mi></mrow></math>).</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">analysis</span> operator <math id="S0.SS0.SSS0.Px3.p2.m1" class="ltx_Math" alttext="\theta:H\rightarrow{\mathbb{C}}^{k}" display="inline"><mrow><mi>θ</mi><mo>:</mo><mrow><mi>H</mi><mo>→</mo><msup><mi>ℂ</mi><mi>k</mi></msup></mrow></mrow></math> is the function defined such that <math id="S0.SS0.SSS0.Px3.p2.m2" class="ltx_Math" alttext="\theta:x\mapsto(\langle x,x_{i}\rangle)_{i}." display="inline"><mrow><mrow><mi>θ</mi><mo>:</mo><mrow><mi>x</mi><mo>↦</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p3" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">synthesis</span> operator <math id="S0.SS0.SSS0.Px3.p3.m1" class="ltx_Math" alttext="\tau:{\mathbb{C}}^{k}\rightarrow H" display="inline"><mrow><mi>τ</mi><mo>:</mo><mrow><msup><mi>ℂ</mi><mi>k</mi></msup><mo>→</mo><mi>H</mi></mrow></mrow></math> is the function defined such that <math id="S0.SS0.SSS0.Px3.p3.m2" class="ltx_Math" alttext="(c_{i})_{i}^{k}\mapsto\sum_{i=1}^{k}c_{i}x_{i}." display="inline"><mrow><mrow><msubsup><mrow><mo stretchy="false">(</mo><msub><mi>c</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mi>i</mi><mi>k</mi></msubsup><mo>↦</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><mrow><msub><mi>c</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p4" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS0.SSS0.Px3.p4.m1" class="ltx_Math" alttext="\tau=\theta^{\ast}" display="inline"><mrow><mi>τ</mi><mo>=</mo><msup><mi>θ</mi><mo>∗</mo></msup></mrow></math>, that is, <math id="S0.SS0.SSS0.Px3.p4.m2" class="ltx_Math" alttext="\langle\theta x,y\rangle_{{\mathbb{C}}^{k}}=\langle x,\tau y\rangle_{H}" display="inline"><mrow><msub><mrow><mo stretchy="false">⟨</mo><mrow><mi>θ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo stretchy="false">⟩</mo></mrow><msup><mi>ℂ</mi><mi>k</mi></msup></msub><mo>=</mo><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mrow><mi>τ</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub></mrow></math> for all <math id="S0.SS0.SSS0.Px3.p4.m3" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math> and all <math id="S0.SS0.SSS0.Px3.p4.m4" class="ltx_Math" alttext="y\in{\mathbb{C}}^{k}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mi>ℂ</mi><mi>k</mi></msup></mrow></math>.
+</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p5" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\langle\theta x,y\rangle_{{\mathbb{C}}^{k}}" display="inline"><msub><mrow><mo stretchy="false">⟨</mo><mrow><mi>θ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo stretchy="false">⟩</mo></mrow><msup><mi>ℂ</mi><mi>k</mi></msup></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\langle(\langle x,x_{i}\rangle_{H})_{i=1}^{k},(y_{i})_{i=1}^{k}%
+\rangle_{{\mathbb{C}}^{k}}" display="inline"><msub><mrow><mo stretchy="false">⟨</mo><msubsup><mrow><mo stretchy="false">(</mo><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><mo>,</mo><msubsup><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><mo stretchy="false">⟩</mo></mrow><msup><mi>ℂ</mi><mi>k</mi></msup></msub></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{k}\langle x,x_{i}\rangle_{H}\overline{y_{i}}=\sum_{i=%
+1}^{k}\langle x,y_{i}x_{i}\rangle_{H}" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover></mstyle><mrow><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub><mo>⁢</mo><mover accent="true"><msub><mi>y</mi><mi>i</mi></msub><mo>¯</mo></mover></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover></mstyle><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\langle x,\sum_{i=1}^{k}y_{i}x_{i}\rangle_{H}=\langle x,\tau y%
+\rangle_{H}" display="inline"><mrow><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover></mstyle><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mrow><mi>τ</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px3.p6" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">frame</span> operator is defined as the <math id="S0.SS0.SSS0.Px3.p6.m1" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix <math id="S0.SS0.SSS0.Px3.p6.m2" class="ltx_Math" alttext="\theta^{\ast}\theta:H\rightarrow H" display="inline"><mrow><mrow><msup><mi>θ</mi><mo>∗</mo></msup><mo>⁢</mo><mi>θ</mi></mrow><mo>:</mo><mrow><mi>H</mi><mo>→</mo><mi>H</mi></mrow></mrow></math> such that <math id="S0.SS0.SSS0.Px3.p6.m3" class="ltx_Math" alttext="\theta^{\ast}\theta:x\mapsto\sum_{i=1}^{k}\langle x,x_{i}\rangle x_{i}" display="inline"><mrow><mrow><msup><mi>θ</mi><mo>∗</mo></msup><mo>⁢</mo><mi>θ</mi></mrow><mo>:</mo><mrow><mi>x</mi><mo>↦</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><mrow><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">⟩</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></mrow></mrow></math> for all <math id="S0.SS0.SSS0.Px3.p6.m4" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p7" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Grammian</span> operator is defined as the composition <math id="S0.SS0.SSS0.Px3.p7.m1" class="ltx_Math" alttext="\theta\theta^{\ast}:{\mathbb{C}}^{k}\rightarrow{\mathbb{C}}^{k}" display="inline"><mrow><mrow><mi>θ</mi><mo>⁢</mo><msup><mi>θ</mi><mo>∗</mo></msup></mrow><mo>:</mo><mrow><msup><mi>ℂ</mi><mi>k</mi></msup><mo>→</mo><msup><mi>ℂ</mi><mi>k</mi></msup></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p8" class="ltx_para">
+<p class="ltx_p">The Grammian and frame operators have the same nonzero eigenvalues.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">frame</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Frame1</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:25:37</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:25:37</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">swiftset (1337)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">swiftset (1337)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">swiftset (1337)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46C99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RieszSequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SetOfSampling</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Parseval frame</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">tight frame</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">frame constants</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">frame bounds</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">synthesis operator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">analysis operator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">frame operator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Grammian</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:39:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

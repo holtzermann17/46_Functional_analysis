@@ -1,0 +1,333 @@
+<!DOCTYPE html><html>
+<head>
+<title>Taylor’s formula in Banach spaces</title>
+<!--Generated on Fri Feb  9 21:44:30 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Taylor’s formula in Banach spaces</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> be an open subset of a real Banach space <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.
+If <math id="p1.m3" class="ltx_Math" alttext="f\colon U\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is differentiable <math id="p1.m4" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> times on <math id="p1.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>,
+it may be expanded by Taylor’s formula:</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="f(x)=f(a)+\operatorname{D}f(a)\cdot h+\frac{1}{2!}\operatorname{D}^{2}f(a)%
+\cdot h^{2}+\cdots+\frac{1}{n!}\operatorname{D}^{n}f(a)\cdot h^{n}+R_{n}(x)\,," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>h</mi></mrow><mo>+</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><msup><mi mathvariant="normal">D</mi><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><msup><mi mathvariant="normal">D</mi><mi>n</mi></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mi>n</mi></msup></mrow><mo>+</mo><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">with the following expressions for the remainder term <math id="p1.m6" class="ltx_Math" alttext="R_{n}(x)" display="inline"><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle R_{n}(x)" display="inline"><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{n!}\,\operatorname{D}^{n+1}f(\eta)\cdot(x-\eta)^{n}h" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><msup><mi mathvariant="normal">D</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>η</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>η</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>⁢</mo><mi>h</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">Cauchy form of remainder</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle R_{n}(x)" display="inline"><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{(n+1)!}\,\operatorname{D}^{n+1}f(\xi)\cdot h^{n+1}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><msup><mi mathvariant="normal">D</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">Lagrange form of remainder</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle R_{n}(x)" display="inline"><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{n!}\int_{0}^{1}\operatorname{D}^{n+1}f(a+th)\cdot((1-t)%
+h)^{n}h\,dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mstyle><mrow><mrow><mrow><mrow><msup><mi mathvariant="normal">D</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>h</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">integral form of remainder</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here <math id="p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p1.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> must be points of <math id="p1.m9" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> such that the line segment
+between <math id="p1.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p1.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> lie inside <math id="p1.m12" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, <math id="p1.m13" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is <math id="p1.m14" class="ltx_Math" alttext="x-a" display="inline"><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow></math>,
+and the points <math id="p1.m15" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> and <math id="p1.m16" class="ltx_Math" alttext="\eta" display="inline"><mi>η</mi></math> lie on the same line segment,
+strictly between <math id="p1.m17" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p1.m18" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The <math id="p2.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>th Fréchet derivative of <math id="p2.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is being denoted by
+<math id="p2.m4" class="ltx_Math" alttext="\operatorname{D}^{k}f(a)" display="inline"><mrow><mrow><msup><mi mathvariant="normal">D</mi><mi>k</mi></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>, to be viewed as a multilinear map <math id="p2.m5" class="ltx_Math" alttext="X^{k}\to\mathbb{R}" display="inline"><mrow><msup><mi>X</mi><mi>k</mi></msup><mo>→</mo><mi>ℝ</mi></mrow></math>.
+The <math id="p2.m6" class="ltx_Math" alttext="\cdot h^{k}" display="inline"><mrow><mi></mi><mo>⋅</mo><msup><mi>h</mi><mi>k</mi></msup></mrow></math> notation means to evaluate a multilinear map
+at <math id="p2.m7" class="ltx_Math" alttext="(h,\ldots,h)" display="inline"><mrow><mo stretchy="false">(</mo><mi>h</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Remainders for vector-valued functions</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S1.p1.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a Banach space, we may also consider
+Taylor expansions for <math id="S1.p1.m2" class="ltx_Math" alttext="f\colon U\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math>.
+Formula (<a href="#Sx4.E4" title="(4) ‣ Taylor series ‣ Taylor’s formula in Banach spaces" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) takes the same form,
+but the Cauchy and Lagrange forms of the remainder
+will not be exact;
+they will only be bounds on <math id="S1.p1.m3" class="ltx_Math" alttext="R_{n}(x)" display="inline"><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+That is, for <math id="S1.p1.m4" class="ltx_Math" alttext="f\colon U\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math>,</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S1.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\displaystyle\lVert R_{n}(x)\rVert" display="inline"><mrow><mo fence="true" stretchy="false">∥</mo><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex4.m2" class="ltx_Math" alttext="\displaystyle\leq\frac{1}{n!}\,\left\lVert\operatorname{D}^{n+1}f(\eta)\cdot(x%
+-\eta)^{n}h\right\rVert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><mo fence="true">∥</mo><mrow><mrow><mrow><mrow><msup><mi mathvariant="normal">D</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>η</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>η</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>⁢</mo><mi>h</mi></mrow><mo fence="true">∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">Cauchy form of remainder</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex5.m1" class="ltx_Math" alttext="\displaystyle\lVert R_{n}(x)\rVert" display="inline"><mrow><mo fence="true" stretchy="false">∥</mo><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex5.m2" class="ltx_Math" alttext="\displaystyle\leq\frac{1}{(n+1)!}\,\left\lVert\operatorname{D}^{n+1}f(\xi)%
+\cdot h^{n+1}\right\rVert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><mo fence="true">∥</mo><mrow><mrow><mrow><msup><mi mathvariant="normal">D</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mo fence="true">∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">Lagrange form of remainder</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is not hard to find counterexamples if we attempt to remove the norm signs or change
+the inequality to equality in the above formulas.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">However, the integral form of the remainder continues to hold for <math id="S1.p2.m1" class="ltx_Math" alttext="Y\neq\mathbb{R}" display="inline"><mrow><mi>Y</mi><mo>≠</mo><mi>ℝ</mi></mrow></math>,
+although strictly speaking it only applies if the integrand is <em class="ltx_emph ltx_font_italic">integrable</em>.
+The integral form is also applicable when <math id="S1.p2.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S1.p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> are complex Banach spaces.</p>
+</div>
+</section>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Mean Value Theorem</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">The Mean Value Theorem can be obtained
+as the special case <math id="Sx1.p1.m1" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math> with the Lagrange form of the remainder:
+for <math id="Sx1.p1.m2" class="ltx_Math" alttext="f\colon U\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> differentiable,
+</p>
+<table id="Sx1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E2.m1" class="ltx_Math" alttext="\lVert f(x)-f(a)\rVert\leq\lVert\operatorname{D}f(\xi)\cdot(x-a)\rVert" display="block"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>≤</mo><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">∥</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="Sx1.p1.m3" class="ltx_Math" alttext="Y=\mathbb{R}" display="inline"><mrow><mi>Y</mi><mo>=</mo><mi>ℝ</mi></mrow></math>, then the norm signs may be removed from
+(<a href="#Sx1.E2" title="(2) ‣ Mean Value Theorem ‣ Taylor’s formula in Banach spaces" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), and the inequality replaced by equality.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">Formula (<a href="#Sx1.E2" title="(2) ‣ Mean Value Theorem ‣ Taylor’s formula in Banach spaces" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) also holds under the much
+weaker hypothesis
+that <math id="Sx1.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> only has a directional derivative along the line
+segment from <math id="Sx1.p2.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> to <math id="Sx1.p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Weaker bounds for the remainder</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx2.p1.m1" class="ltx_Math" alttext="f\colon U\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> is only differentiable <math id="Sx2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> times <em class="ltx_emph ltx_font_italic">at</em> <math id="Sx2.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>,
+then we cannot quantify the remainder by the <math id="Sx2.p1.m4" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math>th derivative,
+but it is still true
+that</p>
+<table id="Sx2.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.E3.m1" class="ltx_Math" alttext="R_{n}(x)=o(\lVert x-a\rVert^{n})\text{ as $x\to a$. }" display="block"><mrow><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mtext> as </mtext><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow><mtext>. </mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Finite-dimensional case</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx3.p1.m1" class="ltx_Math" alttext="X=\mathbb{R}^{m}" display="inline"><mrow><mi>X</mi><mo>=</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></math> and <math id="Sx3.p1.m2" class="ltx_Math" alttext="Y=\mathbb{R}" display="inline"><mrow><mi>Y</mi><mo>=</mo><mi>ℝ</mi></mrow></math>,
+<math id="Sx3.p1.m3" class="ltx_Math" alttext="\operatorname{D}^{k}" display="inline"><msup><mi mathvariant="normal">D</mi><mi>k</mi></msup></math> has the following expression in terms of coordinates:</p>
+<table id="Sx3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex6.m1" class="ltx_Math" alttext="\operatorname{D}^{k}f(a)\cdot(\xi_{1},\ldots,\xi_{k})=\sum_{i_{1},\ldots,i_{k}%
+}\frac{\partial^{k}f}{\partial x^{i_{1}}\cdots\partial x^{i_{k}}}\,\xi_{1}^{i_%
+{1}}\cdots\xi_{k}^{i_{k}}\,," display="block"><mrow><mrow><mrow><mrow><mrow><msup><mi mathvariant="normal">D</mi><mi>k</mi></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>ξ</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>i</mi><mi>k</mi></msub></mrow></munder><mrow><mpadded width="+1.7pt"><mfrac><mrow><msup><mo>∂</mo><mi>k</mi></msup><mo>⁡</mo><mi>f</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mrow><msup><mi>x</mi><msub><mi>i</mi><mn>1</mn></msub></msup><mo>⁢</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><msub><mi>i</mi><mi>k</mi></msub></msup></mrow></mrow></mfrac></mpadded><mo>⁢</mo><msubsup><mi>ξ</mi><mn>1</mn><msub><mi>i</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mpadded width="+1.7pt"><msubsup><mi>ξ</mi><mi>k</mi><msub><mi>i</mi><mi>k</mi></msub></msubsup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where each <math id="Sx3.p1.m4" class="ltx_Math" alttext="i_{j}" display="inline"><msub><mi>i</mi><mi>j</mi></msub></math> runs from <math id="Sx3.p1.m5" class="ltx_Math" alttext="1,\ldots,m" display="inline"><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>m</mi></mrow></math> in the sum.</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">If we collect the equal mixed partials
+(assuming that they are continuous)
+then</p>
+<table id="Sx3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex7.m1" class="ltx_Math" alttext="\frac{1}{k!}\,\operatorname{D}^{k}f(a)\cdot h^{k}=\sum_{\lvert J\rvert=k}\frac%
+{1}{J!}\frac{\partial^{\lvert J\rvert}f}{\partial x^{J}}h^{J}\,," display="block"><mrow><mrow><mrow><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mpadded><mo>⁢</mo><mrow><msup><mi mathvariant="normal">D</mi><mi>k</mi></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mi>k</mi></msup></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mo fence="true" stretchy="false">|</mo><mi>J</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>=</mo><mi>k</mi></mrow></munder><mrow><mfrac><mn>1</mn><mrow><mi>J</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mrow><mo fence="true" stretchy="false">|</mo><mi>J</mi><mo fence="true" stretchy="false">|</mo></mrow></msup><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>J</mi></msup></mrow></mfrac><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>h</mi><mi>J</mi></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx3.p2.m1" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is a multi-index of <math id="Sx3.p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> components, and each component <math id="Sx3.p2.m3" class="ltx_Math" alttext="J_{i}" display="inline"><msub><mi>J</mi><mi>i</mi></msub></math> indicates
+how many times the derivative with respect to the <math id="Sx3.p2.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th coordinate should be taken,
+and the exponent that the <math id="Sx3.p2.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th coordinate of <math id="Sx3.p2.m6" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> should be raised to
+in the monomial <math id="Sx3.p2.m7" class="ltx_Math" alttext="h^{J}" display="inline"><msup><mi>h</mi><mi>J</mi></msup></math>.
+The multi-index <math id="Sx3.p2.m8" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> runs through all combinations
+such that <math id="Sx3.p2.m9" class="ltx_Math" alttext="J_{1}+\cdots+J_{m}=\lvert J\rvert=k" display="inline"><mrow><mrow><msub><mi>J</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>J</mi><mi>m</mi></msub></mrow><mo>=</mo><mrow><mo fence="true" stretchy="false">|</mo><mi>J</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>=</mo><mi>k</mi></mrow></math> in the sum.
+The notation <math id="Sx3.p2.m10" class="ltx_Math" alttext="J!" display="inline"><mrow><mi>J</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> means <math id="Sx3.p2.m11" class="ltx_Math" alttext="J_{1}!\cdots J_{m}!" display="inline"><mrow><mrow><msub><mi>J</mi><mn>1</mn></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><msub><mi>J</mi><mi>m</mi></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<p class="ltx_p">All this is more easily assimilated if we remember that
+<math id="Sx3.p3.m1" class="ltx_Math" alttext="\operatorname{D}^{k}f(a)\cdot h^{k}" display="inline"><mrow><mrow><mrow><msup><mi mathvariant="normal">D</mi><mi>k</mi></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mi>k</mi></msup></mrow></math> is supposed to be a polynomial of degree <math id="Sx3.p3.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.
+Also <math id="Sx3.p3.m3" class="ltx_Math" alttext="\lvert J\rvert!/J!" display="inline"><mrow><mrow><mrow><mo fence="true" stretchy="false">|</mo><mi>J</mi><mo fence="true" stretchy="false">|</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>/</mo><mrow><mi>J</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></math> is just the multinomial coefficient.</p>
+</div>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Taylor series</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx4.p1.m1" class="ltx_Math" alttext="\lim_{n\to\infty}R_{n}(x)=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><msub><mi>R</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>,
+then we may write</p>
+<table id="Sx4.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.E4.m1" class="ltx_Math" alttext="f(x)=f(a)+\operatorname{D}f(a)\cdot h+\frac{1}{2!}\operatorname{D}^{2}f(a)%
+\cdot h^{2}+\cdots" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>h</mi></mrow><mo>+</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><msup><mi mathvariant="normal">D</mi><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">as a convergent infinite series. Elegant as such an expansion is,
+it is not seen very often,
+for the reason that higher order Fréchet derivatives, especially in infinite-dimensional spaces,
+are often difficult to calculate.</p>
+</div>
+<div id="Sx4.p2" class="ltx_para">
+<p class="ltx_p">But a notable exception occurs if a function <math id="Sx4.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is defined by a convergent “power series”</p>
+<table id="Sx4.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.E5.m1" class="ltx_Math" alttext="f(x)=\sum_{k=0}^{\infty}M_{k}\cdot(x-a)^{k}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>M</mi><mi>k</mi></msub><mo>⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx4.p2.m2" class="ltx_Math" alttext="\{M_{k}:k=0,1,\ldots\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>M</mi><mi>k</mi></msub><mo>:</mo><mrow><mi>k</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></math> is a family of continuous symmetric multilinear functions <math id="Sx4.p2.m3" class="ltx_Math" alttext="X^{k}\to Y" display="inline"><mrow><msup><mi>X</mi><mi>k</mi></msup><mo>→</mo><mi>Y</mi></mrow></math>.
+In this case, the series (<a href="#Sx4.E5" title="(5) ‣ Taylor series ‣ Taylor’s formula in Banach spaces" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) is the Taylor series for <math id="Sx4.p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="Sx4.p2.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Arthur Wouk. <span class="ltx_text ltx_font_italic">A course of applied functional analysis</span>. Wiley-Interscience, 1979.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Eberhard Zeidler. <span class="ltx_text ltx_font_italic">Applied functional analysis: main principles and their applications</span>. Springer-Verlag, 1995.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Michael Spivak. <span class="ltx_text ltx_font_italic">Calculus</span>, third edition. Publish or Perish, 1994.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Taylor’s formula in Banach spaces</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TaylorsFormulaInBanachSpaces</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:27</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:27</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46T20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 41A58</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:44:30 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html><html>
+<head>
+<title>every Hilbert space has an orthonormal basis</title>
+<!--Generated on Fri Feb  9 21:38:10 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">every Hilbert space has an orthonormal basis</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem -</span> Every Hilbert space <math id="p1.m1" class="ltx_Math" alttext="H\neq\{0\}" display="inline"><mrow><mi>H</mi><mo>≠</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math> has an orthonormal basis.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><math id="p2.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof :</em> As could be expected, the proof makes use of Zorn’s Lemma. Let <math id="p3.m1" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> be the set of all orthonormal sets of <math id="p3.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. It is clear that <math id="p3.m3" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> is non-empty since the set <math id="p3.m4" class="ltx_Math" alttext="\{x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math> is in <math id="p3.m5" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math>, where <math id="p3.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is an element of <math id="p3.m7" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> such that <math id="p3.m8" class="ltx_Math" alttext="\|x\|=1" display="inline"><mrow><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The elements of <math id="p4.m1" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> can be ordered by inclusion, and each chain <math id="p4.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> in <math id="p4.m3" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> has an upper bound, given by the union of all elements of <math id="p4.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. Thus, Zorn’s Lemma assures the existence of a maximal element <math id="p4.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> in <math id="p4.m6" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math>. We claim that <math id="p4.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is an orthonormal basis of <math id="p4.m8" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">It is clear that <math id="p5.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is an orthonormal set, as it belongs to <math id="p5.m2" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math>. It remains to see that the linear span of <math id="p5.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is dense in <math id="p5.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.
+</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let <math id="p6.m1" class="ltx_Math" alttext="\overline{\mathrm{span}\,B}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover></math> denote the closure of the span of <math id="p6.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Suppose <math id="p6.m3" class="ltx_Math" alttext="\overline{\mathrm{span}\,B}\neq H" display="inline"><mrow><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover><mo>≠</mo><mi>H</mi></mrow></math>. By the orthogonal decomposition theorem we know that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H=\overline{\mathrm{span}\,B}\oplus(\overline{\mathrm{span}\,B})^{\perp}" display="block"><mrow><mi>H</mi><mo>=</mo><mrow><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover><mo>⊕</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⟂</mo></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, we conclude that <math id="p6.m4" class="ltx_Math" alttext="(\overline{\mathrm{span}\,B})^{\perp}\neq\{0\}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⟂</mo></msup><mo>≠</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math>, i.e. there are elements which are orthogonal (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrthogonalVectors</span>) to <math id="p6.m5" class="ltx_Math" alttext="\overline{\mathrm{span}\,B}" display="inline"><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover></math>. This contradicts the maximality of <math id="p6.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> since, by picking an element <math id="p6.m7" class="ltx_Math" alttext="y\in(\overline{\mathrm{span}\,B})^{\perp}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⟂</mo></msup></mrow></math> with <math id="p6.m8" class="ltx_Math" alttext="\|y\|=1" display="inline"><mrow><mrow><mo>∥</mo><mi>y</mi><mo>∥</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>, <math id="p6.m9" class="ltx_Math" alttext="B\cup\{y\}" display="inline"><mrow><mi>B</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></mrow></math> would belong belong to <math id="p6.m10" class="ltx_Math" alttext="\mathcal{O}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒪</mi></math> and would be greater than <math id="p6.m11" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Hence, <math id="p7.m1" class="ltx_Math" alttext="\overline{\mathrm{span}\,B}=H" display="inline"><mrow><mover accent="true"><mrow><mpadded width="+1.7pt"><mi>span</mi></mpadded><mo>⁢</mo><mi>B</mi></mrow><mo>¯</mo></mover><mo>=</mo><mi>H</mi></mrow></math>, and this finishes the proof. <math id="p7.m2" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">every Hilbert space has an orthonormal basis</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EveryHilbertSpaceHasAnOrthonormalBasis</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:56:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:56:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 46C05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:38:10 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

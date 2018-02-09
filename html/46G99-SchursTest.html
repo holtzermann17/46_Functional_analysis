@@ -1,0 +1,227 @@
+<!DOCTYPE html><html>
+<head>
+<title>Schur’s Test</title>
+<!--Generated on Fri Feb  9 21:41:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Schur’s Test</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="ThmLem1" class="ltx_theorem ltx_theorem_Lem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="ThmLem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold ltx_font_italic">(Schur’s Test)<span class="ltx_text ltx_font_medium"> Let <math id="ThmLem1.p1.m1" class="ltx_Math" alttext="(X,\mu)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">X</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> be a measure space (<math id="ThmLem1.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi mathvariant="normal">μ</mi></math> a positive measure). Let <math id="ThmLem1.p1.m3" class="ltx_Math" alttext="K" display="inline"><mi mathvariant="normal">K</mi></math> be a positive, measurable function on <math id="ThmLem1.p1.m4" class="ltx_Math" alttext="X\times X" display="inline"><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">X</mi></mrow></math>. Define the operator</span></span></p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle Tf(x)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle:=\int_{X}K(x,y)f(y)\,d\mu(y),x\in X" display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="ThmLem1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If for some <math id="ThmLem1.p2.m1" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">&lt;</mo><mi>p</mi><mo mathvariant="normal">&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> there exists a measurable, strictly positive function <math id="ThmLem1.p2.m2" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> and a constant <math id="ThmLem1.p2.m3" class="ltx_Math" alttext="M&gt;0" display="inline"><mrow><mi>M</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> such that
+</span></p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\int_{X}K(x,y)h(y)^{q}\,d\mu(y)\leq Mh(x)^{q}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mi>q</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mi>M</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>q</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\int_{X}K(x,y)h(x)^{p}\,d\mu(x)\leq Mh(y)^{p}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mi>M</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mi>p</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="ThmLem1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">with <math id="ThmLem1.p3.m1" class="ltx_Math" alttext="p^{-1}+q^{-1}=1" display="inline"><mrow><mrow><msup><mi>p</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="normal">+</mo><msup><mi>q</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow></math>, then <math id="ThmLem1.p3.m2" class="ltx_Math" alttext="||T||\leq M" display="inline"><mrow><mrow><mo fence="true" mathvariant="normal">||</mo><mi>T</mi><mo fence="true" mathvariant="normal">||</mo></mrow><mo mathvariant="normal">≤</mo><mi>M</mi></mrow></math> in <math id="ThmLem1.p3.m3" class="ltx_Math" alttext="L^{p}(X,d\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mrow><mi>d</mi><mo mathvariant="italic">⁢</mo><mi>μ</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="f\in L^{p}(X,d\mu)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi>d</mi><mo>⁢</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. We have</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle|Tf(x)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>T</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\leq\int_{X}h(y)h(y)^{-1}|f(y)|K(x,y)\,d\mu(y)" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">hence by Hoelder’s inequality</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle|Tf(x)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>T</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\leq\left[\int_{X}K(x,y)h(y)^{q}\,d\mu(y)\right]^{\frac{1}{q}}%
+\left[\int_{X}K(x,y)h(y)^{-p}|f(y)|^{p}\,d\mu(y)\right]^{\frac{1}{p}}" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><msup><mrow><mo>[</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mi>q</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>]</mo></mrow><mfrac><mn>1</mn><mi>q</mi></mfrac></msup><mo>⁢</mo><msup><mrow><mo>[</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mi>p</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>]</mo></mrow><mfrac><mn>1</mn><mi>p</mi></mfrac></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By the first inequality in the assumption we have</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle|Tf(x)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>T</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle\leq M^{\frac{1}{q}}h(x)\left[\int_{X}K(x,y)h(y)^{-p}|f(y)|^{p}\,%
+d\mu(y)\right]^{\frac{1}{p}}" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><msup><mi>M</mi><mfrac><mn>1</mn><mi>q</mi></mfrac></msup><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo>[</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mi>p</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>]</mo></mrow><mfrac><mn>1</mn><mi>p</mi></mfrac></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Evaluating <math id="p5.m1" class="ltx_Math" alttext="||Tf||_{p}^{p}" display="inline"><msubsup><mrow><mo fence="true">||</mo><mrow><mi>T</mi><mo>⁢</mo><mi>f</mi></mrow><mo fence="true">||</mo></mrow><mi>p</mi><mi>p</mi></msubsup></math> by Fubini and the second inequality in the assumption we obtain</p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\int_{X}|Tf(x)|^{p}\,d\mu(x)" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>T</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\leq M^{p}\int_{X}|f(y)|^{p}\,d\mu(y)" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><msup><mi>M</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>X</mi></msub></mstyle><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">This completes the proof.
+∎</p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">A noted special case is Young’s Inequality</p>
+</div>
+<div id="ThmCor1" class="ltx_theorem ltx_theorem_Cor">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Corollary 1</span>.</h6>
+<div id="ThmCor1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold ltx_font_italic">(Young)<span class="ltx_text ltx_font_medium"></span></span></p>
+</div>
+<div id="ThmCor1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="ThmCor1.p2.m1" class="ltx_Math" alttext="K\colon\mathbb{R}^{n}\times\mathbb{R}^{n}\to\mathbb{C}" display="inline"><mrow><mi>K</mi><mo mathvariant="normal">:</mo><mrow><mrow><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup><mo mathvariant="normal">×</mo><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">C</mi></mrow></mrow></math> be Borel-measurable such that there is a constant <math id="ThmCor1.p2.m2" class="ltx_Math" alttext="C&gt;0" display="inline"><mrow><mi>C</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> with</span></p>
+<table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle\sup_{x\in\mathbb{R}^{n}}\int_{\mathbb{R}^{n}}|K(x,y)|\,d\lambda^%
+{n}(y)\leq C" display="inline"><mrow><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>λ</mi><mi>n</mi></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>≤</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle\sup_{y\in\mathbb{R}^{n}}\int_{\mathbb{R}^{n}}|K(x,y)|\,d\lambda^%
+{n}(x)\leq C" display="inline"><mrow><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>y</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>λ</mi><mi>n</mi></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>≤</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="ThmCor1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For <math id="ThmCor1.p3.m1" class="ltx_Math" alttext="f\in L^{p}(\mathbb{R}^{n})" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> (<math id="ThmCor1.p3.m2" class="ltx_Math" alttext="1\leq p\leq+\infty" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>p</mi><mo mathvariant="normal">≤</mo><mrow><mo mathvariant="normal">+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>) define</span></p>
+<table id="A0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle T(f)(x)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle:=\int_{\mathbb{R}^{n}}K(x,y)f(y)\,d\lambda^{n}(y)" display="inline"><mrow><mi></mi><mo>:=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>λ</mi><mi>n</mi></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="ThmCor1.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then <math id="ThmCor1.p4.m1" class="ltx_Math" alttext="||Tf||_{p}\leq C||f||_{p}" display="inline"><mrow><msub><mrow><mo fence="true" mathvariant="normal">||</mo><mrow><mi>T</mi><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow><mo fence="true" mathvariant="normal">||</mo></mrow><mi>p</mi></msub><mo mathvariant="normal">≤</mo><mrow><mi>C</mi><mo mathvariant="italic">⁢</mo><msub><mrow><mo fence="true" mathvariant="normal">||</mo><mi>f</mi><mo fence="true" mathvariant="normal">||</mo></mrow><mi>p</mi></msub></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        
+        <span class="ltx_bibtag ltx_role_refnum">(Hedenmalm 2000)</span>
+        
+<span class="ltx_bibblock"> H. Hedenmalm, Boris Korenblum, Kehe Zhu <em class="ltx_emph ltx_font_italic">Theory of Bergman spaces</em>, Springer Verlag, New York, 2000
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Schur’s Test</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SchursTest</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:01:19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:01:19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">karstenb (16623)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">karstenb (16623)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">karstenb (16623)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 46G99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:41:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

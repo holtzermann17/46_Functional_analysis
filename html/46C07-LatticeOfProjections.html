@@ -1,0 +1,392 @@
+<!DOCTYPE html><html>
+<head>
+<title>lattice of projections</title>
+<!--Generated on Fri Feb  9 21:38:55 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">lattice of projections</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be a Hilbert space and <math id="p2.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> the algebra of bounded operators in <math id="p2.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. By a projection in <math id="p2.m4" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> we always  an orthogonal projection.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Recall that a projection <math id="p3.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> in <math id="p3.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a bounded (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BoundedOperator</span>) self-adjoint operator satisfying <math id="p3.m3" class="ltx_Math" alttext="P^{2}=P" display="inline"><mrow><msup><mi>P</mi><mn>2</mn></msup><mo>=</mo><mi>P</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The set of projections in <math id="p4.m1" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>, although not forming a vector space, has a very rich structure. In this entry we are going to endow this set with a partial ordering in a  that it becomes a complete lattice. The lattice structure of the set of projections has profound consequences on the structure of von Neumann algebras.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span> The Lattice of Projections</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">In Hilbert spaces there is a bijective correspondence between closed subspaces and projections (see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProjectionsAndClosedSubspaces</span>)). This correspondence is given by</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="P\;\longleftrightarrow\;\mathrm{Ran}(P)" display="block"><mrow><mpadded width="+2.8pt"><mi>P</mi></mpadded><mo rspace="5.3pt">⟷</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a projection and <math id="S1.p1.m2" class="ltx_Math" alttext="\mathrm{Ran}(P)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the range of <math id="S1.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Since the set of closed subspaces can be partially ordered by inclusion, we can define a partial order <math id="S1.p2.m1" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> in the set of projections using the above correspondence:</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="P\leq Q\;\;\Longleftrightarrow\;\;\mathrm{Ran}(P)\subseteq\mathrm{Ran}(Q)" display="block"><mrow><mrow><mi>P</mi><mo>≤</mo><mpadded width="+5.6pt"><mi>Q</mi></mpadded></mrow><mo rspace="8.1pt">⟺</mo><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">But since projections are self-adjoint operators (in fact they are positive operators, as <math id="S1.p3.m1" class="ltx_Math" alttext="P=P^{*}P" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><msup><mi>P</mi><mo>*</mo></msup><mo>⁢</mo><mi>P</mi></mrow></mrow></math>), they inherit the natural partial ordering of self-adjoint operators (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrderingOfSelfAdjoints</span>), which we denote by <math id="S1.p3.m2" class="ltx_Math" alttext="\leq_{sa}" display="inline"><msub><mo>≤</mo><mrow><mi>s</mi><mo>⁢</mo><mi>a</mi></mrow></msub></math>, and whose definition we recall now</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="P\leq_{sa}Q\;\;\Longleftrightarrow\;\;Q-P\text{is a positive operator}" display="block"><mrow><mrow><mi>P</mi><msub><mo>≤</mo><mrow><mi>s</mi><mo>⁢</mo><mi>a</mi></mrow></msub><mpadded width="+5.6pt"><mi>Q</mi></mpadded></mrow><mo rspace="8.1pt">⟺</mo><mrow><mi>Q</mi><mo>-</mo><mrow><mi>P</mi><mo>⁢</mo><mtext>is a positive operator</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As the following theorem shows, these two orderings coincide. Thus, we shall not make any more distinctions of notation between them.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p"><math id="S1.p4.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 1 -</span> Let <math id="S1.p5.m1" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> be projections in <math id="S1.p5.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math>. The following conditions are equivalent:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\mathrm{Ran}(P)\subseteq\mathrm{Ran}(Q)\;\;" display="inline"><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo rspace="8.1pt" stretchy="false">)</mo></mrow></mrow></mrow></math> (i.e. <math id="I1.i1.p1.m2" class="ltx_Math" alttext="P\leq Q" display="inline"><mrow><mi>P</mi><mo>≤</mo><mi>Q</mi></mrow></math>)</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="QP=P" display="inline"><mrow><mrow><mi>Q</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>P</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="PQ=P" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mi>P</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="\|Px\|\leq\|Qx\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>P</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mo>∥</mo><mrow><mi>Q</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∥</mo></mrow></mrow></math> for all <math id="I1.i4.p1.m2" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="P\leq_{sa}Q" display="inline"><mrow><mi>P</mi><msub><mo>≤</mo><mrow><mi>s</mi><mo>⁢</mo><mi>a</mi></mrow></msub><mi>Q</mi></mrow></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p"><math id="S1.p6.m1" class="ltx_Math" alttext="\;" display="inline"><mi></mi></math></p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Two closed subspaces <math id="S1.p7.m1" class="ltx_Math" alttext="Y,Z" display="inline"><mrow><mi>Y</mi><mo>,</mo><mi>Z</mi></mrow></math> in <math id="S1.p7.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> have a greatest lower bound <math id="S1.p7.m3" class="ltx_Math" alttext="Y\land Z" display="inline"><mrow><mi>Y</mi><mo>∧</mo><mi>Z</mi></mrow></math> and a least upper bound <math id="S1.p7.m4" class="ltx_Math" alttext="Y\lor Z" display="inline"><mrow><mi>Y</mi><mo>∨</mo><mi>Z</mi></mrow></math>. Specifically, <math id="S1.p7.m5" class="ltx_Math" alttext="Y\land Z" display="inline"><mrow><mi>Y</mi><mo>∧</mo><mi>Z</mi></mrow></math> is precisely the intersection <math id="S1.p7.m6" class="ltx_Math" alttext="Y\cap Z" display="inline"><mrow><mi>Y</mi><mo>∩</mo><mi>Z</mi></mrow></math> and <math id="S1.p7.m7" class="ltx_Math" alttext="Y\lor Z" display="inline"><mrow><mi>Y</mi><mo>∨</mo><mi>Z</mi></mrow></math> is precisely the closure of the subspace generated by <math id="S1.p7.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> and <math id="S1.p7.m9" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math>. Hence, if <math id="S1.p7.m10" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> are projections in <math id="S1.p7.m11" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> then <math id="S1.p7.m12" class="ltx_Math" alttext="P\land Q" display="inline"><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow></math> is the projection onto <math id="S1.p7.m13" class="ltx_Math" alttext="\mathrm{Ran}(P)\cap\mathrm{Ran}(Q)" display="inline"><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S1.p7.m14" class="ltx_Math" alttext="P\lor Q" display="inline"><mrow><mi>P</mi><mo>∨</mo><mi>Q</mi></mrow></math> is the projection onto the closure of <math id="S1.p7.m15" class="ltx_Math" alttext="\mathrm{Ran}(P)+\mathrm{Ran}(Q)" display="inline"><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">The above discussion clarifies that the set of projections in <math id="S1.p8.m1" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> has a lattice structure. In fact, the set of projections forms a complete lattice, by somewhat  as above:</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">Every family <math id="S1.p9.m1" class="ltx_Math" alttext="\{Y_{\alpha}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>Y</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow></math> of closed subspaces in <math id="S1.p9.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> possesses an infimum <math id="S1.p9.m3" class="ltx_Math" alttext="\bigwedge Y_{\alpha}" display="inline"><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><msub><mi>Y</mi><mi>α</mi></msub></mrow></math> and a supremum <math id="S1.p9.m4" class="ltx_Math" alttext="\bigvee Y_{\alpha}" display="inline"><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><msub><mi>Y</mi><mi>α</mi></msub></mrow></math>, which are, respectively, the intersection of all <math id="S1.p9.m5" class="ltx_Math" alttext="Y_{\alpha}" display="inline"><msub><mi>Y</mi><mi>α</mi></msub></math> and the closure of the subspace generated by all <math id="S1.p9.m6" class="ltx_Math" alttext="Y_{\alpha}" display="inline"><msub><mi>Y</mi><mi>α</mi></msub></math>. There is, of course, a correspondent in terms of projections: every family <math id="S1.p9.m7" class="ltx_Math" alttext="\{P_{\alpha}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>P</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow></math> of projections has an infimum <math id="S1.p9.m8" class="ltx_Math" alttext="\bigwedge P_{\alpha}" display="inline"><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><msub><mi>P</mi><mi>α</mi></msub></mrow></math> and a supremum <math id="S1.p9.m9" class="ltx_Math" alttext="\bigvee P_{\alpha}" display="inline"><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><msub><mi>P</mi><mi>α</mi></msub></mrow></math>, which are, respectively, the projection onto the intersection of all <math id="S1.p9.m10" class="ltx_Math" alttext="\mathrm{Ran}(P_{\alpha})" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>P</mi><mi>α</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> and the projection onto the closure of the subspace generated by all <math id="S1.p9.m11" class="ltx_Math" alttext="\mathrm{Ran}(P_{\alpha})" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>P</mi><mi>α</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Additional Lattice Features</h2>
+
+<div id="S2.p1" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The lattice of projections in <math id="I2.i1.p1.m1" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> is never distributive (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DistributiveLattice</span>) (unless <math id="I2.i1.p1.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is one-dimensional).</p>
+</div>
+</li>
+</ul>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Also, it is modular if and only if <math id="I3.i1.p1.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is finite dimensional. Nevertheless, there are important  of von Neumann algebras (a particular type of subalgebras of <math id="I3.i1.p1.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> that are ”rich” in projections) over an infinite-dimensional <math id="I3.i1.p1.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>, whose lattices of projections are in fact modular.</p>
+</div>
+</li>
+</ul>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Projections on one-dimensional subspaces are usually called <span class="ltx_text ltx_font_bold">minimal projections</span> and they are in fact minimal in the sense that: there are no closed subspaces strictly between <math id="I4.i1.p1.m1" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math> and a one-dimensional subspace, and every closed subspace other than <math id="I4.i1.p1.m2" class="ltx_Math" alttext="\{0\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math> contains a one-dimensional subspace. This means that the lattice of projections in <math id="I4.i1.p1.m3" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> is an atomic lattice and its atoms are precisely the projections on one-dimensional subspaces.</p>
+</div>
+<div id="I4.i1.p2" class="ltx_para">
+<p class="ltx_p">Moreover, every closed subspace of <math id="I4.i1.p2.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the closure of the span of its one-dimensional subspaces. Thus, the lattice of projections in <math id="I4.i1.p2.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> is an atomistic lattice.</p>
+</div>
+</li>
+</ul>
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">In Hilbert spaces every closed subspace <math id="I5.i1.p1.m1" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math> is topologically complemented by its orthogonal complement (<math id="I5.i1.p1.m2" class="ltx_Math" alttext="H=Z\oplus Z^{\perp}" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><mi>Z</mi><mo>⊕</mo><msup><mi>Z</mi><mo>⟂</mo></msup></mrow></mrow></math>), and this fact is reflected in the structure of projections. The lattice of projections is then an orthocomplemented lattice, where the orthocomplement of each projection <math id="I5.i1.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is the projection <math id="I5.i1.p1.m4" class="ltx_Math" alttext="I-P" display="inline"><mrow><mi>I</mi><mo>-</mo><mi>P</mi></mrow></math> (onto <math id="I5.i1.p1.m5" class="ltx_Math" alttext="\mathrm{Ran}(P)^{\perp}" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow><mo>⟂</mo></msup></mrow></math>).</p>
+</div>
+</li>
+</ul>
+<ul id="I6" class="ltx_itemize">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p">We shall see further ahead in this entry, when we discuss orthogonal projections, that the lattice of projections in <math id="I6.i1.p1.m1" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> is an orthomodular lattice.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Commuting and Orthogonal Projections</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">When two projections <math id="S3.p1.m1" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> commute, the projections <math id="S3.p1.m2" class="ltx_Math" alttext="P\land Q" display="inline"><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow></math> and <math id="S3.p1.m3" class="ltx_Math" alttext="P\lor Q" display="inline"><mrow><mi>P</mi><mo>∨</mo><mi>Q</mi></mrow></math> can be described algebraically in a very . We shall see at the end of this section that <math id="S3.p1.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="S3.p1.m5" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> commute precisely when its corresponding subspaces <math id="S3.p1.m6" class="ltx_Math" alttext="\mathrm{Ran}(P)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.p1.m7" class="ltx_Math" alttext="\mathrm{Ran}(Q)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></math> are ”perpendicular”.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p"><math id="S3.p2.m1" class="ltx_Math" alttext="\;" display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 2 -</span> Let <math id="S3.p3.m1" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> be commuting projections (i.e. <math id="S3.p3.m2" class="ltx_Math" alttext="PQ=QP" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mi>Q</mi><mo>⁢</mo><mi>P</mi></mrow></mrow></math>), then</p>
+<ul id="I7" class="ltx_itemize">
+<li id="I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I7.i1.p1.m1" class="ltx_Math" alttext="P\land Q=PQ" display="inline"><mrow><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I7.i2.p1.m1" class="ltx_Math" alttext="P\lor Q=P+Q-PQ" display="inline"><mrow><mrow><mi>P</mi><mo>∨</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mrow><mi>P</mi><mo>+</mo><mi>Q</mi></mrow><mo>-</mo><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I7.i3.p1.m1" class="ltx_Math" alttext="\mathrm{Ran}(P)\lor\mathrm{Ran}(Q)=\mathrm{Ran}(P)+\mathrm{Ran}(Q)" display="inline"><mrow><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∨</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. In particular, <math id="I7.i3.p1.m2" class="ltx_Math" alttext="\mathrm{Ran}(P)+\mathrm{Ran}(Q)" display="inline"><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is closed.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p"><math id="S3.p4.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Two projections <math id="S3.p5.m1" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> are said to be <span class="ltx_text ltx_font_bold">orthogonal</span> if <math id="S3.p5.m2" class="ltx_Math" alttext="P\leq Q^{\perp}" display="inline"><mrow><mi>P</mi><mo>≤</mo><msup><mi>Q</mi><mo>⟂</mo></msup></mrow></math>. This is equivalent to say that its corresponding subspaces are orthogonal (<math id="S3.p5.m3" class="ltx_Math" alttext="\mathrm{Ran}(P)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> lies in the orthogonal complement of <math id="S3.p5.m4" class="ltx_Math" alttext="\mathrm{Ran}(Q)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></math>).</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p"><math id="S3.p6.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Corollary 1 -</span> Two projections <math id="S3.p7.m1" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> are orthogonal if and only if <math id="S3.p7.m2" class="ltx_Math" alttext="PQ=0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. When this is so, then <math id="S3.p7.m3" class="ltx_Math" alttext="P\lor Q=P+Q" display="inline"><mrow><mrow><mi>P</mi><mo>∨</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mi>P</mi><mo>+</mo><mi>Q</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p"><math id="S3.p8.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Corollary 2 -</span> Let <math id="S3.p9.m1" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> be projections in <math id="S3.p9.m2" class="ltx_Math" alttext="B(H)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S3.p9.m3" class="ltx_Math" alttext="P\leq Q" display="inline"><mrow><mi>P</mi><mo>≤</mo><mi>Q</mi></mrow></math>. Then <math id="S3.p9.m4" class="ltx_Math" alttext="Q-P" display="inline"><mrow><mi>Q</mi><mo>-</mo><mi>P</mi></mrow></math> is the projection onto <math id="S3.p9.m5" class="ltx_Math" alttext="\mathrm{Ran}(Q)\cap\mathrm{Ran}(P)^{\perp}" display="inline"><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>Ran</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow><mo>⟂</mo></msup></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p10" class="ltx_para">
+<p class="ltx_p"><math id="S3.p10.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S3.p11" class="ltx_para">
+<p class="ltx_p">We can now see that <math id="S3.p11.m1" class="ltx_Math" alttext="P,Q" display="inline"><mrow><mi>P</mi><mo>,</mo><mi>Q</mi></mrow></math> commute if and only if <math id="S3.p11.m2" class="ltx_Math" alttext="\mathrm{Ran}(P)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.p11.m3" class="ltx_Math" alttext="\mathrm{Ran}(Q)" display="inline"><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></math> are ”perpendicular”. A somewhat informal and intuitive definition of ”perpendicular” is that of requiring the two subspaces to be orthogonal outside their intersection (this is different of , since orthogonal subspaces do not  intersect each other). More rigorously, <math id="S3.p11.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="S3.p11.m5" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> commute if and only if the subspaces <math id="S3.p11.m6" class="ltx_Math" alttext="\mathrm{Ran}(P)\cap(\mathrm{Ran}(P)\cap\mathrm{Ran}(Q))^{\perp}" display="inline"><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⟂</mo></msup></mrow></math> and <math id="S3.p11.m7" class="ltx_Math" alttext="\mathrm{Ran}(Q)\cap(\mathrm{Ran}(P)\cap\mathrm{Ran}(Q))^{\perp}" display="inline"><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>Ran</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⟂</mo></msup></mrow></math> are orthogonal.</p>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p">This can be proved using all the above results: The two subspaces are orthogonal iff</p>
+<table id="S3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex4.m1" class="ltx_Math" alttext="0=(P-P\land Q)(Q-P\land Q)=PQ-P\land Q" display="block"><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>P</mi><mo>-</mo><mi>P</mi></mrow><mo>∧</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>Q</mi><mo>-</mo><mi>P</mi></mrow><mo>∧</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>-</mo><mi>P</mi></mrow><mo>∧</mo><mi>Q</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and <math id="S3.p12.m1" class="ltx_Math" alttext="PQ=P\land Q" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow></mrow></math> iff</p>
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex5.m1" class="ltx_Math" alttext="PQ=P\land Q=(P\land Q)^{*}=(PQ)^{*}=QP" display="block"><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>∧</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mi>Q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>=</mo><mrow><mi>Q</mi><mo>⁢</mo><mi>P</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p13" class="ltx_para">
+<p class="ltx_p">We can now also see that the lattice of projections is orthomodular: Suppose <math id="S3.p13.m1" class="ltx_Math" alttext="P\leq Q" display="inline"><mrow><mi>P</mi><mo>≤</mo><mi>Q</mi></mrow></math>. Then, using the above results,</p>
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="P\lor(Q\land P^{\perp})=P\lor(Q-P)=P+(Q-P)-P(Q-P)=Q" display="block"><mrow><mrow><mi>P</mi><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Q</mi><mo>∧</mo><msup><mi>P</mi><mo>⟂</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>∨</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Q</mi><mo>-</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>P</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Q</mi><mo>-</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Q</mi><mo>-</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi>Q</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Nets of Projections</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">In the following we discuss some useful and interesting results about convergence and limits of projections.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p2.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a poset. A net of projections <math id="S4.p2.m2" class="ltx_Math" alttext="\{P_{\alpha}\}_{\alpha\in\Lambda}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>P</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub></math> is said to be increasing
+if <math id="S4.p2.m3" class="ltx_Math" alttext="\alpha\leq\beta\Longrightarrow P_{\alpha}\leq P_{\beta}" display="inline"><mrow><mi>α</mi><mo>≤</mo><mi>β</mi><mo>⟹</mo><msub><mi>P</mi><mi>α</mi></msub><mo>≤</mo><msub><mi>P</mi><mi>β</mi></msub></mrow></math>. Decreasing nets are
+defined similarly.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p"><math id="S4.p3.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 3 -</span> Let <math id="S4.p4.m1" class="ltx_Math" alttext="\{P_{\alpha}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>P</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow></math> be an increasing net of projections. Then
+<math id="S4.p4.m2" class="ltx_Math" alttext="\lim_{\alpha}P_{\alpha}x=\bigvee_{\alpha}P_{\alpha}\;x" display="inline"><mrow><mrow><msub><mo>lim</mo><mi>α</mi></msub><mo>⁡</mo><mrow><msub><mi>P</mi><mi>α</mi></msub><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mi>α</mi></msub><mrow><mpadded width="+2.8pt"><msub><mi>P</mi><mi>α</mi></msub></mpadded><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> for every <math id="S4.p4.m3" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math>.</p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">In other words, <math id="S4.p5.m1" class="ltx_Math" alttext="P_{\alpha}" display="inline"><msub><mi>P</mi><mi>α</mi></msub></math> converges to <math id="S4.p5.m2" class="ltx_Math" alttext="\bigvee_{\alpha}P_{\alpha}" display="inline"><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mi>α</mi></msub><msub><mi>P</mi><mi>α</mi></msub></mrow></math> in the strong operator
+topology.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p"><math id="S4.p6.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Similarly for decreasing nets of projections,</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p"><math id="S4.p8.m1" class="ltx_Math" alttext="\;" display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 4 -</span> Let <math id="S4.p9.m1" class="ltx_Math" alttext="\{P_{\alpha}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>P</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow></math> be a decreasing net of projections. Then
+<math id="S4.p9.m2" class="ltx_Math" alttext="\lim_{\alpha}P_{\alpha}x=\bigwedge_{\alpha}P_{\alpha}\;x" display="inline"><mrow><mrow><msub><mo>lim</mo><mi>α</mi></msub><mo>⁡</mo><mrow><msub><mi>P</mi><mi>α</mi></msub><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mi>α</mi></msub><mrow><mpadded width="+2.8pt"><msub><mi>P</mi><mi>α</mi></msub></mpadded><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> for every <math id="S4.p9.m3" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math>.</p>
+</div>
+<div id="S4.p10" class="ltx_para">
+<p class="ltx_p">In other words, <math id="S4.p10.m1" class="ltx_Math" alttext="P_{\alpha}" display="inline"><msub><mi>P</mi><mi>α</mi></msub></math> converges to <math id="S4.p10.m2" class="ltx_Math" alttext="\bigwedge_{\alpha}P_{\alpha}" display="inline"><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mi>α</mi></msub><msub><mi>P</mi><mi>α</mi></msub></mrow></math> in the strong operator
+topology.</p>
+</div>
+<div id="S4.p11" class="ltx_para">
+<p class="ltx_p"><math id="S4.p11.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="S4.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem 5 -</span> Let <math id="S4.p12.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> be a set and <math id="S4.p12.m2" class="ltx_Math" alttext="\{P_{\alpha}\}_{\alpha\in\Lambda}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>P</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">Λ</mi></mrow></msub></math> be a family of pairwise orthogonal projections. Then <math id="S4.p12.m3" class="ltx_Math" alttext="\sum P_{\alpha}" display="inline"><mrow><mo largeop="true" symmetric="true">∑</mo><msub><mi>P</mi><mi>α</mi></msub></mrow></math> is summable and <math id="S4.p12.m4" class="ltx_Math" alttext="\sum P_{\alpha}\,x=\bigvee_{\alpha}P_{\alpha}\;x" display="inline"><mrow><mrow><mo largeop="true" symmetric="true">∑</mo><mrow><mpadded width="+1.7pt"><msub><mi>P</mi><mi>α</mi></msub></mpadded><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋁</mo><mi>α</mi></msub><mrow><mpadded width="+2.8pt"><msub><mi>P</mi><mi>α</mi></msub></mpadded><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> for all <math id="S4.p12.m5" class="ltx_Math" alttext="x\in H" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>H</mi></mrow></math>.</p>
+</div>
+<div id="S4.p13" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">lattice of projections</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LatticeOfProjections</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:53:29</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:53:29</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46C07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46C05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 06C15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">projections in Hilbert spaces</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrthomodularLattice</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumLogic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ContinuousGeometry</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">minimal projection</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:38:55 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
